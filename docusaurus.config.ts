@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Zoty',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Powered by Experts',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
