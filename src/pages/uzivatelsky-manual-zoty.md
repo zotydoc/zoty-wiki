@@ -1,4 +1,7 @@
-
+<!--- 
+https://www.markdownguide.org/basic-syntax/
+https://docusaurus.io/docs/markdown-features/toc
+-->
 
 # Uživatelský manuál Zoty
 [Platný od verze Zoty 10.0]
