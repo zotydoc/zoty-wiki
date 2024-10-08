@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Zoty',
-  tagline: 'Powered by Experts',
+  tagline: 'Uživatelský manuál Zoty',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -62,6 +62,9 @@ const config: Config = {
     ],
   ],
 
+
+  
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -80,8 +83,8 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://zoty.cz',
+          label: 'zoty.cz',
           position: 'right',
         },
       ],
@@ -95,6 +98,10 @@ const config: Config = {
             {
               label: 'Tutorial',
               to: '/docs/intro',
+            },
+            {
+              label: 'Uživatelský manuál',
+              to: '/uzivatelsky-manual-zoty',
             },
           ],
         },
@@ -139,3 +146,15 @@ const config: Config = {
 };
 
 export default config;
+
+/* RV to test
+export default {
+  themeConfig: {
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
+    },
+  },
+};
+
+*/
