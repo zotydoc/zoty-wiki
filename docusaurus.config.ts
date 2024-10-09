@@ -86,7 +86,7 @@ url: 'https://zoty.cz',
           label: 'Tutorial',
         },*/
 
-        {to: '/uzivatelsky-manual-zoty', label: 'Uživatelský manuál ZOTY [Platný od v 1.10]', position: 'left'},
+        {to: '/uzivatelsky-manual-zoty', label: 'Uživatelský manuál Zoty [v1.10]', position: 'left'},
         
         /*{to: '/blog', label: 'Blog', position: 'left'},*/
         {
@@ -100,14 +100,14 @@ url: 'https://zoty.cz',
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Dokumenty',
           items: [
            /* {
               label: 'Tutorial',
               to: '/docs/intro',
             },*/
             {
-              label: 'Uživatelský manuál',
+              label: 'Uživatelský manuál Zoty [v1.10]',
               to: '/uzivatelsky-manual-zoty',
             },
           ],

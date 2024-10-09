@@ -146,7 +146,7 @@ Po najetí myší nad tuto ikonu se zobrazí seznam s názvy rolí či jmen uži
 ### 3.5	Propojení
 K entitám lze připojovat soubory, štítky, metody, organizace, ale i jiné entity a zachytit tak vzájemné souvislosti.
 Propojení entit mezi sebou navzájem lze zobrazit na záložce Propojení v detailu každé entity, kde lze také vytvářet nová propojení pomocí tlačítka Vytvořit.
-![Propojení – Seznam a vytvoření](/img/placeholder/3_Propojeni-Seznam.png)
+![Propojení – Seznam a vytvoření](/img/placeholder/3_propojeni-seznam.png)
 Propojení jsou zobrazena nejen seznamem propojených entit, ale i graficky pomocí diagramu.
 
 ![Propojení - diagram](/img/placeholder/3_propojeni-diagram_vizualizace-odstranene-entity.png)
@@ -597,7 +597,7 @@ Příkladem je propojení dvou entit typu Úkol, kdy úkol č.2 nelze dokončit 
 -	Nezahrnuje je specifický způsob propojení pomocí jednosměrné vazby, kdy jedna entita vylučuje propojení s jinou entitou/entitami; to jsou případy, kdy je třeba např. dokumentovat výjimku z propojení a nelze to tedy provést tak, že se entity jednoduše pouze nepropojí.
 -	Rodič→Dítě je jednosměrné propojení od jedné entity – rodiče, na jinou entitu – dítě. Propojuje entity, kde jedna z nich nemůže existovat nezávisle na jiné, tzn. dítě (např. hodnocení) nemůže existovat bez rodiče (zde např. aktivum, riziko atp.). Tento typ propojení může být též vytvářen zcela automaticky systémem. Například je-li vytvářeno hodnocení nějaké entity. Pak tato entita vystupuje v roli „rodiče“ a připojené hodnocení v roli „dítěte“. Vše se realizuje na pozadí, bez zásahu uživatele.
 Propojení entit pomocí vazby typu Rodič -> Dítě je také nezbytné, má-li jedna hodnocená entita (dítě) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu.
-####### 16.1.2.4	Stavy
+###### 16.1.2.4	Stavy
 V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsahu hodnot: Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno.
 #### 16.1.3	Znalostní báze
 Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci vyhodnocení rizik.
