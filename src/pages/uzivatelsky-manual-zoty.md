@@ -1,6 +1,4 @@
 <!--- 
-
-
 https://www.markdownguide.org/basic-syntax/
 https://docusaurus.io/docs/markdown-features/toc
 -->
@@ -92,18 +90,19 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 ## 3.1	Ovládací panel a nástrojová lišta
 Menu v levém svislém panelu umožňuje přístup k jednotlivým funkcionalitám Zoty, členěných do sekcí, stejně jako i k různým typům entit, členěných do kategorií. Panel lze jednoduše zúžit či rozšířit kliknutím na ovládací prvek vlevo nahoře a zvětšit tak hlavní pracovní plochu vpravo vedle panelu.
 Horní nástrojová lišta pak zobrazuje sekce:
-•	Zoty (informace o aplikaci)
-•	Kalendář
-•	Schválení
-•	Globální vyhledávání
-•	Nastavení globálního filtru
-•	Nastavení globálních metod
-•	Notifikace
-•	Profil uživatele s jeho aktivitami, nastavením a možností odhlášení
+-	Zoty (informace o aplikaci)
+-	Kalendář
+-	Schválení
+-	Globální vyhledávání
+-	Nastavení globálního filtru
+-	Nastavení globálních metod
+-	Notifikace
+-	Profil uživatele s jeho aktivitami, nastavením a možností odhlášení
 ## 3.2	Vyhledávání
 V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
 ![Vyhledávání v sekci](/img/placeholder/3_Vyhledavani.png)
+
 
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 Kterýkoliv z výsledků vyhledávání lze pak s pomocí ikony špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, připnout do samostatných záložek, které jsou ve spodní části obrazovky připraveny zobrazit na jedno kliknutí detail příslušného záznamu.
@@ -118,11 +117,13 @@ V seznamech lze rychle filtrovat záznamy volbou z dostupných, výrobcem předd
 
 ![Filtry](/img/placeholder/3_Filtry.png)
 
+
 Nebo lze také zvolit uživatelsky definovatelný filtr a nastavit jej dle vlastních preferencí.
 Uživatelské filtry nabízejí možnost definovat filtrační podmínky dle obsahu různých atributů či vlastností, seskupených do filtračních kategorií. Pokud uživatel volí filtrační podmínky z atributů či vlastností v rámci jedné takovéto kategorie, aplikuje se mezi nimi podmínka NEBO (OR). Zatímco pokud je kombinuje v rámci různých kategorií, aplikuje se podmínka A (AND).
 Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech textových fragmentů (paragrafů, odstavců, písmen...) nějakého zákona (normy, směrnice, smlouvy atp.) mají garanta Martinu NEBO Adama NEBO jsou označeny jako auditní (daný fragment reprezentuje požadavek, který má být ověřován v rámci auditu, zda je s ním organizace ve shodě) A mají připojen alespoň jeden komentář.
 
-![Filtr - definice](/img/placeholder/3_Filtr_kombinace_filtracnich_kategorii.png)
+![Filtr - definice](/img/placeholder/3_Filtr_kombinace_filtracnich_kategorii.png "Filtr kombinace")
+<img src="/img/placeholder/3_Filtr_kombinace_filtracnich_kategorii.png"  title="Filter kombinace" width="75%" />
 
 ## 3.4	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
@@ -150,21 +151,21 @@ Pokud je nějaká entita z registru odstraněna (je přesunuta do koše), v diag
 V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení. 
 Systémová propojení jsou typu: Stromová struktura, Výskyt, Zástupce, Rodič→Dítě.
 Účel a použití jednotlivých typů systémových propojení:
-•	Stromová struktura je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
-•	Výskyt je využíván v modulu Zoty Designer při vizualizaci propojení entit tvořící procesní modely importované z procesního nástroje ARIS.
-•	Zástupce je odkaz v katalogu na entitu uloženou v registru.
-•	Rodič→Dítě může být propojení jak systémové, tak uživatelské, viz popis níže.
+-	Stromová struktura je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
+-	Výskyt je využíván v modulu Zoty Designer při vizualizaci propojení entit tvořící procesní modely importované z procesního nástroje ARIS.
+-	Zástupce je odkaz v katalogu na entitu uloženou v registru.
+-	Rodič→Dítě může být propojení jak systémové, tak uživatelské, viz popis níže.
 Uživatel pak ještě může při propojení entit volit výběrem z propojení typu: Vztah, Podporuje, Blokuje, Závislost, Zahrnuje, Nezahrnuje, Rodič→Dítě.
 Účel a použití jednotlivých typů propojení:
-•	Vztah je univerzální typ propojení, který lze použít mezi libovolnými typy entit, které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
-•	Podporuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita souvisí s jinou a to způsobem, že jedna z nich (zdroj) podporuje entitu/entity další (cíl). Tímto typem propojení se vytvoří vazba směřující od zdroje k cíli. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru podpory mezi entitami či důležitost entity podpůrné pro entitu podporovanou.
+-	Vztah je univerzální typ propojení, který lze použít mezi libovolnými typy entit, které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
+-	Podporuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita souvisí s jinou a to způsobem, že jedna z nich (zdroj) podporuje entitu/entity další (cíl). Tímto typem propojení se vytvoří vazba směřující od zdroje k cíli. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru podpory mezi entitami či důležitost entity podpůrné pro entitu podporovanou.
 Příkladem je propojení primárních a podpůrných aktiv.
-•	Blokuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita blokuje entitu jinou, tzn. že by nemělo dojít ke změně stavu blokované entity, aniž by předtím došlo ke změně stavu entity, která ji blokuje.
+-	Blokuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita blokuje entitu jinou, tzn. že by nemělo dojít ke změně stavu blokované entity, aniž by předtím došlo ke změně stavu entity, která ji blokuje.
 Příkladem je propojení dvou entit typu Úkol, kdy úkol č.2 nelze dokončit nebo na něm začít pracovat dříve, než je dokončen úkol č. 1.
-•	Závislost je jednosměrná vazba vyjadřující obecnou závislost jedné entity na druhé; tento typ vazby je podobný typu vazby Blokuje, na rozdíl od něj ale nijak neurčuje způsob, jakým jedna entita na jiné závisí (tj. neříká, že je např. „blocker“), není tedy tak striktní. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru závislosti jedné entity na druhé.
-•	Zahrnuje je jednosměrné vazba, pomocí které jedna entita agreguje jiné entity.
-•	Nezahrnuje je specifický způsob propojení pomocí jednosměrné vazby, kdy jedna entita vylučuje propojení s jinou entitou/entitami; to jsou případy, kdy je třeba např. dokumentovat výjimku z propojení a nelze to tedy provést tak, že se entity jednoduše pouze nepropojí.
-•	Rodič→Dítě je jednosměrné propojení od jedné entity – rodiče, na jinou entitu – dítě. Propojuje entity, kde jedna z nich nemůže existovat nezávisle na jiné, tzn. dítě (např. hodnocení) nemůže existovat bez rodiče (zde např. aktivum, riziko atp.). Tento typ propojení může být též vytvářen zcela automaticky systémem. Například je-li vytvářeno hodnocení nějaké entity. Pak tato entita vystupuje v roli „rodiče“ a připojené hodnocení v roli „dítěte“. Vše se realizuje na pozadí, bez zásahu uživatele.
+-	Závislost je jednosměrná vazba vyjadřující obecnou závislost jedné entity na druhé; tento typ vazby je podobný typu vazby Blokuje, na rozdíl od něj ale nijak neurčuje způsob, jakým jedna entita na jiné závisí (tj. neříká, že je např. „blocker“), není tedy tak striktní. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru závislosti jedné entity na druhé.
+-	Zahrnuje je jednosměrné vazba, pomocí které jedna entita agreguje jiné entity.
+-	Nezahrnuje je specifický způsob propojení pomocí jednosměrné vazby, kdy jedna entita vylučuje propojení s jinou entitou/entitami; to jsou případy, kdy je třeba např. dokumentovat výjimku z propojení a nelze to tedy provést tak, že se entity jednoduše pouze nepropojí.
+-	Rodič→Dítě je jednosměrné propojení od jedné entity – rodiče, na jinou entitu – dítě. Propojuje entity, kde jedna z nich nemůže existovat nezávisle na jiné, tzn. dítě (např. hodnocení) nemůže existovat bez rodiče (zde např. aktivum, riziko atp.). Tento typ propojení může být též vytvářen zcela automaticky systémem. Například je-li vytvářeno hodnocení nějaké entity. Pak tato entita vystupuje v roli „rodiče“ a připojené hodnocení v roli „dítěte“. Vše se realizuje na pozadí, bez zásahu uživatele.
 Propojení entit pomocí vazby typu Rodič -> Dítě je také nezbytné, má-li jedna hodnocená entita (dítě) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu.
 ## 3.6	Aktivity
 Zoty automaticky zaznamenává aktivity uživatelů v systému. Aktivity zobrazují přehled informací zejména o tom, jaké entity, kdy a jakým uživatelem byly nově přidány, změněny či smazány, jaké soubory byly k jaké entitě připojeny či odebrány, nebo jaké entity byly vzájemně propojeny vazbou. Do seznamu aktivit se zapisují i aktualizace obsahu atributů.
@@ -223,7 +224,7 @@ Typické použití v komerčním sektoru je pro ty organizace, které v rámci h
 Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
 Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole Oprávnění. Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů s pomocí standardních funkcionalit pro řízení oprávnění pouze na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
-3.8	Kalendář
+# 3.8	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení.
 
 ![Kalendář](/img/placeholder/3_Kalendar.png)
@@ -260,11 +261,11 @@ Celý průběh schvalovacího workflow je patrný z workflow diagramu na násled
 ![Schvalovací workflow - diagram](/img/placeholder/3_Schvalovaci-workflow-diagram.png)
 ## 3.10	Notifikace
 Systémová služba Notifikace informuje uživatele o všech aktivitách, které s ním mohou mít souvislost. Jedná se o aktivity, kdy je uživatel
-•	přiřazen k entitě jako její Správce;
-•	správcem entity, která byla upravena, smazána nebo propojena vazbou s jinou entitou;
-•	správcem entity, která byla zmíněna v komentáři;
-•	zmíněn jiným uživatelem v komentáři;
-•	v režimu prohlížení detailu záznamu, který jiný uživatel upravuje.
+-	přiřazen k entitě jako její Správce;
+-	správcem entity, která byla upravena, smazána nebo propojena vazbou s jinou entitou;
+-	správcem entity, která byla zmíněna v komentáři;
+-	zmíněn jiným uživatelem v komentáři;
+-	v režimu prohlížení detailu záznamu, který jiný uživatel upravuje.
 Při prvním přihlášení uživatele se mu zobrazí výzva k uložení nastavení notifikací.
 ![Výzva k nastavení notifikací](/img/placeholder/3_Notifikace_vyzva k nastaveni.png)
 Tato výzva se bude zobrazovat i při každém dalším přihlášení, dokud uživatel nepotvrdí pomocí tlačítka „Uložit“ své nastavení notifikací, tj. zda je chce či nechce zasílat.
@@ -296,10 +297,10 @@ Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.
 V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na Zoty Helpdesk nebo využijte hotline linku Zoty podpory.
 ## 3.11	Profil uživatele a odhlášení
 V pravé části horní nástrojové lišty se zobrazuje jméno přihlášeného uživatele, pod kterým lze vyvolat nabídku:
-•	Aktivity
-•	Můj profil
-•	Mé nastavení
-•	Odhlásit se
+-	Aktivity
+-	Můj profil
+-	Mé nastavení
+-	Odhlásit se
 ### 3.11.1	Aktivity
 Aktivity zobrazí všechny uživatelem provedené aktivity v Zoty, které se týkají zejména vytváření, úprav či odstranění složek, entit či jejich atributů, připojování komentářů, štítků, dokumentů k entitám, přiřazování správců entit, apod.
 ### 3.11.2	Můj profil
@@ -321,12 +322,12 @@ Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskyt
 Pojmy Registr a Katalog jsou blíže vysvětleny v kapitole Základní používaná terminologie.
 3.13.1	Správa složek a entit
 Ve stromové struktuře složek zobrazené v levém okně se po výběru složky či entity zobrazí její detail, který má v pravém horním rohu ikonu se symbolem tří teček s nabídkou základních operací, které lze se složkou či entitou provádět:
-•	Upravit
-•	Duplikovat
-•	Archivovat
-•	Přesunout
-•	Odstranit
-•	Exportovat
+-	Upravit
+-	Duplikovat
+-	Archivovat
+-	Přesunout
+-	Odstranit
+-	Exportovat
 Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají přidělené systémové role s nižšími oprávněními, tj. role Uživatel, Auditor nebo Moderátor nebo pokud je entita uzamčena. Entita má totiž ještě, na rozdíl od složky, tuto nabídku základních operací rozšířenou o možnost uzamčení. Uzamčená entita je pak v horním pravém rohu detailu entity vizualizována ikonou zámku. Uzamknout či odemknout entitu mohou pouze uživatelé, kteří mají přidělené systémové role s vyššími oprávněními, tj. role Manažer entit nebo Administrátor.
 #### 3.13.1.1	Přesouvání
 Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze ve stromové struktuře přesouvat. Ve stromové struktuře složek zobrazené v levém okně se vybere složka. Její obsah, který je třeba přesunout jinam, se zobrazí v pravém okně. Zde se v seznamu vyhledá záznam (ať už je to jiná složka nebo záznam entity např. typu Aktivum) a u něj lze přes ikonu se symbolem tří teček zobrazit menu s nabídkou Přesunout. Zde pak lze změnit zatřídění vybraného záznamu v rámci stromové struktury a kliknutím na tlačítko Potvrdit provést jeho přesun.
@@ -377,10 +378,10 @@ Podmínky, za jakých může úkol změnit jeden stav na jiný, jsou dány logik
 Úkoly (spolu s projekty a procesy) mohou tvořit opatření k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.
 Úkoly jsou tedy typem entit, které lze použít velmi univerzálně v celém systému Zoty. Zároveň je třeba adresovat některé úkoly určitým konkrétním okruhům činností či aktivit, aby je bylo možné ve vztahu k těmto aktivitám snadno vyhledávat, filtrovat a reportovat.
 Proto jsou pro entitu typu Úkol, zavedeny další podtypy, které jsou specifické pro určité typické činnosti v rámci procesu řízení rizik, shody a auditů. Konkrétně jsou to podtypy Přezkoumání a Audit. Pro obecné použití je pak implicitně přednastaven podtyp Obecný (úkol).
-6	VIZUALIZACE
+# 6	VIZUALIZACE
 Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit implementační partneři.
 Případné požadavky či náměty směřujte na vašeho implementačního partnera nebo na email: helpdesk@zoty.cz.
-6.1	Obecné
+## 6.1	Obecné
 Příklad vizualizace vazeb závislostí mezi primárními a podpůrnými aktivy a jejich hodnocení.
 
 ![Vizualizace vazeb primární vs podpůrná aktiva – Wokflow](/img/placeholder/6_Vizualizace_primarni-vs-podpurna-aktiva.png)
@@ -431,7 +432,7 @@ Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zraniteln
 Např. při analýze projektových rizik je zpravidla vhodné provádět jejich hodnocení skrze připojené projektové cíle. Jsou-li totiž riziko či hrozba připojeny přímo k projektu, ovlivňují jej jako celek neboli mají dopad na všechny cíle tohoto projektu. Pokud jsou ale tyto cíle založeny v registru cílů a propojeny s tímto projektem, tak následným připojením rizik či hrozeb lze modelovat jejich dopad na každý dílčí projektový cíl.
 ## 8.2	Aktiva
 Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a kategorizovat tak aktiva dle vlastních preferencí. Podobně, jako u jiných registrů, i zde se lze nechat inspirovat již vytvořenými strukturami složek v rámci přednaplněných katalogů aktiv.
-![Katalogy aktiv](/img/placeholder/8_Katalogy aktiv.png)
+![Katalogy aktiv](/img/placeholder/8_Katalogy-aktiv.png)
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit OPATŘENÍ k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.
 Aktiva lze hodnotit podle uživatelsky definovatelných schémat HODNOCENÍ obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit hodnotu aktiva (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících hodnotu dopadu. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
@@ -442,10 +443,10 @@ Aktiva lze hodnotit podle uživatelsky definovatelných schémat HODNOCENÍ obdo
 Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv není totéž, co hodnota dopadu v rámci hodnocení rizik. Hodnota dopadu sice vychází z hodnoty aktiva, ale v důsledku přijatých bezpečnostních opatření by se měla v čase snižovat. Tzn., že na začátku (před zavedením bezpečnostních opatření) může hodnota dopadu být rovna (nebo se blížit) hodnotě aktiva, ale s implementací bezpečnostních opatření se bude postupně snižovat (jsou-li opatření účinná). Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
 ## 8.3	Hrozby a zranitelnosti
 Při návrhu nejvhodnější struktury složek v příslušných registrech v rámci kategorizace hrozeb a zranitelností lze hledat inspiraci v některém z předdefinovaných katalogů hrozeb a zranitelností, které vychází z uznávaných metodik a norem, konkrétně:
-•	Katalog hrozeb dle Evropské agentury pro bezpečnost sítí a informací (ENISA)
-•	Katalogy hrozeb a zranitelností dle normy ISO 27001 - Systém řízení bezpečnosti informací (ISMS)
-•	Katalog bezpečnostních hrozeb ohrožujících soukromí uživatelů dle frameworku LIDDUN (LINDDUN privacy threats)
-•	Katalog hrozeb dle metodiky STRIDE
+-	Katalog hrozeb dle Evropské agentury pro bezpečnost sítí a informací (ENISA)
+-	Katalogy hrozeb a zranitelností dle normy ISO 27001 - Systém řízení bezpečnosti informací (ISMS)
+-	Katalog bezpečnostních hrozeb ohrožujících soukromí uživatelů dle frameworku LIDDUN (LINDDUN privacy threats)
+-	Katalog hrozeb dle metodiky STRIDE
 
 ![Katalogy hrozeb](/img/placeholder/8_Katalogy-hrozeb.png)
 ![Katalogy zranitelností](/img/placeholder/8_Katalogy-zranitelnosti.png)
@@ -454,18 +455,20 @@ Registr rizik je standardně členěn na rizika informační, finanční, projek
 Riziko může nabývat těchto stavů: Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno.
 Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole Schválení.
 Na kartě rizika je, vedle datumů platnosti a popisných atributů (Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci), i výběrový atribut Strategie zvládání, kde je možné zvolit jednu z následujících možností:
-•	Redukce
-•	Přijetí
-•	Přenesení
-•	Vyhnutí se
+-	Redukce
+-	Přijetí
+-	Přenesení
+-	Vyhnutí se
 Redukce – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby (kdy dopad dosahuje nízkých nebo středně vysokých hodnot – nikoliv kritického pásma) a znamená, že k riziku by měla být připojena opatření, jejichž cílem je snížení rizika na přijatelnou úroveň. Jde pak o činnosti ke snížení pravděpodobnosti nebo negativního dopadu nebo obou těchto parametrů.
 Přijetí – tato strategie se volí zpravidla v případech nízké pravděpodobnosti hrozby a jejího dopadu a znamená, že se s rizikem nic nedělá; pouze se monitoruje a pravidelně přezkoumává, zda se v čase nezvýšila pravděpodobnost hrozby a/nebo jejího dopadu, a tudíž zda není třeba zvolit jinou strategii zvládání.
 Přenesení – tato strategie se volí v případech, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo sdílení prospěchu ze zisku vyplývajícího z rizika. V Zoty je pak možné přidat opatření typu Úkol (např. uzavřít Pojistnou smlouvu), nebo Proces (např. Správa pojištění).
 Vyhnutí se – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysoké míry dopadu (kritické pásmo). V těchto případech se zpravidla volí úkoly týkající se zastavení běžících nebo vyhnutí se plánovaným aktivitám.
 Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a ponechána nebo změněna.
 Rizika lze hodnotit podle uživatelsky definovatelných schémat HODNOCENÍ.
-TIP
-Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojenými úkoly. Správce každého rizika pak bude mít u svých rizik připojen úkol/úkoly s termínem splnění k datu, kdy končí platnost zvolené strategie pro tato rizika.
+:::tip
+**Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojenými úkoly. Správce každého rizika pak bude mít u svých rizik připojen úkol/úkoly s termínem splnění k datu, kdy končí platnost zvolené strategie pro tato rizika.
+:::
+
 # 9	HODNOCENÍ
 Hodnocení je speciální typ entity, jejíž jednotlivé záznamy představují konkrétní instance ohodnocení rizika nebo aktiva nebo hrozby nebo zranitelnosti.
 V rámci hodnocení lze ohodnotit skutečnost nebo cílový stav pro vybrané časové období.
@@ -573,21 +576,21 @@ V systému jsou dostupné atributy typu: boolean, text, string, integer, float, 
 V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení. 
 Systémová propojení jsou typu: Stromová struktura, Výskyt, Zástupce.
 Účel a použití jednotlivých typů systémových propojení:
-•	Stromová struktura je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
-•	Výskyt je využíván v modulu Zoty Designer při vizualizaci propojení entit tvořící procesní modely importované z procesního nástroje ARIS.
-•	Zástupce je odkaz v katalogu na entitu uloženou v registru.
-•	Rodič→Dítě může být propojení jak systémové, tak uživatelské, viz popis níže.
+-	Stromová struktura je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
+-	Výskyt je využíván v modulu Zoty Designer při vizualizaci propojení entit tvořící procesní modely importované z procesního nástroje ARIS.
+-	Zástupce je odkaz v katalogu na entitu uloženou v registru.
+-	Rodič→Dítě může být propojení jak systémové, tak uživatelské, viz popis níže.
 Uživatel pak ještě může při propojení entit volit výběrem z propojení typu: Vztah, Podporuje, Blokuje, Závislost, Zahrnuje, Nezahrnuje, Rodič→Dítě.
 Účel a použití jednotlivých typů propojení:
-•	Vztah je univerzální typ propojení, který lze použít mezi libovolnými typy entit, které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
-•	Podporuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita souvisí s jinou a to způsobem, že jedna z nich (zdroj) podporuje entitu/entity další (cíl). Tímto typem propojení se vytvoří vazba směřující od zdroje k cíli. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru podpory mezi entitami či důležitost entity podpůrné pro entitu podporovanou.
+-	Vztah je univerzální typ propojení, který lze použít mezi libovolnými typy entit, které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
+-	Podporuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita souvisí s jinou a to způsobem, že jedna z nich (zdroj) podporuje entitu/entity další (cíl). Tímto typem propojení se vytvoří vazba směřující od zdroje k cíli. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru podpory mezi entitami či důležitost entity podpůrné pro entitu podporovanou.
 Příkladem je propojení primárních a podpůrných aktiv.
-•	Blokuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita blokuje entitu jinou, tzn. že by nemělo dojít ke změně stavu blokované entity, aniž by předtím došlo ke změně stavu entity, která ji blokuje.
+-	Blokuje je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita blokuje entitu jinou, tzn. že by nemělo dojít ke změně stavu blokované entity, aniž by předtím došlo ke změně stavu entity, která ji blokuje.
 Příkladem je propojení dvou entit typu Úkol, kdy úkol č.2 nelze dokončit nebo na něm začít pracovat dříve, než je dokončen úkol č. 1.
-•	Závislost je jednosměrná vazba vyjadřující obecnou závislost jedné entity na druhé; tento typ vazby je podobný typu vazby Blokuje, na rozdíl od něj ale nijak neurčuje způsob, jakým jedna entita na jiné závisí (tj. neříká, že je např. „blocker“), není tedy tak striktní. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru závislosti jedné entity na druhé.
-•	Zahrnuje je jednosměrné vazba, pomocí které jedna entita agreguje jiné entity.
-•	Nezahrnuje je specifický způsob propojení pomocí jednosměrné vazby, kdy jedna entita vylučuje propojení s jinou entitou/entitami; to jsou případy, kdy je třeba např. dokumentovat výjimku z propojení a nelze to tedy provést tak, že se entity jednoduše pouze nepropojí.
-•	Rodič→Dítě je jednosměrné propojení od jedné entity – rodiče, na jinou entitu – dítě. Propojuje entity, kde jedna z nich nemůže existovat nezávisle na jiné, tzn. dítě (např. hodnocení) nemůže existovat bez rodiče (zde např. aktivum, riziko atp.). Tento typ propojení může být též vytvářen zcela automaticky systémem. Například je-li vytvářeno hodnocení nějaké entity. Pak tato entita vystupuje v roli „rodiče“ a připojené hodnocení v roli „dítěte“. Vše se realizuje na pozadí, bez zásahu uživatele.
+-	Závislost je jednosměrná vazba vyjadřující obecnou závislost jedné entity na druhé; tento typ vazby je podobný typu vazby Blokuje, na rozdíl od něj ale nijak neurčuje způsob, jakým jedna entita na jiné závisí (tj. neříká, že je např. „blocker“), není tedy tak striktní. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu „Váha“ (udává se v procentech v rozsahu 10-100 %) určit míru závislosti jedné entity na druhé.
+-	Zahrnuje je jednosměrné vazba, pomocí které jedna entita agreguje jiné entity.
+-	Nezahrnuje je specifický způsob propojení pomocí jednosměrné vazby, kdy jedna entita vylučuje propojení s jinou entitou/entitami; to jsou případy, kdy je třeba např. dokumentovat výjimku z propojení a nelze to tedy provést tak, že se entity jednoduše pouze nepropojí.
+-	Rodič→Dítě je jednosměrné propojení od jedné entity – rodiče, na jinou entitu – dítě. Propojuje entity, kde jedna z nich nemůže existovat nezávisle na jiné, tzn. dítě (např. hodnocení) nemůže existovat bez rodiče (zde např. aktivum, riziko atp.). Tento typ propojení může být též vytvářen zcela automaticky systémem. Například je-li vytvářeno hodnocení nějaké entity. Pak tato entita vystupuje v roli „rodiče“ a připojené hodnocení v roli „dítěte“. Vše se realizuje na pozadí, bez zásahu uživatele.
 Propojení entit pomocí vazby typu Rodič -> Dítě je také nezbytné, má-li jedna hodnocená entita (dítě) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu.
 ##### 16.1.2.4	Stavy
 V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsahu hodnot: Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno.
@@ -614,43 +617,43 @@ Aby bylo možné stávající schéma, které je publikováno, upravit, je třeb
 
 Schéma hodnocení je možné přiřadit metodě. Pak bude viditelné pouze u této konkrétní metody.
 Při definici schématu hodnocení je třeba dále nastavit:
-•	Typ hodnocení – zda se podle definovaného schématu budou hodnotit aktiva, rizika, hrozby nebo zranitelnosti
-•	Název – libovolný uživatelský název pro schéma hodnocení
-•	Možnosti stavu – volba, zda se při hodnocení má uživateli nabízet hodnocení pro aktuální/skutečný stav nebo pro cílový nebo zda se nabídnou k hodnocení obě možnosti
-•	Možnosti dopadu – volba, zda se při hodnocení má uživateli nabízet hodnocení dopadu na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího
-•	Perioda hodnocení – volba, zda časovým obdobím pro hodnocení aktuálního/skutečného stavu má být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu.
+-	Typ hodnocení – zda se podle definovaného schématu budou hodnotit aktiva, rizika, hrozby nebo zranitelnosti
+-	Název – libovolný uživatelský název pro schéma hodnocení
+-	Možnosti stavu – volba, zda se při hodnocení má uživateli nabízet hodnocení pro aktuální/skutečný stav nebo pro cílový nebo zda se nabídnou k hodnocení obě možnosti
+-	Možnosti dopadu – volba, zda se při hodnocení má uživateli nabízet hodnocení dopadu na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího
+-	Perioda hodnocení – volba, zda časovým obdobím pro hodnocení aktuálního/skutečného stavu má být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu.
 V dalším kroku lze již definovat metriky pomocí tlačítka Přidat metriku. Metrika je jedním z parametrů hodnocení, pro který lze definovat:
-•	Typ – určuje způsob, jakým bude metrika v definovaném schématu hodnocení použita. Metrika může být v rámci schématu zcela nově definována (jak je popsáno níže) pomocí volby
-o	Vytvořit metriku
-o	Metrika – lze použít některou ze stávajících, již definovaných metrik v rámci jiných schémat hodnocení.
-o	Schéma hodnocení – lze použít výsledné skóre jiného schématu hodnocení, jehož hodnotu lze převzít do této metriky. Při této volbě je třeba mít na paměti, že entita, která v rámci hodnocení přebírá výsledné skóre hodnocení jiné entity, musí být s touto entitou propojena vazbou rodič-potomek a zároveň, pokud je těmto entitám přiřazena některá metoda, musí být stejná.
+-	Typ – určuje způsob, jakým bude metrika v definovaném schématu hodnocení použita. Metrika může být v rámci schématu zcela nově definována (jak je popsáno níže) pomocí volby
+*	Vytvořit metriku
+*	Metrika – lze použít některou ze stávajících, již definovaných metrik v rámci jiných schémat hodnocení.
+*	Schéma hodnocení – lze použít výsledné skóre jiného schématu hodnocení, jehož hodnotu lze převzít do této metriky. Při této volbě je třeba mít na paměti, že entita, která v rámci hodnocení přebírá výsledné skóre hodnocení jiné entity, musí být s touto entitou propojena vazbou rodič-potomek a zároveň, pokud je těmto entitám přiřazena některá metoda, musí být stejná.
 
 ![Typy metrik hodnocení](/img/placeholder/16_Hodnocení_Metrika-Typ.png)
 
 Níže uvedené dokumentuje postup a význam jednotlivých atributů pro volbu Vytvořit metriku:
-•	Název (např. Dopad nebo Pravděpodobnost, Závažnost, Dostupnost, Integrita atp.)
-•	Osa – volba, zda se má parametr vynášet do osy X nebo Y při prezentaci výsledného hodnocení ve formátu dvou-rozměrného grafu typu heatmapa. Volba osy Y se zpřístupní až tehdy je li definována více než jedna metrika. Hodnocení mohou být jak jednorozměrná (pouze v ose X), tak dvourozměrná (osa X a Y).
-•	Pořadí – pořadí v jakém se metrika zobrazí uživateli v rámci ostatních definovaných metrik při vizualizaci heatmapy, která se pak uživatelům nabízí pro provedení konkrétních ohodnocení.
-•	Vstupní data – lze zvolit, v jakém formátu bude uživatel zadávat vstupní data pro daný parametr a v jakém rozsahu OD (minimum) DO (maximum), k dispozici jsou volby:
-o	Hodnota – uživatel může zadat jednu konkrétní hodnotu v rozsahu OD-DO
-o	Hodnota (rozmezí) - uživatel může zadat více hodnot v rozsahu OD-DO v rámci definovaných pásem (viz níže)
-o	Procenta – uživatel může zadat jedno konkrétní procento v rozsahu OD-DO
-o	Procenta (rozmezí) - uživatel může zadat více procent v rozsahu OD-DO v rámci definovaných pásem (viz níže)
-•	Popis – volitelná poznámka s doplňujícím popisem k názvu. Tyto popisky se pak mohou zobrazit uživateli, pokud při hodnocení podrží ukazatel myši nad příslušným polem heatmapy reprezentujícím předdefinovanou hodnotu v daném pásmu.
+-	Název (např. Dopad nebo Pravděpodobnost, Závažnost, Dostupnost, Integrita atp.)
+-	Osa – volba, zda se má parametr vynášet do osy X nebo Y při prezentaci výsledného hodnocení ve formátu dvou-rozměrného grafu typu heatmapa. Volba osy Y se zpřístupní až tehdy je li definována více než jedna metrika. Hodnocení mohou být jak jednorozměrná (pouze v ose X), tak dvourozměrná (osa X a Y).
+-	Pořadí – pořadí v jakém se metrika zobrazí uživateli v rámci ostatních definovaných metrik při vizualizaci heatmapy, která se pak uživatelům nabízí pro provedení konkrétních ohodnocení.
+-	Vstupní data – lze zvolit, v jakém formátu bude uživatel zadávat vstupní data pro daný parametr a v jakém rozsahu OD (minimum) DO (maximum), k dispozici jsou volby:
+*	Hodnota – uživatel může zadat jednu konkrétní hodnotu v rozsahu OD-DO
+*	Hodnota (rozmezí) - uživatel může zadat více hodnot v rozsahu OD-DO v rámci definovaných pásem (viz níže)
+*	Procenta – uživatel může zadat jedno konkrétní procento v rozsahu OD-DO
+*	Procenta (rozmezí) - uživatel může zadat více procent v rozsahu OD-DO v rámci definovaných pásem (viz níže)
+-	Popis – volitelná poznámka s doplňujícím popisem k názvu. Tyto popisky se pak mohou zobrazit uživateli, pokud při hodnocení podrží ukazatel myši nad příslušným polem heatmapy reprezentujícím předdefinovanou hodnotu v daném pásmu.
 ![Definice metrik hodnocení](/img/placeholder/16_Hodnoceni_Zobrazeni-popisu-k-nazvu.png)
-•	Pásmové rozmezí – definice pásem, v rámci kterých budou zadávána vstupní data pro daný parametr. Pásma lze přidávat pomocí symbolu **+** a odebírat kliknutím na symbol koše v pásmu, které se má odstranit.
+-	Pásmové rozmezí – definice pásem, v rámci kterých budou zadávána vstupní data pro daný parametr. Pásma lze přidávat pomocí symbolu **+** a odebírat kliknutím na symbol koše v pásmu, které se má odstranit.
 Pro každé pásmo lze definovat hodnotu (nebo procento, podle toho, jaký formát vstupních dat byl zvolen v předchozím kroku) a k této hodnotě (nebo procentu) zvolit úroveň, kterou má tato hodnota reprezentovat, včetně přednastavené barvy, kterou bude zobrazena v heatmapě. K výběru jsou tyto předdefinované úrovně hodnocení: Nulové, Velmi nízké, Nízké, Velmi malé, Malé, Střední, Významné, Velmi významné, Vysoké, Velmi vysoké, Kritické. Pro všechny tyto úrovně lze definovat vlastní názvy aktivací volby Definovat vlastní názvy. Lze k nim také doplnit volitelnou poznámku aktivací volby Doprovodný popis.
 Na obrázku níže je prezentován příklad výsledné definice pásem hodnocení pro jeden z parametrů hodnocení aktiv – Integrita. Na dalším obrázku pak příklad možného vzorce výpočtu hodnoty aktiva, který vedle integrity zahrnuje další 2 hodnocené parametry – důvěrnost a dostupnost.
 
 ![Definice pásem ve schématu hodnocení](/img/placeholder/16_Nastaveni_Hodnoceni_pasma.png)
 
-•	Vzorec výpočtu hodnocení – výsledné skóre hodnocení se spočte na základě vstupních dat, která uživatel vybere z předdefinovaných hodnot pro jednotlivá pásma hodnocení. Vzorec je uživatelsky definovatelný. V rámci jeho definice lze použít všechny metriky definované v předchozím kroku a s nimi provádět základní operace, jako jsou sčítání, odčítání, násobení, dělení, funkce zaokrouhlení nahoru (Round Up), zaokrouhlení dolů (Round Down), vyhledání maxima z množiny hodnot (MAX), vyhledání minima z množiny hodnot (MIN). Použít lze přitom závorky, čárky pro oddělení hodnot při použití funkcí nebo libovolný celočíselný koeficient pro úpravu celého výpočtu.
+-	Vzorec výpočtu hodnocení – výsledné skóre hodnocení se spočte na základě vstupních dat, která uživatel vybere z předdefinovaných hodnot pro jednotlivá pásma hodnocení. Vzorec je uživatelsky definovatelný. V rámci jeho definice lze použít všechny metriky definované v předchozím kroku a s nimi provádět základní operace, jako jsou sčítání, odčítání, násobení, dělení, funkce zaokrouhlení nahoru (Round Up), zaokrouhlení dolů (Round Down), vyhledání maxima z množiny hodnot (MAX), vyhledání minima z množiny hodnot (MIN). Použít lze přitom závorky, čárky pro oddělení hodnot při použití funkcí nebo libovolný celočíselný koeficient pro úpravu celého výpočtu.
 ![Definice vzorce ve schématu hodnocení](/img/placeholder/16_Nastaveni_Hodnoceni-vzorec-definice.png)
 Příklady použití základních funkcí:
-o	MAX (3,4,5) = 5
-o	MIN (3,4,5) = 3
-o	Round Up (1.4) = 2
-o	Round Down (1.6) = 1
+*	MAX (3,4,5) = 5
+*	MIN (3,4,5) = 3
+*	Round Up (1.4) = 2
+*	Round Down (1.6) = 1
 Tlačítko Zkontrolovat provede kontrolu logické správnosti celého definovaného vzorce a oznámí, zda je matematicky správný nebo zda obsahuje chybu. Bez provedené kontroly nelze schéma hodnocení uložit.
 ![Kontrola vzorce ve schématu hodnocení](/img/placeholder/16_Nastaveni_Hodnoceni_Vzorec-Zkontrolovat.png)
 Výsledné pásmové hodnocení je heatmapa, která může zobrazovat jednoduché jednorozměrné hodnocení pouze v jedné ose X.
