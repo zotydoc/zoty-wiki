@@ -107,7 +107,7 @@ V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle n
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 Kterýkoliv z výsledků vyhledávání lze pak s pomocí ikony špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, připnout do samostatných záložek, které jsou ve spodní části obrazovky připraveny zobrazit na jedno kliknutí detail příslušného záznamu.
 
-![Vyhledávání globálně s připínáním výsledků do rychlých záložek](/img/placeholder/3_Vyhledavani_globalni-vcetne-pripinani.png)
+![Vyhledávání globálně s připínáním výsledků do rychlých záložek](/img/placeholder/3_vyhledavani_globalni-vcetne-pripinani.png)
 
 Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, které podporují takovýto způsob zadání výběrem ze seznamu.
 Je-li zadávanou hodnotou atributu jiná entita, lze v seznamu entit pro výběr vyhledávat podle názvu nebo klíče entity.
@@ -122,8 +122,8 @@ Nebo lze také zvolit uživatelsky definovatelný filtr a nastavit jej dle vlast
 Uživatelské filtry nabízejí možnost definovat filtrační podmínky dle obsahu různých atributů či vlastností, seskupených do filtračních kategorií. Pokud uživatel volí filtrační podmínky z atributů či vlastností v rámci jedné takovéto kategorie, aplikuje se mezi nimi podmínka NEBO (OR). Zatímco pokud je kombinuje v rámci různých kategorií, aplikuje se podmínka A (AND).
 Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech textových fragmentů (paragrafů, odstavců, písmen...) nějakého zákona (normy, směrnice, smlouvy atp.) mají garanta Martinu NEBO Adama NEBO jsou označeny jako auditní (daný fragment reprezentuje požadavek, který má být ověřován v rámci auditu, zda je s ním organizace ve shodě) A mají připojen alespoň jeden komentář.
 
-![Filtr - definice](/img/placeholder/3_Filtr_kombinace_filtracnich_kategorii.png "Filtr kombinace")
-<img src="/img/placeholder/3_Filtr_kombinace_filtracnich_kategorii.png"  title="Filter kombinace" width="75%" />
+![Filtr - definice](/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png "Filtr kombinace")
+<img src="/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png"  title="Filter kombinace" width="75%" />
 
 ## 3.4	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.

@@ -76,9 +76,10 @@ url: 'https://zoty.cz',
       logo: {
         alt: 'Zoty Logo',
         src: 'img/zoty-logo.png',
+        href: 'https://zoty.cz',
       },
       items: [
-        {
+     /*   {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
@@ -89,7 +90,7 @@ url: 'https://zoty.cz',
           href: 'https://zoty.cz',
           label: 'zoty.cz',
           position: 'right',
-        },
+        },*/
       ],
     },
     footer: {
@@ -98,17 +99,17 @@ url: 'https://zoty.cz',
         {
           title: 'Docs',
           items: [
-            {
+           /* {
               label: 'Tutorial',
               to: '/docs/intro',
-            },
+            },*/
             {
               label: 'Uživatelský manuál',
               to: '/uzivatelsky-manual-zoty',
             },
           ],
         },
-        {
+        /*{
           title: 'Community',
           items: [
             {
@@ -137,7 +138,7 @@ url: 'https://zoty.cz',
               href: 'https://github.com/facebook/docusaurus',
             },
           ],
-        },
+        },*/
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Zoty, IDS Advisory s.r.o.`,
     },
