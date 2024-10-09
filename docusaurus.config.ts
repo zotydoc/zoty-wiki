@@ -84,13 +84,16 @@ url: 'https://zoty.cz',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        },*/
+
+        {to: '/uzivatelsky-manual-zoty', label: 'Uživatelský manuál ZOTY [Platný od v 1.10]', position: 'left'},
+        
+        /*{to: '/blog', label: 'Blog', position: 'left'},*/
         {
           href: 'https://zoty.cz',
           label: 'zoty.cz',
           position: 'right',
-        },*/
+        },
       ],
     },
     footer: {
@@ -140,25 +143,29 @@ url: 'https://zoty.cz',
           ],
         },*/
       ],
+
+
+      
       copyright: `Copyright © ${new Date().getFullYear()} Zoty, IDS Advisory s.r.o.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+    /*RV table of conte*/ 
+    themeConfig: {
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
+    },
+
+    
   } satisfies Preset.ThemeConfig,
 };
 
 export default config;
 
-/* RV to test
-export default {
-  themeConfig: {
-    tableOfContents: {
-      minHeadingLevel: 2,
-      maxHeadingLevel: 5,
-    },
-  },
-};
 
-*/
+
