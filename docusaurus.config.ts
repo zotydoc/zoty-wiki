@@ -9,16 +9,18 @@ const config: Config = {
 
   // Set the production url of your site here
   //url: 'https://your-docusaurus-site.example.com',
-url: 'https://zoty.cz',
+  url: 'https://zoty.cz',
 
 
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/manual/',
+  baseUrl: '/doc/',
+
+  
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'Zoty', // Usually your GitHub org/user name.
   projectName: 'zoty-wiki', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -161,11 +163,24 @@ url: 'https://zoty.cz',
       },
     },
 
-    
   } satisfies Preset.ThemeConfig,
+
+
+
 };
-
 export default config;
-
-
-
+/*
+export default {
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        googleAnalytics: {
+          trackingID: 'G-HN5C97YQ8Q',
+          anonymizeIP: true,
+        },
+      },
+    ],
+  ],
+};
+*/
