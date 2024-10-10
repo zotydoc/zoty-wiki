@@ -750,7 +750,7 @@ Uživatel si může definovat, jaké organizace (společnosti, organizační slo
 Jsou-li některá tato data spravována v externím systému, tak vyplněním atributu "ID externího zdroje dat" lze zajistit automatickou synchronizaci např. organizací a uživatelských účtů v Zoty a jejich přiřazení do té které organizace.
 Pokud je pak štítkem s názvem zde definované organizace označena složka či entita, tak bude viditelná pouze pro ty uživatele, kteří jsou jejími členy (viz kapitola Oprávnění).
 #### 16.2.2	Uživatelé
-Přehled zobrazuje seznam všech uživatelů, kteří mají přístup do aplikace Zoty. 
+
 ***Přehled*** zobrazuje seznam všech uživatelů, kteří mají přístup do aplikace Zoty. 
 Symbol tří teček na konci každého záznamu zobrazí menu s možností upravit základní identifikační a přihlašovací údaje u vybraného uživatele, jemu přiřazené role, celý jeho účet odstranit nebo anonymizovat záznamy o něm za účelem plnění požadavků na ochranu osobních údajů (GDPR). 
 Záložka ***Vizualizace*** pak poskytuje graf nejaktivnějších uživatelů podle celkového času, který strávili v aplikaci Zoty v aktuálním dni.
