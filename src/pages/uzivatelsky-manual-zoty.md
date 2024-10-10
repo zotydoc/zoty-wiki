@@ -247,12 +247,12 @@ Tato schopnost omezení přístupu na vybraná data v žádném případě nenah
 ## 3.8	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: *Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení*.
 
-![Kalendář](/img/placeholder/3_Kalendar.png)
+![Kalendář](/img/placeholder/3_kalendar.png)
 
 ### 3.9	Schválení
 V této sekci se zobrazuje seznam entit, které musí nejprve projít procesem schválení. Typy nově vytvářených entit, které prochází schvalovacím workflow, jsou rizika a aktiva.
 V nástrojové liště se zobrazuje ikona, která upozorňuje na počet záznamů čekajících na schválení.
-![Notifikace – entity ke schválení](/img/placeholder/3_Schvaleni_notifikace.png)
+![Notifikace – entity ke schválení](/img/placeholder/3_schvaleni_notifikace.png)
 Po kliknutí na notifikační ikonu se zobrazí výpis záznamů všech entit čekajících na schválení. Ty lze schvalovat, a to buď jednotlivě nebo hromadně.
 
 ![Schválení](/img/placeholder/3_schvaleni_jednotlive.png)
@@ -267,7 +267,7 @@ Hromadně lze schválit entity tak, jak jsou, tedy beze změn. Chce-li schvalova
 
 Případné úpravy či doplnění chybějících informací ve schvalované entitě, se v posledním kroku schvalovacího workflow mohou potvrdit a schválit volbou stavu *Schválit + Aplikovat změny*. Nebo může být stav schválení zvolen *Schválit beze změny*, *Vrátit* či *Zamítnout*. Zároveň může schvalovatel k tomuto schvalovacím workflow připojit svůj komentář.
 
-![Schválení – Návrh úprav](/img/placeholder/3_Schvaleni_jednotlive_potvrzeni-zmen.png)
+![Schválení – Návrh úprav](/img/placeholder/3_schvaleni_jednotlive_potvrzeni-zmen.png)
 
 Kliknutím na tlačítko ***Potvrdit*** je schvalovací workflow dokončeno a příslušná entita schválena nebo vrácena žadateli (např. k doplnění některých informací potřebných k úspěšnému schválení) nebo je schválení zamítnuto.
 
@@ -665,7 +665,7 @@ Tlačítko **Přidat** sloupec nabídne výběr ze všech entit typu zranitelnos
 Se znalostí, jaké hrozby, mohou působit na jaké kategorie aktiv a jaké zranitelnosti mohou při tom zneužít, pak systém pracuje tak, že přednabízí uživatelům pouze smysluplná propojení mezi aktivem zranitelností a hrozbou.    
 K tomu, aby byl tento koncept funkční, je pouze třeba (vedle správné jednorázové konfigurace matice), aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie (reprezentované složkami v registru či katalozích aktiv).
 
-####v 16.1.4	Hodnocení
+#### 16.1.4	Hodnocení
 V rámci **Administrace – Nastavení – Hodnocení** lze zobrazit přehled stávajících definic schémat hodnocení, upravovat nastavení stávajících schémat nebo založit definici nového schématu hodnocení.
 
 ![Přehled schémat hodnocení](/img/placeholder/16_hodnoceni_prehled-schemat.png)
