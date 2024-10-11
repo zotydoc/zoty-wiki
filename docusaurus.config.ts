@@ -65,6 +65,19 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+/*
+    //GA
+    [
+      '@docusaurus/preset-classic',
+      {
+        gtag: {
+          trackingID: 'G-HN5C97YQ8Q',
+          anonymizeIP: true,
+        },
+      },
+    ],
+*/
+
   ],
 
 
@@ -169,18 +182,3 @@ const config: Config = {
 
 };
 export default config;
-/*
-export default {
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      {
-        googleAnalytics: {
-          trackingID: 'G-HN5C97YQ8Q',
-          anonymizeIP: true,
-        },
-      },
-    ],
-  ],
-};
-*/

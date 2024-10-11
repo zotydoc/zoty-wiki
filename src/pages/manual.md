@@ -13,20 +13,18 @@ toc_max_heading_level: 5
 
 ##	ÚČEL DOKUMENTU
 Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis funkcionalit aplikace Zoty. Nedává univerzální návod pro implementaci Zoty v konkrétní organizaci. Nastavení celého systému doporučujeme vždy konzultovat s kvalifikovaným implementačním partnerem. Navrhne řešení a doporučí, jak využít dané funkcionality tak, aby co nejlépe podpořily proces řízení aktiv a rizik s ohledem na zvyklosti či specifické potřeby konkrétní organizace.
+
 :::info
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
  Budeme vám vděční za veškeré podněty a připomínky.
 :::
                        
-
-
 ##	ZÁKLADNÍ POUŽÍVANÁ TERMINOLOGIE
 
 - **Entita** obecný termín pro veškeré objekty v systému, které mohou být různého typu, přičemž entity stejného typu mají shodné chování a vlastnosti (vlastnosti jsou definované atributy). Systémové entity mohou být např. typu *Riziko, Hrozba, Zranitelnost, Aktivum, Projekt, Proces, Úkol, Cíl, Incident, Hodnocení* atp. Seznam všech typů entit, se kterými lze v systému pracovat, včetně jejich zkratek (které jsou součástí tzv. klíče jednoznačně identifikujícího všechny záznamy v Zoty), jsou uvedeny níže v rámci popisu atributu Klíč. Pro každou entitu lze také nastavit její ***Důležitost*** v rozsahu *1-Nevýznamná, 2-Nízká, 3-Normální, 4-Vysoká, 5-Kritická*.
 
 - **Atribut** – informace popisující vlastnosti entity daného typu, např. *Název, Popis, Datum platnosti, Správce, Náklady* atp.
-
- - **Záznam** – výskyt jedné konkrétní entity; dle typu entity lze pak záznamy třídit do stejnojmenných kategorií (*Rizika, Aktiva, Úkoly* atp.). Pro záznam libovolné entity lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole Omezení přístupu na složky a záznamy.
+- **Záznam** – výskyt jedné konkrétní entity; dle typu entity lze pak záznamy třídit do stejnojmenných kategorií (*Rizika, Aktiva, Úkoly* atp.). Pro záznam libovolné entity lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole Omezení přístupu na složky a záznamy.
 - **Klíč** – entity mají atribut *Klíč*, který usnadňuje vyhledávání a třídění záznamů. Klíč je alfanumerický kód, který je systémem automaticky generován a je složen z pořadového čísla a kódu reprezentujícího zkratku typu entity, ke které záznam patří. Např. riziko může mít klíč „*R13*“. Pokud zkratka typu entity obsahuje na konci „*Z*“, indikuje to záznamy přednaplněné v systému Zoty výrobcem. Ty mohou být aktualizovány v rámci distribuce nových verzí aplikace.
 
     Zkratky používané při generování klíče pro jednotlivé typy entit:
@@ -77,8 +75,6 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 - **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole Metody.
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
 
-
-
 ## 3	UŽIVATELSKÉ PROSTŘEDÍ {#myUserExp}
 ### 3.1	Ovládací panel a nástrojová lišta
 Menu v levém svislém panelu umožňuje přístup k jednotlivým funkcionalitám Zoty, členěných do sekcí, stejně jako i k různým typům entit, členěných do kategorií. Panel lze jednoduše zúžit či rozšířit kliknutím na ovládací prvek vlevo nahoře a zvětšit tak hlavní pracovní plochu vpravo vedle panelu.
@@ -96,8 +92,6 @@ Horní nástrojová lišta pak zobrazuje sekce:
 V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
 ![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
-
-
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 
 :::tip
@@ -106,14 +100,13 @@ Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, um
 
 ![Vyhledávání globálně s připínáním výsledků do rychlých záložek](/img/placeholder/3_vyhledavani_globalni-vcetne-pripinani.png)
 
-Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, které podporují takovýto způsob zadání výběrem ze seznamu.
+Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, jež podporují takovýto způsob zadání výběrem ze seznamu.
 Je-li zadávanou hodnotou atributu jiná entita, lze v seznamu entit pro výběr vyhledávat podle názvu nebo klíče entity.
 Je-li zadávanou hodnotou atributu uživatel, lze v seznamu entit pro výběr uživatele vyhledávat podle jména nebo příjmení nebo role přiřazené uživateli.
 ### 3.3	Filtry
 V seznamech lze rychle filtrovat záznamy volbou z dostupných, výrobcem předdefinovaných filtrů.
 
 ![Filtry](/img/placeholder/3_filtry.png)
-
 
 Nebo lze také zvolit uživatelsky definovatelný filtr a nastavit jej dle vlastních preferencí.
 Uživatelské filtry nabízejí možnost definovat filtrační podmínky dle obsahu různých atributů či vlastností, seskupených do filtračních kategorií. Pokud uživatel volí filtrační podmínky z atributů či vlastností v rámci jedné takovéto kategorie, aplikuje se mezi nimi podmínka ***NEBO*** (*OR*). Zatímco pokud je kombinuje v rámci různých kategorií, aplikuje se podmínka ***A*** (*AND*).
@@ -175,7 +168,6 @@ Zoty automaticky zaznamenává aktivity uživatelů v systému. *Aktivity* zobra
 Pro každou složku i entitu lze nastavit různé úrovně oprávnění přístupu.
 > Zoty zde umožňuje aplikovat princip dědičnosti. Oprávnění lze definovat pro vybranou složku pouze jednou a automaticky je pak dědit do všech podřízených složek a entit v nich zatříděných.
 
-
 Ve výchozím nastavení jsou složky či záznamy v nich uložené viditelné všem uživatelům. To je zajištěno pomocí atributu ***Přístup***, který je při vytváření všech nových složek či entit automaticky přednastaven na hodnotu Veřejný.    
 Pro omezení přístupu k vybraným složkám či záznamům je třeba atribut ***Přístup*** přepnout do stavu *Omezený* nebo *Soukromý* v nastavení oprávnění na detailu příslušné entity či složky.
 
@@ -209,7 +201,6 @@ A opět platí – všechna stávající oprávnění jsou touto akcí odstraně
 Pokud v rámci nastavení oprávnění je v atributu "Přístup" dostupná volba "Zdědit přístup", není zde pak dostupná volba "Veřejný". Tyto dvě volby se totiž vzájemně vylučují.
 Pokud je na složce nastavena dědičnost, tak se uplatní nejen na stávající podřízené složky, ale automaticky i na všechny ty, které budou v budoucnu teprve vytvořené.
 :::
-
 
 #### 3.7.1	Oprávnění z pohledu uživatele
 Pokud je pro přihlášeného uživatele složka či entita viditelná, ale má nastaveno jakékoliv omezení v nastavení oprávnění pro některou z jeho rolí či přímo pro něj, tak se mu v detailu příslušné složky či entity zobrazí ikona "**!**" s varováním, že oprávnění k této složce nebo entitě jsou omezena. Po najetí myší nad tuto ikonu se zobrazí tooltip s informací, jaká konkrétní omezení jsou zde pro něj nastavena a pokud jsou zděděna z nadřízeného uzlu, tak je zobrazen i název složky reprezentující nadřízený uzel, odkud se tato oprávnění dědí.
@@ -330,10 +321,13 @@ V pravé části horní nástrojové lišty se zobrazuje jméno přihlášeného
 -	Můj profil
 -	Mé nastavení
 -	Odhlásit se
+
 #### 3.11.1	Aktivity
 Aktivity zobrazí všechny uživatelem provedené aktivity v Zoty, které se týkají zejména vytváření, úprav či odstranění složek, entit či jejich atributů, připojování komentářů, štítků, dokumentů k entitám, přiřazování správců entit, apod.
+
 #### 3.11.2	Můj profil
 V této sekci lze zobrazit a editovat přihlašovací a identifikační údaje přihlášeného uživatele. Tyto údaje má možnost měnit pouze přihlášený uživatel nebo administrátor aplikace s příslušným oprávněním.
+
 #### 3.11.3	Mé nastavení
 V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách Obecné a Email notifikace (viz kap. Notifikace)
 V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách **Obecné** a **Email notifikace** (viz kap. Notifikace)    
@@ -347,7 +341,7 @@ Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licen
 Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
 :::
 #### 3.13	Složky
-Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. m    
+Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. 
 Každá množina záznamů entit určitého typu může mít svoji vlastní strukturu složek a podsložek. Např. záznamy entit typu *Aktiva* mohou být strukturovány zcela odlišně než *Hrozby* či *Rizika*.     
 Dokonce i záznamy entit jednoho typu, např. *Aktiva*, lze uspořádat do složek více různými způsoby v rámci tzv. katalogů. Na jedna a ta samá data je pak možné dívat se různými pohledy, aby tak bylo možné podpořit různé metodiky (např. kategorizace aktiv a práce s nimi může být jiná dle kybernetického zákona, jiná dle ISO 27001, atp.). Strukturace složek na více možných způsobů se dá také s výhodou využít i při sestavování různých reportů a vizualizacích dat, kde lze pak sumarizovat stejná data dle různých skupin či kategorií, reprezentovaných právě složkami.    
 Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskytuje ve více různých složkách v rámci různých katalogů, existuje jedna definice struktury složek definovaná pro každý typ entity, tzv. ***Registr***. V registru má každý výskyt entity daného typu jedinečnou definici, která se pak může vyskytovat, formou odkazu na ni, v dalších, uživatelsky definovatelných pohledech, které se nazývají ***Katalogy***.    
@@ -452,7 +446,6 @@ Obsah každého požadavku je tvořen fragmenty textu, reprezentující ve struk
 ![Garant požadavku](/img/placeholder/7_pozadavek_kybersecurity_propojeni-garant.png)
 
 Aby bylo na první pohled vidět, za kterými fragmenty textu se skrývají další připojené informace, zobrazuje se u nich notifikace s indikací počtu takto připojených informací. Lze tak, i u velmi obsáhlého dokumentu, snadno odhalit, v kterých částech jeho obsahu se „něco děje“ (viz obrázek výše)
-
 
 :::tip
  V celém obsahu dokumentu lze snadno zobrazit pouze ty fragmenty textu, za kterými se skrývají další informace. Stačí jednoduše kliknout na ikonu filtru.
@@ -614,11 +607,8 @@ Obsahuje podsekce **Nastavení**, **Účet** a **Koš**.
 V sekci Administrace lze provádět řadu nastavení samotné aplikace včetně dat, se kterými pracuje, spravovat Zoty účet se všemi uživateli a jejich rolemi a provádět řadu dalších systémových nastavení, která mohou mít zásadní vliv na fungování celé aplikace.
 
 :::warning
-
 Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení oprávnění – viz kapitola Oprávnění.
-
 :::
-
 
 ### 16.1	Nastavení
 V této sekci jsou dostupná všechna důležitá nastavení, která ovlivňují chování aplikace, včetně exportů a importů dat, tvorby zakázkových reportů, konfigurace metod, schémat hodnocení, znalostní báze, multijazyčnosti, oprávnění pro přístup do různých částí aplikace a řady dalších nastavení, jak je popsáno v podkapitolách níže.
@@ -766,8 +756,8 @@ V administraci účtu jsou v rámci příslušných záložek definovány organi
 Uživatel si může definovat, jaké organizace (společnosti, organizační složky či jiné subjekty) jsou součástí jeho organizační struktury. Zároveň pak k jednotlivým organizacím nebo organizačním jednotkám (např. oddělením) přiřadit uživatele, kteří do nich patří.
 Jsou-li některá tato data spravována v externím systému, tak vyplněním atributu "ID externího zdroje dat" lze zajistit automatickou synchronizaci např. organizací a uživatelských účtů v Zoty a jejich přiřazení do té které organizace.
 Pokud je pak štítkem s názvem zde definované organizace označena složka či entita, tak bude viditelná pouze pro ty uživatele, kteří jsou jejími členy (viz kapitola Oprávnění).
-#### 16.2.2	Uživatelé
 
+#### 16.2.2	Uživatelé
 ***Přehled*** zobrazuje seznam všech uživatelů, kteří mají přístup do aplikace Zoty. 
 Symbol tří teček na konci každého záznamu zobrazí menu s možností upravit základní identifikační a přihlašovací údaje u vybraného uživatele, jemu přiřazené role, celý jeho účet odstranit nebo anonymizovat záznamy o něm za účelem plnění požadavků na ochranu osobních údajů (GDPR). 
 Záložka ***Vizualizace*** pak poskytuje graf nejaktivnějších uživatelů podle celkového času, který strávili v aplikaci Zoty v aktuálním dni.
