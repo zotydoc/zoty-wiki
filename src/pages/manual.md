@@ -31,9 +31,6 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 
     Zkratky používané při generování klíče pro jednotlivé typy entit:
 
-
-
-
 -	***A*** – Aktivum (obecného typu) 
 -	***AGR*** – Smlouva
 -	***AUDN*** – Neshoda auditu
@@ -75,7 +72,7 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 - **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole Omezení přístupu na složky a záznamy. 
 - **Detail** – způsob zobrazení jednoho vybraného záznamu v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, **Aktivity** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
-- **Registr** – výrobcem předdefinovaná struktura složek (např. Majetek, Informace, Procesy atp.), kde lze ukládat a spravovat entity daného typu (např. Aktiva).
+- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Informace, Procesy atp.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
 - **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole Metody.
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
@@ -104,7 +101,7 @@ V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle n
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 
 :::tip
-Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterýkoliv "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
+Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterékoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
 :::
 
 ![Vyhledávání globálně s připínáním výsledků do rychlých záložek](/img/placeholder/3_vyhledavani_globalni-vcetne-pripinani.png)
@@ -209,7 +206,7 @@ Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno p
 A opět platí – všechna stávající oprávnění jsou touto akcí odstraněna a nahrazena těmi, které se zdědí z nadřízeného uzlu.
 
 :::info
-Pokud je v rámci nastavení oprávnění v atributu "Přístup" dostupná volba "Zdědit přístup", není zde dostupná volba "Veřejný". Tyto dvě volby se totiž vzájemně vylučují.
+Pokud v rámci nastavení oprávnění je v atributu "Přístup" dostupná volba "Zdědit přístup", není zde pak dostupná volba "Veřejný". Tyto dvě volby se totiž vzájemně vylučují.
 Pokud je na složce nastavena dědičnost, tak se uplatní nejen na stávající podřízené složky, ale automaticky i na všechny ty, které budou v budoucnu teprve vytvořené.
 :::
 
@@ -300,8 +297,10 @@ V nastavení lze konfigurovat, jaké typy notifikací se mají odesílat a zda m
 
 ![Notifikace - nastavení](/img/placeholder/3_notifikace-nastaveni.png)
 
-Dostupný výčet typů notifikací lze rozšířit formou zakázkové úpravy na základě požadavku uživatele.
+Dostupný výčet typů notifikací lze rozšířit formou zakázkové úpravy na základě požadavku uživatele.      
+      
 V nástrojové liště se vpravo zobrazuje ikona notifikací, informující o počtu nových notifikací, které jsou připraveny ve výpisu pro přihlášeného uživatele.
+      
 ![Notifikační ikona](/img/placeholder/3_notifikace-ikona.png)
 Po kliknutí na notifikační ikonu se zobrazí výpis s rychlým náhledem posledních deseti událostí, které mají souvislost s přihlášeným uživatelem (entita, kde je přihlášený uživatel zmíněn nebo je jejím správcem, byla založena, upravena, smazána nebo propojena vazbou s jinou entitou). 
 Tlačítko ***Zobrazit vše***, na konci tohoto seznamu, zobrazí kompletní výpis všech notifikací uživatele seskupených po jednotlivých dnech, včetně časové známky zaznamenané systémem pro každou notifikovanou událost.
@@ -309,13 +308,20 @@ Tlačítko ***Zobrazit vše***, na konci tohoto seznamu, zobrazí kompletní vý
 ![Notifikace - výpis](/img/placeholder/3_notifikace-vypis.png)
 
 Pokud dojde ke ztrátě spojení se Zoty serverem, ať už v důsledku výpadku síťového nebo internetového připojení, dlouhodobé nečinnosti v aplikaci, či z jiných příčin, systémová notifikační služba bude odpojena a veškeré notifikace budou pozastaveny.
-V takovém případě Zoty zobrazí informaci, že připojení k notifikační službě bylo odpojeno a pokusí se o opětovné připojení za 20 sec.
-![Notifikace – výpadek služby](/img/placeholder/3_notifikace-sluzba_odpojeno_reconnect-1.png)
-V případě úspěchu zobrazí informaci, že připojení ke službě bylo opět navázáno.
-![Notifikace – obnovení služby](/img/placeholder/3_notifikace-sluzba_obnoveno.png)
-V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.
-![Notifikace – opakované připojení](/img/placeholder/3_notifikace-sluzba_reconnect-2.png)
-Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.
+V takovém případě Zoty zobrazí informaci, že připojení k notifikační službě bylo odpojeno a pokusí se o opětovné připojení za 20 sec.      
+
+![Notifikace – výpadek služby](/img/placeholder/3_notifikace-sluzba_odpojeno_reconnect-1.png)      
+      
+      
+V případě úspěchu zobrazí informaci, že připojení ke službě bylo opět navázáno.      
+
+![Notifikace – obnovení služby](/img/placeholder/3_notifikace-sluzba_obnoveno.png)     
+     
+V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.      
+
+![Notifikace – opakované připojení](/img/placeholder/3_notifikace-sluzba_reconnect-2.png)     
+Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.     
+
 ![Notifikace – pozastavení služby](/img/placeholder/3_notifikace-sluzba_failed.png)
 V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na Zoty Helpdesk nebo využijte hotline linku Zoty podpory.
 ### 3.11	Profil uživatele a odhlášení
@@ -344,19 +350,24 @@ Zde je důležité zejména číslo verze, které je třeba uvádět při každ�
 Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. m    
 Každá množina záznamů entit určitého typu může mít svoji vlastní strukturu složek a podsložek. Např. záznamy entit typu *Aktiva* mohou být strukturovány zcela odlišně než *Hrozby* či *Rizika*.     
 Dokonce i záznamy entit jednoho typu, např. *Aktiva*, lze uspořádat do složek více různými způsoby v rámci tzv. katalogů. Na jedna a ta samá data je pak možné dívat se různými pohledy, aby tak bylo možné podpořit různé metodiky (např. kategorizace aktiv a práce s nimi může být jiná dle kybernetického zákona, jiná dle ISO 27001, atp.). Strukturace složek na více možných způsobů se dá také s výhodou využít i při sestavování různých reportů a vizualizacích dat, kde lze pak sumarizovat stejná data dle různých skupin či kategorií, reprezentovaných právě složkami.    
-Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskytuje ve více různých složkách v rámci různých katalogů, existuje jedna specifická systémová definice struktury složek definovaná pro každý typ entity, tzv. ***Registr***. V registru má každý výskyt entity daného typu jedinečnou definici, která se pak může vyskytovat, formou odkazu na ni, v dalších, uživatelsky definovatelných pohledech, které se nazývají ***Katalogy***.    
+Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskytuje ve více různých složkách v rámci různých katalogů, existuje jedna definice struktury složek definovaná pro každý typ entity, tzv. ***Registr***. V registru má každý výskyt entity daného typu jedinečnou definici, která se pak může vyskytovat, formou odkazu na ni, v dalších, uživatelsky definovatelných pohledech, které se nazývají ***Katalogy***.    
 Pojmy ***Registr*** a ***Katalog*** jsou blíže vysvětleny v kapitole Základní používaná terminologie.
 
-3.13.1	Správa složek a entit
+#### 3.13.1	Správa složek a entit      
 Ve stromové struktuře složek zobrazené v levém okně se po výběru složky či entity zobrazí její detail, který má v pravém horním rohu ikonu se symbolem tří teček s nabídkou základních operací, které lze se složkou či entitou provádět:
 -	Upravit
 -	Duplikovat
 -	Archivovat
 -	Přesunout
 -	Odstranit
+- Uzamknout
 -	Exportovat
 
-Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají přidělené systémové role s nižšími oprávněními, tj. role *Uživatel*, *Auditor* nebo *Moderátor* nebo pokud je entita uzamčena. Entita má totiž ještě, na rozdíl od složky, tuto nabídku základních operací rozšířenou o možnost uzamčení. Uzamčená entita je pak v horním pravém rohu detailu entity vizualizována ikonou zámku. Uzamknout či odemknout entitu mohou pouze uživatelé, kteří mají přidělené systémové role s vyššími oprávněními, tj. role *Manažer entit* nebo *Administrátor*.
+Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají přidělené systémové role s nižšími oprávněními, tj. role *Uživatel*, *Auditor* nebo *Moderátor* nebo mají nastavená omezená oprávnění nebo pokud je entita uzamčena. Uzamčená entita je pak v horním pravém rohu detailu entity vizualizována ikonou zámku. Uzamknout či odemknout entitu mohou pouze uživatelé, kteří mají přidělené systémové role s vyššími oprávněními, tj. role *Manažer entit* nebo *Administrátor*.
+
+:::tip
+Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tomu má oprávnění, je třeba zkontrolovat, zda u není nemá zobrazen symbol zámku.
+:::
 
 #### 3.13.1.1	Přesouvání
 Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze ve stromové struktuře přesouvat. Ve stromové struktuře složek zobrazené v levém okně se vybere složka. Její obsah, který je třeba přesunout jinam, se zobrazí v pravém okně. Zde se v seznamu vyhledá záznam (ať už je to jiná složka nebo záznam entity např. typu Aktivum) a u něj lze přes ikonu se symbolem tří teček zobrazit menu s nabídkou ***Přesunout***. Zde pak lze změnit zatřídění vybraného záznamu v rámci stromové struktury a kliknutím na tlačítko ***Potvrdit*** provést jeho přesun.
@@ -464,7 +475,13 @@ Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zraniteln
 Např. při analýze projektových rizik je zpravidla vhodné provádět jejich hodnocení skrze připojené projektové cíle. Jsou-li totiž riziko či hrozba připojeny přímo k projektu, ovlivňují jej jako celek neboli mají dopad na všechny cíle tohoto projektu. Pokud jsou ale tyto cíle založeny v registru cílů a propojeny s tímto projektem, tak následným připojením rizik či hrozeb lze modelovat jejich dopad na každý dílčí projektový cíl.
 ### 8.2	Aktiva
 Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a kategorizovat tak aktiva dle vlastních preferencí. Podobně, jako u jiných registrů, i zde se lze nechat inspirovat již vytvořenými strukturami složek v rámci přednaplněných katalogů aktiv.
-![Katalogy aktiv](/img/placeholder/8_katalogy-aktiv.png)
+![Katalogy aktiv](/img/placeholder/8_katalogy-aktiv.png)      
+
+Při vytváření nejen nových aktiv, ale libovolných entit či složek, je vhodné myslet i na jejich správné zatřídění ve stávající struktuře složek v příslušném registru.
+
+:::info
+Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna. Tím dojde nejen k vytvoření nového záznamu, ale zároveň i k jeho zatřídění. Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno přesunout do správné složky, jak je popsáno v kapitole Správa složek a entit.
+:::
 
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
 Aktiva lze hodnotit podle uživatelsky definovatelných schémat **HODNOCENÍ** obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
