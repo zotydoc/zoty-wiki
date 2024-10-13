@@ -24,55 +24,56 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 - **Entita** obecný termín pro veškeré objekty v systému, které mohou být různého typu, přičemž entity stejného typu mají shodné chování a vlastnosti (vlastnosti jsou definované atributy). Systémové entity mohou být např. typu *Riziko, Hrozba, Zranitelnost, Aktivum, Projekt, Proces, Úkol, Cíl, Incident, Hodnocení* atp. Seznam všech typů entit, se kterými lze v systému pracovat, včetně jejich zkratek (které jsou součástí tzv. klíče jednoznačně identifikujícího všechny záznamy v Zoty), jsou uvedeny níže v rámci popisu atributu Klíč. Pro každou entitu lze také nastavit její ***Důležitost*** v rozsahu *1-Nevýznamná, 2-Nízká, 3-Normální, 4-Vysoká, 5-Kritická*.
 
 - **Atribut** – informace popisující vlastnosti entity daného typu, např. *Název, Popis, Datum platnosti, Správce, Náklady* atp.
-- **Záznam** – výskyt jedné konkrétní entity; dle typu entity lze pak záznamy třídit do stejnojmenných kategorií (*Rizika, Aktiva, Úkoly* atp.). Pro záznam libovolné entity lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole Oprávnění.
+- **Záznam** – výskyt jedné konkrétní entity; dle typu entity lze pak záznamy třídit do stejnojmenných kategorií (*Rizika, Aktiva, Úkoly* atp.). Pro záznam libovolné entity lze nastavit různé úrovně [oprávnění přístupu](#37oprávnění-přístupu-na-záznamy).
 - **Klíč** – entity mají atribut *Klíč*, který usnadňuje vyhledávání a třídění záznamů. Klíč je alfanumerický kód, který je systémem automaticky generován a je složen z pořadového čísla a kódu reprezentujícího zkratku typu entity, ke které záznam patří. Např. riziko může mít klíč „*R13*“. Pokud zkratka typu entity obsahuje na konci „*Z*“, indikuje to záznamy přednaplněné v systému Zoty výrobcem. Ty mohou být aktualizovány v rámci distribuce nových verzí aplikace.
 
     Zkratky používané při generování klíče pro jednotlivé typy entit:
+   -	***A*** – Aktivum (obecného typu) 
+   -	***AGR*** – Smlouva
+   -	***AUDN*** – Neshoda auditu
+   -	***AUDR*** – Doporučení auditu
+   -	***DATA*** – Data
+   -	***E*** – Hodnocení (Evaluation)
+   -	***F*** – Složka
+   -	***FP*** – Funkční místo / Pracovní pozice
+   -	***HW*** – Hardware
+   -	***I*** – Incident
+   -	***INF*** – Informace
+   -	***KNW*** – Znalost
+   -	***LOC*** – Lokalita
+   -	***M*** – Model
+   -	***O*** – Cíl (Objective)
+   -	***OU*** – Organizační jednotka
+   -	***PER*** – Pracovník
+   -	***PROD*** – Produkt
+   -	***PROC*** – Aktivum typu Proces
+   -	***PROJ*** – Aktivum typu Projekt
+   -	***R*** – Riziko
+   -	***REQ*** – Požadavek (Requirement)
+   -	***REQD*** – Odvozený požadavek (Derived Requirement)
+   -	***ROLE*** – Role
+   -	***SW*** – Software
+   -	***SR*** – Servisní požadavek
+   -	***T*** – Hrozba (Threat)
+   -	***TA*** – Hmotný majetek (Tangible asset)
+   -	***TASK*** – Úkol
+   -	***TPR*** – Plán zvládání rizik
+   -	***V*** – Zranitelnost (Vulnerability)
+   -	***VEN*** – Dodavatel
+   -	***WGT*** – Pracovní skupina a tým       
+          
 
--	***A*** – Aktivum (obecného typu) 
--	***AGR*** – Smlouva
--	***AUDN*** – Neshoda auditu
--	***AUDR*** – Doporučení auditu
--	***DATA*** – Data
--	***E*** – Hodnocení (Evaluation)
--	***F*** – Složka
--	***FP*** – Funkční místo / Pracovní pozice
--	***HW*** – Hardware
--	***I*** – Incident
--	***INF*** – Informace
--	***KNW*** – Znalost
--	***LOC*** – Lokalita
--	***M*** – Model
--	***O*** – Cíl (Objective)
--	***OU*** – Organizační jednotka
--	***PER*** – Pracovník
--	***PROD*** – Produkt
--	***PROC*** – Aktivum typu Proces
--	***PROJ*** – Aktivum typu Projekt
--	***R*** – Riziko
--	***REQ*** – Požadavek (Requirement)
--	***REQD*** – Odvozený požadavek (Derived Requirement)
--	***ROLE*** – Role
--	***SW*** – Software
--	***SR*** – Servisní požadavek
--	***T*** – Hrozba (Threat)
--	***TA*** – Hmotný majetek (Tangible asset)
--	***TASK*** – Úkol
--	***TPR*** – Plán zvládání rizik
--	***V*** – Zranitelnost (Vulnerability)
--	***VEN*** – Dodavatel
--	***WGT*** – Pracovní skupina a tým
 - **Nástrojová lišta** – horní vodorovný panel s informačními a ovládacími prvky.
 - **Panel** – levý svislý panel s menu pro přístup k jednotlivým sekcím.
 - **Sekce** – modul aplikace Zoty dostupný z panelu nebo nástrojové lišty.
 - **Podsekce** – části modulů aplikace Zoty dostupné po výběru některých sekcí z panelu nebo nástrojové lišty.
 - **Seznam** – způsob zobrazení záznamů v řádkové režimu, které lze třídit, filtrovat či vyhledávat.
-- **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole Omezení přístupu na složky a záznamy. 
+- **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole [Oprávnění](#37oprávnění-přístupu-na-záznamy). 
 - **Detail** – způsob zobrazení jednoho vybraného záznamu v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, **Aktivity** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
 - **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Informace, Procesy atp.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
-- **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole Metody.
+- **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole [Metody](#16112metody).
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
 
 ## 3	UŽIVATELSKÉ PROSTŘEDÍ {#myUserExp}
@@ -117,7 +118,7 @@ Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech 
 
 ### 3.4	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
-V komentáři lze zmínit jiného uživatele zadáním symbolu zavináče ***@***. Systém následně umožní vyhledání a výběr ze stávajících uživatelů Zoty. Všem takto zmíněným uživatelům dorazí notifikace, že byli zmíněni v tomto komentáři. Jednoduchým kliknutím na komentář si jej pak mohou ihned snadno zobrazit a případně na něj i rovnou reagovat.    
+V komentáři lze zmínit jiného uživatele zadáním symbolu zavináče ***@***. Systém následně umožní vyhledání a výběr ze stávajících uživatelů Zoty. Všem takto zmíněným uživatelům dorazí notifikace, že byli zmíněni v tomto komentáři. Kliknutím na komentář si jej pak mohou ihned snadno zobrazit a případně na něj i rovnou reagovat.    
 Podobným způsobem lze v komentářích zmínit také odkazy na libovolné entity v systému s pomocí znaku ***#***.    
 Komentáře lze skrýt a zobrazit je pouze pro vybrané uživatele či role. Standardně jsou komentáře publikovány se statusem „Veřejné“. Pokud je před odesláním status komentáře změněn na „Soukromé“, zobrazí se nabídka Oprávnění, kde lze zadat role, konkrétní uživatele či kombinaci obojího, pro které bude komentář viditelný.
 
@@ -164,11 +165,14 @@ Zoty automaticky zaznamenává aktivity uživatelů v systému. *Aktivity* zobra
 *Aktivity* se zobrazují jednak v přehledu na úvodní stránce, kde se zobrazuje seznam posledních aktivit a pak také v detailu u každého typu entity pouze ty vybrané aktivity, kterého se dané entity týkají. Uživatel, který nemá přiřazenu roli *Administrátor* nebo *Manažer entit*, vidí pouze aktivity informující o entitách, kde je tento uživatel přiřazen jako Správce.
 
 ![Aktivity](/img/placeholder/3_aktivity.png)
-### 3.7	Oprávnění
+### 3.7	Oprávnění přístupu na záznamy
 Pro každou složku i entitu lze nastavit různé úrovně oprávnění přístupu.
-> Zoty zde umožňuje aplikovat princip dědičnosti. Oprávnění lze definovat pro vybranou složku pouze jednou a automaticky je pak dědit do všech podřízených složek a entit v nich zatříděných.
 
-Ve výchozím nastavení jsou složky či záznamy v nich uložené viditelné všem uživatelům. To je zajištěno pomocí atributu ***Přístup***, který je při vytváření všech nových složek či entit automaticky přednastaven na hodnotu Veřejný.    
+:::info
+Zoty umožňuje aplikovat princip tzv. dědičnosti oprávnění. To znamená, že oprávnění lze definovat pro vybranou složku pouze jednou a automaticky je pak dědit do všech podřízených složek a entit v nich zatříděných.
+:::
+
+Ve výchozím nastavení jsou složky či záznamy v nich uložené viditelné všem uživatelům. To je zajištěno pomocí atributu ***Přístup***, který je při vytváření všech nových složek či entit automaticky přednastaven na hodnotu *Veřejný*.    
 Pro omezení přístupu k vybraným složkám či záznamům je třeba atribut ***Přístup*** přepnout do stavu *Omezený* nebo *Soukromý* v nastavení oprávnění na detailu příslušné entity či složky.
 
 ![Omezení přístupu k záznamu](/img/placeholder/3_pristup-na-slozku.png)
@@ -177,7 +181,8 @@ Takto nastavená restrikce pak omezí přístup pouze pro vybrané uživatele ne
 
 ![Omezený přístupu – info pro uživatele](/img/placeholder/3_omezeny-pristup-info-pro-uzivatele.png)
 
-Pro složky, záznamy všech typů entit a pro povolení pořizovat k nim komentáře (viz kap. Komentáře), lze nastavit různé úrovně oprávnění přístupu – *Číst, Vytvořit, Upravit, Odstranit, Komentář*. Oprávnění lze definovat pro vybrané role nebo konkrétní uživatele nebo kombinací obojího.    
+
+Pro složky, záznamy všech typů entit a pro povolení pořizovat k nim [komentáře](#34komentáře), lze nastavit různé úrovně oprávnění přístupu – *Číst, Vytvořit, Upravit, Odstranit, Komentář*. Oprávnění lze definovat pro vybrané role nebo konkrétní uživatele nebo kombinací obojího.    
 Pokud je nastaven přístup na *Omezený* nebo *Soukromý* a nejsou definována žádná oprávnění pro role nebo uživatele, tak budou mít k takovýmto složkám nebo entitám přístup pouze uživatelé s rolí administrátora.    
 Na obrázcích níže je příklad nastavení oprávnění přístupu na konkrétní složku.
 
@@ -225,14 +230,14 @@ Uživatel Martina má přiřazenou roli *Manažer entit*. Tato **role** má v re
 
 ![Konflikt oprávnění uživatele a jeho role](/img/placeholder/3_opravneni_konflikt_stejna-pro-uzivatele-i-roli.png)
 ##### 3.7.3	Rozšířená správa oprávnění pro velké organizace
-Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Systém je postaven na jednoduchém označení dat, která patří vybranému subjektu/subjektům pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit pak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole Organizace).    
+Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Systém je postaven na jednoduchém označení dat, která patří vybranému subjektu/subjektům pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit pak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
 Typické použití v komerčním sektoru je pro ty organizace, které v rámci holdingu/skupiny sdružují více společností, jejichž data mají být oddělena. Tzn., že uživatelé pracující pro jednu konkrétní společnost pak nevidí data (složky a entity v registrech) ostatních společností skupiny.
 Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
 :::info
-Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole Oprávnění. Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů s pomocí standardních funkcionalit pro řízení oprávnění pouze na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
+Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole [Oprávnění](#37oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů s pomocí standardních funkcionalit pro řízení oprávnění pouze na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
 :::
-## 3.8	Kalendář
+### 3.8	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: *Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení*.
 
 ![Kalendář](/img/placeholder/3_kalendar.png)
@@ -330,22 +335,22 @@ V této sekci lze zobrazit a editovat přihlašovací a identifikační údaje p
 
 #### 3.11.3	Mé nastavení
 V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách Obecné a Email notifikace (viz kap. Notifikace)
-V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách **Obecné** a **Email notifikace** (viz kap. Notifikace)    
+V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách **Obecné** a [**Email notifikace**](#310notifikace).    
 Na záložce **Obecné** může volit **jazyk aplikace** a nezávisle na jazyku aplikace také **jazyk obsahu**, tj. v jakém jazyce mají být prezentována data. S tím, že pokud data nemají překlad v daném jazyce, zobrazí se alternativně v primárním jazyce, který je nastaven v administraci systému Zoty.    
 Volba **Barvy grafů** umožňuje výběrem z řady různých sad barevných palet nastavit, jaká barevnost má být použita v grafech a dashboardech při vizualizaci dat.    
 Volba **Velikost UI** optimalizuje celé pracovní prostředí Zoty aplikace zejména s ohledem na velikost a zozlišení displeje zařízení, na kterém uživatel provozuje aplikaci Zoty. Zvětšením či zmenšením lze zvolit optimální kompromis mezi velikostí zobrazovaných informací a množstvím dat, která budou zobrazena bez nutnosti rolovat vertikálním či horizontálním posuvníkem.
 
 Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele.
-#### 3.12	Zoty – O aplikaci
+### 3.12	Zoty – O aplikaci
 :::info
 Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
 :::
-#### 3.13	Složky
+### 3.13	Složky
 Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. 
 Každá množina záznamů entit určitého typu může mít svoji vlastní strukturu složek a podsložek. Např. záznamy entit typu *Aktiva* mohou být strukturovány zcela odlišně než *Hrozby* či *Rizika*.     
 Dokonce i záznamy entit jednoho typu, např. *Aktiva*, lze uspořádat do složek více různými způsoby v rámci tzv. katalogů. Na jedna a ta samá data je pak možné dívat se různými pohledy, aby tak bylo možné podpořit různé metodiky (např. kategorizace aktiv a práce s nimi může být jiná dle kybernetického zákona, jiná dle ISO 27001, atp.). Strukturace složek na více možných způsobů se dá také s výhodou využít i při sestavování různých reportů a vizualizacích dat, kde lze pak sumarizovat stejná data dle různých skupin či kategorií, reprezentovaných právě složkami.    
 Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskytuje ve více různých složkách v rámci různých katalogů, existuje jedna definice struktury složek definovaná pro každý typ entity, tzv. ***Registr***. V registru má každý výskyt entity daného typu jedinečnou definici, která se pak může vyskytovat, formou odkazu na ni, v dalších, uživatelsky definovatelných pohledech, které se nazývají ***Katalogy***.    
-Pojmy ***Registr*** a ***Katalog*** jsou blíže vysvětleny v kapitole Základní používaná terminologie.
+Pojmy ***Registr*** a ***Katalog*** jsou blíže vysvětleny v kapitole [Základní používaná terminologie](#základní-používaná-terminologie).
 
 #### 3.13.1	Správa složek a entit      
 Ve stromové struktuře složek zobrazené v levém okně se po výběru složky či entity zobrazí její detail, který má v pravém horním rohu ikonu se symbolem tří teček s nabídkou základních operací, které lze se složkou či entitou provádět:
@@ -363,7 +368,7 @@ Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají při
 Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tomu má oprávnění, je třeba zkontrolovat, zda u není nemá zobrazen symbol zámku.
 :::
 
-#### 3.13.1.1	Přesouvání
+##### 3.13.1.1	Přesouvání složek
 Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze ve stromové struktuře přesouvat. Ve stromové struktuře složek zobrazené v levém okně se vybere složka. Její obsah, který je třeba přesunout jinam, se zobrazí v pravém okně. Zde se v seznamu vyhledá záznam (ať už je to jiná složka nebo záznam entity např. typu Aktivum) a u něj lze přes ikonu se symbolem tří teček zobrazit menu s nabídkou ***Přesunout***. Zde pak lze změnit zatřídění vybraného záznamu v rámci stromové struktury a kliknutím na tlačítko ***Potvrdit*** provést jeho přesun.
 
 #### 3.13.2	Omezení obsahu složek
@@ -373,7 +378,7 @@ Administrátor tedy může upravit vlastnosti každé složky tak, že např. da
 ![Omezení obsahu složek](/img/placeholder/3_Slozka_Nastaveni omezeni.png)
 
 Pokud má být jeden typ entity, umístěný např. ve složce Hardware, dále členěn pro větší přehlednost do více samostatných podsložek (např. Servery, Pracovní stanice, Tiskárny atp. …) tak potom volba ***Nastavit dle rodiče*** u všech podřízených složek zajistí, že povolené typy entity pro ně budou nastaveny takové, jak má nastavena nadřazená (rodičovská) složka, tedy v tomto příkladu Hardware.    
-Vedle omezení obsahu složek lze také omezit samotný přístup na složky a entity v nich zatříděné. Celý systém správy uživatelských oprávnění je popsán v kapitole Oprávnění.
+Vedle omezení obsahu složek lze také omezit samotný přístup na složky a entity v nich zatříděné. Celý systém správy uživatelských oprávnění je popsán v kapitole [Oprávnění](#37oprávnění-přístupu-na-záznamy).
 
 ## 4	PŘEHLED
 Úvodní stránka zobrazuje přehled základních informací, co se nového událo, jaké nejnovější záznamy, aktivity či komentáře byly pořízeny nebo aktualizovány, jaké úkoly uživatel vytvořil nebo mu byly přiděleny k řešení anebo kolik aktiv, rizik, opatření, cílů či jiných entit je aktuálně v systému celkem evidováno.
@@ -473,7 +478,8 @@ Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a ka
 Při vytváření nejen nových aktiv, ale libovolných entit či složek, je vhodné myslet i na jejich správné zatřídění ve stávající struktuře složek v příslušném registru.
 
 :::info
-Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna. Tím dojde nejen k vytvoření nového záznamu, ale zároveň i k jeho zatřídění. Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno přesunout do správné složky, jak je popsáno v kapitole Správa složek a entit.
+Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna. Tím dojde nejen k vytvoření nového záznamu, ale zároveň i k jeho zatřídění.
+Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno přesunout do správné složky, jak je popsáno v kapitole [Přesouvání složek](#31311přesouvání-složek).
 :::
 
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
@@ -487,7 +493,7 @@ Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv ne
 :::
 Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
 
-## 8.3	Hrozby a zranitelnosti
+### 8.3	Hrozby a zranitelnosti
 Při návrhu nejvhodnější struktury složek v příslušných registrech v rámci kategorizace hrozeb a zranitelností lze hledat inspiraci v některém z předdefinovaných katalogů hrozeb a zranitelností, které vychází z uznávaných metodik a norem, konkrétně:
 -	Katalog hrozeb dle Evropské agentury pro bezpečnost sítí a informací (ENISA)
 -	Katalogy hrozeb a zranitelností dle normy ISO 27001 - Systém řízení bezpečnosti informací (ISMS)
@@ -499,7 +505,7 @@ Při návrhu nejvhodnější struktury složek v příslušných registrech v r�
 ### 8.4	Rizika
 Registr rizik je standardně členěn na rizika *informační, finanční, projektová, provozní, strategická, a environmentální*. Uživatel si i v tomto registru může vytvořit svoji vlastní strukturu složek, která bude lépe vyhovovat jeho potřebám.    
 Riziko může nabývat těchto stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
-Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole Schválení.    
+Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schválení](#39schválení).    
 Na kartě rizika je, vedle datumů platnosti a popisných atributů (*Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci*), i výběrový atribut ***Strategie zvládání***, kde je možné zvolit jednu z následujících možností:
 - *Redukce*
 - *Přijetí*
@@ -531,11 +537,11 @@ Při zadávání hodnocení cílového nebo skutečného stavu si lze zobrazit v
 ![Hodnocení rizika – detail nastavení a ohodnocení](/img/placeholder/9_hodnoceni_predvyplnit-vyber.png)
 ![Hodnocení rizika – detail nastavení a ohodnocení](/img/placeholder/9_hodnoceni_predvyplnit-vybrano.png)
 
-Při samotném hodnocení lze ke každé hodnocené metrice vložit textové poznámky a také číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.
-Aby bylo na první pohled patrné, že k příslušné hodnocené metrice jsou již nějaké poznámky vloženy, tak je ikona pro editaci poznámky podsvícena ve žlutém kruhu.
+Při samotném hodnocení lze ke každé hodnocené metrice vložit textové poznámky a také číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.      
+Aby bylo na první pohled patrné, že k příslušné hodnocené metrice jsou již nějaké poznámky vloženy, tak je ikona pro editaci poznámky podsvícena ve žlutém kruhu.      
 Časovým obdobím pro hodnocení aktuálního/skutečného stavu může být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu. Toto datum je milníkem, ke kterému má být dosaženo plánovaného cílového stavu. Platnost takto nastaveného milníku je v čase platná až do data, kdy bude zaplánován nový cílový milník.
-Všechny tyto parametry lze plně uživatelsky konfigurovat v *Nastavení – Hodnocení* zcela samostatně pro každé schéma hodnocení. Stejně, jako zde lze např. nastavit, zda se v rámci daného schématu může hodnotit pouze skutečnost nebo pouze cílový stav nebo obojí. Nebo zda budeme chtít v rámci daného schématu hodnotit dopad na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího. Všechny možnosti uživatelské konfigurace a specifických nastavení pro schémata hodnocení jsou dále popsána v kap.  Nastavení, podkapitole Hodnocení.    
-Ve výběru z dostupných schémat hodnocení, dle kterých se má hodnocení provést, se nenabízí všechna schémata hodnocení definovaná v *Nastavení – Hodnocení*. Nabízí se pouze schémata relevantní pro hodnocení určitého typu, tj. buď pro rizika nebo aktiva nebo hrozby nebo zranitelnosti.
+Všechny tyto parametry lze plně uživatelsky konfigurovat v [nastavení Hodnocení](#1614hodnocení) zcela samostatně pro každé schéma hodnocení. Stejně, jako zde lze např. nastavit, zda se v rámci daného schématu může hodnotit pouze skutečnost nebo pouze cílový stav nebo obojí. Nebo zda budeme chtít v rámci daného schématu hodnotit dopad na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího. Všechny možnosti uživatelské konfigurace a specifických nastavení pro schémata hodnocení jsou dále popsána v kap. [Nastavení - Hodnocení](#1614hodnocení).    
+Ve výběru z dostupných schémat hodnocení, dle kterých se má hodnocení provést, se nenabízí všechna schémata hodnocení definovaná v [nastavení Hodnocení](#1614hodnocení). Nabízí se pouze schémata relevantní pro hodnocení určitého typu, tj. buď pro rizika nebo aktiva nebo hrozby nebo zranitelnosti.
 
 ![Hodnocení rizika – detail nastavení a ohodnocení](/img/placeholder/9_hodnoceni-typy-hodnoceni-v-nastaveni.png)
 
@@ -597,7 +603,7 @@ Je-li zadávanou hodnotou atributu *uživatel*, lze v seznamu entit pro výběr 
 ## 14	ŠTÍTKY
 
 Sekce **Štítky** obsahuje seznam všech štítků, které jsou v Zoty vytvořeny, s možností zobrazit či upravit jejich název, popis, či barvu, jakou jsou vizualizovány. V detailu štítku se pak v záložce „Obsahuje“ zobrazí seznam všech entit, ke kterým je štítek připojen.    
-Specifický typ systémového štítku je *Organizace*. Pokud je tímto štítkem označena libovolná složka v registrech entit či konkrétní entita, bude omezena jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky. Více v kap. Omezení přístupu na složky a záznamy.
+Specifický typ systémového štítku je *Organizace*. Pokud je tímto štítkem označena libovolná složka v registrech entit či konkrétní entita, bude omezena jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky. Více v kap. [Rozšířená správa oprávnění](#373rozšířená-správa-oprávnění-pro-velké-organizace).
 
 ## 15	SKUPINY
 V Zoty jsou předdefinovaná schémata pro tvorbu skupin, které umožní seskupovat entity příslušného typu – *Aktiva, Hrozby, Zranitelnosti, Rizika*. Do takto vytvořených skupin lze zařazovat entity příslušného typu (dle příslušného schématu v rámci kterého byla skupina vytvořena) a provádět s nimi pak hromadné operace, např. provést hromadně jedno hodnocení nad celou skupinou vybraných rizik namísto mnoha hodnocení jednotlivých rizik.
@@ -606,8 +612,8 @@ V Zoty jsou předdefinovaná schémata pro tvorbu skupin, které umožní seskup
 Obsahuje podsekce **Nastavení**, **Účet** a **Koš**.
 V sekci Administrace lze provádět řadu nastavení samotné aplikace včetně dat, se kterými pracuje, spravovat Zoty účet se všemi uživateli a jejich rolemi a provádět řadu dalších systémových nastavení, která mohou mít zásadní vliv na fungování celé aplikace.
 
-:::warning
-Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení oprávnění – viz kapitola Oprávnění.
+:::caution
+Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení [oprávnění](#16113oprávnění-přístupu-do-aplikace).
 :::
 
 ### 16.1	Nastavení
@@ -624,8 +630,8 @@ Metoda poskytuje možnost uživatelsky definovat, uložit a následně opakovan�
 Typickým příkladem jsou hodnocení. Např. hodnocení rizik (ale i aktiv, hrozeb či zranitelností), která mohou mít definovaná různá schémata hodnocení v rámci různých metod, kdy jedna metoda reprezentuje jeden přístup řízení rizik vycházející např. z normy ISO 31000 pro Risk management, druhá z Bezpečnosti informací dle ISO 27001, třetí ze zákona o kybernetické bezpečnosti atp. Podobně i např. doporučená opatření pro mitigaci rizik.
 Koncept metod tak umožňuje zapojit více různých pohledů v rámci celého systému řízení rizik a mnohem snáze např. ověřovat, zda je organizace ve shodě se zákonnými, regulatorními či normativními požadavky, které na ni dopadají z více různých zdrojů.
 
-##### 16.1.1.3	Oprávnění
-Záložka **Oprávnění** umožňuje pro vybrané role či konkrétní uživatele nastavit přístup do jednotlivých sekcí či podsekcí systému s libovolnou kombinací oprávnění: *Číst, Vytvořit, Upravit, Odstranit, Komentář* nebo zvolit *Vše* pro nejvyšší úroveň oprávnění.
+##### 16.1.1.3	Oprávnění přístupu do aplikace
+Záložka **Oprávnění** umožňuje pro vybrané role či konkrétní uživatele nastavit přístup do jednotlivých sekcí či podsekcí aplikace, s libovolnou kombinací oprávnění: *Číst, Vytvořit, Upravit, Odstranit, Komentář* nebo zvolit *Vše* pro nejvyšší úroveň oprávnění.
 
 ##### 16.1.1.4	Přesměrování
 Záložka **Přesměrování** umožňuje pro každou roli individuálně nastavit, do jaké sekce či podsekce aplikace Zoty bude po přihlášení automaticky přesměrován uživatel s touto rolí. Pokud mají uživatelé přiřazeno více rolí, pak volbou *Pořadí* lze nastavit, v jakém pořadí mají být role seřazeny při vyhodnocování, kam má být daný uživatel přesměrován. Přičemž role s nižším pořadovým číslem mají vyšší prioritu. Specifické postavení zde má role *Administrátor*, která je v pořadí vždy na prvním místě.
@@ -739,7 +745,7 @@ Vzorec výpočtu hodnocení pro sestavení dvojrozměrné heatmapy v rámci hodn
 ![Definice heatmapy s výpočtem skóre ve schématu hodnocení](/img/placeholder/16_hodnoceni_priklad-pro-osu-x-a-y.png)
 #### 16.1.5	Reporty
 Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních technologií JavaScript, GraphQL, Handlebars, CSS. Pro každý report lze také zapnout/vypnout přepínač Aktivní, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatelům či role, pro které má být report dostupný.
-### 16.1.6	Data
+#### 16.1.6	Data
 Záložky ***Export*** a ***Import*** v sekci ***Administrace – Nastavení – Data***, slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
 Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.
 Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty pak umožňuje uživateli v roli administrátora exportovat obsah databáze do souboru ve formátu JSON.
@@ -751,11 +757,13 @@ Záložka ***Spreadsheet*** importuje data různých typů entit (*Aktiva, Hrozb
 Pro nové zákazníky, kteří si testují Zoty s demo daty, založili si v rámci testování v tomto účtu i svá data, která chtějí zachovat, ale demo demo data potřebují odstranit, slouží volba *Vyčistit* na záložce ***Demo***.    
 Záložka ***ARIS*** importuje data z  databáze SW nástroje ARIS pro modelování a analýzu procesů.
 
+### 16.2	Účet
+
 V administraci účtu jsou v rámci příslušných záložek definovány organizace (a organizační jednotky), uživatelé, lidé a role.
 #### 16.2.1	Organizace
 Uživatel si může definovat, jaké organizace (společnosti, organizační složky či jiné subjekty) jsou součástí jeho organizační struktury. Zároveň pak k jednotlivým organizacím nebo organizačním jednotkám (např. oddělením) přiřadit uživatele, kteří do nich patří.
 Jsou-li některá tato data spravována v externím systému, tak vyplněním atributu "ID externího zdroje dat" lze zajistit automatickou synchronizaci např. organizací a uživatelských účtů v Zoty a jejich přiřazení do té které organizace.
-Pokud je pak štítkem s názvem zde definované organizace označena složka či entita, tak bude viditelná pouze pro ty uživatele, kteří jsou jejími členy (viz kapitola Oprávnění).
+Pokud je pak štítkem s názvem zde definované organizace označena složka či entita, tak bude viditelná pouze pro ty uživatele, kteří jsou jejími členy (viz kapitola [Rozšířená správa oprávnění](#373rozšířená-správa-oprávnění-pro-velké-organizace)).
 
 #### 16.2.2	Uživatelé
 ***Přehled*** zobrazuje seznam všech uživatelů, kteří mají přístup do aplikace Zoty. 
@@ -768,7 +776,7 @@ Zde se zobrazují jak role předdefinované výrobcem (systémové role), tak ro
 Aby se zjednodušilo a částečně či zcela zautomatizovalo vyplňování metod, lze navíc jednotlivým rolím nastavit omezení pouze na *přiřazené metody*. A poté vybrat a přiřadit této roli, které metody z těch všech, jež jsou v Zoty definované, se mají uživateli nabízet pro výběr.
 Nebo lze také metodu/metody rovnou předvybrat bez zásahu uživatele. Uživatel s takto nastavenými rolemi pak nebude muset z nabídky metod vůbec vybírat, protože se předvyplní automaticky ta/ty, které jsou zde nastaveny jako *předvybrané metody*. Žádné jiné metody pak nemůže zvolit.
 
-## 16.3	Koš
+### 16.3	Koš
 Všechny smazané záznamy se přesouvají do koše, odkud je možné je obnovit nebo trvale smazat. V koši se zobrazuje název, datum odstranění a typ záznamu (*Složka, Hodnocení, Riziko, Hrozba* atp.).
 
 ![Koš](/img/placeholder/16_kos.png)
