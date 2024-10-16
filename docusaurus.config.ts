@@ -161,7 +161,7 @@ const config: Config = {
 
 
       
-      copyright: `Copyright © ${new Date().getFullYear()} Zoty, IDS Advisory s.r.o.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Zoty s.r.o.`,
     },
     prism: {
       theme: prismThemes.github,

@@ -92,8 +92,13 @@ Horní nástrojová lišta pak zobrazuje sekce:
 ### 3.2	Vyhledávání
 V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
-![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
+<!--- ![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
+-->
+
+<img src="/img/placeholder/3_vyhledavani.png"  title="Vyhledávání v sekci" width="70%" />
+
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
+
 
 :::tip
 Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterékoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
@@ -114,7 +119,7 @@ Uživatelské filtry nabízejí možnost definovat filtrační podmínky dle obs
 
 Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech textových fragmentů (paragrafů, odstavců, písmen...) nějakého zákona (normy, směrnice, smlouvy atp.) mají garanta Martinu ***NEBO*** Adama ***NEBO*** jsou označeny jako auditní (daný fragment reprezentuje požadavek, který má být ověřován v rámci auditu, zda je s ním organizace ve shodě) ***A*** mají připojen alespoň jeden komentář.
 
-<!--- <img src="/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png"  title="Filter kombinace" width="75%" /> -->
+<img src="/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png"  title="Filtr - definice" width="75%" />
 
 ### 3.4	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
@@ -122,13 +127,24 @@ V komentáři lze zmínit jiného uživatele zadáním symbolu zavináče ***@**
 Podobným způsobem lze v komentářích zmínit také odkazy na libovolné entity v systému s pomocí znaku ***#***.    
 Komentáře lze skrýt a zobrazit je pouze pro vybrané uživatele či role. Standardně jsou komentáře publikovány se statusem „Veřejné“. Pokud je před odesláním status komentáře změněn na „Soukromé“, zobrazí se nabídka Oprávnění, kde lze zadat role, konkrétní uživatele či kombinaci obojího, pro které bude komentář viditelný.
 
+<!--- 
 ![Komentáře - oprávnění](/img/placeholder/3_komentare_opravneni.png)
+-->
+<img src="/img/placeholder/3_komentare_opravneni.png"  title="Komentáře - oprávnění" width="70%" />
+
 
 Soukromé komentáře indikuje speciální ikona oprávnění
+
+<!---
 ![Oprávnění pro komentáře](/img/placeholder/3_ikona_opravneni-komentare.png)
+-->
+<img src="/img/placeholder/3_ikona_opravneni-komentare.png"  title="Oprávnění pro komentáře" width="25%" />
+
 Po najetí myší nad tuto ikonu se zobrazí seznam s názvy rolí či jmen uživatelů, kteří mají oprávnění ke zobrazení tohoto komentáře.
 
 ![Komentáře – indikace nastavené restrikce](/img/placeholder/3_komentare_opravneni-indikace.png)
+
+
 ### 3.5	Propojení
 K entitám lze připojovat soubory, štítky, metody, organizace, ale i jiné entity a zachytit tak vzájemné souvislosti.
 Propojení entit mezi sebou navzájem lze zobrazit na záložce ***Propojení*** v detailu každé entity, kde lze také vytvářet nová propojení pomocí tlačítka ***Vytvořit***.
@@ -175,7 +191,7 @@ Zoty umožňuje aplikovat princip tzv. dědičnosti oprávnění. To znamená, �
 Ve výchozím nastavení jsou složky či záznamy v nich uložené viditelné všem uživatelům. To je zajištěno pomocí atributu ***Přístup***, který je při vytváření všech nových složek či entit automaticky přednastaven na hodnotu *Veřejný*.    
 Pro omezení přístupu k vybraným složkám či záznamům je třeba atribut ***Přístup*** přepnout do stavu *Omezený* nebo *Soukromý* v nastavení oprávnění na detailu příslušné entity či složky.
 
-![Omezení přístupu k záznamu](/img/placeholder/3_pristup-na-slozku.png)
+![Omezení přístupu k záznamu nebo obsahu složky](/img/placeholder/3_pristup-na-slozku.png)
 
 Takto nastavená restrikce pak omezí přístup pouze pro vybrané uživatele nebo role dle definovaných úrovní oprávnění, jak je popsáno níže. Nebo složku či záznam zcela skryje, takže ji ostatní uživatelé bez nastaveného oprávnění vůbec nevidí (soukromý přístup).
 
@@ -587,7 +603,7 @@ Je-li audit propojen s požadavkem v sekci Řízení shody - POŽADAVKY, a tímt
 Po najetí myší nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment se stává tzv. auditní.
 ![Aktivace auditu pro fragment textu požadavku](/img/placeholder/13_audit_aktivace-pro-fragment-textu-pozadavku.png)
 
-Aktivací auditu pro vybrané fragmenty / dílčí požadavky se určí zaměření a rozsah celého auditu. Zároveň lze ke každému dílčímu požadavku přiřadit odpovědnou osobu – garanta, který zodpovídá za jeho zavedení, připojit k němu komentáře nebo jej propojit s libovolnými dalšími entitami v Zoty. V rámci auditu lze pak každý dílčí požadavek označit za Zaveden, Nezaveden, V procesu zavádění či Neaplikovatelný.
+Aktivací auditu pro vybrané fragmenty / dílčí požadavky se určí zaměření a rozsah celého auditu. Zároveň lze ke každému dílčímu požadavku přiřadit odpovědnou osobu – garanta, který zodpovídá za jeho zavedení, připojit k němu komentáře nebo jej propojit s libovolnými dalšími entitami v Zoty. V rámci auditu lze pak každý dílčí požadavek označit za *Zaveden, Nezaveden, V procesu zavádění* či *Neaplikovatelný*.
 
 ![Audit - detail](/img/placeholder/13_audit_detail.png)
 ![Audit – vyhodnocení v grafu](/img/placeholder/13_audit_zokb_grafy.png)
