@@ -92,11 +92,11 @@ Horní nástrojová lišta pak zobrazuje sekce:
 ### 3.2	Vyhledávání
 V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
-<!--- ![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
--->
+![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
 
+<!--- 
 <img src="/img/placeholder/3_vyhledavani.png"  title="Vyhledávání v sekci" width="70%" />
-
+-->
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 
 
@@ -113,13 +113,16 @@ Je-li zadávanou hodnotou atributu uživatel, lze v seznamu entit pro výběr u�
 V seznamech lze rychle filtrovat záznamy volbou z dostupných, výrobcem předdefinovaných filtrů.
 
 ![Filtry](/img/placeholder/3_filtry.png)
+<!---
+<img src="/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png"  title="Filtr - definice" width="75%" />
+--->
 
 Nebo lze také zvolit uživatelsky definovatelný filtr a nastavit jej dle vlastních preferencí.
 Uživatelské filtry nabízejí možnost definovat filtrační podmínky dle obsahu různých atributů či vlastností, seskupených do filtračních kategorií. Pokud uživatel volí filtrační podmínky z atributů či vlastností v rámci jedné takovéto kategorie, aplikuje se mezi nimi podmínka ***NEBO*** (*OR*). Zatímco pokud je kombinuje v rámci různých kategorií, aplikuje se podmínka ***A*** (*AND*).
 
 Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech textových fragmentů (paragrafů, odstavců, písmen...) nějakého zákona (normy, směrnice, smlouvy atp.) mají garanta Martinu ***NEBO*** Adama ***NEBO*** jsou označeny jako auditní (daný fragment reprezentuje požadavek, který má být ověřován v rámci auditu, zda je s ním organizace ve shodě) ***A*** mají připojen alespoň jeden komentář.
 
-<img src="/img/placeholder/3_filtr_kombinace_filtracnich_kategorii.png"  title="Filtr - definice" width="75%" />
+
 
 ### 3.4	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
@@ -127,19 +130,19 @@ V komentáři lze zmínit jiného uživatele zadáním symbolu zavináče ***@**
 Podobným způsobem lze v komentářích zmínit také odkazy na libovolné entity v systému s pomocí znaku ***#***.    
 Komentáře lze skrýt a zobrazit je pouze pro vybrané uživatele či role. Standardně jsou komentáře publikovány se statusem „Veřejné“. Pokud je před odesláním status komentáře změněn na „Soukromé“, zobrazí se nabídka Oprávnění, kde lze zadat role, konkrétní uživatele či kombinaci obojího, pro které bude komentář viditelný.
 
-<!--- 
+ 
 ![Komentáře - oprávnění](/img/placeholder/3_komentare_opravneni.png)
--->
+<!---
 <img src="/img/placeholder/3_komentare_opravneni.png"  title="Komentáře - oprávnění" width="70%" />
-
+-->
 
 Soukromé komentáře indikuje speciální ikona oprávnění
 
-<!---
-![Oprávnění pro komentáře](/img/placeholder/3_ikona_opravneni-komentare.png)
--->
-<img src="/img/placeholder/3_ikona_opravneni-komentare.png"  title="Oprávnění pro komentáře" width="25%" />
 
+![Oprávnění pro komentáře](/img/placeholder/3_ikona_opravneni-komentare.png)
+<!---
+<img src="/img/placeholder/3_ikona_opravneni-komentare.png"  title="Oprávnění pro komentáře" width="25%" />
+-->
 Po najetí myší nad tuto ikonu se zobrazí seznam s názvy rolí či jmen uživatelů, kteří mají oprávnění ke zobrazení tohoto komentáře.
 
 ![Komentáře – indikace nastavené restrikce](/img/placeholder/3_komentare_opravneni-indikace.png)
@@ -803,3 +806,16 @@ Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity m
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
  Budeme vám vděční za veškeré podněty a připomínky.
 :::
+
+<!---
+vlastní lokalizace
+
+node_modules\@docusaurus\theme-translations\locales\cs\theme-common.json
+
+  "theme.admonition.caution": "pozor",
+  "theme.admonition.danger": "pozor!",
+  "theme.admonition.info": "info",
+  "theme.admonition.note": "příklad",
+  "theme.admonition.tip": "tip",
+
+--->
