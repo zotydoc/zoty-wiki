@@ -101,9 +101,11 @@ Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klí
 
 
 :::tip
-Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterékoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
+Ikona špendlíku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterýkoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
 :::
-
+       
+     
+           
 ![Vyhledávání globálně s připínáním výsledků do rychlých záložek](/img/placeholder/3_vyhledavani_globalni-vcetne-pripinani.png)
 
 Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, jež podporují takovýto způsob zadání výběrem ze seznamu.
@@ -210,7 +212,7 @@ Oprávnění definovaná na úrovni složky lze volitelně dědit i na všechny 
 
 Podřízenými uzly konkrétní složky se tedy rozumí všechny ty složky nebo entity, které jsou jí ve stromové struktuře podřízené. A to až do nejnižší úrovně zanoření, má-li tato konkrétní složka víceúrovňovou strukturu dalších podřízených složek, případně i spolu s entitami v nich zatříděnými.
 Pokud už složka či entita měla nastavena nějaká oprávnění, tak jsou nahrazena zděděnými.
-Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno pro které uživatele či role, přímo na úrovni složky či entity, které už ale mají oprávnění děděná, tak jsou všechna tato zděděná oprávnění odstraněna a nahrazena nově definovanými. V případě potřeby se lze velmi snadno vrátit do předchozího stavu před výmazem děděných oprávnění – aktivace volby *Zdědit přístup* na záložce *Oprávnění* v detailu složky či entity znovu zdědí oprávnění z nadřízeného uzlu. Tato volba je dostupná pouze pokud 
+Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno pro které uživatele či role, přímo na úrovni složky či entity, které už ale mají oprávnění děděná, tak jsou všechna tato zděděná oprávnění odstraněna a nahrazena nově definovanými. V případě potřeby se lze velmi snadno vrátit do předchozího stavu před výmazem děděných oprávnění – aktivace volby *Zdědit přístup* na záložce *Oprávnění* v detailu složky či entity znovu zdědí oprávnění z nadřízeného uzlu. Tato volba je dostupná pouze pokud: 
 - kdekoliv v nadřízeném uzlu je nastaveno omezení, které se dědí do podřízených uzlů a
 - oprávnění nejsou děděna, tzn. aktuálně jsou definována přímo na dané složce nebo entitě nebo nejsou zatím vůbec definována.
 
@@ -219,7 +221,8 @@ Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno p
 A opět platí – všechna stávající oprávnění jsou touto akcí odstraněna a nahrazena těmi, které se zdědí z nadřízeného uzlu.
 
 :::info
-Pokud v rámci nastavení oprávnění je v atributu "Přístup" dostupná volba "Zdědit přístup", není zde pak dostupná volba "Veřejný". Tyto dvě volby se totiž vzájemně vylučují.
+Pokud v rámci nastavení oprávnění je v atributu "Přístup" dostupná volba "Zdědit přístup", není zde pak dostupná volba "Veřejný". Tyto dvě volby se totiž vzájemně vylučují.     
+      
 Pokud je na složce nastavena dědičnost, tak se uplatní nejen na stávající podřízené složky, ale automaticky i na všechny ty, které budou v budoucnu teprve vytvořené.
 :::
 
@@ -350,13 +353,14 @@ Aktivity zobrazí všechny uživatelem provedené aktivity v Zoty, které se tý
 V této sekci lze zobrazit a editovat přihlašovací a identifikační údaje přihlášeného uživatele. Tyto údaje má možnost měnit pouze přihlášený uživatel nebo administrátor aplikace s příslušným oprávněním.
 
 #### 3.11.3	Mé nastavení
-V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách Obecné a Email notifikace (viz kap. Notifikace)
 V této sekci si může uživatel přizpůsobit Zoty dle svých preferencí pomocí voleb dostupných na záložkách **Obecné** a [**Email notifikace**](#310notifikace).    
 Na záložce **Obecné** může volit **jazyk aplikace** a nezávisle na jazyku aplikace také **jazyk obsahu**, tj. v jakém jazyce mají být prezentována data. S tím, že pokud data nemají překlad v daném jazyce, zobrazí se alternativně v primárním jazyce, který je nastaven v administraci systému Zoty.    
 Volba **Barvy grafů** umožňuje výběrem z řady různých sad barevných palet nastavit, jaká barevnost má být použita v grafech a dashboardech při vizualizaci dat.    
 Volba **Velikost UI** optimalizuje celé pracovní prostředí Zoty aplikace zejména s ohledem na velikost a zozlišení displeje zařízení, na kterém uživatel provozuje aplikaci Zoty. Zvětšením či zmenšením lze zvolit optimální kompromis mezi velikostí zobrazovaných informací a množstvím dat, která budou zobrazena bez nutnosti rolovat vertikálním či horizontálním posuvníkem.
 
-Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele.
+#### 3.11.4	Odhlásit se
+Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele.      
+
 ### 3.12	Zoty – O aplikaci
 :::info
 Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
@@ -381,7 +385,7 @@ Ve stromové struktuře složek zobrazené v levém okně se po výběru složky
 Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají přidělené systémové role s nižšími oprávněními, tj. role *Uživatel*, *Auditor* nebo *Moderátor* nebo mají nastavená omezená oprávnění nebo pokud je entita uzamčena. Uzamčená entita je pak v horním pravém rohu detailu entity vizualizována ikonou zámku. Uzamknout či odemknout entitu mohou pouze uživatelé, kteří mají přidělené systémové role s vyššími oprávněními, tj. role *Manažer entit* nebo *Administrátor*.
 
 :::tip
-Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tomu má oprávnění, je třeba zkontrolovat, zda u není nemá zobrazen symbol zámku.
+Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tomu má oprávnění, je třeba zkontrolovat, zda u ní není zobrazen symbol zámku.
 :::
 
 ##### 3.13.1.1	Přesouvání složek
@@ -391,7 +395,7 @@ Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze 
 Pro podporu udržení přehlednosti, zejména při větším počtu různých typů aktiv (ale i jakýchkoliv jiných typů entit), lze zajistit, aby systém hlídal, že do konkrétní složky nebude možné uložit jiné typy entit než ty, které administrátor povolil. V případě, že do složky bude povoleno ukládat více než jeden typ entit, lze též přednastavit, jaký výchozí typ entity se má automaticky přednastavit, pokud bude uživatel do této složky vytvářet novou entitu.    
 Administrátor tedy může upravit vlastnosti každé složky tak, že např. data, informace a znalosti, které v Zoty reprezentují tři různé specifické typy entit, umístí do tří samostatných složek nebo je naopak umístí do jedné společné a povolí do ní ukládat všechny tyto tři typy entit.
 
-![Omezení obsahu složek](/img/placeholder/3_Slozka_Nastaveni omezeni.png)
+![Omezení obsahu složek](/img/placeholder/3_slozka_nastaveni omezeni.png)
 
 Pokud má být jeden typ entity, umístěný např. ve složce Hardware, dále členěn pro větší přehlednost do více samostatných podsložek (např. Servery, Pracovní stanice, Tiskárny atp. …) tak potom volba ***Nastavit dle rodiče*** u všech podřízených složek zajistí, že povolené typy entity pro ně budou nastaveny takové, jak má nastavena nadřazená (rodičovská) složka, tedy v tomto příkladu Hardware.    
 Vedle omezení obsahu složek lze také omezit samotný přístup na složky a entity v nich zatříděné. Celý systém správy uživatelských oprávnění je popsán v kapitole [Oprávnění](#37oprávnění-přístupu-na-záznamy).
@@ -410,8 +414,8 @@ Vzhled celé úvodní stránky lze upravit přepnutím do editačního módu, kd
 ![Zoty úvodní stránka](/img/placeholder/4_homepage_nastaveni.png)
 
 ## 5	ÚKOLY
-Úkoly uživateli přidělené nebo jím vytvořené jsou jedna z prvních věcí, které tento uživatel vidí v sekci **PŘEHLED** na své úvodní stránce po přihlášení do systému. V sekci **UŽIVATELÉ** lze pak zobrazit úkoly ostatních uživatelů, na záložce *Přehled* v detailu každého uživatele.    
-Zobrazení všech úkolů je dostupné v sekci **ÚKOLY**. Zde je lze třídit, filtrovat, sledovat jejich stav, časový průběh, datumy kdy byly vytvořeny, upraveny, jaký mají deadline, jakého mají správce nebo důležitost.    
+Úkoly uživateli přidělené nebo jím vytvořené jsou jedna z prvních věcí, které tento uživatel vidí v sekci [Přehled](#4přehled) na své úvodní stránce po přihlášení do systému. Uživatelé, kteří mají přístup do sekce [Administrace](#1622uživatelé), vidí i úkoly přidělené všem ostatním uživatelům, na záložce *Entity* v detailu každého uživatele.    
+Zobrazení všech úkolů je dostupné v sekci **Úkoly**. Zde je lze třídit, filtrovat, sledovat jejich stav, časový průběh, datumy kdy byly vytvořeny, upraveny, jaký mají deadline, jakého mají správce nebo důležitost.    
 Úkoly, které nebyly uzavřeny (tzn. dokončeny, odmítnuty nebo archivovány) do plánovaného datumu dokončení, se po uplynutí tohoto datumu zobrazují v seznamu červeně s vykřičníkem. V případě, že plánovaný datum dokončení je již velmi blízko (tzn. je dnes nebo nastane již následující den), zobrazuje se toto datum oranžově.
 
 ![Seznam úkolů](/img/placeholder/5_ukoly_zobrazeni-seznam.png)
@@ -499,7 +503,7 @@ Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chyb
 :::
 
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
-Aktiva lze hodnotit podle uživatelsky definovatelných schémat **HODNOCENÍ** obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
+Aktiva lze hodnotit podle uživatelsky definovatelných schémat [Hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
 :::tip
  Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání, tj. např. narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
@@ -535,8 +539,9 @@ Na kartě rizika je, vedle datumů platnosti a popisných atributů (*Název, Po
 ***Přenesení*** – tato strategie se volí v případech, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo sdílení prospěchu ze zisku vyplývajícího z rizika. V Zoty je pak možné přidat opatření typu *Úkol* (např. uzavřít Pojistnou smlouvu), nebo *Proces* (např. Správa pojištění).
 
 ***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysoké míry dopadu (kritické pásmo). V těchto případech se zpravidla volí úkoly týkající se zastavení běžících nebo vyhnutí se plánovaným aktivitám.
-Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a ponechána nebo změněna.
-Rizika lze hodnotit podle uživatelsky definovatelných schémat *Hodnocení*.
+Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a ponechána nebo změněna.      
+      
+Rizika lze hodnotit podle uživatelsky definovatelných schémat [Hodnocení](#1614hodnocení).
 
 :::tip
 Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojenými úkoly. Správce každého rizika pak bude mít u svých rizik připojen úkol/úkoly s termínem splnění k datu, kdy končí platnost zvolené strategie pro tato rizika.
@@ -571,21 +576,25 @@ Při tvorbě nové entity typového Hodnocení je hlavně třeba také zvolit, c
 
 Přitom je možné zvolit, že toto typové hodnocení nebude mít jednoho tzv. rodiče (v tomto příkladu riziko - *Narušení střeženého objektu*), ale může jich mít více. Např. aktivum typu *Proces* (*Provoz a údržba budov*) nebo projekt. Nebo též hrozbu, která působí na aktivum typu *Proces*. A zároveň s ní i zranitelnost aktiva (v tomto příkladu procesu), skrze kterou hrozba na aktivum působí.    
 Tímto způsobem lze, pomocí vazeb mezi jednotlivými entitami, zviditelnit konkrétní instance hodnocení pro všechny tyto vybrané rodiče. To může být velmi užitečné např. při hodnocení jednoho typu entity (např. rizika), které je ovlivněno výsledkem předchozího hodnocení jiného typu entity (např. aktiva). Potom je výhodné vidět výsledná skóre hodnocení rizika i u všech souvisejících aktiv (rodičů).    
-Propojení entit pomocí vazby typu *Rodič-Potomek* je nezbytné, má-li jedna hodnocená entita (potomek) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu (viz Nastavení, v kap. Hodnocení).    
+Propojení entit pomocí vazby typu *Rodič-Potomek* je nezbytné, má-li jedna hodnocená entita (potomek) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle [nastaveného schématu](#1614hodnocení).    
 Přehled všech hodnocení, jejich výsledného skóre a časového rozmezí, pro který je platné, lze pro hodnocení každé konkrétní entity zobrazit ze stejnojmenné záložky *Hodnocení*, viz obr. níže.
 Pro plánovaná cílová hodnocení reprezentující cílové milníky, je navíc vidět i celkový počet opatření, s pomocí kterých má být cílového stavu dosaženo. Kliknutím na symbol **+**/**-** vlevo vedle názvu hodnocení, lze pak rozbalit/sbalit seznam všech opatření připojených k tomuto plánovanému cílovému milníku.
 ![Hodnocení rizika – detail nastavení a ohodnocení](/img/placeholder/9_hodnoceni.png)
 
 Časový průběh výsledných skóre hodnocení pro skutečnost i pro plánované cílové hodnoty lze přehledně zobrazit v jednoduchém grafu. Nad ním lze také zobrazit seznam záznamů s historií všech provedených hodnocení.
+
 ## 10	ZVLÁDÁNÍ RIZIK
 ### 10.1	Opatření
 Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
 Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“. Typické je to u tzv. „3A opatření“ - tj. opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů). V tomto případě se jedná o základní sadu opatření, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena přímo k příslušnému aktivu.    
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
+
 ### 10.2	Plán zvládání rizik
-Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností OD-DO. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka Připojit riziko do něj zahrnout rizika z registru rizik. Pokud mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci Obsah stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce Report, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační a dále též libovolnou textovou poznámku.
+Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností OD-DO. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik. Pokud mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.
+
 ### 10.3	Reporty
 V této sekci mohou být definovány reporty, jejichž obsah či vzhled je třeba zakázkově přizpůsobit dle požadavků uživatelů konkrétní organizace. V Zoty jsou pro tento účel připravena data v takovém kontextu, aby z nich bylo možné sestavit příslušné standardní reporty, např. Prohlášení o aplikovatelnosti (PoA) dle požadavku Zákona o kybernetické bezpečnosti, které v Zoty, v metodě ZoKB, využívá přednaplněný registr bezpečnostních opatření dle vyhlášky o kybernetické bezpečnosti (VoKB) s možností auditovat, zda a jak jsou jednotlivá bezpečností opatření v organizaci aplikována ve vazbě na požadavky této vyhlášky. Výstupy z tohoto auditu, spolu s registrem bezpečnostních opatření a znalostní bází Zoty, kde je definována matice opatření a kategorií zranitelností, na které tato opatření působí, jsou pak podkladem pro sestavení PoA reportu.
+
 ## 11	PŘÍPADY
 V této sekci lze evidovat specifické typy případů, jakými jsou:
 - Auditní nálezy
@@ -594,12 +603,13 @@ V této sekci lze evidovat specifické typy případů, jakými jsou:
 - Incidenty
 - Servisní požadavky
 Protože některé tyto záznamy, zejména incidenty a servisní požadavky, jsou často evidovány a řízeny ve specializovaných externích systémech, je Zoty připraveno tato data na pravidelné bázi synchronizovat. Aby pak mohla být propojena na relevantní entity spravované v  Zoty registrech (rizika, aktiva, atp.). Nastavení této synchronizace je vždy specifické pro každý konkrétní integrační scénář a je realizováno zakázkově v kooperaci s kvalifikovaným implementačním Zoty partnerem.
+
 ## 12	AUDITY
 V modulu ***Audit*** lze zakládat interní či externí audity a propojovat je s požadavky, vůči kterým je v rámci daného auditu posuzována shoda.
 
 ![Audity](/img/placeholder/13_audit_seznam.png)
 
-Je-li audit propojen s požadavkem v sekci Řízení shody - POŽADAVKY, a tímto požadavkem je dokument (zákon, ISO norma, směrnice, smlouva, atp.), jež má strukturovaný obsah (kapitoly, podkapitoly nebo paragrafy, odstavce, písmena, atp.), tak pak lze ze všech těchto ucelených fragmentů textu vybrat v rámci auditu ty, u kterých má být posuzováno, zda je s nimi organizace ve shodě či nikoliv.
+Je-li audit propojen s požadavkem v sekci Řízení shody - [Požadavky](#71požadavky), a tímto požadavkem je dokument (zákon, ISO norma, směrnice, smlouva, atp.), jež má strukturovaný obsah (kapitoly, podkapitoly nebo paragrafy, odstavce, písmena, atp.), tak pak lze ze všech těchto ucelených fragmentů textu vybrat v rámci auditu ty, u kterých má být posuzováno, zda je s nimi organizace ve shodě či nikoliv.
 Po najetí myší nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment se stává tzv. auditní.
 ![Aktivace auditu pro fragment textu požadavku](/img/placeholder/13_audit_aktivace-pro-fragment-textu-pozadavku.png)
 
@@ -610,14 +620,15 @@ Aktivací auditu pro vybrané fragmenty / dílčí požadavky se určí zaměře
 
 Zoty ve standardu nabízí různé typy grafů, které poskytnou rychlý přehled o aktuálním stavu plnění požadavků daného zákona, normy či jiných předpisů prověřovaných v rámci interního auditu.
 Grafy lze snadno použít i v externích dokumentech, např. v prezentacích a to tak, že po najetí myší do oblasti grafu se zobrazí ikona  ![Ikona stažení grafu](/img/placeholder/13_ikona_graph-download.png) pro stažení grafu ve formátu PNG (viz obrázek výše).
-## 13	VYHLEDAT
-Vyhledávat lze v celé aplikaci dle názvu nebo klíče entity zadáním části vyhledávaného řetězce. Avšak zatímco vyhledávání přes pole pro vyhledávání vedle symbolu lupy v jednotlivých sekcích, které dostupné pouze pro záznamy jen některých typů entit patřících do dané sekce nebo globální vyhledávání s využitím symbolu lupy v horní nástrojové liště, slouží pro rychlé vyhledání, které je omezeno na max. 10 výsledků, tak v této sekci lze vyhledávat bez omezení. Navíc se zde vyhledané výsledky, je-li jich více, zobrazují ve standardním seznamu záznamů, který lze dále filtrovat, třídit anebo označovat jednotlivé záznamy a pak s nimi provádět některé hromadné operace.
-Kterýkoliv z výsledků vyhledávání lze pak také připnout do samostatných záložek, které jsou ve spodní části obrazovky připraveny zobrazit na jedno kliknutí detail příslušného záznamu.
-Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, které podporují takovýto způsob zadání výběrem ze seznamu.
-Je-li zadávanou hodnotou atributu jiná entita, lze v seznamu entit pro výběr vyhledávat podle názvu nebo klíče entity.
-Je-li zadávanou hodnotou atributu *uživatel*, lze v seznamu entit pro výběr uživatele vyhledávat podle *jména* nebo *příjmení* nebo *role* přiřazené uživateli.
-## 14	ŠTÍTKY
 
+## 13	VYHLEDAT
+Vyhledávat lze v celé aplikaci dle názvu nebo klíče entity zadáním části vyhledávaného řetězce. Avšak zatímco vyhledávání přes pole pro vyhledávání vedle symbolu lupy v jednotlivých sekcích, které dostupné pouze pro záznamy jen některých typů entit patřících do dané sekce nebo globální vyhledávání s využitím symbolu lupy v horní nástrojové liště, slouží pro rychlé vyhledání, které je omezeno na max. 10 výsledků, tak v této sekci lze vyhledávat bez omezení. Navíc se zde vyhledané výsledky, je-li jich více, zobrazují ve standardním seznamu záznamů, který lze dále filtrovat, třídit anebo označovat jednotlivé záznamy a pak s nimi provádět některé hromadné operace.     
+Kterýkoliv z výsledků vyhledávání lze pak také připnout do samostatných záložek, které jsou ve spodní části obrazovky připraveny zobrazit na jedno kliknutí detail příslušného záznamu.      
+Vyhledávat lze fulltextově i v seznamech záznamů, které se nabízí při zadávání hodnot těch atributů, které podporují takovýto způsob zadání výběrem ze seznamu.     
+Je-li zadávanou hodnotou atributu jiná entita, lze v seznamu entit pro výběr vyhledávat podle názvu nebo klíče entity.      
+Je-li zadávanou hodnotou atributu *uživatel*, lze v seznamu entit pro výběr uživatele vyhledávat podle *jména* nebo *příjmení* nebo *role* přiřazené uživateli.
+
+## 14	ŠTÍTKY
 Sekce **Štítky** obsahuje seznam všech štítků, které jsou v Zoty vytvořeny, s možností zobrazit či upravit jejich název, popis, či barvu, jakou jsou vizualizovány. V detailu štítku se pak v záložce „Obsahuje“ zobrazí seznam všech entit, ke kterým je štítek připojen.    
 Specifický typ systémového štítku je *Organizace*. Pokud je tímto štítkem označena libovolná složka v registrech entit či konkrétní entita, bude omezena jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky. Více v kap. [Rozšířená správa oprávnění](#373rozšířená-správa-oprávnění-pro-velké-organizace).
 
@@ -625,8 +636,8 @@ Specifický typ systémového štítku je *Organizace*. Pokud je tímto štítke
 V Zoty jsou předdefinovaná schémata pro tvorbu skupin, které umožní seskupovat entity příslušného typu – *Aktiva, Hrozby, Zranitelnosti, Rizika*. Do takto vytvořených skupin lze zařazovat entity příslušného typu (dle příslušného schématu v rámci kterého byla skupina vytvořena) a provádět s nimi pak hromadné operace, např. provést hromadně jedno hodnocení nad celou skupinou vybraných rizik namísto mnoha hodnocení jednotlivých rizik.
 
 ## 16	ADMINISTRACE
-Obsahuje podsekce **Nastavení**, **Účet** a **Koš**.
-V sekci Administrace lze provádět řadu nastavení samotné aplikace včetně dat, se kterými pracuje, spravovat Zoty účet se všemi uživateli a jejich rolemi a provádět řadu dalších systémových nastavení, která mohou mít zásadní vliv na fungování celé aplikace.
+Obsahuje podsekce [**Nastavení**](#161nastavení), [**Účet**](#162účet) a [**Koš**](#163koš).
+V sekci **Administrace** lze provádět řadu nastavení samotné aplikace včetně dat, se kterými pracuje, spravovat Zoty účet se všemi uživateli a jejich rolemi a provádět řadu dalších systémových nastavení, která mohou mít zásadní vliv na fungování celé aplikace.
 
 :::caution
 Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení [oprávnění](#16113oprávnění-přístupu-do-aplikace).
@@ -664,7 +675,8 @@ V systému jsou dostupné atributy typu: *boolean, text, string, integer, float,
 
 ##### 16.1.2.3	Propojení
 V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení.    
-Systémová propojení jsou typu: *Stromová struktura, Výskyt, Zástupce*.
+Systémová propojení jsou typu: *Stromová struktura, Výskyt, Zástupce*.     
+      
 Účel a použití jednotlivých typů systémových propojení:
 -	***Stromová struktura*** je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
 -	***Výskyt*** je využíván v modulu Zoty Designer při vizualizaci propojení entit tvořící procesní modely importované z procesního nástroje ARIS.
@@ -685,12 +697,15 @@ Propojení entit pomocí vazby typu *Rodič -> Dítě* je také nezbytné, má-l
 
 ##### 16.1.2.4	Stavy
 V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsahu hodnot: *Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno*.
+
 #### 16.1.3	Znalostní báze
-Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci vyhodnocení rizik.    
+:::info
+Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci vyhodnocení rizik.
+:::    
 Znalostní báze je matice kombinující hrozby s relevantními zranitelnostmi, požadavky a kategoriemi aktiv (či přímo konkrétními aktivy). Správce systému může jednotlivé dimenze této matice zcela volně definovat, tj. stanovit, jaké konkrétní kategorie pro aktivum, hrozbu či zranitelnost budou do této matice zahrnuty a jak na sebe navzájem působí.    
 Řádky matice reprezentují jednotlivé hrozby. Systém do řádků automaticky vloží všechny hrozby, které jsou uložené v registru.     
 V konfiguraci lze také zapnout přepínač *Kompaktní zobrazení* kdy se namísto názvů entit zobrazují pouze jejich klíče a název se zobrazí až v tooltipu (po najetí myší nad příslušný klíč). Matice se pak stane daleko přehlednější. Zejména v případech, kdy uživatelé používají delší názvy.      
-Tlačítko **Přidat** sloupec nabídne výběr ze všech entit typu zranitelnosti a entit a složek z registrů aktiv a požadavků. Na konci každého řádku lze vyvolat menu Upravit, umožňující nastavit relevanci propojení, tj. které sloupce matice jsou pro tento konkrétní řádek relevantní.    
+Tlačítko ***Přidat*** sloupec nabídne výběr ze všech entit typu zranitelnosti a entit a složek z registrů aktiv a požadavků. Na konci každého řádku lze vyvolat menu Upravit, umožňující nastavit relevanci propojení, tj. které sloupce matice jsou pro tento konkrétní řádek relevantní.    
 Se znalostí, jaké hrozby, mohou působit na jaké kategorie aktiv a jaké zranitelnosti mohou při tom zneužít, pak systém pracuje tak, že přednabízí uživatelům pouze smysluplná propojení mezi aktivem zranitelností a hrozbou.    
 K tomu, aby byl tento koncept funkční, je pouze třeba (vedle správné jednorázové konfigurace matice), aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie (reprezentované složkami v registru či katalozích aktiv).
 
@@ -703,7 +718,7 @@ Nově vytvořené schéma je třeba publikovat (pomocí tlačítka ***Publikovat
 
 ![Publikace schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni-publikace.png)
 
-Aby bylo možné stávající schéma, které je publikováno, upravit, je třeba jej přepnout pomocí tlačítka ***Upravit*** do editačního režimu. Schéma je pak viditelné pouze zde, v nastavení **Hodnocení**.
+Aby bylo možné stávající schéma, které je publikováno, upravit, je třeba jej přepnout pomocí tlačítka ***Upravit*** do editačního režimu. Schéma je pak viditelné pouze zde, v nastavení hodnocení.
 
 ![Povolení editace schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni-editace.png)
 
@@ -715,7 +730,7 @@ Při definici schématu hodnocení je třeba dále nastavit:
 - **Možnosti dopadu** – volba, zda se při hodnocení má uživateli nabízet hodnocení dopadu na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího
 - **Perioda hodnocení** – volba, zda časovým obdobím pro hodnocení aktuálního/skutečného stavu má být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu.
 
-V dalším kroku lze již definovat metriky pomocí tlačítka Přidat metriku. Metrika je jedním z parametrů hodnocení, pro který lze definovat:
+V dalším kroku lze již definovat metriky pomocí tlačítka ***Přidat metriku***. Metrika je jedním z parametrů hodnocení, pro který lze definovat:
 - **Typ** – určuje způsob, jakým bude metrika v definovaném schématu hodnocení použita. Metrika může být v rámci schématu zcela nově definována (jak je popsáno níže) pomocí volby
   - **Vytvořit metriku**
   - **Metrika** – lze použít některou ze stávajících, již definovaných metrik v rámci jiných schémat hodnocení.
@@ -742,8 +757,10 @@ Na obrázku níže je prezentován příklad výsledné definice pásem hodnocen
 :::
 ![Definice pásem ve schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni_pasma.png)
 
-- **Vzorec výpočtu hodnocení** – výsledné skóre hodnocení se spočte na základě vstupních dat, která uživatel vybere z předdefinovaných hodnot pro jednotlivá pásma hodnocení. Vzorec je uživatelsky definovatelný. V rámci jeho definice lze použít všechny metriky definované v předchozím kroku a s nimi provádět základní operace, jako jsou sčítání, odčítání, násobení, dělení, funkce zaokrouhlení nahoru (*Round Up*), zaokrouhlení dolů (*Round Down*), vyhledání maxima z množiny hodnot (*MAX*), vyhledání minima z množiny hodnot (*MIN*). Použít lze přitom závorky, čárky pro oddělení hodnot při použití funkcí nebo libovolný celočíselný koeficient pro úpravu celého výpočtu.
-![Definice vzorce ve schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni-vzorec-definice.png)
+- **Vzorec výpočtu hodnocení** – výsledné skóre hodnocení se spočte na základě vstupních dat, která uživatel vybere z předdefinovaných hodnot pro jednotlivá pásma hodnocení. Vzorec je uživatelsky definovatelný. V rámci jeho definice lze použít všechny metriky definované v předchozím kroku a s nimi provádět základní operace, jako jsou sčítání, odčítání, násobení, dělení, funkce zaokrouhlení nahoru (*Round Up*), zaokrouhlení dolů (*Round Down*), vyhledání maxima z množiny hodnot (*MAX*), vyhledání minima z množiny hodnot (*MIN*). Použít lze přitom závorky, čárky pro oddělení hodnot při použití funkcí nebo libovolný celočíselný koeficient pro úpravu celého výpočtu.      
+
+![Definice vzorce ve schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni-vzorec-definice.png)      
+      
 :::note
 Použití základních funkcí:
   - *MAX* (3,4,5) = 5
@@ -751,8 +768,10 @@ Použití základních funkcí:
   - *Round Up* (1.4) = 2
   - *Round Down* (1.6) = 1
 :::
+      
 Tlačítko ***Zkontrolovat*** provede kontrolu logické správnosti celého definovaného vzorce a oznámí, zda je matematicky správný nebo zda obsahuje chybu. Bez provedené kontroly nelze schéma hodnocení uložit.
-![Kontrola vzorce ve schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni_vzorec-zkontrolovat.png)
+![Kontrola vzorce ve schématu hodnocení](/img/placeholder/16_nastaveni_hodnoceni_vzorec-zkontrolovat.png)      
+      
 Výsledné pásmové hodnocení je heatmapa, která může zobrazovat jednoduché jednorozměrné hodnocení pouze v jedné ose X.
 Anebo může také kombinovat pásmová hodnocení v ose X a v ose Y v podobě dvourozměrné heatmapy – viz příklad na obr. níže. V takovém případě jsou definovány vzorce tři. Jeden, obsahující parametr/parametry v ose X, druhý, obsahující parametr/parametry v ose Y a třetí (tzv. *Matice*), který kombinuje výsledky výpočtu předchozích dvou (*Osa X celkem, Osa Y celkem*).
 :::note
@@ -763,7 +782,7 @@ Vzorec výpočtu hodnocení pro sestavení dvojrozměrné heatmapy v rámci hodn
 Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních technologií JavaScript, GraphQL, Handlebars, CSS. Pro každý report lze také zapnout/vypnout přepínač Aktivní, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatelům či role, pro které má být report dostupný.
 #### 16.1.6	Data
 Záložky ***Export*** a ***Import*** v sekci ***Administrace – Nastavení – Data***, slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
-Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.
+Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
 Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty pak umožňuje uživateli v roli administrátora exportovat obsah databáze do souboru ve formátu JSON.
 
 ![Záloha a obnova dat](/img/placeholder/16_zalohovani.png)
@@ -784,9 +803,12 @@ Pokud je pak štítkem s názvem zde definované organizace označena složka č
 #### 16.2.2	Uživatelé
 ***Přehled*** zobrazuje seznam všech uživatelů, kteří mají přístup do aplikace Zoty. 
 Symbol tří teček na konci každého záznamu zobrazí menu s možností upravit základní identifikační a přihlašovací údaje u vybraného uživatele, jemu přiřazené role, celý jeho účet odstranit nebo anonymizovat záznamy o něm za účelem plnění požadavků na ochranu osobních údajů (GDPR). 
-Záložka ***Vizualizace*** pak poskytuje graf nejaktivnějších uživatelů podle celkového času, který strávili v aplikaci Zoty v aktuálním dni.
+Záložka ***Vizualizace*** pak poskytuje graf nejaktivnějších uživatelů podle celkového času, který strávili v aplikaci Zoty v aktuálním dni.      
+V detailu vybraného uživatele lze pak zobrazit, vedle jeho identifikačních údajů, seznam všech entit či složek, které jsou mu přiděleny (jeho jméno je zadáno v atributu *Správce* nebo *Garant*) a také přehled všech jeho komentářů a připojených souborů.
 
-Lidé jsou osoby bez přístupu do aplikace Zoty. Tzn., že nemají vytvořen uživatelský účet, přesto se ale mohou nabízet pro vyplnění některých atributů entit, kde se očekává zadání výběrem i z těch osob, které nemusí být uživateli Zoty (přičemž se neřeší, zda se jedná o zaměstnance, externisty nebo jakékoliv jiné osoby).
+#### 16.2.3	Lidé
+Lidé jsou osoby bez přístupu do aplikace Zoty. Tzn., že nemají vytvořen uživatelský účet, přesto se ale mohou nabízet pro vyplnění některých atributů entit, kde se očekává zadání výběrem i z těch osob, které nemusí být uživateli Zoty (přičemž se neřeší, zda se jedná o zaměstnance, externisty nebo jakékoliv jiné osoby).      
+
 #### 16.2.4	Role
 Zde se zobrazují jak role předdefinované výrobcem (systémové role), tak role vytvořené uživatelem. V seznamu rolí se zobrazuje i atribut *Uživatelé* s číselným údajem o celkovém počtu uživatelů, kterým je daná role přiřazena. Kliknutím na tuto informaci se pak zobrazí výpis všech uživatelů s touto rolí.
 Aby se zjednodušilo a částečně či zcela zautomatizovalo vyplňování metod, lze navíc jednotlivým rolím nastavit omezení pouze na *přiřazené metody*. A poté vybrat a přiřadit této roli, které metody z těch všech, jež jsou v Zoty definované, se mají uživateli nabízet pro výběr.
