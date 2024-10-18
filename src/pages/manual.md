@@ -3,8 +3,20 @@ https://www.markdownguide.org/basic-syntax/
 https://docusaurus.io/docs/markdown-features/toc
 -->
 
+<!---
+vlastní lokalizace
 
-<!--- to test
+node_modules\@docusaurus\theme-translations\locales\cs\theme-common.json
+
+  "theme.admonition.caution": "pozor",
+  "theme.admonition.danger": "pozor!",
+  "theme.admonition.info": "info",
+  "theme.admonition.note": "příklad",
+  "theme.admonition.tip": "tip",
+
+--->
+
+<!--- Content to test
 ## Obsah
 toc_min_heading_level: 2
 toc_max_heading_level: 5
