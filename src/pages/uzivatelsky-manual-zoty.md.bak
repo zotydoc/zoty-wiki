@@ -99,7 +99,7 @@ Horní nástrojová lišta pak zobrazuje sekce:
 V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
 ![Vyhledávání v sekci](/img/placeholder/3_vyhledavani.png)
-
+<img src="/doc/img/placeholder/3-vyhledavani.png" title="Vyhledávání v sekci" width="100" />
 
 Vyhledávat lze též globálně napříč celým systémem dle názvu nebo klíče entity s využitím symbolu lupy v horní nástrojové liště.
 
