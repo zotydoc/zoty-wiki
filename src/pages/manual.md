@@ -853,3 +853,16 @@ Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity m
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
  Budeme vám vděční za veškeré podněty a připomínky.
 :::
+
+<!---
+vlastní lokalizace
+
+node_modules\@docusaurus\theme-translations\locales\cs\theme-common.json
+
+  "theme.admonition.caution": "pozor",
+  "theme.admonition.danger": "pozor!",
+  "theme.admonition.info": "info",
+  "theme.admonition.note": "příklad",
+  "theme.admonition.tip": "tip",
+
+--->
