@@ -4,6 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Zoty',
+  staticDirectories:['public','static'],
   tagline: 'Uživatelský manuál Zoty',
   favicon: 'img/favicon.png',
 
