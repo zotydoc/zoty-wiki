@@ -857,7 +857,7 @@ Nebo lze také metodu/metody rovnou předvybrat bez zásahu uživatele. Uživate
 ### 16.3	Koš
 Všechny smazané záznamy se přesouvají do koše, odkud je možné je obnovit nebo trvale smazat. V koši se zobrazuje název, datum odstranění a typ záznamu (*Složka, Hodnocení, Riziko, Hrozba* atp.).
 
-<img src="/doc/img/16-zalohovani.png" title="Koš" width="640"/>
+<img src="/doc/img/16-kos.png" title="Koš" width="640"/>
 
 Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity mimo koš. Tzn., že zobrazit a/nebo odstranit či obnovit entitu z koše, může jen uživatel, který je u ní přiřazen jako *Správce*, pokud není *Správce* přiřazen, tak uživatel, který ji vytvořil. Role *Manažer* entit má oprávnění plného přístupu na všechny entity bez ohledu na to, kdo je vytvořil nebo kdo je jejich *Správce*, ale pouze za předpokladu, že je členem *Organizace*, která je entitě přiřazena. Toto pravidlo platí i pro ty entity, které již byly odstraněny do koše.
 
