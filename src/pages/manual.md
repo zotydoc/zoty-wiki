@@ -17,7 +17,7 @@ node_modules\@docusaurus\theme-translations\locales\cs\theme-common.json
 --->
 
 <!--- Content to test
-## Obsah
+
 toc_min_heading_level: 2
 toc_max_heading_level: 5
 -->
