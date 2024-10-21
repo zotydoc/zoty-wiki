@@ -123,7 +123,7 @@ Příklad na obrázku níže demonstruje definici filtru pro vyhledání všech 
 
 ### 3.4	Globální metody
 Globální metody umožňují ze všech metod definovaných v [administraci](#16112metody) nastavit pouze ty, které chce organizace aktuálně využívat. Tzn., že pouze tyto nastavené globální metody se budou zobrazovat uživatelům v nabídce při výběru metody, např. při vytváření nové entity a jejího přiřazení do některé z metod.     
-Volba ***Aplikovat globální filtr*** umožní převzít toto nastavení z globálních metod i do globálního filtru, kde automaticky zapne parametr ***Metoda*** a do nastavení filtru převezme ty metody, které jsou v nastavení globální metody aktivované. Uživatelům jsou pak filtrovány pouze ty záznamy, jež mají přidělenou alespoň jednu z metod převzatých či definovaných v globálním filtru. Ostatní záznamy jsou skryté.
+Volba ***Aplikovat globální filtr*** umožní převzít toto nastavení z globálních metod i do [globálního filtru](#33filtry), kde automaticky zapne parametr ***Metoda*** a do nastavení filtru převezme ty metody, které jsou v nastavení globální metody aktivované. Uživatelům jsou pak filtrovány pouze ty záznamy, jež mají přidělenou alespoň jednu z metod převzatých či definovaných v globálním filtru. Ostatní záznamy jsou skryté.
 
 :::tip
 Aby uživatelé nemuseli vždy zadávat metody pro nově vytvářené entity, lze pro ně nastavit **automatické přednastavení správné metody**. K tomu je potřeba propojit jejich uživatelské role s preferovanou metodou/metodami v [nastavení rolí](#1624role) v administraci účtu. A zde pak v konfiguraci také nastavit, zda se tyto metody mají uživateli pouze zobrazit a nabídnout pro výběr nebo rovnou i automaticky vybrat.
@@ -155,9 +155,12 @@ Propojení jsou zobrazena nejen seznamem propojených entit, ale i graficky pomo
 
 <img src="/doc/img/3-propojeni-diagram-vizualizace-odstranene-entity.png" title="Propojení - diagram" />
 
-Pokud je nějaká entita z registru odstraněna (je přesunuta do koše), v diagramu je vizualizována červeně. Z diagramu automaticky zmizí až po vysypání koše.
+:::info
+Pokud je nějaká entita odstraněna (je přesunuta do koše), v diagramu je stále viditelná a je vizualizována červeně.    
+Z diagramu automaticky zmizí až po vysypání koše.
+:::
 
-V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení. 
+V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky, bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení. 
 Systémová propojení jsou typu: *Stromová struktura, Výskyt, Zástupce, Rodič→Dítě*.
 Účel a použití jednotlivých typů systémových propojení:
 - ***Stromová struktura*** je často používaný typ směrově orientovaného propojení mezi složkami či entitami, kde je třeba modelovat hierarchickou strukturu vazeb, kdy jedna složka či entita vystupuje v roli nadřazené a ve stromové struktuře se pak pod ní zobrazují ostatní, jí podřazené složky/entity.
@@ -214,7 +217,7 @@ Oprávnění definovaná na úrovni složky lze volitelně dědit i na všechny 
 Podřízenými uzly konkrétní složky se tedy rozumí všechny ty složky nebo entity, které jsou jí ve stromové struktuře podřízené. A to až do nejnižší úrovně zanoření, má-li tato konkrétní složka víceúrovňovou strukturu dalších podřízených složek, případně i spolu s entitami v nich zatříděnými.
 Pokud už složka či entita měla nastavena nějaká oprávnění, tak jsou nahrazena zděděnými.
 Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno pro které uživatele či role, přímo na úrovni složky či entity, které už ale mají oprávnění děděná, tak jsou všechna tato zděděná oprávnění odstraněna a nahrazena nově definovanými. V případě potřeby se lze velmi snadno vrátit do předchozího stavu před výmazem děděných oprávnění – aktivace volby *Zdědit přístup* na záložce ***Oprávnění*** v detailu složky či entity znovu zdědí oprávnění z nadřízeného uzlu. Tato volba je dostupná pouze pokud: 
-- kdekoliv v nadřízeném uzlu je nastaveno omezení, které se dědí do podřízených uzlů a
+- kdekoliv v nadřízeném uzlu je nastaveno omezení oprávnění, které se dědí do podřízených uzlů a
 - oprávnění nejsou děděna, tzn. aktuálně jsou definována přímo na dané složce nebo entitě nebo nejsou zatím vůbec definována.
 
 <img src="/doc/img/3-opravneni-zdedit-pristup.png" title="Oprávnění – zdědit přístup" width="650"/>
@@ -254,10 +257,10 @@ Uživatel Martina má přiřazenou roli *Manažer entit*. Tato **role** má v re
 #### 3.8.3	Rozšířená správa oprávnění pro velké organizace
 Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit pak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
 Typické použití v komerčním sektoru je pro ty organizace, které v rámci holdingu/skupiny sdružují více společností, jejichž data mají být oddělena. Tzn., že uživatelé pracující pro jednu konkrétní společnost pak nevidí data (složky a entity v registrech) ostatních společností skupiny.
-Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.
+Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.      
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
 :::info
-Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů s pomocí standardních funkcionalit pro řízení oprávnění pouze na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
+Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů pouze s pomocí standardních funkcionalit pro řízení oprávnění na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
 :::
 ### 3.9	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: *Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení*.
@@ -700,13 +703,13 @@ Metody mohou ovlivnit, jaké vlastnosti (atributy) budou entity mít, jak se s n
 
 Schopnost skrývat záznamy lze zajistit i s pomocí nastavení přístupových oprávnění. Rozdíl je ale ten, že skrýt záznamy entit s využitím metod a globálního filtru může i běžný uživatel, nikoliv pouze administrátor.     
       
-Přesto, že koncept metod s sebou přináší řadu výhod, není jeho použití povinné či nezbytné pro správné fungování aplikace.
+I když koncept metod přináší řadu výhod, není jeho použití povinné či nezbytné pro správné fungování aplikace.
 
 ##### 16.1.1.3	Oprávnění přístupu do aplikace
 Záložka ***Oprávnění*** umožňuje pro vybrané role či konkrétní uživatele nastavit přístup do jednotlivých sekcí či podsekcí aplikace, s libovolnou kombinací oprávnění: *Číst, Vytvořit, Upravit, Odstranit, Komentář* nebo zvolit *Vše* pro nejvyšší úroveň oprávnění.
 
 ##### 16.1.1.4	Přesměrování
-Záložka ***Přesměrování*** umožňuje pro každou roli individuálně nastavit, do jaké sekce či podsekce aplikace Zoty bude po přihlášení automaticky přesměrován uživatel s touto rolí. Pokud mají uživatelé přiřazeno více rolí, pak volbou *Pořadí* lze nastavit, v jakém pořadí mají být role seřazeny při vyhodnocování, kam má být daný uživatel přesměrován. Přičemž role s nižším pořadovým číslem mají vyšší prioritu. Specifické postavení zde má role *Administrátor*, která je v pořadí vždy na prvním místě.
+Záložka ***Přesměrování*** umožňuje pro každou roli individuálně nastavit, do jaké sekce či podsekce aplikace Zoty bude po přihlášení automaticky přesměrován uživatel s touto rolí. Pokud mají uživatelé přiřazeno více rolí, pak volbou *Pořadí* lze nastavit, v jakém pořadí mají být role seřazeny při vyhodnocování, kam má být daný uživatel přesměrován. Přičemž role s nižším pořadovým číslem mají vyšší prioritu. Specifické postavení zde má role administrátora, která je v pořadí vždy na prvním místě.
 
 #### 16.1.2	Entity
 Jednotlivé záložky zobrazují všechny **Typy entit**, které jsou v systému k dispozici, **Atributy**, které jsou používány pro popis vlastností entit, typy **Propojení**, která lze mezi entitami realizovat a všechny **Stavy**, kterých mohou entity nabývat v rámci systémových či uživatelských workflow.    
