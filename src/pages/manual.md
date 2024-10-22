@@ -400,6 +400,8 @@ Ve stromové struktuře složek zobrazené v levém okně se po výběru složky
 
 Tyto operace (vyjma exportu) nejsou dostupné pro uživatele, kteří mají přidělené systémové role s nižšími oprávněními, tj. role *Uživatel*, *Auditor* nebo *Moderátor* nebo mají nastavená omezená oprávnění nebo pokud je entita uzamčena. Uzamčená entita je pak v horním pravém rohu detailu entity vizualizována ikonou zámku. Uzamknout či odemknout entitu mohou pouze uživatelé, kteří mají přidělené systémové role s vyššími oprávněními, tj. role *Manažer entit* nebo *Administrátor*.
 
+<img src="/doc/img/3-zamek-entity.png"  title="Uzamčení entity" width="850"/>
+
 :::tip
 Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tomu má oprávnění, je třeba zkontrolovat, zda u ní není zobrazen symbol zámku.
 :::
