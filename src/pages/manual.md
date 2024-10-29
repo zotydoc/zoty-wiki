@@ -72,7 +72,7 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 - **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy). 
 - **Detail** – způsob zobrazení jednoho vybraného záznamu v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
-- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Informace, Procesy atp.
+- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Software, Informace, Procesy atp.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
 - **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole [Metody](#16112metody).
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
@@ -156,7 +156,7 @@ Propojení jsou zobrazena nejen seznamem propojených entit, ale i graficky pomo
 <img src="/doc/img/3-propojeni-diagram-vizualizace-odstranene-entity.png" title="Propojení - diagram" />
 
 :::info
-Pokud je nějaká entita odstraněna (je přesunuta do koše), v diagramu je stále viditelná a je vizualizována červeně.    
+Pokud je nějaká entita odstraněna, je přesunuta do koše, ale v diagramu je přesto stále viditelná a je vizualizována červeně.    
 Z diagramu automaticky zmizí až po vysypání koše.
 :::
 
