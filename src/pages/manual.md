@@ -151,6 +151,10 @@ K entitám lze připojovat soubory, [štítky](#14štítky), [metody](#16112meto
 Propojení entit mezi sebou navzájem lze zobrazit na záložce ***Propojení*** v detailu každé entity, kde lze také vytvářet nová propojení pomocí tlačítka ***Vytvořit***.
 
 <img src="/docs/img/3-propojeni-seznam.png" title="Propojení – Seznam a vytvoření" width="700"/>
+
+      
+      
+#### 3.6.1	Vizualizace propojení pomocí diagramu
 Propojení jsou zobrazena nejen seznamem propojených entit, ale i graficky pomocí diagramu.
 
 <img src="/docs/img/3-propojeni-diagram-vizualizace-odstranene-entity.png" title="Propojení - diagram" />
