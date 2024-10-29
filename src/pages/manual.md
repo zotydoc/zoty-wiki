@@ -173,8 +173,9 @@ V pravé části záhlaví okna Diagramu je, vedle možnosti filtrace zobrazený
 <img src="/docs/img/3-diagram-propojeni-1x-dekompozice.png" title="Hierarchizace - Dekompozice o další jednu úroveň níže" />
 <img src="/docs/img/3-diagram-propojeni-2x-dekompozice.png" title="Hierarchizace - Dekompozice o další dvě úrovně níže" />
 
-Pro rychlý návrat do původního zobrazení lze použít obnovení okna prohlížeče.      
+Pro rychlý návrat zpět do původního zobrazení lze použít obnovení okna prohlížeče.      
 
+#### 3.6.2	Typy vazeb propojení
 
 V Zoty lze propojovat entity vazbami různého typu. Přičemž některé typy propojení jsou systémové (systém je vytváří automaticky, bez zásahu uživatele) a některé jsou uživatelsky volitelné. Pokud je vazba směrově orientovaná, tzn., že směřuje od zdroje k cíli, tak pak je zde též informace, jaký zdroj, s jakým cílem mohou být propojeny. Neboli určuje směr propojení. 
 Systémová propojení jsou typu: *Stromová struktura, Výskyt, Zástupce, Rodič→Dítě*.
@@ -198,11 +199,6 @@ Příkladem je propojení dvou entit typu Úkol, kdy úkol č.2 nelze dokončit 
 Propojení entit pomocí vazby typu *Rodič -> Dítě* je také nezbytné, má-li jedna hodnocená entita (dítě) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu.
 
 
-
-
-V pravé části záhlaví okna Diagramu je, vedle možnosti filtrace zobrazených entit, také ikona hierarchizace. Pokud mají entity zobrazené v diagramu nějakou další hierarchizaci v rámci svých propojení na další entity, tak každé kliknutí na tuto ikonu provede dekompozici v hierarchii jejich propojení o jednu další úroveň níže.
-
-Pro rychlý návrat zpět do původního zobrazení lze použít obnovení okna prohlížeče.
 
 ### 3.7	Aktivity
 Zoty automaticky zaznamenává aktivity uživatelů v systému. *Aktivity* zobrazují přehled informací zejména o tom, jaké entity, kdy a jakým uživatelem byly nově přidány, změněny či smazány, jaké soubory byly k jaké entitě připojeny či odebrány, nebo jaké entity byly vzájemně propojeny vazbou. Do seznamu aktivit se zapisují i aktualizace obsahu atributů.    
