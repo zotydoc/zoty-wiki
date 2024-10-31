@@ -30,38 +30,39 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 
     Zkratky používané při generování klíče pro jednotlivé typy entit:
    -	***A*** – Aktivum (obecného typu) 
+   -	***AA*** – Analýza aktiv
    -	***AGR*** – Smlouva
    -	***AUDN*** – Neshoda auditu
    -	***AUDR*** – Doporučení auditu
-   -	***DATA*** – Data
+   -	***DATA*** – Aktivum typu Data
    -	***E*** – Hodnocení (Evaluation)
-   -	***F*** – Složka
-   -	***FP*** – Funkční místo / Pracovní pozice
-   -	***HW*** – Hardware
+   -	***F*** – Složka (Folder)
+   -	***FP*** – Aktivum typu Funkční místo / Pracovní pozice
+   -	***HW*** – Aktivum typu Hardware
    -	***I*** – Incident
-   -	***INF*** – Informace
-   -	***KNW*** – Znalost
-   -	***LOC*** – Lokalita
+   -	***INF*** – Aktivum typu Informace
+   -	***KNW*** – Aktivum typu Znalost
+   -	***LOC*** – Aktivum typu Lokalita
    -	***M*** – Model
    -	***O*** – Cíl (Objective)
-   -	***OU*** – Organizační jednotka
-   -	***PER*** – Pracovník
-   -	***PROD*** – Produkt
+   -	***OU*** – Aktivum typu Organizační jednotka
+   -	***PER*** – Aktivum typu Pracovník
+   -	***PROD*** – Aktivum typu Produkt
    -	***PROC*** – Aktivum typu Proces
    -	***PROJ*** – Aktivum typu Projekt
    -	***R*** – Riziko
    -	***REQ*** – Požadavek (Requirement)
    -	***REQD*** – Odvozený požadavek (Derived Requirement)
-   -	***ROLE*** – Role
-   -	***SW*** – Software
+   -	***ROLE*** – Aktivum typu Role
+   -	***SW*** – Aktivum typu Software
    -	***SR*** – Servisní požadavek
    -	***T*** – Hrozba (Threat)
-   -	***TA*** – Hmotný majetek (Tangible asset)
+   -	***TA*** – Aktivum typu Hmotný majetek (Tangible asset)
    -	***TASK*** – Úkol
    -	***TPR*** – Plán zvládání rizik
    -	***V*** – Zranitelnost (Vulnerability)
-   -	***VEN*** – Dodavatel
-   -	***WGT*** – Pracovní skupina a tým       
+   -	***VEN*** – Aktivum typu Dodavatel
+   -	***WGT*** – Aktivum typu Pracovní skupina a tým       
           
 
 - **Nástrojová lišta** – horní vodorovný panel s informačními a ovládacími prvky.
@@ -70,7 +71,7 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 - **Podsekce** – části modulů aplikace Zoty dostupné po výběru některých sekcí z panelu nebo nástrojové lišty.
 - **Seznam** – způsob zobrazení záznamů v řádkové režimu, které lze třídit, filtrovat či vyhledávat.
 - **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy). 
-- **Detail** – způsob zobrazení jednoho vybraného záznamu v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
+- **Detail** – způsob zobrazení jednoho vybraného záznamu entity v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
 - **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Software, Informace, Procesy atp.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
@@ -80,6 +81,11 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 ## 3	UŽIVATELSKÉ PROSTŘEDÍ {#myUserExp}
 ### 3.1	Ovládací panel a nástrojová lišta
 Menu v levém svislém panelu umožňuje přístup k jednotlivým funkcionalitám Zoty, členěných do sekcí, stejně jako i k různým typům entit, členěných do kategorií. Panel lze jednoduše zúžit či rozšířit kliknutím na ovládací prvek vlevo nahoře a zvětšit tak hlavní pracovní plochu vpravo vedle panelu.
+
+:::tip
+Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče pomocí funkční klávesy F11. Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
+:::
+
 Horní nástrojová lišta pak zobrazuje sekce:
 -	Zoty (informace o aplikaci)
 -	Kalendář
@@ -91,7 +97,7 @@ Horní nástrojová lišta pak zobrazuje sekce:
 -	Profil uživatele s jeho aktivitami, nastavením a možností odhlášení
 
 ### 3.2	Vyhledávání
-V rámci příslušné sekce, např. Aktiva, Rizika atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
+V rámci příslušné sekce, např. **Aktiva**, **Rizika** atp. lze vyhledávat podle názvu nebo klíče entity zadáním části vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
 
 <img src="/docs/img/3-vyhledavani.png" title="Vyhledávání v sekci" width="600" />
 
@@ -546,7 +552,7 @@ Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chyb
 :::
 
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
-Aktiva lze hodnotit podle uživatelsky definovatelných schémat [Hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
+Aktiva lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
 :::tip
  Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání, tj. např. narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
@@ -556,7 +562,10 @@ Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv ne
 :::
 Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
 
-### 8.3	Hrozby a zranitelnosti
+### 8.3	Analýza aktiv
+
+
+### 8.4	Hrozby a zranitelnosti
 Při návrhu nejvhodnější struktury složek v příslušných registrech v rámci kategorizace hrozeb a zranitelností lze hledat inspiraci v některém z předdefinovaných katalogů hrozeb a zranitelností, které vychází z uznávaných metodik a norem, konkrétně:
 -	Katalog hrozeb dle Evropské agentury pro bezpečnost sítí a informací (ENISA)
 -	Katalogy hrozeb a zranitelností dle normy ISO 27001 - Systém řízení bezpečnosti informací (ISMS)
@@ -567,11 +576,14 @@ Při návrhu nejvhodnější struktury složek v příslušných registrech v r�
 
 <img src="/docs/img/8-katalogy-zranitelnosti.png" title="Katalogy zranitelností" width="570"/>
 
-### 8.4	Rizika
-Registr rizik je standardně členěn na rizika *informační, finanční, projektová, provozní, strategická, a environmentální*. Uživatel si i v tomto registru může vytvořit svoji vlastní strukturu složek, která bude lépe vyhovovat jeho potřebám.    
-Riziko může nabývat těchto stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
-Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schválení](#310schválení).    
-Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), i výběrový atribut ***Strategie zvládání***, kde je možné zvolit jednu z následujících možností:
+### 8.5	Rizika
+Podobně jako v jiných registrech i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
+
+ <img src="/docs/img/8-katalogy-rizik.png " title="Katalogy rizik" width="560"/>
+
+Založit nové riziko do registru rizik lze pomocí tlačítka ***Vytvořit*** v sekci **Rizika**.
+    
+Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), i výběrový atribut ***Strategie zvládání***, který bude zpravidla vyplněn až později, ve fázi zvládání rizik poté, co byla rizika analyzována a vyhodnocena, a kde pak bude možné zvolit jednu z následujících možností:
 - *Redukce*
 - *Přijetí*
 - *Přenesení*
@@ -583,13 +595,26 @@ Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, 
 
 ***Přenesení*** – tato strategie se volí v případech, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo sdílení prospěchu ze zisku vyplývajícího z rizika. V Zoty je pak možné přidat opatření typu *Úkol* (např. uzavřít Pojistnou smlouvu), nebo *Proces* (např. Správa pojištění).
 
-***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysoké míry dopadu (kritické pásmo). V těchto případech se zpravidla volí úkoly týkající se zastavení běžících nebo vyhnutí se plánovaným aktivitám.
-Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a ponechána nebo změněna.      
+***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysoké míry dopadu (kritické pásmo). V těchto případech se zpravidla volí úkoly týkající se zastavení běžících nebo vyhnutí se plánovaným aktivitám.      
       
-Rizika lze hodnotit podle uživatelsky definovatelných schémat [Hodnocení](#1614hodnocení).
+Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a buď ponechána nebo změněna.           
 
 :::tip
 Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojenými úkoly. Správce každého rizika pak bude mít u svých rizik připojen úkol/úkoly s termínem splnění k datu, kdy končí platnost zvolené strategie pro tato rizika.
+:::
+
+Riziko může nabývat těchto stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
+Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schválení](#310schválení).
+
+Při vytváření nového rizika lze zvolit i jeho tzv. „rodiče“. Tj. *hrozbu*, *zranitelnost* či *aktivum*, výsledkem jejichž kombinace je právě riziko (*hrozba*, zneužívající *zranitelnosti aktiva*, představuje *riziko*).       
+Při výběru těchto rodičovských entit může Zoty uživateli napovědět, kterou konkrétní hrozbu, zranitelnost či aktivum z celého seznamu vybrat. K tomu slouží přepínače ***Filtrovat dle propojení*** a ***Filtrovat dle Znalostní báze***.       
+Volba ***Filtrovat dle propojení***, je-li aktivována, tak po výběru jednoho z rodičů, např. hrozby, odfiltruje ze seznamu entit pro výběr ostatních rodičů (v tomto příkladu aktiv a zranitelností) ty, které zatím nemají s touto vybranou hrozbou žádné propojení.       
+Podobně funguje i přepínač ***Filtrovat dle Znalostní báze***, který analyzuje možná propojení na základě kombinací hrozeb, zranitelností a aktiv v matici znalostní báze a podle toho pak nabídne uživateli omezený výběr vhodných rodičů pro dané riziko.      
+Volba rodičů není pro vytvoření rizika v Zoty povinná. Je to ale výhodné např. v okamžiku, kdy se později provádí [hodnocení rizik](#9hodnocení). Ta lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení). A pokud už bylo provedeno hodnocení některého z rodičů, tj. hrozby, zranitelnosti či aktiva, tak výstupy těchto hodnocení pak mohou automaticky vstupovat do hodnocení rizika. Jinými slovy, výsledné skóre rizika pak může být spočteno automaticky. Pokud je takto zároveň nastaveno příslušné schéma hodnocení v metodě pro hodnocení rizik.
+
+:::tip
+Rizika nemusí vytvářet sám uživatel, ale může si je nechat vygenerovat do registru rizik s pomocí Zoty.     
+[Generování rizik](#16132generování-rizik) je realizováno na základě kombinací hrozeb, zranitelností a aktiv, které Zoty navrhne s využitím znalostní báze. Uživatel pak navržené kombinace už jen potvrdí, případně některé vyloučí, a nechá Zoty rizika vytvořit.
 :::
 
 ## 9	HODNOCENÍ
@@ -640,7 +665,7 @@ Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k ak
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
 
 ### 10.2	Plán zvládání rizik
-Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností OD-DO. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik. Pokud mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.
+Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik. Pokud mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.
 
 ### 10.3	Reporty
 V této sekci mohou být definovány reporty, jejichž obsah či vzhled je třeba zakázkově přizpůsobit dle požadavků uživatelů konkrétní organizace. V Zoty jsou pro tento účel připravena data v takovém kontextu, aby z nich bylo možné sestavit příslušné standardní reporty, např. Prohlášení o aplikovatelnosti (PoA) dle požadavku Zákona o kybernetické bezpečnosti, které v Zoty, v metodě ZoKB, využívá přednaplněný registr bezpečnostních opatření dle vyhlášky o kybernetické bezpečnosti (VoKB) s možností auditovat, zda a jak jsou jednotlivá bezpečností opatření v organizaci aplikována ve vazbě na požadavky této vyhlášky. Výstupy z tohoto auditu, spolu s registrem bezpečnostních opatření a znalostní bází Zoty, kde je definována matice opatření a kategorií zranitelností, na které tato opatření působí, jsou pak podkladem pro sestavení PoA reportu.
@@ -767,14 +792,34 @@ V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsah
 
 #### 16.1.3	Znalostní báze
 :::info
-Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci vyhodnocení rizik.
-:::    
-Znalostní báze je matice kombinující hrozby s relevantními zranitelnostmi, požadavky a kategoriemi aktiv (či přímo konkrétními aktivy). Správce systému může jednotlivé dimenze této matice zcela volně definovat, tj. stanovit, jaké konkrétní kategorie pro aktivum, hrozbu či zranitelnost budou do této matice zahrnuty a jak na sebe navzájem působí.    
+Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci jejich vyhodnocení.
+:::  
+
+##### 16.1.3.1	Konfigurace matice
+Znalostní báze je matice kombinující hrozby s relevantními zranitelnostmi, aktivy, opatřeními a případně i požadavky (zákonů, norem, smluv, …). Správce systému může jednotlivé dimenze této matice zcela volně definovat, tj. stanovit, jaké konkrétní kategorie pro aktivum, hrozbu či zranitelnost budou do této matice zahrnuty a jak na sebe navzájem působí.    
 Řádky matice reprezentují jednotlivé hrozby. Systém do řádků automaticky vloží všechny hrozby, které jsou uložené v registru.     
-V konfiguraci lze také zapnout přepínač *Kompaktní zobrazení* kdy se namísto názvů entit zobrazují pouze jejich klíče a název se zobrazí až v tooltipu (po najetí myší nad příslušný klíč). Matice se pak stane daleko přehlednější. Zejména v případech, kdy uživatelé používají delší názvy.      
-Tlačítko ***Přidat*** sloupec nabídne výběr ze všech entit typu zranitelnosti a entit a složek z registrů aktiv a požadavků. Na konci každého řádku lze vyvolat menu Upravit, umožňující nastavit relevanci propojení, tj. které sloupce matice jsou pro tento konkrétní řádek relevantní.    
-Se znalostí, jaké hrozby, mohou působit na jaké kategorie aktiv a jaké zranitelnosti mohou při tom zneužít, pak systém pracuje tak, že přednabízí uživatelům pouze smysluplná propojení mezi aktivem zranitelností a hrozbou.    
-K tomu, aby byl tento koncept funkční, je pouze třeba (vedle správné jednorázové konfigurace matice), aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie (reprezentované složkami v registru či katalozích aktiv).
+
+:::tip
+V konfiguraci lze zapnout přepínač *Kompaktní zobrazení*, kdy se namísto názvů entit zobrazují pouze jejich klíče a název se zobrazí až v tooltipu (po najetí myší nad příslušný klíč). Matice se pak stane daleko přehlednější. Zejména v případech, kdy uživatelé používají delší názvy.      
+:::
+       
+Tlačítko ***Přidat*** sloupec nabídne výběr ze všech entit typu zranitelnosti a entit a složek z registrů aktiv a požadavků.     
+Na konci každého řádku lze pomocí symbolu tří teček vyvolat menu s volbou ***Upravit***, umožňující nastavit relevanci propojení, tj. které sloupce matice jsou pro tento konkrétní řádek relevantní.     
+Se znalostí, jaké hrozby mohou působit na jaké kategorie aktiv, jaké zranitelnosti mohou při tom zneužít a jaká bezpečnostní opatření mohou pomoci tyto zranitelnosti eliminovat v rámci mitigace rizika, pak systém pracuje tak, že přednabízí uživatelům pouze smysluplná propojení mezi aktivem, zranitelností a hrozbou. A zároveň doporučuje vhodná bezpečnostní opatření.     
+V menu jsou dále dostupné volby ***Duplikovat*** celý řádek matice a ***Detail***, který zobrazí možnost přiřadit [Metodu](#16112metody), pro kterou budou zde definované kombinace relevantní a [Organizaci](#1621organizace), pro kterou budou viditelné.
+
+:::info
+K tomu, aby byl tento koncept funkční, je pouze třeba, vedle správné jednorázové konfigurace matice, aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie reprezentované složkami v registru aktiv. Zpravidla jsou totiž hrozby nebo zranitelnosti namapovány nikoliv na konkrétní aktivum, ale na celou kategorii aktiv daného typu, tj. složku, např. *Hardware, Software, Informace*, atp.
+:::
+
+##### 16.1.3.2	Generování rizik
+Pokud je v daném řádku matice definovaná alespoň jedna kombinace hrozby s dalším typem entity (jedno zda zranitelností, aktivem či kombinace obojího), pak volba ***Detail*** v menu nabídne navíc možnost z těchto kombinací vytvořit rizika. Rizika lze takto vygenerovat hromadně pro každou hrozbu ze všech možných kombinací, které Zoty sestaví a zobrazí v seznamu. Nebo může uživatel procházet seznam s jednotlivými kombinacemi, které Zoty pro vytvoření rizik nabízí a pomocí tlačítka ***Vytvořit*** na každém jednotlivém řádku generovat rizika jedno po druhém.      
+Pokud je z dané kombinace riziko vytvořeno, není již pro ni tlačítko ***Vytvořit*** dostupné a namísto něj se zobrazuje identifikátor (klíč) vytvořeného rizika. Je-li riziko odstraněno, tlačítko ***Vytvořit*** bude pro tuto kombinaci opět dostupné.      
+Ne vždy je vhodné generovat rizika z celého seznamu všech možných kombinací aktiv, hrozeb a zranitelností, které se nabízí. Uživatel má proto možnost skrýt vybrané kombinace pomocí stejnojmenné volby ***Skrýt***, aby se pro tvorbu rizik nenabízely. Tato rizika se pak přesunou do odděleného seznamu, kde je možné je pouze prohlížet. Nebo je lze pomocí volby ***Zobrazit*** přesunout zpět do seznamu relevantních kombinací, ze kterých lze generovat nová rizika.
+
+:::info
+Nechtěné kombinace se záměrně neodstraňují, ale pouze skrývají proto, aby byla zajištěna transparentnost. Pokud totiž v registru chybí riziko pro některou kombinaci hrozby, zranitelnosti či aktiva, je zde dokumentováno, proč tomu tak je a že je to tudíž žádoucí stav.
+:::
 
 #### 16.1.4	Hodnocení
 V rámci **Administrace – Nastavení – Hodnocení** lze zobrazit přehled stávajících definic schémat hodnocení, upravovat nastavení stávajících schémat nebo založit definici nového schématu hodnocení.
@@ -811,10 +856,10 @@ Níže uvedené dokumentuje postup a význam jednotlivých atributů pro volbu *
 - **Osa** – volba, zda se má parametr vynášet do osy X nebo Y při prezentaci výsledného hodnocení ve formátu dvou-rozměrného grafu typu heatmapa. Volba osy Y se zpřístupní až tehdy je li definována více než jedna metrika. Hodnocení mohou být jak jednorozměrná (pouze v ose X), tak dvourozměrná (osa X a Y).
 - **Pořadí** – pořadí v jakém se metrika zobrazí uživateli v rámci ostatních definovaných metrik při vizualizaci heatmapy, která se pak uživatelům nabízí pro provedení konkrétních ohodnocení.
 - **Vstupní data** – lze zvolit, v jakém formátu bude uživatel zadávat vstupní data pro daný parametr a v jakém rozsahu *OD* (minimum) *DO* (maximum), k dispozici jsou volby:
-  - *Hodnota* – uživatel může zadat jednu konkrétní hodnotu v rozsahu *OD-DO*
-  - *Hodnota (rozmezí)* - uživatel může zadat více hodnot v rozsahu *OD-DO* v rámci definovaných pásem (viz níže)
-  - *Procenta* – uživatel může zadat jedno konkrétní procento v rozsahu *OD-DO*
-  - *Procenta (rozmezí)* - uživatel může zadat více procent v rozsahu *OD-DO* v rámci definovaných pásem (viz níže)
+  - *Hodnota* – uživatel může zadat jednu konkrétní hodnotu v rozsahu *Od-Do*
+  - *Hodnota (rozmezí)* - uživatel může zadat více hodnot v rozsahu *Od-Do* v rámci definovaných pásem (viz níže)
+  - *Procenta* – uživatel může zadat jedno konkrétní procento v rozsahu *Od-Do*
+  - *Procenta (rozmezí)* - uživatel může zadat více procent v rozsahu *Od-Do* v rámci definovaných pásem (viz níže)
 - **Popis** – volitelná poznámka s doplňujícím popisem k názvu. Tyto popisky se pak mohou zobrazit uživateli, pokud při hodnocení podrží ukazatel myši nad příslušným polem heatmapy reprezentujícím předdefinovanou hodnotu v daném pásmu.
 
 <img src="/docs/img/16-hodnoceni-zobrazeni-popisu-k-nazvu.png" title="Definice metrik hodnocení" width="550"/>
