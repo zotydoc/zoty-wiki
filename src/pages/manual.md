@@ -179,7 +179,7 @@ V pravé části záhlaví okna Diagramu je, vedle možnosti filtrace zobrazený
 <img src="/docs/img/3-diagram-propojeni-1x-dekompozice.png" title="Hierarchizace - Dekompozice o další jednu úroveň níže" />
 <img src="/docs/img/3-diagram-propojeni-2x-dekompozice.png" title="Hierarchizace - Dekompozice o další dvě úrovně níže" />
 
-Pro rychlý návrat zpět do původního zobrazení lze použít obnovení okna prohlížeče.      
+Pro rychlý návrat zpět do původního zobrazení lze použít obnovení okna prohlížeče (funkční klávesa F5).      
 
 #### 3.6.2	Typy vazeb propojení
 
@@ -506,6 +506,7 @@ Příklad změny vizualizace hodnocení aktiv jednoduchou změnou registru v zá
 
 <img src="/docs/img/6-vizualizace-obecne-registr-vs-katalogy.png" title="Vizualizace – Hodnocení aktiv seskupená různými způsoby" />
       
+       
 ## 7 ŘÍZENÍ SHODY
 ### 7.1	Požadavky
 Registr požadavků je tvořen veškerými požadavky, které mohou být relevantní k řízení rizik a aktiv. Mohou zde ale také být obecně jakékoliv požadavky, se kterými musí být organizace trvale ve shodě. Registr požadavků je proto strukturován na požadavky zákonné (vyplývající z legislativy národní či evropské), požadavky vyplývající z ISO norem a požadavky smluvní.
@@ -547,20 +548,26 @@ Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a ka
 Při vytváření nejen nových aktiv, ale libovolných entit či složek, je vhodné myslet i na jejich správné zatřídění ve stávající struktuře složek v příslušném registru.
 
 :::info
-Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna. Tím dojde nejen k vytvoření nového záznamu, ale zároveň i k jeho zatřídění.
-Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno přesunout do správné složky, jak je popsáno v kapitole [Přesouvání složek](#31411přesouvání-složek).
+Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba v registru vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna.      
+Tím dojde nejen k jejich vytvoření a zatřídění, ale zároveň je entitě nastaven i správný typ, který se automaticky nastaví z definovaných [vlastností vybrané složky](#3142omezení-obsahu-složek) (např. *Hardware, Software, Proces*, atp.).
 :::
+
+:::tip
+Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno [přesunout do správné složky](#31411přesouvání-složek).
+:::       
 
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
 Aktiva lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
-:::tip
- Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání, tj. např. narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
-:::
 :::info
 Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv není totéž, co hodnota dopadu v rámci hodnocení rizik. Hodnota dopadu sice vychází z hodnoty aktiva, ale v důsledku přijatých bezpečnostních opatření by se měla v čase snižovat. Tzn., že na začátku (před zavedením bezpečnostních opatření) může hodnota dopadu být rovna (nebo se blížit) hodnotě aktiva, ale s implementací bezpečnostních opatření se bude postupně snižovat (jsou-li opatření účinná).
 :::
 Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
+
+:::tip
+ Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
+:::
+
 
 ### 8.3	Analýza aktiv
 
@@ -577,7 +584,7 @@ Při návrhu nejvhodnější struktury složek v příslušných registrech v r�
 <img src="/docs/img/8-katalogy-zranitelnosti.png" title="Katalogy zranitelností" width="570"/>
 
 ### 8.5	Rizika
-Podobně jako v jiných registrech i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
+Podobně jako v jiných registrech, i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
 
  <img src="/docs/img/8-katalogy-rizik.png " title="Katalogy rizik" width="560"/>
 
@@ -661,7 +668,13 @@ Pro plánovaná cílová hodnocení reprezentující cílové milníky, je naví
 ## 10	ZVLÁDÁNÍ RIZIK
 ### 10.1	Opatření
 Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
-Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“. Typické je to u tzv. „3A opatření“ - tj. opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů). V tomto případě se jedná o základní sadu opatření, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena přímo k příslušnému aktivu.    
+Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“.      
+Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena i přímo k příslušnému aktivu.
+
+:::info
+**3A opatření**  jsou opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů).
+:::      
+      
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
 
 ### 10.2	Plán zvládání rizik
@@ -865,9 +878,9 @@ Níže uvedené dokumentuje postup a význam jednotlivých atributů pro volbu *
 <img src="/docs/img/16-hodnoceni-zobrazeni-popisu-k-nazvu.png" title="Definice metrik hodnocení" width="550"/>
 
 **Pásmové rozmezí** – definice pásem, v rámci kterých budou zadávána vstupní data pro daný parametr. Pásma lze přidávat pomocí symbolu "**+**" a odebírat kliknutím na symbol koše v pásmu, které se má odstranit.    
-Pro každé pásmo lze definovat hodnotu (nebo procento, podle toho, jaký formát vstupních dat byl zvolen v předchozím kroku) a k této hodnotě (nebo procentu) zvolit úroveň, kterou má tato hodnota reprezentovat, včetně přednastavené barvy, kterou bude zobrazena v heatmapě. K výběru jsou tyto předdefinované úrovně hodnocení: *Nulové, Velmi nízké, Nízké, Velmi malé, Malé, Střední, Významné, Velmi významné, Vysoké, Velmi vysoké, Kritické*. Pro všechny tyto úrovně lze definovat vlastní názvy aktivací volby Definovat vlastní názvy. Lze k nim také doplnit volitelnou poznámku aktivací volby Doprovodný popis.    
+Pro každé pásmo lze definovat hodnotu (nebo procento, podle toho, jaký formát vstupních dat byl zvolen v předchozím kroku) a k této hodnotě (nebo procentu) zvolit úroveň, kterou má tato hodnota reprezentovat, včetně přednastavené barvy, kterou bude zobrazena v heatmapě. K výběru jsou tyto předdefinované úrovně hodnocení: *Nulové, Velmi nízké, Nízké, Velmi malé, Malé, Střední, Významné, Velmi významné, Vysoké, Velmi vysoké, Kritické*. Pro všechny tyto úrovně lze definovat vlastní názvy aktivací volby Definovat vlastní názvy. Lze k nim také doplnit volitelnou poznámku aktivací volby ***Doprovodný popis***.    
 :::note
-Na obrázku níže je prezentován příklad výsledné definice pásem hodnocení pro jeden z parametrů hodnocení aktiv – *Integrita*. Na dalším obrázku pak příklad možného vzorce výpočtu hodnoty aktiva, který vedle integrity zahrnuje další 2 hodnocené parametry – *Důvěrnost* a *Dostupnost*.
+Na obrázku níže je prezentován příklad výsledné definice pásem hodnocení pro jeden z parametrů hodnocení aktiv – *Integrita*. Na dalším obrázku pak příklad možného vzorce výpočtu hodnoty aktiva, který vedle integrity zahrnuje další dva hodnocené parametry – *Důvěrnost* a *Dostupnost*.
 :::
 
 <img src="/docs/img/16-nastaveni-hodnoceni-pasma.png" title="Definice pásem ve schématu hodnocení" width="560"/>
@@ -964,6 +977,7 @@ Název sekce: bold
 Název záložky: bold+kurzíva
 Název ikony: bold+kurzíva
 Název atributu: bold+kurzíva
+Název menu nebo volby v menu: bold+kurzíva
 --
 Název hodnoty atributu: kurzíva
 Název přepínače: kurzíva
