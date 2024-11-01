@@ -668,7 +668,13 @@ Pro plánovaná cílová hodnocení reprezentující cílové milníky, je naví
 ## 10	ZVLÁDÁNÍ RIZIK
 ### 10.1	Opatření
 Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
-Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“. Typické je to u tzv. „3A opatření“ - tj. opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů). V tomto případě se jedná o základní sadu opatření, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena přímo k příslušnému aktivu.    
+Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“.      
+Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena i přímo k příslušnému aktivu.
+
+:::info
+**3A opatření**  jsou opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů).
+:::      
+      
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
 
 ### 10.2	Plán zvládání rizik
