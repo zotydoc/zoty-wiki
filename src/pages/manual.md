@@ -139,7 +139,7 @@ Aby uživatelé nemuseli vždy zadávat metody pro nově vytvářené entity, lz
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
 V komentáři lze zmínit jiného uživatele zadáním symbolu zavináče ***@***. Systém následně umožní vyhledání a výběr ze stávajících uživatelů Zoty. Všem takto zmíněným uživatelům dorazí notifikace, že byli zmíněni v tomto komentáři. Kliknutím na komentář si jej pak mohou ihned snadno zobrazit a případně na něj i rovnou reagovat.    
 Podobným způsobem lze v komentářích zmínit také odkazy na libovolné entity v systému s pomocí znaku ***#***.    
-Komentáře lze skrýt a zobrazit je pouze pro vybrané uživatele či role. Standardně jsou komentáře publikovány se statusem „Veřejné“. Pokud je před odesláním status komentáře změněn na „Soukromé“, zobrazí se nabídka Oprávnění, kde lze zadat role, konkrétní uživatele či kombinaci obojího, pro které bude komentář viditelný.
+Komentáře lze skrýt a zobrazit je pouze pro vybrané uživatele či role. Standardně jsou komentáře publikovány se statusem *Veřejné*. Pokud je před odesláním status komentáře změněn na *Soukromé*, zobrazí se nabídka ***Oprávnění***, kde lze zadat role, konkrétní uživatele či kombinaci obojího, pro které bude komentář viditelný.
 
 <img src="/docs/img/3-komentare-opravneni.png"  title="Komentáře - oprávnění" width="560" />
 
@@ -166,11 +166,10 @@ Propojení jsou zobrazena nejen seznamem propojených entit, ale i graficky pomo
 <img src="/docs/img/3-propojeni-diagram-vizualizace-odstranene-entity.png" title="Propojení - diagram" />
 
 :::info
-Pokud je nějaká entita odstraněna, je přesunuta do koše, ale v diagramu je přesto stále viditelná a je vizualizována červeně.    
-Z diagramu automaticky zmizí až po vysypání koše.
+Pokud je nějaká entita odstraněna, je přesunuta do koše, ale v diagramu je přesto stále viditelná a je vizualizována červeně. V diagramu se přestane zobrazovat až po vysypání koše.
 :::
 
-Při najetí myší nad libovolnou entitu v diagramu se zobrazí nabídka, která umožní zobrazit ***detail*** a ***vlastnosti*** této entity, tzn. veškeré její atributy, připojené soubory a komentáře.
+Při najetí myší nad libovolnou entitu v diagramu se zobrazí nabídka, která umožní zobrazit ***Detail*** a ***Vlastnosti*** této entity, tzn. veškeré její atributy, připojené soubory a komentáře.
 
 <img src="/docs/img/3-diagram-propojeni-detail-a-vlastnosti.png" title="Detail a vlastnosti entity v diagramu propojení" />
 
@@ -239,9 +238,10 @@ Oprávnění definovaná na úrovni složky lze volitelně dědit i na všechny 
 
 <img src="/docs/img/3-opravneni-na-slozku-nastaveni.png" title="Nastavení oprávnění" width="300"/>
 
-Podřízenými uzly konkrétní složky se tedy rozumí všechny ty složky nebo entity, které jsou jí ve stromové struktuře podřízené. A to až do nejnižší úrovně zanoření, má-li tato konkrétní složka víceúrovňovou strukturu dalších podřízených složek, případně i spolu s entitami v nich zatříděnými.
-Pokud už složka či entita měla nastavena nějaká oprávnění, tak jsou nahrazena zděděnými.
-Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno pro které uživatele či role, přímo na úrovni složky či entity, které už ale mají oprávnění děděná, tak jsou všechna tato zděděná oprávnění odstraněna a nahrazena nově definovanými. V případě potřeby se lze velmi snadno vrátit do předchozího stavu před výmazem děděných oprávnění – aktivace volby *Zdědit přístup* na záložce ***Oprávnění*** v detailu složky či entity znovu zdědí oprávnění z nadřízeného uzlu. Tato volba je dostupná pouze pokud: 
+Podřízenými uzly konkrétní složky se tedy rozumí všechny ty složky nebo entity, které jsou jí ve stromové struktuře podřízené. A to až do nejnižší úrovně zanoření, má-li tato konkrétní složka víceúrovňovou strukturu dalších podřízených složek, případně i spolu s entitami v nich zatříděnými.      
+Pokud už složka či entita měla nastavena nějaká oprávnění, tak jsou nahrazena zděděnými.     
+Platí i obráceně, že pokud jsou definována jakákoliv oprávnění, jedno pro které uživatele či role, přímo na úrovni složky či entity, které už ale mají oprávnění děděná, tak jsou všechna tato zděděná oprávnění odstraněna a nahrazena nově definovanými.     
+V případě potřeby se lze velmi snadno vrátit do předchozího stavu před výmazem děděných oprávnění – aktivace volby *Zdědit přístup* na záložce ***Oprávnění*** v detailu složky či entity znovu zdědí oprávnění z nadřízeného uzlu. Tato volba je dostupná pouze pokud: 
 - kdekoliv v nadřízeném uzlu je nastaveno omezení oprávnění, které se dědí do podřízených uzlů a
 - oprávnění nejsou děděna, tzn. aktuálně jsou definována přímo na dané složce nebo entitě nebo nejsou zatím vůbec definována.
 
@@ -269,7 +269,7 @@ Pokud jsou oprávnění k přístupu na složku či entitu zděděna z nadříze
 
 <img src="/docs/img/3-opravneni-na-slozku-info-o-dedicnosti.png" title="Přehled přidělených oprávnění" />
 
-Vzhledem k tomu, že lze definovat (nebo dědit) různé úrovně oprávnění zcela nezávisle pro uživatele a pro role, může nastat situace, kdy uživatel bude mít přiřazeny role, jejichž úroveň oprávnění pro některou složku či entitu bude v konfliktu s úrovní oprávnění, která jsou definována (nebo děděna) přímo pro tohoto konkrétního uživatele. Konflikt spočívá v tom, že uživatel může mít nějaké oprávnění povoleno, ale jemu přidělená role bude mít tu stejnou úroveň oprávnění (např. odstranění složky/entity) zakázanou.
+Vzhledem k tomu, že lze definovat (nebo dědit) různé úrovně oprávnění zcela nezávisle pro uživatele a pro role, může nastat situace, kdy uživatel bude mít přiřazeny role, jejichž úroveň oprávnění pro některou složku či entitu bude v konfliktu s úrovní oprávnění, která jsou definována (nebo děděna) přímo pro tohoto konkrétního uživatele. Konflikt spočívá v tom, že uživatel může mít nějaké oprávnění povoleno, ale jemu přidělená role bude mít tu stejnou úroveň oprávnění (např. odstranění složky/entity) zakázanou.      
 Zoty tento konflikt řeší tak, že pokud tento případ nastane, tak oprávnění se sečtou a přednost dostane ta úroveň oprávnění, která povoluje (zelená) před tou, která zakazuje (červená).
 
 :::note
@@ -280,13 +280,21 @@ Uživatel Martina má přiřazenou roli *Manažer entit*. Tato **role** má v re
 <img src="/docs/img/3-opravneni-konflikt-stejna-pro-uzivatele-i-roli.png" title="Konflikt oprávnění uživatele a jeho role" />
 
 #### 3.8.3	Rozšířená správa oprávnění pro velké organizace
-Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit tak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
+Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům. Ty umožňují filtrovat / skrývat určité záznamy pro uživatele podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit tak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
+      
 Typické použití v komerčním sektoru je pro ty organizace, které v rámci holdingu/skupiny sdružují více společností, jejichž data mají být oddělena. Tzn., že uživatelé pracující pro jednu konkrétní společnost pak nevidí data (složky a entity v registrech) ostatních společností skupiny.
-Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.      
+Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak lze snadno vytvářet i různé konsolidované reporty a pohledy na data napříč všemi společnostmi skupiny.      
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
+
 :::info
-Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů pouze s pomocí standardních funkcionalit pro řízení oprávnění na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
+Tato schopnost filtrovat vybraná data a skrýt je tak některým uživatelům, v žádném případě nenahrazuje či neduplikuje systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost snadno omezit přístup k datům i pro větší organizace s velmi komplexní organizační strukturou. Tedy všude tam, kde je třeba jednoduše zajistit, aby zaměstnanci jedné organizace či org. jednotky, neviděli do dat těch ostatních.      
 :::
+
+:::tip
+Pokud je očekáváno zvýšení komfortu uživatelů spíše, než vysoká úroveň zabezpečení dat, je výhodné toto filtrování dat označených štítkem [Organizace](#1621organizace) využít. 
+V opačném případě je doporučeno využít raději standardní systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy), který poskytuje vyšší úroveň zabezpečení. Data, která spravuje Zoty server, nejsou totiž v tomto případě filtrována/skrývána až na straně uživatele, ale zůstávají na Zoty serveru. K datům, ke kterým nemá oprávnění, se pak běžný uživatel, bez administrátorského přístupu k serveru, nemůže nijak dostat.
+:::
+
 ### 3.9	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: *Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení*.
 
@@ -440,8 +448,8 @@ Administrátor tedy může upravit vlastnosti každé složky tak, že např. da
 
 <img src="/docs/img/3-slozka-nastaveni-omezeni.png"  title="Omezení obsahu složek" width="370"/>
 
-Pokud má být jeden typ entity, umístěný např. ve složce Hardware, dále členěn pro větší přehlednost do více samostatných podsložek (např. Servery, Pracovní stanice, Tiskárny atp. …) tak potom volba ***Nastavit dle rodiče*** u všech podřízených složek zajistí, že povolené typy entity pro ně budou nastaveny takové, jak má nastavena nadřazená (rodičovská) složka, tedy v tomto příkladu Hardware.    
-Vedle omezení obsahu složek lze také omezit samotný přístup na složky a entity v nich zatříděné. Celý systém správy uživatelských oprávnění je popsán v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy).
+Pokud má být jeden typ entity, umístěný např. ve složce *Hardware*, dále členěn pro větší přehlednost do více samostatných podsložek (např. *Servery, Pracovní stanice, Tiskárny* atp. …) tak potom volba ***Nastavit dle rodiče*** u všech podřízených složek zajistí, že povolené typy entity pro ně budou nastaveny takové, jak má nastavena nadřazená (rodičovská) složka, tedy v tomto příkladu *Hardware*.    
+Vedle omezení obsahu složek lze také omezit samotný [přístup na složky a entity](#38oprávnění-přístupu-na-záznamy) v nich zatříděné.
 
 ## 4	PŘEHLED
 Úvodní stránka zobrazuje přehled základních informací, co se nového událo, jaké nejnovější záznamy, aktivity či komentáře byly pořízeny nebo aktualizovány, jaké úkoly uživatel vytvořil nebo mu byly přiděleny k řešení anebo kolik aktiv, rizik, opatření, cílů či jiných entit je aktuálně v systému celkem evidováno.
@@ -577,10 +585,10 @@ Připravujeme pro vás novinky. Tyto funkcionality budou nyní postupně uvolňo
 
 Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá standardnímu schvalovacímu workflow.      
 Pokud jsou některá aktiva identifikována jako primární, včetně aktiv podpůrných, která jsou k nim připojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
-Účelem je vymezit takto rozsah analýzy rizik s následnou možností odsouhlasit jej odpovědnými manažery a celý proces takto přímo v aplikaci dokumentovat.      
+Účelem je vymezit rozsah analýzy rizik, odsouhlasit jej v rámci schvalovacího workflow a celý proces takto dokumentovat přímo v aplikaci.      
 
 :::tip
-Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz a každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.
+Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.
 :::
 
 ### 8.4	Hrozby a zranitelnosti
