@@ -280,12 +280,12 @@ Uživatel Martina má přiřazenou roli *Manažer entit*. Tato **role** má v re
 <img src="/docs/img/3-opravneni-konflikt-stejna-pro-uzivatele-i-roli.png" title="Konflikt oprávnění uživatele a jeho role" />
 
 #### 3.8.3	Rozšířená správa oprávnění pro velké organizace
-Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit pak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
+Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům i podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit tak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
 Typické použití v komerčním sektoru je pro ty organizace, které v rámci holdingu/skupiny sdružují více společností, jejichž data mají být oddělena. Tzn., že uživatelé pracující pro jednu konkrétní společnost pak nevidí data (složky a entity v registrech) ostatních společností skupiny.
 Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak někteří uživatelé s příslušným vyšším oprávněním mohou dostávat i konsolidované pohledy na data napříč všemi společnostmi skupiny.      
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
 :::info
-Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém správy přístupových oprávnění, jak jsou dále popsána v kapitole [Oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů pouze s pomocí standardních funkcionalit pro řízení oprávnění na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
+Tato schopnost omezení přístupu na vybraná data v žádném případě nenahrazuje či neduplikuje systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost jednoduché správy přístupu k datům i pro větší organizace s velmi komplexní organizační strukturou, kde by správa přístupů pouze s pomocí standardních funkcionalit pro řízení oprávnění na úrovni uživatelů/uživatelských skupin/rolí, mohla být dosti složitá a pracná.
 :::
 ### 3.9	Kalendář
 V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dle data, kdy byly vytvořeny nebo aktualizovány nebo nastavit přihlášenému uživateli zobrazení všech jeho záznamů, u kterých je správcem. V kalendáři se takto zobrazují záznamy entit typu: *Incidenty, Požadavky, Cíle, Aktiva, Projekty, Procesy, Úkoly, Hrozby, Zranitelnosti, Rizika, Hodnocení*.
@@ -378,7 +378,7 @@ V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.
 Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.     
 
 <img src="/docs/img/3-notifikace-sluzba-failed.png" title="Notifikace – pozastavení služby" width="350"/>
-V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na Zoty Helpdesk nebo využijte hotline linku Zoty podpory.
+V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty Helpdesk](#313zoty–o-aplikaci) nebo využijte hotline linku Zoty podpory.
 
 ### 3.12	Profil uživatele a odhlášení
 V pravé části horní nástrojové lišty se zobrazuje jméno přihlášeného uživatele, pod kterým lze vyvolat nabídku:
@@ -404,7 +404,7 @@ Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licen
 
 ### 3.13	Zoty – O aplikaci
 :::info
-Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
+Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace  Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
 :::
 ### 3.14	Složky
 Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. 
@@ -532,7 +532,7 @@ Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a ja
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni.png" title="Propojení na odvozený požadavek" />
 
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni-pozadavek-odvozeny-a-commenty.png" title="Odvozený požadavek" width="390"/>
-
+           
 ## 8	ANALÝZA RIZIK
 ### 8.1	Cíle
 Registr cílů je členěn na cíle bezpečnosti informací a dále cíle projektové, provozní a strategické. Cíle bezpečnosti informací jsou v rámci metody ISO27x přednaplněny cíli dle normy ISO 27001.
@@ -551,12 +551,13 @@ Při vytváření nejen nových aktiv, ale libovolných entit či složek, je vh
 Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba v registru vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna.      
 Tím dojde nejen k jejich vytvoření a zatřídění, ale zároveň je entitě nastaven i správný typ, který se automaticky nastaví z definovaných [vlastností vybrané složky](#3142omezení-obsahu-složek) (např. *Hardware, Software, Proces*, atp.).
 :::
-
-:::tip
+ 
+:::tip 
 Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno [přesunout do správné složky](#31411přesouvání-složek).
 :::       
-
+  
 Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
+
 Aktiva lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
 :::info
@@ -568,9 +569,14 @@ Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoud
  Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
 :::
 
-
 ### 8.3	Analýza aktiv
+Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá standardnímu schvalovacímu workflow.      
+Pokud jsou některá aktiva identifikována jako primární, včetně aktiv podpůrných, která jsou k nim připojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
+Účelem je vymezit takto rozsah analýzy rizik s následnou možností odsouhlasit jej odpovědnými manažery a celý proces takto přímo v aplikaci dokumentovat.      
 
+:::tip
+Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz a každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.
+:::
 
 ### 8.4	Hrozby a zranitelnosti
 Při návrhu nejvhodnější struktury složek v příslušných registrech v rámci kategorizace hrozeb a zranitelností lze hledat inspiraci v některém z předdefinovaných katalogů hrozeb a zranitelností, které vychází z uznávaných metodik a norem, konkrétně:
@@ -760,7 +766,7 @@ Ve spojení s [globálním filtrem](#33filtry) pak může metoda/metody, přiřa
 Metody mohou ovlivnit, jaké vlastnosti (atributy) budou entity mít, jak se s nimi bude v systému zacházet (např. v rámci hodnocení) a také které jejich záznamy mají být viditelné nebo skryté.
 :::
 
-Schopnost skrývat záznamy lze zajistit i s pomocí nastavení přístupových oprávnění. Rozdíl je ale ten, že skrýt záznamy entit s využitím metod a globálního filtru může i běžný uživatel, nikoliv pouze administrátor.     
+Schopnost skrývat záznamy lze zajistit i s pomocí nastavení [přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Rozdíl je ale ten, že skrýt záznamy entit s využitím metod a globálního filtru může i běžný uživatel, nikoliv pouze administrátor.     
       
 I když koncept metod přináší řadu výhod, není jeho použití povinné či nezbytné pro správné fungování aplikace.
 
@@ -914,7 +920,7 @@ Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů
 
 #### 16.1.6	Data
 Záložky ***Export*** a ***Import*** slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
-Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
+Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci [Zoty Helpdesk](#313zoty–o-aplikaci) nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
 Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty pak umožňuje uživateli v roli administrátora exportovat obsah databáze do souboru ve formátu JSON.
 
 <img src="/docs/img/16-zalohovani.png" title="Záloha a obnova dat" width="640"/>
@@ -942,16 +948,16 @@ V detailu vybraného uživatele lze pak zobrazit, vedle jeho identifikačních �
 Lidé jsou osoby bez přístupu do aplikace Zoty. Tzn., že nemají vytvořen uživatelský účet, přesto se ale mohou nabízet pro vyplnění některých atributů entit, kde se očekává zadání výběrem i z těch osob, které nemusí být uživateli Zoty (přičemž se neřeší, zda se jedná o zaměstnance, externisty nebo jakékoliv jiné osoby).      
 
 #### 16.2.4	Role
-Zde se zobrazují jak role předdefinované výrobcem (systémové role), tak role vytvořené uživatelem. V seznamu rolí se zobrazuje i atribut ***Uživatelé*** s číselným údajem o celkovém počtu uživatelů, kterým je daná role přiřazena. Kliknutím na tuto informaci se pak zobrazí výpis všech uživatelů s touto rolí.
-Aby se zjednodušilo a částečně či zcela zautomatizovalo vyplňování metod, lze navíc jednotlivým rolím nastavit omezení pouze na *přiřazené metody*. A poté vybrat a přiřadit této roli, které metody z těch všech, jež jsou v Zoty definované, se mají uživateli nabízet pro výběr.
+Zde se zobrazují jak role předdefinované výrobcem (systémové role), tak role vytvořené uživatelem. V seznamu rolí se zobrazuje i atribut ***Uživatelé*** s číselným údajem o celkovém počtu uživatelů, kterým je daná role přiřazena. Kliknutím na tuto informaci se pak zobrazí výpis všech uživatelů s touto rolí.      
+Aby se zjednodušilo a částečně či zcela zautomatizovalo vyplňování metod, lze navíc jednotlivým rolím nastavit omezení pouze na *přiřazené metody*. A poté vybrat a přiřadit této roli, které metody z těch všech, jež jsou v Zoty definované, se mají uživateli nabízet pro výběr.          
 Nebo lze také metodu/metody rovnou předvybrat bez zásahu uživatele. Uživatel s takto nastavenými rolemi pak nebude muset z nabídky metod vůbec vybírat, protože se předvyplní automaticky ta/ty, které jsou zde nastaveny jako *předvybrané metody*. Žádné jiné metody pak nemůže zvolit.
 
 ### 16.3	Koš
-Všechny smazané záznamy se přesouvají do koše, odkud je možné je obnovit nebo trvale smazat. V koši se zobrazuje název, datum odstranění a typ záznamu (*Složka, Hodnocení, Riziko, Hrozba* atp.).
+Všechny smazané záznamy se přesouvají do koše, odkud je možné je obnovit nebo trvale odstranit. V koši se zobrazuje název, datum odstranění a typ záznamu (*Složka, Hodnocení, Riziko, Hrozba* atp.).
 
 <img src="/docs/img/16-kos.png" title="Koš" width="740"/>
 
-Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity mimo koš. Tzn., že zobrazit a/nebo odstranit či obnovit entitu z koše, může jen uživatel, který je u ní přiřazen jako *Správce*, pokud není správce přiřazen, tak uživatel, který ji vytvořil. Role *Manažer* entit má oprávnění plného přístupu na všechny entity bez ohledu na to, kdo je vytvořil nebo kdo je jejich *Správce*, ale pouze za předpokladu, že je členem *Organizace*, která je entitě přiřazena. Toto pravidlo platí i pro ty entity, které již byly odstraněny do koše.
+Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity mimo koš. Tzn., že zobrazit a/nebo odstranit či obnovit entitu z koše, může jen uživatel, který je u ní přiřazen jako *Správce*, pokud není správce přiřazen, tak uživatel, který ji vytvořil. Role *Manažer* entit má oprávnění plného přístupu na všechny entity bez ohledu na to, kdo je vytvořil nebo kdo je jejich *Správce*, ale pouze za předpokladu, že je členem *Organizace*, která je entitě přiřazena. Toto pravidlo opět platí i pro entity v koši.
 
 :::info
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
