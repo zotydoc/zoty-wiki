@@ -378,7 +378,7 @@ V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.
 Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.     
 
 <img src="/docs/img/3-notifikace-sluzba-failed.png" title="Notifikace – pozastavení služby" width="350"/>
-V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty Helpdesk](#313zoty–o-aplikaci) nebo využijte hotline linku Zoty podpory.
+V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty Helpdesk](#313zoty--o-aplikaci) nebo využijte hotline linku Zoty podpory.
 
 ### 3.12	Profil uživatele a odhlášení
 V pravé části horní nástrojové lišty se zobrazuje jméno přihlášeného uživatele, pod kterým lze vyvolat nabídku:
@@ -572,7 +572,7 @@ Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoud
 ### 8.3	Analýza aktiv
 
 :::caution
-Tyto funkcionality budou nyní postupně uvolňovány v nových verzích Zoty
+Připravujeme pro vás novinky. Tyto funkcionality budou nyní postupně uvolňovány v nových verzích Zoty.
 :::
 
 Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá standardnímu schvalovacímu workflow.      
@@ -925,7 +925,7 @@ Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů
 
 #### 16.1.6	Data
 Záložky ***Export*** a ***Import*** slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
-Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci [Zoty Helpdesk](#313zoty–o-aplikaci) nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
+Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci [Zoty Helpdesk](#313zoty--o-aplikaci) nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
 Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty pak umožňuje uživateli v roli administrátora exportovat obsah databáze do souboru ve formátu JSON.
 
 <img src="/docs/img/16-zalohovani.png" title="Záloha a obnova dat" width="640"/>
