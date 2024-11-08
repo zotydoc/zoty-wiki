@@ -570,6 +570,11 @@ Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoud
 :::
 
 ### 8.3	Analýza aktiv
+
+:::caution
+Tyto funkcionality budou nyní postupně uvolňovány v nových verzích Zoty
+:::
+
 Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá standardnímu schvalovacímu workflow.      
 Pokud jsou některá aktiva identifikována jako primární, včetně aktiv podpůrných, která jsou k nim připojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
 Účelem je vymezit takto rozsah analýzy rizik s následnou možností odsouhlasit jej odpovědnými manažery a celý proces takto přímo v aplikaci dokumentovat.      
