@@ -56,13 +56,16 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
    -	***ROLE*** – Aktivum typu Role
    -	***SW*** – Aktivum typu Software
    -	***SR*** – Servisní požadavek
+   -	***C*** – Šablona opatření
    -	***T*** – Hrozba (Threat)
    -	***TA*** – Aktivum typu Hmotný majetek (Tangible asset)
    -	***TASK*** – Úkol
    -	***TPR*** – Plán zvládání rizik
    -	***V*** – Zranitelnost (Vulnerability)
    -	***VEN*** – Aktivum typu Dodavatel
-   -	***WGT*** – Aktivum typu Pracovní skupina a tým       
+   -	***WGT*** – Aktivum typu Pracovní skupina a tým
+   
+   -	***WK*** – Workflow       
           
 
 - **Nástrojová lišta** – horní vodorovný panel s informačními a ovládacími prvky.
@@ -287,12 +290,12 @@ Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve s
 Analogicky podobně lze tuto schopnost využít např. i ve státní a veřejné správě pro více organizačních složek podřízených jednomu státnímu či veřejnému subjektu.
 
 :::info
-Tato schopnost filtrovat vybraná data a skrýt je tak některým uživatelům, v žádném případě nenahrazuje či neduplikuje systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost snadno omezit přístup k datům i pro větší organizace s velmi komplexní organizační strukturou. Tedy všude tam, kde je třeba jednoduše zajistit, aby zaměstnanci jedné organizace či org. jednotky, neviděli do dat těch ostatních.      
+Tato schopnost filtrovat vybraná data a skrýt je tak některým uživatelům, v žádném případě nenahrazuje či neduplikuje systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy). Pouze jej doplňuje a rozšiřuje o schopnost snadno omezit přístup k datům i pro uživatele ve větších organizacích s velmi komplexní organizační strukturou. Tedy všude tam, kde je třeba jednoduše zajistit, aby zaměstnanci jedné organizace či org. jednotky, neviděli do dat těch ostatních.      
 :::
 
 :::tip
-Pokud je očekáváno zvýšení komfortu uživatelů spíše, než vysoká úroveň zabezpečení dat, je výhodné toto filtrování dat označených štítkem [Organizace](#1621organizace) využít. 
-V opačném případě je doporučeno využít raději standardní systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy), který poskytuje vyšší úroveň zabezpečení. Data, která spravuje Zoty server, nejsou totiž v tomto případě filtrována/skrývána až na straně uživatele, ale zůstávají na Zoty serveru. K datům, ke kterým nemá oprávnění, se pak běžný uživatel, bez administrátorského přístupu k serveru, nemůže nijak dostat.
+Pokud je očekáváno zvýšení komfortu uživatelů spíše, než vysoká úroveň zabezpečení dat, je výhodné toto filtrování dat, označených štítkem [*Organizace*](#1621organizace), využít. 
+V opačném případě je doporučeno využít raději standardní systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy), který poskytuje vyšší úroveň zabezpečení. Data, která spravuje Zoty server, nejsou totiž v tomto případě filtrována/skrývána až na straně uživatele, ale zůstávají na Zoty serveru. K datům, ke kterým nemá oprávnění, se tak běžný uživatel bez administrátorského přístupu k serveru nemůže nijak dostat.
 :::
 
 ### 3.9	Kalendář
@@ -751,7 +754,7 @@ Obsahuje podsekce [**Nastavení**](#161nastavení), [**Účet**](#162účet) a [
 V sekci **Administrace** lze provádět řadu nastavení samotné aplikace včetně dat, se kterými pracuje, spravovat Zoty účet se všemi uživateli a jejich rolemi a provádět řadu dalších systémových nastavení, která mohou mít zásadní vliv na fungování celé aplikace.
 
 :::caution
-Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení [oprávnění](#16113oprávnění-přístupu-do-aplikace).
+Je důležité vždy pečlivě zkontrolovat a nastavit přístup do této sekce pouze pro vybrané uživatele či role v nastavení [oprávnění přístupu do aplikace](#16113oprávnění-přístupu-do-aplikace).
 :::
 
 ### 16.1	Nastavení
@@ -834,27 +837,45 @@ Znalostní báze je matice kombinující hrozby s relevantními zranitelnostmi, 
 :::tip
 V konfiguraci lze zapnout přepínač *Kompaktní zobrazení*, kdy se namísto názvů entit zobrazují pouze jejich klíče a název se zobrazí až v tooltipu (po najetí myší nad příslušný klíč). Matice se pak stane daleko přehlednější. Zejména v případech, kdy uživatelé používají delší názvy.      
 :::
-       
+
+<img src="/docs/img/16-znalostni-baze-kompaktni-zobrazeni.png" title="Znalostní báze - Kompaktní zobrazení" />
+
 Tlačítko ***Přidat*** sloupec nabídne výběr ze všech entit typu zranitelnosti a entit a složek z registrů aktiv a požadavků.     
 Na konci každého řádku lze pomocí symbolu tří teček vyvolat menu s volbou ***Upravit***, umožňující nastavit relevanci propojení, tj. které sloupce matice jsou pro tento konkrétní řádek relevantní.     
 Se znalostí, jaké hrozby mohou působit na jaké kategorie aktiv, jaké zranitelnosti mohou při tom zneužít a jaká bezpečnostní opatření mohou pomoci tyto zranitelnosti eliminovat v rámci mitigace rizika, pak systém pracuje tak, že přednabízí uživatelům pouze smysluplná propojení mezi aktivem, zranitelností a hrozbou. A zároveň doporučuje vhodná bezpečnostní opatření.     
 V menu jsou dále dostupné volby ***Duplikovat*** celý řádek matice a ***Detail***, který zobrazí možnost přiřadit [Metodu](#16112metody), pro kterou budou zde definované kombinace relevantní a [Organizaci](#1621organizace), pro kterou budou viditelné.
 
 :::info
-K tomu, aby byl tento koncept funkční, je pouze třeba, vedle správné jednorázové konfigurace matice, aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie reprezentované složkami v registru aktiv. Zpravidla jsou totiž hrozby nebo zranitelnosti namapovány nikoliv na konkrétní aktivum, ale na celou kategorii aktiv daného typu, tj. složku, např. *Hardware, Software, Informace*, atp.
+K tomu, aby byl tento koncept funkční, je pouze třeba, vedle správné jednorázové konfigurace matice, aby konkrétní identifikovaná aktiva byla při založení do systému vždy zatřízena do správné kategorie reprezentované složkami v registru aktiv. Zpravidla jsou totiž hrozby nebo zranitelnosti namapovány nikoliv na konkrétní aktivum, ale na celou kategorii aktiv daného typu, tj. složku, např. *Hardware, Software, Informace*, atp., případně na podkategorie; pro *Hardware* to tedy mohou být např. *Aktivní síťové prvky*, *Servery*, atp.
 :::
 
+<img src="/docs/img/16-znalostni-baze-kategorie-aktiv.png" title="Kategorie aktiv pro konfiguraci matice znalostní báze" width="400"/>
+
 ##### 16.1.3.2	Generování rizik
-Pokud je v daném řádku matice definovaná alespoň jedna kombinace hrozby s dalším typem entity (jedno zda zranitelností, aktivem či kombinace obojího), pak volba ***Detail*** v menu nabídne navíc možnost z těchto kombinací vytvořit rizika. Rizika lze takto vygenerovat hromadně pro každou hrozbu ze všech možných kombinací, které Zoty sestaví a zobrazí v seznamu. Nebo může uživatel procházet seznam s jednotlivými kombinacemi, které Zoty pro vytvoření rizik nabízí a pomocí tlačítka ***Vytvořit*** na každém jednotlivém řádku generovat rizika jedno po druhém.      
+Pokud je v daném řádku matice definovaná alespoň jedna kombinace hrozby s dalším typem entity (jedno zda zranitelností, aktivem či kombinace obojího), pak volba ***Detail*** v menu nabídne navíc možnost z těchto kombinací vytvořit rizika.       
+<img src="/docs/img/16-znalostni-baze.png" title="Zobrazení detailu možných kombinací entit pro vybranou hrozbu" />
+
+Rizika lze takto vygenerovat hromadně z celého seznamu, který Zoty sestaví na základě znalosti možných kombinací mezi vybranou hrozbu a všemi relevantními aktivy a zranitelnostmi. Nebo může uživatel procházet seznam s jednotlivými kombinacemi, které Zoty pro vytvoření rizik nabízí a pomocí tlačítka ***Vytvořit*** na každém jednotlivém řádku generovat rizika jedno po druhém.
+<img src="/docs/img/16-znalostni-baze-kombinace-avt-detail.png" title="Nabídka kombinací aktiv, zranitelností a hrozeb pro generování rizik" />
 Pokud je z dané kombinace riziko vytvořeno, není již pro ni tlačítko ***Vytvořit*** dostupné a namísto něj se zobrazuje identifikátor (klíč) vytvořeného rizika. Je-li riziko odstraněno, tlačítko ***Vytvořit*** bude pro tuto kombinaci opět dostupné.      
-Ne vždy je vhodné generovat rizika z celého seznamu všech možných kombinací aktiv, hrozeb a zranitelností, které se nabízí. Uživatel má proto možnost skrýt vybrané kombinace pomocí stejnojmenné volby ***Skrýt***, aby se pro tvorbu rizik nenabízely. Tato rizika se pak přesunou do odděleného seznamu, kde je možné je pouze prohlížet. Nebo je lze pomocí volby ***Zobrazit*** přesunout zpět do seznamu relevantních kombinací, ze kterých lze generovat nová rizika.
+
+Zoty nemusí nabízet seznam pro generování rizik hledáním kombinací aktiv a zranitelností vždy jen pro jednu hrozbu, ale i pro více hrozeb najednou. Stačí je vybrat.
+<img src="/docs/img/16-znalostni-baze-select-hrozeb.png" title="Výběr hrozeb k sestavení jejich kombinací s aktivy, zranitelnostmi" />
+
+Je-li vybráno více hrozeb, aktivuje se ve spodní části pracovní plochy modrý pruh s informací a počtu vybraných záznamů. A také s tlačítkem ***Detail***, které ze znalostní báze sestaví a nabídne kombinace pro hromadné vytvoření rizik pro všechny vybrané hrozby se všemi relevantními aktivy a zranitelnostmi. 
+<img src="/docs/img/16-znalostni-baze-kombinace-avt-select-hrozeb-detail.png" title="Výběr hrozeb k sestavení jejich kombinací s aktivy, zranitelnostmi" />
+
+V detailu jednoho či více vybraných řádků matice znalostní báze lze zapnout zobrazování doplňkových informací. Pak se u aktiv, na které hrozba/hrozby působí, bude zobrazovat, jakým metodám nebo organizacím či org. jednotkám jsou tato aktiva přiřazena.
+<img src="/docs/img/16-znalostni-baze-kombinace-avt-rozsireny-detail-a-skryvani.png" title="Skrývání vybraných kombinací aktiv, zranitelností a hrozeb pro generování rizik" />      
+        
+Mimo to zde lze také skrýt nechtěné kombinace. Ne vždy je totiž vhodné generovat rizika z celého seznamu všech možných kombinací aktiv, hrozeb a zranitelností, které se nabízí. Uživatel má proto možnost skrýt vybrané kombinace pomocí stejnojmenné volby ***Skrýt***, aby se pro tvorbu rizik nenabízely. Tyto kombinace se pak přesunou do odděleného seznamu, kde je možné je pouze prohlížet. Nebo je lze pomocí volby ***Zobrazit*** přesunout zpět do seznamu relevantních kombinací, ze kterých lze generovat nová rizika.      
 
 :::info
 Nechtěné kombinace se záměrně neodstraňují, ale pouze skrývají proto, aby byla zajištěna transparentnost. Pokud totiž v registru chybí riziko pro některou kombinaci hrozby, zranitelnosti či aktiva, je zde dokumentováno, proč tomu tak je a že je to tudíž žádoucí stav.
 :::
 
 #### 16.1.4	Hodnocení
-V rámci **Administrace – Nastavení – Hodnocení** lze zobrazit přehled stávajících definic schémat hodnocení, upravovat nastavení stávajících schémat nebo založit definici nového schématu hodnocení.
+V rámci **Administrace – Nastavení – Hodnocení** lze zobrazit přehled stávajících definic schémat hodnocení, upravovat nastavení těchto schémat nebo založit definici nového schématu hodnocení.
 
 
 <img src="/docs/img/16-hodnoceni-prehled-schemat.png" title="Přehled schémat hodnocení" />      
