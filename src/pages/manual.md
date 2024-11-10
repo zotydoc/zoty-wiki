@@ -862,7 +862,7 @@ Pokud je z dané kombinace riziko vytvořeno, není již pro ni tlačítko ***Vy
 Zoty nemusí nabízet seznam pro generování rizik hledáním kombinací aktiv a zranitelností vždy jen pro jednu hrozbu, ale i pro více hrozeb najednou. Stačí je vybrat.
 <img src="/docs/img/16-znalostni-baze-select-hrozeb.png" title="Výběr hrozeb k sestavení jejich kombinací s aktivy, zranitelnostmi" />
 
-Je-li vybráno více hrozeb, aktivuje se ve spodní části pracovní plochy modrý pruh s informací a počtu vybraných záznamů. A také s tlačítkem ***Detail***, které ze znalostní báze sestaví a nabídne kombinace pro hromadné vytvoření rizik pro všechny vybrané hrozby se všemi relevantními aktivy a zranitelnostmi. 
+Je-li vybráno více hrozeb, aktivuje se ve spodní části pracovní plochy modrý pruh s informací o počtu vybraných záznamů. A také s tlačítkem ***Detail***, které nabídne kombinace pro hromadné vytvoření rizik sestavené ze znalostní báze pro všechny vybrané hrozby se všemi relevantními aktivy a zranitelnostmi. 
 <img src="/docs/img/16-znalostni-baze-kombinace-avt-select-hrozeb-detail.png" title="Výběr hrozeb k sestavení jejich kombinací s aktivy, zranitelnostmi" />
 
 V detailu jednoho či více vybraných řádků matice znalostní báze lze zapnout zobrazování doplňkových informací. Pak se u aktiv, na které hrozba/hrozby působí, bude zobrazovat, jakým metodám nebo organizacím či org. jednotkám jsou tato aktiva přiřazena.
