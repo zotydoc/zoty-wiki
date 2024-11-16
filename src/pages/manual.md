@@ -16,7 +16,7 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
 
 :::info
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
- Budeme vám vděční za veškeré podněty a připomínky.
+Budeme vám vděční za veškeré podněty a připomínky.
 :::                
 
 
@@ -34,6 +34,7 @@ Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis fu
    -	***AGR*** – Smlouva
    -	***AUDN*** – Neshoda auditu
    -	***AUDR*** – Doporučení auditu
+   -	***C*** – Šablona opatření (Control)
    -	***DATA*** – Aktivum typu Data
    -	***E*** – Hodnocení (Evaluation)
    -	***F*** – Složka (Folder)
@@ -283,7 +284,7 @@ Uživatel Martina má přiřazenou roli *Manažer entit*. Tato **role** má v re
 <img src="/docs/img/3-opravneni-konflikt-stejna-pro-uzivatele-i-roli.png" title="Konflikt oprávnění uživatele a jeho role" />
 
 #### 3.8.3	Rozšířená správa oprávnění pro velké organizace
-Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům. Ty umožňují filtrovat / skrývat určité záznamy pro uživatele podle jejich příslušnosti k podřízeným subjektům / organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která patří vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – *Organizace*. Ten lze v registrech připojit k libovolné složce či entitě a omezit tak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky (více v kapitole [Organizace](#1621organizace)).    
+Pro větší organizace s rozsáhlejší organizační strukturou poskytuje Zoty rozšířené schopnosti řízení přístupu k datům. Ty umožňují filtrovat / skrývat určité záznamy pro uživatele podle jejich příslušnosti k podřízeným subjektům či organizačním jednotkám. Koncept tohoto řešení je založen na jednoduchém označení dat, která mají patřit vybranému subjektu/subjektům, pomocí specifického typu systémového štítku – [*Organizace*](#1621organizace). Ten lze v registrech připojit k libovolné složce či entitě a omezit tak jejich viditelnost jen pro ty uživatele, kteří patří do příslušné organizace či organizační jednotky.    
       
 Typické použití v komerčním sektoru je pro ty organizace, které v rámci holdingu/skupiny sdružují více společností, jejichž data mají být oddělena. Tzn., že uživatelé pracující pro jednu konkrétní společnost pak nevidí data (složky a entity v registrech) ostatních společností skupiny.
 Přesto, že z pohledu běžného uživatele se jeví data jako oddělená, ve skutečnosti jsou stále součástí jedné společné databáze. Výhodou je, že pak lze snadno vytvářet i různé konsolidované reporty a pohledy na data napříč všemi společnostmi skupiny.      
@@ -295,7 +296,7 @@ Tato schopnost filtrovat vybraná data a skrýt je tak některým uživatelům, 
 
 :::tip
 Pokud je očekáváno zvýšení komfortu uživatelů spíše, než vysoká úroveň zabezpečení dat, je výhodné toto filtrování dat, označených štítkem [*Organizace*](#1621organizace), využít. 
-V opačném případě je doporučeno využít raději standardní systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy), který poskytuje vyšší úroveň zabezpečení. Data, která spravuje Zoty server, nejsou totiž v tomto případě filtrována/skrývána až na straně uživatele, ale zůstávají na Zoty serveru. K datům, ke kterým nemá oprávnění, se tak běžný uživatel bez administrátorského přístupu k serveru nemůže nijak dostat.
+V opačném případě je doporučeno využít raději standardní systém [správy přístupových oprávnění](#38oprávnění-přístupu-na-záznamy), který poskytuje vyšší úroveň zabezpečení. Data, která spravuje Zoty server, nejsou totiž v tomto případě filtrována/skrývána až na straně uživatele, ale zůstávají na Zoty serveru. Běžný uživatel bez administrátorského přístupu k serveru se tak k datům, ke kterým nemá oprávnění, nemůže nijak dostat.
 :::
 
 ### 3.9	Kalendář
@@ -304,8 +305,8 @@ V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dl
 <img src="/docs/img/3-kalendar.png" title="Kalendář" />
 
 
-### 3.10	Schválení
-V této sekci se zobrazuje seznam entit, které musí nejprve projít procesem schválení. Typy nově vytvářených entit, které prochází schvalovacím workflow, jsou *rizika* a *aktiva*.
+### 3.10	Schvalovací workflow
+V sekci **Schválení** se zobrazuje seznam entit, které musí nejprve projít procesem schválení. Typy nově vytvářených entit, které prochází schvalovacím workflow, jsou *rizika* a *aktiva*.
 V nástrojové liště se zobrazuje ikona, která upozorňuje na počet záznamů čekajících na schválení.
 
 <img src="/docs/img/3-schvaleni-notifikace.png" title="Notifikace – entity ke schválení" width="300"/>
@@ -551,24 +552,63 @@ Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zraniteln
 Např. při analýze projektových rizik je zpravidla vhodné provádět jejich hodnocení skrze připojené projektové cíle. Jsou-li totiž riziko či hrozba připojeny přímo k projektu, ovlivňují jej jako celek neboli mají dopad na všechny cíle tohoto projektu. Pokud jsou ale tyto cíle založeny v registru cílů a propojeny s tímto projektem, tak následným připojením rizik či hrozeb lze modelovat jejich dopad na každý dílčí projektový cíl.
 
 ### 8.2	Aktiva
-Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a kategorizovat tak aktiva dle vlastních preferencí. Podobně, jako u jiných registrů, i zde se lze nechat inspirovat již vytvořenými strukturami složek v rámci přednaplněných katalogů aktiv.
-       
+Aktiva tvoří (nejen v aplikaci Zoty) velkou množinu, uvnitř které lze identifikovat skupiny entit s podobnými vlastnostmi (atributy). Přitom některé vlastnosti entit z různých skupin se mohou často odlišovat.      
+Proto v rámci identifikace celé velké množiny aktiv nelze všechna popsat pouze s pomocí jedné sady univerzálních atributů, např. *Název, Popis, Správce, Garant* atp., které by byly pro všechna aktiva společné. Při popisu aktiv se tak pracuje i s atributy, které jsou specifické vždy jen pro určitý konkrétní typ, např. "*Data*"; zatímco pro jiný typ aktiva, např. "*Lokalita*", nemusí být ten samý atribut vůbec relevantní.
 
+:::note
+Aktivum typu ***Lokalita*** bude mít vedle názvu a popisu i další specifické atributy, jako např. *Adresa* nebo informaci o tom, zda se jedná o lokalitu interní či externí. Pro aktivum typu ***Data*** nejsou tyto atributy relevantní. Zde je třeba evidovat jiné specifické atributy, které jsou zase zcela irelevantní pro lokality, např. *Typ úložiště dat, Klasifikace dat, Způsob zabezpečení dat*, atp.
+:::
+
+V Zoty se proto rozlišují aktiva různého typu. Díky tomu je možné v rámci analýzy popsat všechny důležité vlastnosti všech aktiv, bez ohledu, zda jsou některé z nich specifické jen pro určité skupiny (typy) aktiv.      
+
+#### Typy aktiv:
+-	Data (DATA)
+-	Informace (INF)
+-	Znalost (KNW – Knowledge)        
+________________________________      
+
+- Aktivum obecného typu (A – Asset)
+-	Dodavatel (VEN – Vendor)
+-	Hardware (HW)
+-	Hmotný majetek (TA – Tangible asset)
+-	Lokalita (LOC)
+-	Organizační jednotka (OU – Organizational Unit)
+-	Pracovník (PER)
+-	Pracovní pozice / Funkční místo (FP – Functional Position)
+-	Pracovní skupina a tým (WGT – Workgroup, Team)
+-	Produkt (PROD)
+-	Proces (PROC)
+-	Projekt (PROJ)
+-	Role (ROLE)
+-	Software (SW)
+
+Speciální kategorii pak tvoří aktiva typu projekt a proces, které mohou (spolu s [úkoly](#5úkoly)) vystupovat v roli konkrétních [opatření](#101opatření) připojených k [cílovým hodnocením](#9hodnocení) rizik v rámci jejich mitigace.
+
+#### 8.2.1 Správa aktiv
+Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a kategorizovat tak aktiva dle vlastních preferencí. Podobně, jako u jiných registrů, i zde se lze nechat inspirovat již vytvořenými strukturami složek v rámci předdefinovaných kategorií v katalozích aktiv.
+       
 <img src="/docs/img/8-katalogy-aktiv.png" title="Katalogy aktiv" width="570"/>
 
-Při vytváření nejen nových aktiv, ale libovolných entit či složek, je vhodné myslet i na jejich správné zatřídění ve stávající struktuře složek v příslušném registru.
+Zejména při větším objemu aktiv pak vhodně zvolená kategorizace významným způsobem zpřehledňuje a usnadňuje jejich správu. Proto při vytváření nejen nových aktiv, ale i libovolných jiných entit, je vhodné myslet také na jejich správné zatřídění ve struktuře složek v příslušném registru.
 
 :::info
-Předtím, než je aktivováno tlačítko ***Vytvořit*** (entitu/složku) je třeba v registru vybrat některou stávající složku, do které má být nově vytvářená entita či složka zatříděna.      
-Tím dojde nejen k jejich vytvoření a zatřídění, ale zároveň je entitě nastaven i správný typ, který se automaticky nastaví z definovaných [vlastností vybrané složky](#3142omezení-obsahu-složek) (např. *Hardware, Software, Proces*, atp.).
+Předtím, než uživatel aktivuje tlačítko ***Vytvořit***, je třeba, aby v registru vybral některou stávající složku, do které má být nově vytvářená entita zatříděna. Tím dojde nejen k jejímu vytvoření a zatřídění, ale zároveň je entitě automaticky nastaven i [správný typ](#typy-aktiv) (např. *Hardware, Software, Proces*, atp.), neboť ten je již definován ve [vlastnostech každé složky](#3142omezení-obsahu-složek).
 :::
- 
-:::tip 
-Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v registru, tj. bez zatřídění do složky, lze jej kdykoliv snadno [přesunout do správné složky](#31411přesouvání-složek).
-:::       
-  
-Speciální typy aktiv tvoří projekty a procesy, které mohou (spolu s úkoly) tvořit **Opatření** k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.    
 
+:::tip 
+Pokud zatřídění neproběhlo správně, tzn. nový záznam se uložil do chybně zvolené složky nebo je uložen přímo v „root“ registru (je-li to povoleno), lze jej kdykoliv snadno [přesunout do správné složky](#31411přesouvání-složek).
+:::  
+
+S pomocí oprávnění lze v [administraci aplikace](#16113oprávnění-přístupu-do-aplikace) nastavit také různé úrovně oprávnění pro registry. Tak lze např. zamezit tomu, aby uživatelé mohli přímo do root registrů entity či složky ukládat. Nebo zde předdefinovanou strukturu složek jakkoliv měnit. Dokud tedy uživatel nejprve některou složku nevybere, tak tlačítko ***Vytvořit*** nebude v registru dostupné. Tím je zabráněno uložení nově vytvářené entity do rootu příslušného registru, tj. mimo předdefinovanou strukturu složek.
+
+<img src="/docs/img/8-entity-restrikce-na-ulozeni-do-registru.png"  title="Restrikce na vytvoření entit s uložením do root registru" />
+         
+:::info
+Registr není složka, ale část aplikace Zoty (sekce). Proto restrikce na celý registr nelze nastavit v rámci systému [správy řízení přístupů na záznamy](#38oprávnění-přístupu-na-záznamy)
+ (entity a složky), ale pouze nastavením oprávnění přístupu do vybraných částí aplikace Zoty v [administraci aplikace](#16113oprávnění-přístupu-do-aplikace), jak je popsáno výše.
+:::
+
+#### 8.2.2 Hodnocení aktiv
 Aktiva lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení) obdobně, jako např. rizika, přičemž hodnocení rizik obvykle předchází právě hodnocení aktiv. Jeho cílem je stanovit **hodnotu aktiva** (např. z pohledu důvěrnosti, integrity a dostupnosti, v případě hodnocení v rámci informační bezpečnosti), která následně může vstupovat do hodnocení rizik s využitím definovaných schémat hodnocení zahrnujících **hodnotu dopadu**. Proto Zoty umožňuje automaticky přebírat výsledné skóre jednoho hodnocení (např. aktiva) jako vstup pro výpočet skóre jiného hodnocení (např. rizika).
 
 :::info
@@ -580,7 +620,7 @@ Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoud
  Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
 :::
 
-### 8.3	Analýza aktiv
+#### 8.2.3 Analýza aktiv
 
 :::caution
 Připravujeme pro vás novinky. Tyto funkcionality budou nyní postupně uvolňovány v nových verzích Zoty.
@@ -633,7 +673,7 @@ Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojený
 :::
 
 Riziko může nabývat těchto stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
-Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schválení](#310schválení).
+Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schvalovací workflow](#310schvalovací-workflow).
 
 Při vytváření nového rizika lze zvolit i jeho tzv. „rodiče“. Tj. *hrozbu*, *zranitelnost* či *aktivum*, výsledkem jejichž kombinace je právě riziko (*hrozba*, zneužívající *zranitelnosti aktiva*, představuje *riziko*).       
 Při výběru těchto rodičovských entit může Zoty uživateli napovědět, kterou konkrétní hrozbu, zranitelnost či aktivum z celého seznamu vybrat. K tomu slouží přepínače ***Filtrovat dle propojení*** a ***Filtrovat dle Znalostní báze***.       
@@ -788,6 +828,12 @@ I když koncept metod přináší řadu výhod, není jeho použití povinné č
 
 ##### 16.1.1.3	Oprávnění přístupu do aplikace
 Záložka ***Oprávnění*** umožňuje pro vybrané role či konkrétní uživatele nastavit přístup do jednotlivých sekcí či podsekcí aplikace, s libovolnou kombinací oprávnění: *Číst, Vytvořit, Upravit, Odstranit, Komentář* nebo zvolit *Vše* pro nejvyšší úroveň oprávnění.
+
+:::tip
+V případě, kdy jsou v registrech vytvořeny struktury složek, může být žádoucí, aby uživatelé nemohli zakládat nově vytvářené entity, např. [aktiva](#821-správa-aktiv), přímo do root registru, tedy mimo tuto předdefinovanou strukturu. Za tímto účelem lze v administraci nastavit oprávnění pro ***Registry entit***.
+:::
+
+<img src="/docs/img/16-opravneni-registry.png"  title="Nastavení oprávnění pro registry entit" />
 
 ##### 16.1.1.4	Přesměrování
 Záložka ***Přesměrování*** umožňuje pro každou roli individuálně nastavit, do jaké sekce či podsekce aplikace Zoty bude po přihlášení automaticky přesměrován uživatel s touto rolí. Pokud mají uživatelé přiřazeno více rolí, pak volbou *Pořadí* lze nastavit, v jakém pořadí mají být role seřazeny při vyhodnocování, kam má být daný uživatel přesměrován. Přičemž role s nižším pořadovým číslem mají vyšší prioritu. Specifické postavení zde má role administrátora, která je v pořadí vždy na prvním místě.
