@@ -66,11 +66,10 @@ Budeme vám vděční za veškeré podněty a připomínky.
    -	***TPR*** – Plán zvládání rizik
    -	***V*** – Zranitelnost (Vulnerability)
    -	***VEN*** – Aktivum typu Dodavatel
+   -	***WF*** – Workflow
    -	***WGT*** – Aktivum typu Pracovní skupina a tým
-   
-   -	***WK*** – Workflow       
+        
           
-
 - **Nástrojová lišta** – horní vodorovný panel s informačními a ovládacími prvky celé aplikace Zoty nebo pracovní plochy jednotlivých sekcí.
 - **Ovládací panel** – levý svislý panel s menu pro přístup k jednotlivým sekcím s funkcionalitami aplikace Zoty a registry entit.
 - **Sekce / podsekce** – funkcionality aplikace Zoty dostupné z ovládacího panelu nebo nástrojové lišty; některé sekce mohou také reprezentovat samostatné aplikační moduly, které fungují i zcela autonomně a jsou licencované jako samostatné produkty, např. ***Zoty Designer***.
@@ -169,11 +168,12 @@ Hromadně lze schválit entity tak, jak jsou, tedy beze změn. Chce-li schvalova
 
 &nbsp;
 
-Případné úpravy či doplnění chybějících informací ve schvalované entitě, se v posledním kroku schvalovacího workflow mohou potvrdit a schválit volbou stavu *Schválit + Aplikovat změny*. Nebo může být stav schválení zvolen *Schválit beze změny*, *Vrátit* či *Zamítnout*. Zároveň může schvalovatel k tomuto schvalovacím workflow připojit svůj komentář.
+Případné úpravy či doplnění chybějících informací ve schvalované entitě, se v posledním kroku schvalovacího workflow mohou potvrdit a schválit volbou stavu *Schválit a aplikovat změny*. Nebo může být stav schválení zvolen *Schválit beze změny*, *Vrátit* či *Zamítnout*, případně lze schvalování *Delegovat* na jiného schvalovatele.      
+Zároveň může schvalovatel k tomuto schvalovacím workflow připojit svůj komentář. Komentář je povinný pro volby *Delegovat, Vrátit* a *Zamítnout*.
 
 <img src="/docs/img/3-schvaleni-jednotlive-potvrzeni-zmen.png" title="Schválení – Návrh úprav" width="440"/>
 
-Kliknutím na tlačítko ***Potvrdit*** je schvalovací workflow dokončeno a příslušná entita schválena nebo vrácena žadateli (např. k doplnění některých informací potřebných k úspěšnému schválení) nebo je schválení zamítnuto.
+Kliknutím na tlačítko ***Potvrdit*** je schvalovací workflow dokončeno a příslušná entita dle zvoleného typu akce buď schválena nebo vrácena žadateli (např. k doplnění některých informací potřebných k úspěšnému schválení) nebo delegována na jiného schvalovatele nebo je schválení zamítnuto.
 
 <img src="/docs/img/3-schvaleni-jednotlive-potvrzeni-zmen-approved.png" title="Schválení – Návrh úprav" width="580"/>
 
@@ -181,7 +181,11 @@ Průběh každého workflow je dokumentován a uložen. Lze se k němu kdykoliv 
 Přístup k těmto informacím zprostředkují tyto ikony:   
 <img src="/docs/img/3-schvaleni-piktogramy-aktivity-a-comment.png" title="Schválení – dokumentace aktivit" width="90"/>
 
-Celý průběh schvalovacího workflow je patrný z workflow diagramu na následujícím obrázku. Ukazuje kdy a jak se mění jednotlivé stavy workflow při vytváření nových entit typu *Riziko* nebo *Aktivum*, spolu se změnou stavů samotné schvalované entity, včetně zapojení uživatelských rolí, které mají oprávnění příslušné činnosti provádět.
+Ke konkrétním schválením (instancím schvalovacích workflow) mají přístup uživatelé s rolí *Administrátor* a všichni účastníci workflow, tj. uživatel, který workflow schvaluje (*Schvalovatel*) a uživatel, který příslušnou entitu (aktivum, riziko, atp.) nebo výstup (např. analýzu rizik) odeslal ke schválení a tím celé workflow inicioval (*Autor*). Všichni tito uživatelé mají přístup ke schvalovacím workflow pouze za předpokladu, že mají povolen přístup do sekce Schválení v [nastavení oprávnění](#oprávnění-přístupu-do-aplikace).
+
+&nbsp;
+
+Celý průběh schvalování je patrný z workflow diagramu níže. Ukazuje kdy a jak se mění jednotlivé stavy workflow při vytváření nových entit typu *Riziko* nebo *Aktivum*, spolu se změnou stavů samotné schvalované entity, včetně zapojení uživatelských rolí, které mají oprávnění provádět příslušné kroky v rámci workflow.
 
 <img src="/docs/img/3-schvalovaci-workflow-diagram.png" title="Schvalovací workflow - diagram" width="680"/>
 
@@ -432,10 +436,10 @@ Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tom
 
 &nbsp;
 
-##### Přesouvání složek
+#### Přesouvání složek
 Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze ve stromové struktuře přesouvat. Ve stromové struktuře složek zobrazené v levém okně se vybere složka. Její obsah, který je třeba přesunout jinam, se zobrazí v pravém okně. Zde se v seznamu vyhledá záznam (ať už je to jiná složka nebo záznam entity např. typu Aktivum) a u něj lze přes ikonu se symbolem tří teček zobrazit menu s nabídkou ***Přesunout***. Zde pak lze změnit zatřídění vybraného záznamu v rámci stromové struktury a kliknutím na tlačítko ***Potvrdit*** provést jeho přesun.
 
-##### Omezení obsahu složek
+#### Omezení obsahu složek
 Pro podporu udržení přehlednosti, zejména při větším počtu různých typů aktiv (ale i jakýchkoliv jiných typů entit), lze zajistit, aby systém hlídal, že do konkrétní složky nebude možné uložit jiné typy entit než ty, které administrátor povolil. V případě, že do složky bude povoleno ukládat více než jeden typ entit, lze též přednastavit, jaký výchozí typ entity se má automaticky přednastavit, pokud bude uživatel do této složky vytvářet novou entitu.    
 Administrátor tedy může upravit vlastnosti každé složky tak, že např. data, informace a znalosti, které v Zoty reprezentují tři různé specifické typy entit, umístí do tří samostatných složek nebo je naopak umístí do jedné společné a povolí do ní ukládat všechny tyto tři typy entit.
 
@@ -515,7 +519,7 @@ Pro každou entitu nebo složku lze na záložce ***Oprávnění*** zobrazit sez
 
 Pokud jsou oprávnění k přístupu na složku či entitu zděděna z nadřízeného uzlu, tak ikona, která zobrazuje menu pro editaci či odstranění oprávnění, není dostupná, neboť správa těchto oprávnění je realizována na úrovni nadřízeného uzlu odkud jsou zděděna. Informace, který konkrétní nadřízený uzel je rodičem, odkud se oprávnění dědí a kde je tedy lze případně editovat či odstranit, je dostupná přes info ikonu ***Zdroj oprávnění***.
 
-<img src="/docs/img/3-opravneni-na-slozku-info-o-dedicnosti.png" title="Přehled přidělených oprávnění" />
+<img src="/docs/img/3-opravneni-na-slozku-info-o-dedicnosti.png" title="Info o rodiči - zdroj, odkud se dědí oprávnění"/>
 
 Vzhledem k tomu, že lze definovat (nebo dědit) různé úrovně oprávnění zcela nezávisle pro uživatele a pro role, může nastat situace, kdy uživatel bude mít přiřazeny role, jejichž úroveň oprávnění pro některou složku či entitu bude v konfliktu s úrovní oprávnění, která jsou definována (nebo děděna) přímo pro tohoto konkrétního uživatele. Konflikt spočívá v tom, že uživatel může mít nějaké oprávnění povoleno, ale jemu přidělená role bude mít tu stejnou úroveň oprávnění (např. odstranění složky/entity) zakázanou.      
 Zoty tento konflikt řeší tak, že pokud tento případ nastane, tak oprávnění se sečtou a přednost dostane ta úroveň oprávnění, která povoluje (zelená) před tou, která zakazuje (červená).
