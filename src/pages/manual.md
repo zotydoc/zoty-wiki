@@ -75,9 +75,9 @@ Budeme vám vděční za veškeré podněty a připomínky.
 - **Sekce / podsekce** – funkcionality aplikace Zoty dostupné z ovládacího panelu nebo nástrojové lišty; některé sekce mohou také reprezentovat samostatné aplikační moduly, které fungují i zcela autonomně a jsou licencované jako samostatné produkty, např. ***Zoty Designer***.
 - **Seznam** – způsob zobrazení záznamů v řádkové režimu, které lze třídit, filtrovat, vybírat či prohledávat.
 - **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole [Oprávnění](#3132oprávnění-přístupu-na-záznamy). 
-- **Detail** – způsob zobrazení jednoho vybraného záznamu entity v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, Hodnocení (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu. Pro entity typu Hodnocení se zobrazuje navíc záložka ***Opatření***.
+- **Detail** – způsob zobrazení jednoho vybraného záznamu entity v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, ***Hodnocení*** (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení,mitigační ***Opatření***, která mohou být propojena na cílová hodnocení rizik, ale i aktiv, hrozeb či zranitelností, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
-- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. Hardware, Software, Informace, Procesy atp.
+- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. *Hardware, Software, Informace, Procesy* atp. Registr je, podobně jako funkcionality v sekcích, dostupný z menu ovládacího panelu.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
 - **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole [Metody](#metody).
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
@@ -86,7 +86,7 @@ Budeme vám vděční za veškeré podněty a připomínky.
 
 ## 3	UŽIVATELSKÉ PROSTŘEDÍ {#myUserExp}
 Uživatelské prostředí Zoty je navrženo tak, aby funkcionality a ovládací prvky, které jsou k dispozici na více místech v aplikaci, se chovaly a ovládaly z jakéhokoliv místa stejně.     
-Zoty v tomto ohledu myslí i na hendikepované osoby se zrakovým postižením. Tito uživatelé si mohou v [nastavení svého profilu](#393mé-nastavení) přizpůsobit uživatelské prostředí dle svých preferencí a s ohledem na svůj zdravotní hendikep. Pro vizualizace dat pomocí různých typů grafů lze např. volit ze sad barevných palet uzpůsobených pro uživatele s poruchami barvocitu. Navíc barva samotná, je-li v Zoty nositelem informací, tak pouze doplňkových, jinak je vždy kombinována s textem. Slabozrací uživatelé zase ocení možnost zvětšit všechny grafické prvky tvořící uživatelské prostředí Zoty, včetně veškerých textových popisků.
+Zoty v tomto ohledu myslí i na hendikepované osoby se zrakovým postižením. Tito uživatelé si mohou v [nastavení svého profilu](#393-mé-nastavení) přizpůsobit uživatelské prostředí dle svých preferencí a s ohledem na svůj zdravotní hendikep. Pro vizualizace dat pomocí různých typů grafů lze např. volit ze sad barevných palet uzpůsobených pro uživatele s poruchami barvocitu. Navíc barva samotná, je-li v Zoty nositelem informací, tak pouze doplňkových, jinak je vždy kombinována s textem. Slabozrací uživatelé zase ocení možnost zvětšit všechny grafické prvky tvořící uživatelské prostředí Zoty, včetně veškerých textových popisků.
 
 :::info
 Pro většinu uživatelů není nezbytné studovat tuto část manuálu pro zvládnutí základního ovládání.
@@ -94,14 +94,42 @@ Pro většinu uživatelů není nezbytné studovat tuto část manuálu pro zvl�
 
 &nbsp;
 
-### 3.1	Ovládání aplikace
-K jednotlivým funkcionalitám Zoty lze přistupovat přes menu v levém ovládacím panelu. Tato menu poskytují přístup též do registrů, kde jsou uloženy příslušné typy entit a zatříděny do kategorií pomocí složek.     
-Hlavní pracovní plocha aplikace Zoty pak zobrazuje obsah příslušné sekce zvolené v ovládacím panelu. Tato pracovní plocha může být rozdělena na samostatné panely. Např. pokud je zde zobrazen obsah některého z registrů, tak v levém panelu se zobrazí stromová struktura složek obsahující entity určitého typu (např. aktiva nebo rizika atp.) a v pravém panelu se pak zobrazí detail jedné složky nebo entity (např. konkrétní aktivum) vybrané ve stromu složek z levého panelu.     
+### 3.1	Ovládání aplikace a vizualizace dat
+Nabídka voleb z menu v levém ovládacím panelu poskytuje přístup k jednotlivým funkcionalitám a registrům Zoty, kde jsou uloženy příslušné typy entit a zpravidla též zatříděny do kategorií pomocí složek.     
 Ovládací panel lze jednoduše skrýt či zobrazit kliknutím na jeho záhlaví s názvem Zoty účtu a zvětšit tak hlavní pracovní plochu vpravo vedle tohoto panelu.
 
 <img src="/docs/img/3-zoty-menu.png"  title="Menu ovládacího panelu" />
 
 &nbsp;
+
+Hlavní **pracovní plocha** aplikace Zoty zobrazuje většinou některý z registrů entit nebo funkcionality příslušné sekce aplikace. Tato pracovní plocha pak ještě může být tvořena jedním či více **panely** a někdy též informačními **kartami**. Pracovní plochy a panely jednotlivých sekcí bývají často vybaveny horním horizontálním pruhem s nástrojovou lištou a ovládacími prvky specifickými pro danou sekci.
+        
+Např.  registry jsou standardně vizualizovány pomocí dvou panelů pracovní plochy. V levém panelu se zobrazuje stromová struktura složek obsahující entity určitého typu (např. aktiva nebo rizika atp.). Zatímco pravý panel pak může zobrazovat různý obsah podle toho, jakou záložku (např. ***Aktivity, Propojení, Oprávnění***, Schválení atp.) vybere uživatel v nástrojové liště pracovní plochy. Při výběru složky v levém panelu bude nabídka záložek jiná než při výběru entity. Přičemž i entity různého typu mohou mít specifickou nabídku záložek. Některé záložky mohou být také určitým uživatelům skryté s ohledem na omezení definovaná v rámci nastavení jejich uživatelských oprávnění.      
+Výchozí záložkou je ***Přehled***, která v pravém panelu zobrazuje přehled všech atributů a dalších informací, jež lze evidovat u konkrétní složky nebo entity, vybrané z registru v levém panelu.
+
+<img src="/docs/img/3-pracovni-plocha.png" title="Pracovní plocha aplikace Zoty" />
+
+V tomto výchozím přehledovém zobrazení je na pracovním panelu jeden vnější vertikální posuvník pro posun celého panelu. Pro entitu, která má mnohem více atributů než složka, je zde navíc ještě jeden vnitřní pro posun obsahu okna uvnitř panelu se všemi atributy entity. Pro jejich zobrazení je též možné, namísto rolování obsahu okna vnitřním posuvníkem, „rozbalit“ celý jeho obsah pomocí ovládacího prvku se symbolem šipky dolů. Stejným způsobem lze pak obsah okna zase „sbalit“ zpět.      
+
+K entitám lze pomocí ikony se symbolem „+“připojovat organizace, metody, soubory a štítky. Příklad na obrázku demonstruje připojení dalších štítků, přičemž lze vybírat z dříve vytvořených nebo vytvořit a připojit štítek nový. Nově vytvořený štítek se automaticky ukládá pro případné další použití.      
+
+V Zoty jsou dva základní způsoby zobrazení entit a složek – **detail** a **seznam**.    
+
+&nbsp;
+
+#### Zobrazení detailu
+Toto zobrazení skryje levý panel s registrem a celá pracovní plocha je tak využita pro lepší zobrazení všech relevantních informací k vybrané entitě nebo složce.     
+Zobrazit detail entity nebo složky lze pomocí stejnojmenného tlačítka na panelu vpravo dole nebo též pomocí ikony se symbolem pravé šipky vpravo nahoře. Tyto volby nejsou dostupné pro entity, které zatím nebyly schváleny.
+
+&nbsp;
+
+#### Zobrazení seznamu
+V nástrojové liště aplikace, vpravo nahoře, je ikona Seznam entit, která skryje levý panel s registrem a celá pracovní plocha je tak využita pro zobrazení řádkového seznamu všech entit uložených ve vybraném registru. Opakované kliknutí na tuto ikonu umožňuje rychle se přepínat mezi zobrazením tohoto seznamu v jednom panelu a zobrazením dvou panelů se stromem a záložkami. Přičemž se v druhém panelu zobrazí poslední zvolená záložka, která se pamatuje, dokud uživatel nevybere některou sekci v ovládacím panelu. Pokud nebyla žádná zvolena, zobrazí se výchozí záložka ***Přehled***.
+
+&nbsp;
+
+Vpravo nad panelem seznamu entit lze vybrat některý z předdefinovaných filtrů a zúžit seznam na zobrazení pouze těch entit, které jsou uloženy v konkrétní složce (*Dle složky*) nebo jsou zvoleného typu entity. Vlevo nad panelem seznamu entit se pak zobrazí informace o počtu záznamů, které odpovídají definici zvoleného filtru.
+
 
 Nastavení šířky panelů pracovní plochy lze konfigurovat pomocí symbolu zubatého kola v pravém horním rohu pracovní plochy. Lze pak lépe využít šířku pracovní plochy s ohledem na velikost displeje, zejména poměr jeho stran. Toto nastavení se pak použije také pro ostatní panely použité i na jiných místech aplikace Zoty. Stejnou možnost konfigurace mají uživatelé k dispozici také v [nastavení svého profilu](#393mé-nastavení). 
 
@@ -109,16 +137,15 @@ Nastavení šířky panelů pracovní plochy lze konfigurovat pomocí symbolu zu
 
 &nbsp;
 
-Takto lze zvětšit nebo zmenšit velikost jednoho panelu pracovní plochy na úkor či ve prospěch druhého.     
+Takto lze zvětšit velikost pravého panelu pracovní plochy na úkor levého, při zobrazení detailu pak bude přes celou šířku pracovní plochy.     
 Pro malé displeje, které mají nastavené vertikální rozlišení 1440 px a nižší, není toto nastavení dostupné.
 
 :::tip
 Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče pomocí funkční klávesy F11. Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
 :::
 
-V části nad pracovní plochou se ještě nachází nástrojové lišty. V horním, fialově podbarveném horizontálním pruhu, je nástrojová lišta aplikace, která poskytuje obecné funkcionality pro celou aplikaci Zoty. Podobně i jednotlivé sekce mají také svoji nástrojovou lištu, poskytující funkcionality specifické jen pro konkrétní zvolenou sekci.
+V horním, fialově podbarveném horizontálním pruhu nad pracovní plochou, je nástrojová lišta aplikace, která poskytuje obecné funkcionality pro celou aplikaci Zoty:
 
-Nástrojová lišta aplikace zobrazuje:
 -	Zoty (informace o aplikaci)
 -	Kalendář
 -	Schválení
@@ -145,7 +172,7 @@ V kalendáři lze zobrazit pro zvolený měsíc všechny záznamy filtrované dl
 &nbsp;
 
 ### 3.4	Schvalovací workflow
-V sekci **Schválení** se zobrazuje seznam entit typu *rizika* a *aktiva*, které musí nejprve projít procesem schválení v rámci obecného schvalovacího workflow.     
+V sekci **Schválení** se zobrazuje seznam entit typu *aktiva* a *rizika*, které musí nejprve projít procesem schválení v rámci obecného schvalovacího workflow.     
 V nástrojové liště se zobrazuje ikona, která upozorňuje na počet záznamů čekajících na schválení.
 
 <img src="/docs/img/3-schvaleni-notifikace.png" title="Notifikace – entity ke schválení" width="300"/>
@@ -181,13 +208,22 @@ Průběh každého workflow je dokumentován a uložen. Lze se k němu kdykoliv 
 Přístup k těmto informacím zprostředkují tyto ikony:   
 <img src="/docs/img/3-schvaleni-piktogramy-aktivity-a-comment.png" title="Schválení – dokumentace aktivit" width="90"/>
 
-Ke konkrétním schválením (instancím schvalovacích workflow) mají přístup uživatelé s rolí *Administrátor* a všichni účastníci workflow, tj. uživatel, který workflow schvaluje (*Schvalovatel*) a uživatel, který příslušnou entitu (aktivum, riziko, atp.) nebo výstup (např. analýzu rizik) odeslal ke schválení a tím celé workflow inicioval (*Autor*). Všichni tito uživatelé mají přístup ke schvalovacím workflow pouze za předpokladu, že mají povolen přístup do sekce Schválení v [nastavení oprávnění](#oprávnění-přístupu-do-aplikace).
+K jednotlivým schválením (instancím schvalovacích workflow) mají přístup všichni jeho ***účastníci***, tj.:
+- ***Autor*** - uživatel, který příslušnou entitu (aktivum, riziko, atp.) nebo výstup (např. analýzu rizik) odeslal ke schválení a tím celé workflow inicioval, což může být jakýkoliv uživatel;;
+- ***Schvalovatel*** – všichni uživatelé, kteří jsou či v minulosti byli k tomuto workflow přiřazeni v roli *Schvalovatele*;      
+- ***Administrátor*** - uživatelé s touto rolí mohou do schvalovacího workflow také vstupovat a pokud se tak stane, a někteří z nich provedou jakékoliv změny v některém z kroků schvalovacího workflow, stávají se pak automaticky i oni účastníky tohoto workflow.      
+
+Všichni tito uživatelé mají přístup ke schvalovacím workflow pouze za předpokladu, že mají povolen přístup do sekce **Schválení** v [nastavení oprávnění](#oprávnění-přístupu-do-aplikace).
+
+Celý průběh schvalování je patrný z workflow diagramu níže. Ukazuje, kdy a jak se mění jednotlivé stavy workflow při vytváření nových entit typu *Riziko* nebo *Aktivum*, spolu se změnou stavů samotné schvalované entity, včetně zapojení uživatelských rolí, které mají oprávnění provádět příslušné kroky v rámci workflow.
+
+<img src="/docs/img/3-schvalovaci-workflow-diagram.png" title="Schvalovací workflow - diagram" width="680"/>
 
 &nbsp;
 
-Celý průběh schvalování je patrný z workflow diagramu níže. Ukazuje kdy a jak se mění jednotlivé stavy workflow při vytváření nových entit typu *Riziko* nebo *Aktivum*, spolu se změnou stavů samotné schvalované entity, včetně zapojení uživatelských rolí, které mají oprávnění provádět příslušné kroky v rámci workflow.
-
-<img src="/docs/img/3-schvalovaci-workflow-diagram.png" title="Schvalovací workflow - diagram" width="680"/>
+:::info
+Je-li odeslána ke schválení entita uživateli, který k ní má omezené oprávnění, tak se mu v seznamu schvalovacích workflow požadavek na schválení zobrazí, ale nemůže jej schválit ani zobrazit detail této entity. Musí pak požádat, aby mu k entitě bylo uděleno oprávnění nebo aby toto schválení bylo delegováno na jiného schvalovatele.
+:::
 
 &nbsp;
 
@@ -322,10 +358,10 @@ Podobně i volba **Šířka panelů** přispívá k optimálnějšímu využití
 Pro širokoúhlé displeje je doporučeno vyzkoušet volbu Maximální šířka panelů, která roztáhne panely pracovní plochy aplikace na celou šířku plochy zobrazované monitorem nebo displejem mobilního zařízení.
 :::
 
+&nbsp;
+
 #### 3.9.4 Odhlásit se
 Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele.   
-
-&nbsp;
 
 ### 3.10	Komentáře
 V celém systému je podporována týmová spolupráce díky rychlé a snadné interakci uživatelů pomocí sdílených komentářů. Pokud je uživatel jakýmkoliv jiným uživatelem zmíněn v komentáři, je na to upozorněn ikonou notifikací vpravo nahoře v nástrojové liště.
@@ -408,7 +444,7 @@ Propojení entit pomocí vazby typu *Rodič -> Dítě* je také nezbytné, má-l
 
 &nbsp;
 
-### 3.12	Aktivity
+### 3.12	Aktivity uživatelů
 Zoty automaticky zaznamenává aktivity uživatelů v systému. *Aktivity* zobrazují přehled informací zejména o tom, jaké entity, kdy a jakým uživatelem byly nově přidány, změněny či smazány, jaké soubory byly k jaké entitě připojeny či odebrány, nebo jaké entity byly vzájemně propojeny vazbou. Do seznamu aktivit se zapisují i aktualizace obsahu atributů.    
 *Aktivity* se zobrazují jednak v přehledu na úvodní stránce, kde se zobrazuje seznam posledních aktivit a pak také v detailu u každého typu entity pouze ty vybrané aktivity, kterého se dané entity týkají. Uživatel, který nemá přiřazenu roli *Administrátor* nebo *Manažer entit*, vidí pouze aktivity informující o entitách, kde je tento uživatel přiřazen jako *Správce*.
 
@@ -564,9 +600,13 @@ V opačném případě je doporučeno využít raději standardní systém [spr�
 
 <img src="/docs/img/4-homepage.png" title="Zoty úvodní stránka" />
 
+&nbsp;
+
 Vzhled a obsah této stránky si může každý uživatel přizpůsobit dle svých preferencí. Obsah v horním pruhu karet lze nastavit přes ikonu ***Nastavení karet*** v pravém horní rohu úvodní stránky.
 
 <img src="/docs/img/4-homepage-nastaveni-karet.png" title="Zoty úvodní stránka - nastavení karet" />
+
+&nbsp;
 
 Vzhled celé úvodní stránky lze upravit přepnutím do editačního módu, kdy lze jednotlivé celky zvětšovat, zmenšovat či přesouvat.
 
@@ -581,9 +621,13 @@ Zobrazení všech úkolů je dostupné v sekci **Úkoly**. Zde je lze třídit, 
 
 <img src="/docs/img/5-ukoly-zobrazeni-seznam.png" title="Seznam úkolů" />
 
+&nbsp;
+
 V nastavení zobrazení lze zvolit, zda budou úkoly zobrazeny formou řádkového seznamu nebo formou karet (tzv. Kanban zobrazení).
 
 <img src="/docs/img/5-ukoly-zobrazeni-kanban.png" title="Úkoly - Kanban zobrazení" />
+
+&nbsp;
 
 Úkoly mohou nabývat těchto stavů: *Vytvořen, Odmítnut, V řešení,
  Pozastaven, Dokončen, Archivován*.
@@ -591,13 +635,19 @@ Průběh stavů je v seznamu úkolů, stejně tak i v detailu úkolu, graficky v
 
 <img src="/docs/img/5-ukol-seznam-prubeh-stavu.png" title="Úkoly – Průběh stavů" width="550"/>
 
+&nbsp;
+
 Po najetí kurzorem myši nad příslušnou barvu v indikátoru průběhu se zobrazí informace o názvu stavu, který tato barva reprezentuje, počtu dnů a datumu *Od-Do*, ve kterém se úkol v tomto stavu nacházel.
 
 <img src="/docs/img/5-ukol-detail-prubeh-stavu.png" title="Úkoly – Průběh stavů" width="670"/>
 
+&nbsp;
+
 Podmínky, za jakých může úkol změnit jeden stav na jiný, jsou dány logikou přednastaveného workflow pro entitu typu Úkol, jak ukazuje workflow diagram níže.
 
 <img src="/docs/img/5-workflow-task.png" title="Úkoly – Wokflow" width="700"/>
+
+&nbsp;
 
 Úkoly (spolu s projekty a procesy) mohou tvořit opatření k cílovým hodnocením nejen rizik, ale i aktiv, hrozeb a zranitelností.
 Úkoly jsou tedy typem entit, které lze použít velmi univerzálně v celém systému Zoty. Zároveň je třeba adresovat některé úkoly určitým konkrétním okruhům činností či aktivit, aby je bylo možné ve vztahu k těmto aktivitám snadno vyhledávat, filtrovat a reportovat.
@@ -614,9 +664,11 @@ Příklad vizualizace vazeb závislostí mezi primárními a podpůrnými aktivy
 
 <img src="/docs/img/6-vizualizace-primarni-vs-podpurna-aktiva.png" title="Vizualizace vazeb primární vs podpůrná aktiva – Wokflow" />
 
+&nbsp;
+
 Příklad demonstruje dvě primární aktiva, kterými jsou procesy *Řízení rizik a aktiv* a *Zajištění fyzické bezpečnosti* a ty jsou závislé na podpoře pěti podpůrných aktiv – dvou softwarových systémů (SOFTWARE9. SOFTWARE10), instalovaných na dvou různých serverech (HARDWARE5, HARDWARE7), vše umístěno v jedné lokalitě, kterou je serverovna (LOCALITY3).    
 Z první vizualizace jsou na první pohled patrná veškerá propojení mezi primárními a podpůrnými aktivy. Existenci propojení indikuje koeficient v průsečíku příslušného řádku (podpůrné aktivum) a sloupce (primární aktivum). Tento koeficient zároveň prezentuje sílu závislosti mezi příslušným primárním a podpůrným aktivem, jejíž váha může nabývat až deseti hodnot v rozsahu 0,1 – 1.
-Následné vizualizace nabízí samostatné seznamy primárních a podpůrných aktiv, přičemž jakékoliv aktivum lze pak rozbalit/sbalit kliknutím na symbol +/- a zobrazit pouze na něm závislá připojená aktiva.
+Následné vizualizace nabízí samostatné seznamy primárních a podpůrných aktiv, přičemž jakékoliv aktivum lze pak rozbalit/sbalit kliknutím na symbol +/- a zobrazit pouze na něm závislá připojená aktiva.     
 Na obrázku níže je takto příklad rychlého zobrazení všech podpůrných aktiv nezbytných pro zajištění fungování procesu „Zajištění fyzické bezpečnosti“ – IP bezpečnostních kamery a SW aplikace pro management bezpečnostních kamer, která je instalovaná na serveru *PowerEdge* umístěném v serverovně v lokalitě ZO1.
 
 <img src="/docs/img/6-vizualizace-rozklik-primarniho-aktiva-na-podpurna.png" title="Vizualizace – Rozpad primárních aktiv na podůrná" />
@@ -636,6 +688,8 @@ Registr požadavků je tvořen veškerými požadavky, které mohou být relevan
 
 <img src="/docs/img/7-pozadavky.png" title="Požadavky" />
 
+&nbsp;
+
 Obsah každého požadavku je tvořen fragmenty textu, reprezentující ve struktuře dokumentu kapitoly, odstavce, písmena či paragrafy. Ke každému fragmentu textu lze připojit soubory, libovolné další entity uložené v Zoty, vyjadřovat se k němu spolu s ostatními uživateli formou komentářů nebo k němu přiřadit odpovědnou osobu – garanta, který odpovídá za zajištění shody s tímto dílčím požadavkem.
 
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni-garant.png" title="Garant požadavku" width="470"/>
@@ -652,7 +706,7 @@ Aby bylo na první pohled vidět, za kterými fragmenty textu se skrývají dal�
 
 &nbsp;
 
-Z požadavků lze pak ještě vytvářet tzv. odvozené požadavky, jejichž smyslem je zpravidla konsolidovat více stejných či podobných požadavků, pocházejících z různých zdrojů, do požadavku jednoho, který pak agregovaně alokuje zdroje pro případná plánovaná opatření. Dalším důvodem, kdy se, zpravidla z legislativního požadavku, tvoří požadavky odvozené, může být snaha interpretovat právní výklad za účelem jeho snadnější implementace v praxi, tzn. tvoří se tímto způsobem soubor prováděcích předpisů či metodických pokynů k zákonům.
+Z požadavků lze pak ještě vytvářet tzv. odvozené požadavky, jejichž smyslem je zpravidla konsolidovat více stejných či podobných požadavků, pocházejících z různých zdrojů, do požadavku jednoho, který pak agregovaně alokuje zdroje pro případná plánovaná opatření. Dalším důvodem, kdy se, zpravidla z legislativního požadavku, tvoří požadavky odvozené, může být snaha interpretovat právní výklad za účelem jeho snadnější implementace v praxi, tzn. tvoří se tímto způsobem soubor prováděcích předpisů či metodických pokynů k zákonům.     
 Odvozený, uživatelsky srozumitelný požadavek, lze vytvořit a připojit ke každému paragrafu či konkrétnímu odstavci zákona, či libovolného jiného typu dokumentu. A k němu přiřadit odpovědnou osobu. A celý jej pak propojit vazbou např. s rizikem, libovolným typem aktiva, cílem nebo s jiným souvisejícím požadavkem. Jsou zde tedy stejné možnosti, jako při práci s fragmenty textů u nadřízeného požadavku.
 Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a jak se s nimi konkrétně organizace vypořádala v rámci celého systému řízení rizik a shody.
 
@@ -826,11 +880,15 @@ V rámci hodnocení lze ohodnotit skutečnost nebo cílový stav pro vybrané č
 
 <img src="/docs/img/9-hodnoceni-rizika-detail-nastaveni-a-ohodnoceni.png" title="Hodnocení rizika – detail nastavení a ohodnocení" width="660"/>
 
+&nbsp;
+
 Při zadávání hodnocení cílového nebo skutečného stavu si lze zobrazit všechna předchozí provedená hodnocení (pro skutečnost i cíl) a automaticky jimi předvyplnit aktuálně prováděné hodnocení, s tím, že uživatel si může nabídnuté hodnoty změnit.
 
 <img src="/docs/img/9-hodnoceni-predvyplnit-vyber.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
 
 <img src="/docs/img/9-hodnoceni-predvyplnit-vybrano.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
+
+&nbsp;
 
 Při samotném hodnocení lze ke každé hodnocené metrice vložit textové poznámky a také číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.      
 Aby bylo na první pohled patrné, že k příslušné hodnocené metrice jsou již nějaké poznámky vloženy, tak je ikona pro editaci poznámky podsvícena ve žlutém kruhu.        
@@ -843,17 +901,26 @@ Ve výběru z dostupných schémat hodnocení, dle kterých se má hodnocení pr
 
 <img src="/docs/img/9-hodnoceni-typy-hodnoceni-v-nastaveni.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
 
+&nbsp;
+
 Výběr z dostupných schémat pro hodnocení daného typu lze dále ještě více omezit, pokud při vytváření nové entity typového *Hodnocení* byl nejen zvolen určitý podtyp *Hodnocení* (A, R, T, V), ale bylo toto typové *Hodnocení* navíc přiřazeno nějaké konkrétní metodě, jež má v *Nastavení* povoleno pouze jedno vybrané schéma hodnocení pro tento typ.
 
 <img src="/docs/img/9-hodnoceni-detail.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
+
+&nbsp;
 
 Při tvorbě nové entity typového Hodnocení je hlavně třeba také zvolit, co konkrétně se bude hodnotit, tj. k čemu se pak jednotlivá hodnocení vztahují (např. k jakému konkrétnímu riziku).
 
 <img src="/docs/img/9-hodnoceni-detail-rodice.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
 
+&nbsp;
+
 Přitom je možné zvolit, že toto typové hodnocení nebude mít jednoho tzv. rodiče (v tomto příkladu riziko - *Narušení střeženého objektu*), ale může jich mít více. Např. aktivum typu *Proces* (*Provoz a údržba budov*) nebo projekt. Nebo též hrozbu, která působí na aktivum typu *Proces*. A zároveň s ní i zranitelnost aktiva (v tomto příkladu procesu), skrze kterou hrozba na aktivum působí.    
 Tímto způsobem lze, pomocí vazeb mezi jednotlivými entitami, zviditelnit konkrétní instance hodnocení pro všechny tyto vybrané rodiče. To může být velmi užitečné např. při hodnocení jednoho typu entity (např. rizika), které je ovlivněno výsledkem předchozího hodnocení jiného typu entity (např. aktiva). Potom je výhodné vidět výsledná skóre hodnocení rizika i u všech souvisejících aktiv (rodičů).    
 Propojení entit pomocí vazby typu *Rodič-Potomek* je nezbytné, má-li jedna hodnocená entita (potomek) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle [nastaveného schématu](#1614hodnocení).    
+
+&nbsp;
+
 Přehled všech hodnocení, jejich výsledného skóre a časového rozmezí, pro který je platné, lze pro hodnocení každé konkrétní entity zobrazit ze stejnojmenné záložky *Hodnocení*, viz obr. níže.
 Pro plánovaná cílová hodnocení reprezentující cílové milníky, je navíc vidět i celkový počet opatření, s pomocí kterých má být cílového stavu dosaženo. Kliknutím na symbol **+**/**-** vlevo vedle názvu hodnocení, lze pak rozbalit/sbalit seznam všech opatření připojených k tomuto plánovanému cílovému milníku.
 
@@ -866,6 +933,8 @@ Pro plánovaná cílová hodnocení reprezentující cílové milníky, je naví
 ## 10	ZVLÁDÁNÍ RIZIK
 ### 10.1	Opatření
 Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
+
+
 Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“.      
 Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena i přímo k příslušnému aktivu.
 
@@ -1021,6 +1090,8 @@ Propojení entit pomocí vazby typu *Rodič -> Dítě* je také nezbytné, má-l
 #### Stavy
 V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsahu hodnot: *Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno*.
 
+&nbsp;
+
 #### 16.1.3	Znalostní báze
 :::info
 Mezi aktivem, hrozbou a zranitelností existuje určitý vztah. Jeho znalost je důležitá pro úspěšné provedení analýzy a vyhodnocení rizik. Účelem znalostní báze v Zoty je usnadnit uživatelům v roli risk analytiků či manažerů rizik nejen zhodnocení aktiv, hrozeb a zranitelností v rámci analýzy rizik, ale i kvantifikaci vhodných opatření v rámci jejich vyhodnocení.
@@ -1074,7 +1145,9 @@ Je-li vybráno více hrozeb, aktivuje se ve spodní části pracovní plochy mod
 
 V detailu jednoho či více vybraných řádků matice znalostní báze lze zapnout zobrazování doplňkových informací. Pak se u aktiv, na které hrozba/hrozby působí, bude zobrazovat, jakým metodám nebo organizacím či org. jednotkám jsou tato aktiva přiřazena.
 <img src="/docs/img/16-znalostni-baze-kombinace-avt-rozsireny-detail-a-skryvani.png" title="Skrývání vybraných kombinací aktiv, zranitelností a hrozeb pro generování rizik" />      
-        
+
+&nbsp;
+
 Mimo to zde lze také skrýt nechtěné kombinace. Ne vždy je totiž vhodné generovat rizika z celého seznamu všech možných kombinací aktiv, hrozeb a zranitelností, které se nabízí. Uživatel má proto možnost skrýt vybrané kombinace pomocí stejnojmenné volby ***Skrýt***, aby se pro tvorbu rizik nenabízely. Tyto kombinace se pak přesunou do odděleného seznamu, kde je možné je pouze prohlížet. Nebo je lze pomocí volby ***Zobrazit*** přesunout zpět do seznamu relevantních kombinací, ze kterých lze generovat nová rizika.      
 
 :::info
@@ -1210,12 +1283,20 @@ Zde se zobrazují jak role předdefinované výrobcem (systémové role), tak ro
 Aby se zjednodušilo a částečně či zcela zautomatizovalo vyplňování metod, lze navíc jednotlivým rolím nastavit omezení pouze na *přiřazené metody*. A poté vybrat a přiřadit této roli, které metody z těch všech, jež jsou v Zoty definované, se mají uživateli nabízet pro výběr.          
 Nebo lze také metodu/metody rovnou předvybrat bez zásahu uživatele. Uživatel s takto nastavenými rolemi pak nebude muset z nabídky metod vůbec vybírat, protože se předvyplní automaticky ta/ty, které jsou zde nastaveny jako *předvybrané metody*. Žádné jiné metody pak nemůže zvolit.
 
+&nbsp;
+
 ### 16.3	Koš
 Všechny smazané záznamy se přesouvají do koše, odkud je možné je obnovit nebo trvale odstranit. V koši se zobrazuje název, datum odstranění a typ záznamu (*Složka, Hodnocení, Riziko, Hrozba* atp.).
 
 <img src="/docs/img/16-kos.png" title="Koš" width="740"/>
 
+&nbsp;
+
 Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity mimo koš. Tzn., že zobrazit a/nebo odstranit či obnovit entitu z koše, může jen uživatel, který je u ní přiřazen jako *Správce*, pokud není správce přiřazen, tak uživatel, který ji vytvořil. Role *Manažer* entit má oprávnění plného přístupu na všechny entity bez ohledu na to, kdo je vytvořil nebo kdo je jejich *Správce*, ale pouze za předpokladu, že je členem *Organizace*, která je entitě přiřazena. Toto pravidlo opět platí i pro entity v koši.
+
+&nbsp;
+
+&nbsp;
 
 :::info
  Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
