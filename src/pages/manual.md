@@ -29,10 +29,10 @@ Pro každou entitu lze také nastavit její ***Důležitost*** v rozsahu *1-Nev�
 
 - **Atribut** – může být různého typu, např. jako textový řetězec, časový údaj, celé nebo reálné číslo atp. a popisuje vlastnosti entity (např. *Název, Popis, Datum platnosti, Správce, Náklady* atp.). Některé atributy mohou nabývat hodnot jen z přesně definované množiny – číselníku.
 - **Záznam** – výskyt jedné konkrétní entity. Dle typu entity lze pak záznamy třídit do stejnojmenných kategorií (*Rizika, Aktiva, Úkoly* atp.) reprezentovaných [složkami](#313složky-a-záznamy) v příslušném registru. Pro záznam libovolné entity lze též nastavit různé úrovně [oprávnění přístupu](#3132oprávnění-přístupu-na-záznamy).
-- **Klíč** – entity mají atribut ***Klíč***, který jednoznačně identifikuje všechny záznamy v Zoty a usnadňuje vyhledávání a třídění záznamů. Je to alfanumerický kód, který je systémem automaticky generován. Klíč je složen z pořadového čísla a kódu reprezentujícího [zkratku typu entity](#typy-entit-a-jejich-kódové-značení), ke které záznam patří. Např. riziko může mít klíč „*R13*“.       
+- **Klíč** – entity mají atribut ***Klíč***, který jednoznačně identifikuje všechny záznamy v Zoty a usnadňuje jejich vyhledávání a třídění. Je to alfanumerický kód, který je systémem automaticky generován. Klíč je složen z pořadového čísla a kódu reprezentujícího [zkratku typu entity](#typy-entit-a-jejich-kódové-značení), ke které záznam patří. Např. riziko může mít klíč „*R13*“.       
 
 :::info
-Pokud zkratka typu entity obsahuje na konci „*Z*“, indikuje to záznamy přednaplněné v systému Zoty výrobcem. Ten pak může tyto specifické záznamy automaticky aktualizovat v rámci distribuce nových verzí aplikace a uživatelé je tudíž nemohou zcela volně editovat.
+Pokud klíč obsahuje zkratku typu entity, ke které je na konci přidáno písmeno „*Z*“, indikuje to záznamy přednaplněné v systému Zoty výrobcem. Ten pak může tyto specifické záznamy automaticky aktualizovat v rámci distribuce nových verzí aplikace a uživatelé je tudíž nemohou zcela volně editovat.
 :::        
           
 - **Nástrojová lišta** – horní vodorovný panel s informačními a ovládacími prvky celé aplikace Zoty nebo pracovní plochy jednotlivých sekcí.
@@ -42,7 +42,7 @@ Pokud zkratka typu entity obsahuje na konci „*Z*“, indikuje to záznamy pře
 - **Strom** – způsob zobrazení záznamů entit v režimu stromové struktury složek, které se mohou strukturovat do dalších podřízených složek. Pro každou složku lze nastavit různé úrovně oprávnění přístupu. Více k tomuto nastavení v kapitole [Oprávnění](#3132oprávnění-přístupu-na-záznamy). 
 - **Detail** – způsob zobrazení jednoho vybraného záznamu entity v režimu okna, které je v horním vodorovném pruhu opatřeno záložkami ***Přehled*** atributů, ***Aktivity*** uživatelů, ***Propojení*** na jiné entity, ***Hodnocení*** (zobrazuje se pouze pro typy entity, které lze hodnotit) s možností vytvořit nové nebo zobrazit stávající hodnocení,mitigační ***Opatření***, která mohou být propojena na cílová hodnocení rizik, ale i aktiv, hrozeb či zranitelností, ***Skupiny***, do kterých je záznam zařazen a ***Schválení*** (zobrazuje se pouze pro typy entity, které se mohou schvalovat) s možností neschválené entity schválit nebo u již schválených entit zobrazit detaily schvalovacího workflow a nakonec záložka ***Oprávnění*** s přehledem uživatelů a/nebo rolí a úrovně oprávnění jejich přístupu k tomuto záznamu.
 - **Rychlá záložka** – uživatel si může připínat pomocí ikony připínáčku libovolné záznamy z jejich detailu nebo i z výsledků vyhledávání do záložek, které jsou pak zobrazeny ve spodní části pracovní plochy. Připnuté záznamy jsou tak velmi rychle dostupné a lze se mezi nimi snadno přepínat na jedno kliknutí, bez ohledu na to, ve které sekci Zoty se uživatel právě nachází.
-- **Registr** – místo, kde lze ukládat a spravovat entity daného typu (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. *Hardware, Software, Informace, Procesy* atp. Registr je, podobně jako funkcionality v sekcích, dostupný z menu ovládacího panelu.
+- **Registr** – místo, kde lze ukládat a spravovat entity daného [typu](#typy-entit-a-jejich-kódové-značení) (např. Aktiva), zpravidla do předem vytvořené struktury složek, které mohou reprezentovat různé typy či kategorie entit, v tomto příkladu aktiv, např. *Hardware, Software, Informace, Procesy* atp. Registr je, podobně jako funkcionality v sekcích, dostupný z menu ovládacího panelu.
 - **Katalog** – uživatelsky definovatelná struktura složek, kde lze, v rámci příslušného registru, zobrazovat entity uložené v tomto registru. V katalozích jsou pak pouze odkazy (zástupci / výskytové kopie) na definiční originály entit uložených v registru.
 - **Metoda** – Metoda je, zjednodušeně, systémový filtr. Tzn., že u těch typů entit, kterým lze přiřadit metodu, lze skrýt nebo zobrazit záznamy, podle toho, zda a k jaké metodě jsou přiřazeny; případně lze zobrazit/skrýt určité specifické atributy entity závislé pouze na konkrétní metodě. Základní koncept a účel metod je detailněji popsán v kapitole [Metody](#metody).
 - **Tooltip** – nápověda, která se uživateli zobrazí, když umístí kurzor myši na specifický objekt, například ikonu nebo odkaz. V Zoty se používá i všude tam, kde by nebylo praktické zobrazovat dlouhé řetězce znaků. Typicky dlouhé názvy, kdy se namísto toho zobrazuje kratší identifikátor, např. klíč nebo pouze zkrácený název a celý název se zobrazí až v tooltipu.
@@ -119,13 +119,13 @@ Výchozí záložkou je ***Přehled***, která v pravém panelu zobrazuje přehl
 
 V tomto výchozím přehledovém zobrazení je na pracovním panelu jeden vnější vertikální posuvník pro posun celého panelu. Pro entitu, která má mnohem více atributů než složka, je zde navíc ještě jeden vnitřní pro posun obsahu okna uvnitř panelu se všemi atributy entity. Pro jejich zobrazení je též možné, namísto rolování obsahu okna vnitřním posuvníkem, „rozbalit“ celý jeho obsah pomocí ovládacího prvku se symbolem šipky dolů. Stejným způsobem lze pak obsah okna zase „sbalit“ zpět.      
 
-K entitám lze pomocí ikony se symbolem „**+**“ připojovat organizace, metody, soubory a štítky. Příklad na obrázku demonstruje připojení dalších štítků, přičemž lze vybírat z dříve vytvořených nebo vytvořit a připojit štítek nový. Nově vytvořený štítek se automaticky ukládá pro případné další použití.      
+K entitám lze pomocí ikony se symbolem „**+**“ připojovat [organizace](#1621organizace), [metody](#metody), [štítky](#14štítky) a soubory. Příklad na obrázku demonstruje připojení dalších štítků, přičemž lze vybírat z dříve vytvořených nebo vytvořit a připojit štítek nový. Nově vytvořený štítek se automaticky ukládá pro případné další použití.      
 
 V Zoty jsou dva základní způsoby zobrazení entit a složek – **detail** a **seznam**.    
 
 #### Zobrazení detailu
 Toto zobrazení skryje levý panel s registrem a celá pracovní plocha je tak využita pro lepší zobrazení všech relevantních informací k vybrané entitě nebo složce.     
-Zobrazit detail entity nebo složky lze pomocí stejnojmenného tlačítka na panelu vpravo dole nebo též pomocí ikony se symbolem pravé šipky vpravo nahoře. Tyto volby nejsou dostupné pro entity, které zatím nebyly schváleny.
+Zobrazit detail entity nebo složky lze pomocí stejnojmenného tlačítka na panelu vpravo dole nebo též pomocí ikony se symbolem pravé šipky vpravo nahoře. Tyto volby nejsou dostupné pro entity, které čekají na schválení, tzn. schvalovací workflow již u nich bylo zahájeno, a ještě nebylo dokončeno (stav entity je *Schvaluje se*).
 
 #### Zobrazení seznamu
 V nástrojové liště aplikace, vpravo nahoře, je ikona ***Seznam entit***, která skryje levý panel s registrem a celá pracovní plocha je tak využita pro zobrazení řádkového seznamu všech entit uložených ve vybraném registru. Opakované kliknutí na tuto ikonu umožňuje rychle se přepínat mezi zobrazením tohoto seznamu v jednom panelu a zobrazením dvou panelů se stromem a záložkami. Přičemž se v druhém panelu zobrazí poslední zvolená záložka, která se pamatuje, dokud uživatel nevybere některou sekci v ovládacím panelu. Pokud nebyla žádná zvolena, zobrazí se výchozí záložka ***Přehled***.
@@ -467,7 +467,7 @@ Zoty automaticky zaznamenává aktivity uživatelů v systému. *Aktivity* zobra
    
 
 ### 3.13	Složky a záznamy
-Jednotlivé typy entit (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. 
+Jednotlivé [typy entit](#typy-entit-a-jejich-kódové-značení) (např. aktiva, rizika, hrozby, zranitelnosti, aj.) lze třídit do složek a ty dále strukturovat na podsložky podobně, jako např. v Průzkumníku Windows. 
 Každá množina záznamů entit určitého typu může mít svoji vlastní strukturu složek a podsložek. Např. záznamy entit typu *Aktiva* mohou být strukturovány zcela odlišně než *Hrozby* či *Rizika*.     
 Dokonce i záznamy entit jednoho typu, např. *Aktiva*, lze uspořádat do složek více různými způsoby v rámci tzv. katalogů. Na jedna a ta samá data je pak možné dívat se různými pohledy, aby tak bylo možné podpořit různé metodiky (např. kategorizace aktiv a práce s nimi může být jiná dle kybernetického zákona, jiná dle ISO 27001, atp.). Strukturace složek na více možných způsobů se dá také s výhodou využít i při sestavování různých reportů a vizualizacích dat, kde lze pak sumarizovat stejná data dle různých skupin či kategorií, reprezentovaných právě složkami.    
 Aby tento přístup nevedl k duplicitám, kdy jedna konkrétní entita se vyskytuje ve více různých složkách v rámci různých katalogů, existuje jedna definice struktury složek definovaná pro každý [typ entity](#typy-entit-a-jejich-kódové-značení), tzv. ***Registr***. V registru má každý výskyt entity daného typu jedinečnou definici, která se pak může vyskytovat, formou odkazu na ni, v dalších, uživatelsky definovatelných pohledech, které se nazývají ***Katalogy***.    
@@ -499,7 +499,7 @@ Pokud uživatel nemůže entitu/složku upravit nebo odstranit, přestože k tom
 Samotné entity, ale i celé složky, do kterých jsou entity zatříděny, lze ve stromové struktuře přesouvat. Ve stromové struktuře složek zobrazené v levém okně se vybere složka. Její obsah, který je třeba přesunout jinam, se zobrazí v pravém okně. Zde se v seznamu vyhledá záznam (ať už je to jiná složka nebo záznam entity např. typu Aktivum) a u něj lze přes ikonu se symbolem tří teček zobrazit menu s nabídkou ***Přesunout***. Zde pak lze změnit zatřídění vybraného záznamu v rámci stromové struktury a kliknutím na tlačítko ***Potvrdit*** provést jeho přesun.
 
 #### Omezení obsahu složek
-Pro podporu udržení přehlednosti, zejména při větším počtu různých typů aktiv (ale i jakýchkoliv jiných typů entit), lze zajistit, aby systém hlídal, že do konkrétní složky nebude možné uložit jiné typy entit než ty, které administrátor povolil. V případě, že do složky bude povoleno ukládat více než jeden [typ entit](#typy-entit-a-jejich-kódové-značení), lze též přednastavit, jaký výchozí typ entity se má automaticky přednastavit, pokud bude uživatel do této složky vytvářet novou entitu.    
+Pro podporu udržení přehlednosti, zejména při větším počtu různých [typů aktiv](#typy-aktiv) (ale i jakýchkoliv jiných [typů entit](#typy-entit-a-jejich-kódové-značení)), lze zajistit, aby systém hlídal, že do konkrétní složky nebude možné uložit jiné typy entit než ty, které administrátor povolil. V případě, že do složky bude povoleno ukládat více než jeden [typ entit](#typy-entit-a-jejich-kódové-značení), lze též přednastavit, jaký výchozí typ entity se má automaticky přednastavit, pokud bude uživatel do této složky vytvářet novou entitu.    
 Administrátor tedy může upravit vlastnosti každé složky tak, že např. data, informace a znalosti, které v Zoty reprezentují tři různé specifické typy entit, umístí do tří samostatných složek nebo je naopak umístí do jedné společné a povolí do ní ukládat všechny tyto tři typy entit.
 
 <img src="/docs/img/3-slozka-nastaveni-omezeni.png"  title="Omezení obsahu složek" width="370"/>
@@ -704,6 +704,9 @@ Příklad změny vizualizace hodnocení aktiv jednoduchou změnou registru v zá
 &nbsp;
 
 ## 7 ŘÍZENÍ SHODY
+Řízení shody (Compliance) umožňuje identifikovat konkrétní požadavky vyplývající např. ze zákonů, předpisů, standardů, smluv, směrnic, či jakékoliv další požadavky, propojovat je s libovolnými entitami v Zoty a integrovat je tak do celého systému řízení rizik.
+Ověření shody s příslušnými požadavky je pak realizováno spoluprací funkcionalit sekce **Požadavky** s [auditním modulem](#12audity).
+
 ### 7.1	Požadavky
 Registr požadavků je tvořen veškerými požadavky, které mohou být relevantní k řízení rizik a aktiv. Mohou zde ale také být obecně jakékoliv požadavky, se kterými musí být organizace trvale ve shodě. Registr požadavků je proto strukturován na požadavky zákonné (vyplývající z legislativy národní či evropské), požadavky vyplývající z ISO norem a požadavky smluvní.
 
@@ -737,6 +740,9 @@ Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a ja
 &nbsp;
 
 ## 8	ANALÝZA RIZIK
+Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná aktiva, hrozby, zranitelnosti, tak i výsledná rizika, vytvářená z jejich kombinací.     
+Vedle těchto základních registrů jsou zde také registr cílů a funkcionality pro analýzu samotných aktiv. Analýza aktiv pomáhá vymezit hranice celé analýzy rizik tím, že umožňuje určit a odsouhlasit aktiva, jež do ní budou zahrnuta.
+
 ### 8.1	Cíle
 Registr cílů je členěn na cíle bezpečnosti informací a dále cíle projektové, provozní a strategické. Cíle bezpečnosti informací jsou v rámci metody ISO27x přednaplněny cíli dle normy ISO 27001.
 Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zranitelnostmi, aktivy, opatřeními, projekty, procesy, požadavky, úkoly, incidenty, ale i s jinými cíli.
@@ -830,7 +836,7 @@ Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikov
 
 &nbsp;
 
-Pokud jsou některá aktiva identifikována jako primární, včetně aktiv podpůrných, která jsou k nim připojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
+Pokud jsou identifikována jak primární, tak podpůrná aktiva, a jsou vzájemně propojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
 Účelem je vymezit rozsah analýzy rizik, odsouhlasit jej odpovědnými osobami v roli schvalovatelů v rámci schvalovacího workflow a celý proces takto dokumentovat přímo v aplikaci.      
 
 :::tip
@@ -985,7 +991,7 @@ Protože některé tyto záznamy, zejména incidenty a servisní požadavky, jso
 &nbsp;
 
 ## 12	AUDITY
-V modulu ***Audit*** lze zakládat interní či externí audity a propojovat je s požadavky, vůči kterým je v rámci daného auditu posuzována shoda.
+V modulu **Audity** lze zakládat interní či externí audity a propojovat je s požadavky, vůči kterým je v rámci daného auditu posuzována shoda.
 
 <img src="/docs/img/13-audit-seznam.png" title="Audity" />
 
@@ -1097,7 +1103,7 @@ Systémová propojení jsou typu: *Stromová struktura, Výskyt, Zástupce*.
 -	***Zástupce*** je odkaz v katalogu na entitu uloženou v registru.
 -	***Rodič→Dítě*** může být propojení jak systémové, tak uživatelské, viz popis níže.                 
 Uživatel pak ještě může při propojení entit volit výběrem z propojení typu: *Vztah, Podporuje, Blokuje, Závislost, Zahrnuje, Nezahrnuje, Rodič→Dítě*. Účel a použití jednotlivých typů propojení:
--	***Vztah*** je univerzální typ propojení, který lze použít mezi libovolnými typy entit, které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
+-	***Vztah*** je univerzální typ propojení, který lze použít mezi libovolnými [typy entit](#typy-entit-a-jejich-kódové-značení), které mohou existovat zcela nezávisle na sobě a není třeba modelovat směr propojení mezi nimi.
 -	***Podporuje*** je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita souvisí s jinou a to způsobem, že jedna z nich (zdroj) podporuje entitu/entity další (cíl). Tímto typem propojení se vytvoří vazba směřující od zdroje k cíli. Tento typ propojení má navíc specifickou vlastnost, která umožňuje pomocí atributu ***Váha*** (udává se v procentech v rozsahu 10-100 %) určit míru podpory mezi entitami či důležitost entity podpůrné pro entitu podporovanou.
 Příkladem je propojení primárních a podpůrných aktiv.
 -	***Blokuje*** je typ směrově orientovaného propojení, pomocí kterého lze vyjádřit, že jedna entita blokuje entitu jinou, tzn. že by nemělo dojít ke změně stavu blokované entity, aniž by předtím došlo ke změně stavu entity, která ji blokuje.
@@ -1109,7 +1115,7 @@ Příkladem je propojení dvou entit typu *Úkol*, kdy úkol č. 2 nelze dokonč
 Propojení entit pomocí vazby typu *Rodič -> Dítě* je také nezbytné, má-li jedna hodnocená entita (dítě) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle nastaveného schématu.
 
 #### Stavy
-V systému mohou rozličné typy entit získávat či měnit svůj stav v rozsahu hodnot: *Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno*.
+V systému mohou rozličné [typy entit](#typy-entit-a-jejich-kódové-značení) získávat či měnit svůj stav v rozsahu hodnot: *Akceptováno, Archivováno, Blokováno, Čekající, Dokončeno, Implementováno, Ke schválení, Nepřiřazeno, Obnoveno, Odmítnuto, Odstraněno, Pozastaveno, Převzato, Schvaluje se, Schváleno, V přípravě, V realizaci, V revizi, Vráceno, Vyhodnoceno, Vytvořeno, Zamítnuto, Zrušeno*.
 
 &nbsp;
 
