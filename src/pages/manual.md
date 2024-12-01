@@ -740,13 +740,16 @@ Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a ja
 &nbsp;
 
 ## 8	ANALÝZA RIZIK
-Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná aktiva, hrozby, zranitelnosti, tak i výsledná rizika, vytvářená z jejich kombinací.     
-Vedle těchto základních registrů jsou zde také registr cílů a funkcionality pro analýzu samotných aktiv. Analýza aktiv pomáhá vymezit hranice celé analýzy rizik tím, že umožňuje určit a odsouhlasit aktiva, jež do ní budou zahrnuta.
+Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná [aktiva](#82aktiva), [hrozby, zranitelnosti](#84hrozby-a-zranitelnosti), tak i výsledná [rizika](#85rizika), vytvářená z jejich kombinací.     
+Vedle těchto základních registrů jsou zde také registr [cílů](#81cíle) a funkcionality pro [analýzu samotných aktiv](#823-analýza-aktiv). Analýza aktiv pomáhá vymezit hranice celé analýzy rizik tím, že umožňuje určit a odsouhlasit aktiva, jež do ní budou zahrnuta.
 
 ### 8.1	Cíle
 Registr cílů je členěn na cíle bezpečnosti informací a dále cíle projektové, provozní a strategické. Cíle bezpečnosti informací jsou v rámci metody ISO27x přednaplněny cíli dle normy ISO 27001.
 Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zranitelnostmi, aktivy, opatřeními, projekty, procesy, požadavky, úkoly, incidenty, ale i s jinými cíli.
+
+:::tip
 Např. při analýze projektových rizik je zpravidla vhodné provádět jejich hodnocení skrze připojené projektové cíle. Jsou-li totiž riziko či hrozba připojeny přímo k projektu, ovlivňují jej jako celek neboli mají dopad na všechny cíle tohoto projektu. Pokud jsou ale tyto cíle založeny v registru cílů a propojeny s tímto projektem, tak následným připojením rizik či hrozeb lze modelovat jejich dopad na každý dílčí projektový cíl.
+:::
 
 ### 8.2	Aktiva
 Aktiva tvoří (nejen v aplikaci Zoty) velkou množinu, uvnitř které lze identifikovat skupiny entit s podobnými vlastnostmi (atributy). Přitom některé vlastnosti entit z různých skupin se mohou často odlišovat.      
