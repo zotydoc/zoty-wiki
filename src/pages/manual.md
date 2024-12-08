@@ -751,6 +751,8 @@ Cíle lze propojit s mnoha typy entit, konkrétně s riziky, hrozbami, zraniteln
 Např. při analýze projektových rizik je zpravidla vhodné provádět jejich hodnocení skrze připojené projektové cíle. Jsou-li totiž riziko či hrozba připojeny přímo k projektu, ovlivňují jej jako celek neboli mají dopad na všechny cíle tohoto projektu. Pokud jsou ale tyto cíle založeny v registru cílů a propojeny s tímto projektem, tak následným připojením rizik či hrozeb lze modelovat jejich dopad na každý dílčí projektový cíl.
 :::
 
+&nbsp;
+
 ### 8.2	Aktiva
 Aktiva tvoří (nejen v aplikaci Zoty) velkou množinu, uvnitř které lze identifikovat skupiny entit s podobnými vlastnostmi (atributy). Přitom některé vlastnosti entit z různých skupin se mohou často odlišovat.      
 Proto v rámci identifikace celé velké množiny aktiv nelze všechna popsat pouze s pomocí jedné sady univerzálních atributů, např. *Název, Popis, Správce, Garant* atp., které by byly pro všechna aktiva společné. Při popisu aktiv se tak pracuje i s atributy, které jsou specifické vždy jen pro určitý konkrétní typ, např. "*Data*"; zatímco pro jiný typ aktiva, např. "*Lokalita*", nemusí být ten samý atribut vůbec relevantní.
@@ -826,14 +828,10 @@ Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoud
 
 #### 8.2.3 Analýza aktiv
 
-:::caution
-Připravujeme pro vás novinky. Tyto funkcionality budou nyní postupně uvolňovány v nových verzích Zoty.
-:::
-
-Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá schvalovacímu workflow pro analýzu aktiv.
+Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikována jako kritická či významná, lze v Zoty připojit do specifického typu entity *Analýza aktiv*. Ta může mít své popisné atributy, jako jsou např. datumy platnosti *Od-Do*, odpovědného *Správce* a také podléhá schvalovacímu workflow.
 &nbsp;
 
-&nbsp;
+##### Diagram schvalovacího workflow pro analýzu aktiv
 
 <img src="/docs/img/8-schvalovaci-workflow-analyza-aktiv-diagram.png"  title="Schvalovací workflow pro analýzu aktiv" />
 
@@ -866,6 +864,8 @@ Podobně jako v jiných registrech, i zde platí, že uživatel si může vytvo�
 
  <img src="/docs/img/8-katalogy-rizik.png " title="Katalogy rizik" width="560"/>
 
+&nbsp;
+
 Založit nové riziko do registru rizik lze pomocí tlačítka ***Vytvořit*** v sekci **Rizika**.
     
 Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), i výběrový atribut ***Strategie zvládání***, který bude zpravidla vyplněn až později, ve fázi zvládání rizik poté, co byla rizika analyzována a vyhodnocena, a kde pak bude možné zvolit jednu z následujících možností:
@@ -874,21 +874,21 @@ Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, 
 - *Přenesení*
 - *Vyhnutí se*
 
-***Redukce*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby (kdy dopad dosahuje nízkých nebo středně vysokých hodnot – nikoliv kritického pásma) a znamená, že k riziku by měla být připojena opatření, jejichž cílem je snížení rizika na přijatelnou úroveň. Jde pak o činnosti ke snížení pravděpodobnosti nebo negativního dopadu nebo obou těchto parametrů.
+***Redukce*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby (kdy dopad dosahuje nízkých nebo středně vysokých hodnot – nikoliv kritického pásma) a znamená, že k riziku by měla být připojena opatření, jejichž cílem je snížení rizika na přijatelnou úroveň.
 
 ***Přijetí*** – tato strategie se volí zpravidla v případech nízké pravděpodobnosti hrozby a jejího dopadu a znamená, že se s rizikem nic nedělá; pouze se monitoruje a pravidelně přezkoumává, zda se v čase nezvýšila pravděpodobnost hrozby a/nebo jejího dopadu, a tudíž zda není třeba zvolit jinou strategii zvládání.
 
-***Přenesení*** – tato strategie se volí v případech, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo sdílení prospěchu ze zisku vyplývajícího z rizika. V Zoty je pak možné přidat opatření typu *Úkol* (např. uzavřít Pojistnou smlouvu), nebo *Proces* (např. Správa pojištění).
+***Přenesení*** – tato strategie se volí v případech v případech nízké pravděpodobnosti hrozby a vysokého dopadu, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo v případě sdílení prospěchu ze zisku vyplývajícího z rizika.
 
-***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysoké míry dopadu (kritické pásmo). V těchto případech se zpravidla volí úkoly týkající se zastavení běžících nebo vyhnutí se plánovaným aktivitám.      
-      
-Zvolená strategie má, stejně jako samotné riziko, svoji platnost Od-Do. Po této době by měla být zvolená strategie zrevidována a buď ponechána nebo změněna.           
-
+***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysokého dopadu (kritické pásmo).      
+        
 :::tip
-Pravidelné přezkoumání zvolené strategie je výhodné podpořit připojenými úkoly. Správce každého rizika pak bude mít u svých rizik připojen úkol/úkoly s termínem splnění k datu, kdy končí platnost zvolené strategie pro tato rizika.
+V rámci zvolené strategie lze na operativní úrovni velmi jednoduše vytvářet [úkoly](#5úkoly) a adresovat je jako konkrétní opatření pro podporu realizace dané strategie. Např. úkoly na omezení rizikových činností či revizi celých procesů (***Vyhnutí se*** riziku), uzavření pojistných smluv (***Přenesení*** rizika), atp.
 :::
 
-Riziko může nabývat těchto stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
+&nbsp;
+
+Riziko může nabývat stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
 Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schvalovací workflow](#34schvalovací-workflow).
 
 Při vytváření nového rizika lze zvolit i jeho tzv. „rodiče“. Tj. *hrozbu*, *zranitelnost* či *aktivum*, výsledkem jejichž kombinace je právě riziko (*hrozba*, zneužívající *zranitelnosti aktiva*, představuje *riziko*).       
@@ -920,8 +920,8 @@ Při zadávání hodnocení cílového nebo skutečného stavu si lze zobrazit v
 
 &nbsp;
 
-Při samotném hodnocení lze ke každé hodnocené metrice vložit textové poznámky a také číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.      
-Aby bylo na první pohled patrné, že k příslušné hodnocené metrice jsou již nějaké poznámky vloženy, tak je ikona pro editaci poznámky podsvícena ve žlutém kruhu.        
+Při samotném hodnocení lze ke každé hodnocené metrice vložit číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.       
+K jednotlivým metrikám, stejně tak k výslednému skóre, lze vkládat i textové poznámky. Aby pak bylo na první pohled patrné, kde jsou již nějaké poznámky vloženy, tak je zde ikona pro editaci poznámky podsvícena ve žlutém kruhu.        
             
 Časovým obdobím pro hodnocení aktuálního/skutečného stavu může být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu. Toto datum je milníkem, ke kterému má být dosaženo plánovaného cílového stavu. Platnost takto nastaveného milníku je v čase platná až do data, kdy bude zaplánován nový cílový milník.
           
@@ -949,12 +949,12 @@ Přitom je možné zvolit, že toto typové hodnocení nebude mít jednoho tzv. 
 Tímto způsobem lze, pomocí vazeb mezi jednotlivými entitami, zviditelnit konkrétní instance hodnocení pro všechny tyto vybrané rodiče. To může být velmi užitečné např. při hodnocení jednoho [typu entity](#typy-entit-a-jejich-kódové-značení) (např. rizika), které je ovlivněno výsledkem předchozího hodnocení jiného typu entity (např. aktiva). Potom je výhodné vidět výsledná skóre hodnocení rizika i u všech souvisejících aktiv (rodičů).    
 Propojení entit pomocí vazby typu *Rodič-Potomek* je nezbytné, má-li jedna hodnocená entita (potomek) přebírat výsledné skóre hodnocení jiné entity (rodiče) a zahrnout ji do výpočtu svého skóre hodnocení dle [nastaveného schématu](#1614hodnocení).    
 
-&nbsp;
-
 Přehled všech hodnocení, jejich výsledného skóre a časového rozmezí, pro který je platné, lze pro hodnocení každé konkrétní entity zobrazit ze stejnojmenné záložky *Hodnocení*, viz obr. níže.
 Pro plánovaná cílová hodnocení reprezentující cílové milníky, je navíc vidět i celkový počet opatření, s pomocí kterých má být cílového stavu dosaženo. Kliknutím na symbol **+**/**-** vlevo vedle názvu hodnocení, lze pak rozbalit/sbalit seznam všech opatření připojených k tomuto plánovanému cílovému milníku.
 
 <img src="/docs/img/9-hodnoceni.png" title="Hodnocení rizika – detail nastavení a ohodnocení" />
+
+&nbsp;
 
 Časový průběh výsledných skóre hodnocení pro skutečnost i pro plánované cílové hodnoty lze přehledně zobrazit v jednoduchém grafu. Nad ním lze také zobrazit seznam záznamů s historií všech provedených hodnocení.
 
@@ -975,7 +975,9 @@ Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, 
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
 
 ### 10.2	Plán zvládání rizik
-Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik. Pokud mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.
+Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik.      
+Pokud už mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.    
+Plán zvládání rizik je schvalován stejnými kroky, jak ukazuje [diagram  schvalovacího workflow](#diagram-schvalovacího-workflow-pro-analýzu-aktiv) pro analýzu aktiv.
 
 ### 10.3	Reporty
 V této sekci mohou být definovány reporty, jejichž obsah či vzhled je třeba zakázkově přizpůsobit dle požadavků uživatelů konkrétní organizace. V Zoty jsou pro tento účel připravena data v takovém kontextu, aby z nich bylo možné sestavit příslušné standardní reporty, např. Prohlášení o aplikovatelnosti (PoA) dle požadavku Zákona o kybernetické bezpečnosti, které v Zoty, v metodě ZoKB, využívá přednaplněný registr bezpečnostních opatření dle vyhlášky o kybernetické bezpečnosti (VoKB) s možností auditovat, zda a jak jsou jednotlivá bezpečností opatření v organizaci aplikována ve vazbě na požadavky této vyhlášky. Výstupy z tohoto auditu, spolu s registrem bezpečnostních opatření a znalostní bází Zoty, kde je definována matice opatření a kategorií zranitelností, na které tato opatření působí, jsou pak podkladem pro sestavení PoA reportu.
@@ -1238,9 +1240,14 @@ Níže uvedené dokumentuje postup a význam jednotlivých atributů pro volbu *
 &nbsp;
 
 **Pásmové rozmezí** – definice pásem, v rámci kterých budou zadávána vstupní data pro daný parametr. Pásma lze přidávat pomocí symbolu "**+**" a odebírat kliknutím na symbol koše v pásmu, které se má odstranit.    
-Pro každé pásmo lze definovat hodnotu (nebo procento, podle toho, jaký formát vstupních dat byl zvolen v předchozím kroku) a k této hodnotě (nebo procentu) zvolit úroveň, kterou má tato hodnota reprezentovat, včetně přednastavené barvy, kterou bude zobrazena v heatmapě. K výběru jsou tyto předdefinované úrovně hodnocení: *Nulové, Velmi nízké, Nízké, Velmi malé, Malé, Střední, Významné, Velmi významné, Vysoké, Velmi vysoké, Kritické*. Pro všechny tyto úrovně lze definovat vlastní názvy aktivací volby Definovat vlastní názvy. Lze k nim také doplnit volitelnou poznámku aktivací volby ***Doprovodný popis***.    
+Pro každé pásmo lze definovat hodnotu (nebo procento, podle toho, jaký formát vstupních dat byl zvolen v předchozím kroku) a k této hodnotě (nebo procentu) zvolit úroveň, kterou má tato hodnota reprezentovat, včetně přednastavené barvy, kterou bude zobrazena v heatmapě. K výběru jsou tyto předdefinované úrovně hodnocení: *Nulové, Velmi nízké, Nízké, Velmi malé, Malé, Střední, Významné, Velmi významné, Vysoké, Velmi vysoké, Kritické*. Pro všechny tyto úrovně lze definovat vlastní názvy aktivací volby ***Definovat vlastní názvy***. Lze k nim také doplnit volitelnou poznámku aktivací volby ***Doprovodný popis***.    
+
+<img src="/docs/img/16-hodnoceni-vlatni-nazvy-urovni-metrik.png" title="Vlastní názvy úrovní metrik hodnocení" width="850"/>
+
+&nbsp;
+
 :::note
-Na obrázku níže je prezentován příklad výsledné definice pásem hodnocení pro jeden z parametrů hodnocení aktiv – *Integrita*. Na dalším obrázku pak příklad možného vzorce výpočtu hodnoty aktiva, který vedle integrity zahrnuje další dva hodnocené parametry – *Důvěrnost* a *Dostupnost*.
+Na obrázku níže je prezentován příklad výsledné definice pásem hodnocení dopadu na informační aktivum při narušení jeho *integrity*. Na dalším obrázku pak příklad možného vzorce výpočtu, který vedle integrity zahrnuje další dvě hodnocené vlastnosti bezpečnosti informací – *důvěrnost* a *dostupnost*.
 :::
 
 <img src="/docs/img/16-nastaveni-hodnoceni-pasma.png" title="Definice pásem ve schématu hodnocení" width="560"/>
@@ -1272,6 +1279,16 @@ Vzorec výpočtu hodnocení pro sestavení dvojrozměrné heatmapy v rámci hodn
 :::
 
 <img src="/docs/img/16-hodnoceni-priklad-pro-osu-x-a-y.png" title="Definice heatmapy s výpočtem skóre ve schématu hodnocení" />
+
+&nbsp;
+
+Pro libovolné kombinace metrik, ze kterých je v nastavení příslušného schématu hodnocení rizik počítáno výsledné pásmové rozmezí úrovně rizika (neboli pro každý průsečík osy X a Y v matici heatmapy), lze definovat přípustné strategie zvládání rizika. A zohlednit přitom stanovený risk apetit.
+
+<img src="/docs/img/16-hodnoceni-strategie-zvladani.png" title="Definice heatmapy s nastavením strategie zvládání" /> 
+
+&nbsp;
+
+Pokud někde toto omezení nebude administrátorem nastaveno, budou se pak pro zvládání takto hodnoceného rizika nabízet uživatelům všechny strategie zvládání. Např. ve výběru při volbě strategie v [plánu zvládání rizik](#102plán-zvládání-rizik).
 
 &nbsp;
 

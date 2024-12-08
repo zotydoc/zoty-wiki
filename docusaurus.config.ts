@@ -123,7 +123,7 @@ const config: Config = {
               to: '/docs/intro',
             },*/
             {
-              label: 'Uživatelský manuál Zoty [v1.12]',
+              label: 'Uživatelský manuál Zoty [v1.13]',
               to: '/manual',
             },
           ],
