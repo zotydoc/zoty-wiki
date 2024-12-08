@@ -740,7 +740,7 @@ Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a ja
 &nbsp;
 
 ## 8	ANALÝZA RIZIK
-Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná [aktiva](#82aktiva), [hrozby, zranitelnosti](#84hrozby-a-zranitelnosti), tak i výsledná [rizika](#85rizika), vytvářená z jejich kombinací.     
+Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná [aktiva](#82aktiva), [hrozby, zranitelnosti](#83hrozby-a-zranitelnosti), tak i výsledná [rizika](#84rizika), vytvářená z jejich kombinací.     
 Vedle těchto základních registrů jsou zde také registr [cílů](#81cíle) a funkcionality pro [analýzu samotných aktiv](#823-analýza-aktiv). Analýza aktiv pomáhá vymezit hranice celé analýzy rizik tím, že umožňuje určit a odsouhlasit aktiva, jež do ní budou zahrnuta.
 
 ### 8.1	Cíle
@@ -846,7 +846,7 @@ Zejména v případě většího množství aktiv může být výhodné rozděli
 
 &nbsp;
 
-### 8.4	Hrozby a zranitelnosti
+### 8.3	Hrozby a zranitelnosti
 Při návrhu nejvhodnější struktury složek v příslušných registrech v rámci kategorizace hrozeb a zranitelností lze hledat inspiraci v některém z předdefinovaných katalogů hrozeb a zranitelností, které vychází z uznávaných metodik a norem, konkrétně:
 -	Katalog hrozeb dle Evropské agentury pro bezpečnost sítí a informací (ENISA)
 -	Katalogy hrozeb a zranitelností dle normy ISO 27001 - Systém řízení bezpečnosti informací (ISMS)
@@ -859,7 +859,7 @@ Při návrhu nejvhodnější struktury složek v příslušných registrech v r�
 
 &nbsp;
 
-### 8.5	Rizika
+### 8.4	Rizika
 Podobně jako v jiných registrech, i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
 
  <img src="/docs/img/8-katalogy-rizik.png " title="Katalogy rizik" width="560"/>
@@ -868,25 +868,7 @@ Podobně jako v jiných registrech, i zde platí, že uživatel si může vytvo�
 
 Založit nové riziko do registru rizik lze pomocí tlačítka ***Vytvořit*** v sekci **Rizika**.
     
-Na kartě rizika je, vedle datumů platnosti a popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), i výběrový atribut ***Strategie zvládání***, který bude zpravidla vyplněn až později, ve fázi zvládání rizik poté, co byla rizika analyzována a vyhodnocena, a kde pak bude možné zvolit jednu z následujících možností:
-- *Redukce*
-- *Přijetí*
-- *Přenesení*
-- *Vyhnutí se*
-
-***Redukce*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby (kdy dopad dosahuje nízkých nebo středně vysokých hodnot – nikoliv kritického pásma) a znamená, že k riziku by měla být připojena opatření, jejichž cílem je snížení rizika na přijatelnou úroveň.
-
-***Přijetí*** – tato strategie se volí zpravidla v případech nízké pravděpodobnosti hrozby a jejího dopadu a znamená, že se s rizikem nic nedělá; pouze se monitoruje a pravidelně přezkoumává, zda se v čase nezvýšila pravděpodobnost hrozby a/nebo jejího dopadu, a tudíž zda není třeba zvolit jinou strategii zvládání.
-
-***Přenesení*** – tato strategie se volí v případech v případech nízké pravděpodobnosti hrozby a vysokého dopadu, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo v případě sdílení prospěchu ze zisku vyplývajícího z rizika.
-
-***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysokého dopadu (kritické pásmo).      
-        
-:::tip
-V rámci zvolené strategie lze na operativní úrovni velmi jednoduše vytvářet [úkoly](#5úkoly) a adresovat je jako konkrétní opatření pro podporu realizace dané strategie. Např. úkoly na omezení rizikových činností či revizi celých procesů (***Vyhnutí se*** riziku), uzavření pojistných smluv (***Přenesení*** rizika), atp.
-:::
-
-&nbsp;
+Na kartě rizika je, vedle řady popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), které jsou editovatelné, zobrazen i atribut ***Strategie zvládání***, který lze editovat v Plánu zvládání rizik (tj. poté, co byla rizika analyzována a vyhodnocena ve fázi zvládání rizik ve stejnojmenné sekci).
 
 Riziko může nabývat stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
 Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schvalovací workflow](#34schvalovací-workflow).
@@ -976,7 +958,30 @@ Pro každé opatření lze zadat celkovou výši nákladů, které realizace dan
 
 ### 10.2	Plán zvládání rizik
 Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik.      
-Pokud už mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných záložkách v detailu vybraného plánu v sekci **Obsah** stejně, jako samotná rizika do něj zahrnutá. Pod sekcí Obsah je pak ještě sekce **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační* a dále též libovolnou textovou poznámku.    
+Pokud už mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných samostatných záložkách.     
+V záložce se samotnými riziky lze pro každé zvolit strategii jeho zvládání výběrem jedné z následujících možností:
+- *Redukce*
+- *Přijetí*
+- *Přenesení*
+- *Vyhnutí se*
+
+***Redukce*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby (kdy dopad dosahuje nízkých nebo středně vysokých hodnot – nikoliv kritického pásma) a znamená, že k riziku by měla být připojena opatření, jejichž cílem je snížení rizika na přijatelnou úroveň.
+
+***Přijetí*** – tato strategie se volí zpravidla v případech nízké pravděpodobnosti hrozby a jejího dopadu a znamená, že se s rizikem nic nedělá; pouze se monitoruje a pravidelně přezkoumává, zda se v čase nezvýšila pravděpodobnost hrozby a/nebo jejího dopadu, a tudíž zda není třeba zvolit jinou strategii zvládání.
+
+***Přenesení*** – tato strategie se volí v případech v případech nízké pravděpodobnosti hrozby a vysokého dopadu, kdy se ekonomicky vyplatí sdílet náklady ze ztrát s jinou stranou nebo v případě sdílení prospěchu ze zisku vyplývajícího z rizika.
+
+***Vyhnutí se*** – tato strategie se volí zpravidla v případech vysoké pravděpodobnosti hrozby a vysokého dopadu (kritické pásmo).      
+
+:::info
+Uživateli se pro každé riziko v plánu nemusí nabízet všechny strategie jeho možného zvládání. Nabídka může být pro každé konkrétní riziko individuálně omezena. A to na výběr pouze z těch strategií zvládání, které administrátor definoval (v konfiguraci příslušného [schématu hodnocení rizik](#konfigurace-nabídky-strategií-zvládání-rizik)) jako přípustné volby s ohledem na výsledné skóre hodnocení úrovně daného rizika a risk apetit.
+:::
+
+:::tip
+V rámci zvolené strategie lze na operativní úrovni velmi jednoduše vytvářet [úkoly](#5úkoly) a adresovat je jako konkrétní opatření pro podporu realizace dané strategie. Např. úkoly na omezení rizikových činností či revizi celých procesů (***Vyhnutí se*** riziku), uzavření pojistných smluv (***Přenesení*** rizika), atp.
+:::
+
+Ve spodním panelu je ještě volba **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační*, přidat libovolnou textovou poznámku, a připravit jej pro případný tisk nebo prezentaci a schválení.    
 Plán zvládání rizik je schvalován stejnými kroky, jak ukazuje [diagram  schvalovacího workflow](#diagram-schvalovacího-workflow-pro-analýzu-aktiv) pro analýzu aktiv.
 
 ### 10.3	Reporty
@@ -1281,7 +1286,7 @@ Vzorec výpočtu hodnocení pro sestavení dvojrozměrné heatmapy v rámci hodn
 <img src="/docs/img/16-hodnoceni-priklad-pro-osu-x-a-y.png" title="Definice heatmapy s výpočtem skóre ve schématu hodnocení" />
 
 &nbsp;
-
+#### Konfigurace nabídky strategií zvládání rizik
 Pro libovolné kombinace metrik, ze kterých je v nastavení příslušného schématu hodnocení rizik počítáno výsledné pásmové rozmezí úrovně rizika (neboli pro každý průsečík osy X a Y v matici heatmapy), lze definovat přípustné strategie zvládání rizika. A zohlednit přitom stanovený risk apetit.
 
 <img src="/docs/img/16-hodnoceni-strategie-zvladani.png" title="Definice heatmapy s nastavením strategie zvládání" /> 
