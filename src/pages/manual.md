@@ -739,6 +739,16 @@ Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a ja
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni-pozadavek-odvozeny-a-commenty.png" title="Odvozený požadavek" width="390"/>
 &nbsp;
 
+#### Legislativní požadavky na řízení informačních aktiv
+
+Příkladem odvozeného požadavku jsou pravidla ochrany jednotlivých úrovní informačních aktiv, která vychází z požadavků na řízení aktiv dle § 4 písm. h) – j) vyhlášky o kybernetické bezpečnosti.
+
+<img src="/docs/img/7-pozadavky-odvozeny-pozadavek-rizeni-aktiv.png"  title="Odvozený požadavek - Pravidla ochrany jednotlivých úrovní informačních aktiv" width="" />
+
+&nbsp;
+
+&nbsp;
+
 ## 8	ANALÝZA RIZIK
 Uživatelé zde mohou spravovat v příslušných registrech jak identifikovaná [aktiva](#82aktiva), [hrozby, zranitelnosti](#83hrozby-a-zranitelnosti), tak i výsledná [rizika](#84rizika), vytvářená z jejich kombinací.     
 Vedle těchto základních registrů jsou zde také registr [cílů](#81cíle) a funkcionality pro [analýzu samotných aktiv](#823-analýza-aktiv). Analýza aktiv pomáhá vymezit hranice celé analýzy rizik tím, že umožňuje určit a odsouhlasit aktiva, jež do ní budou zahrnuta.
@@ -994,9 +1004,9 @@ V této sekci lze evidovat specifické typy případů, jakými jsou:
 - Auditní nálezy
   - Doporučení auditu
   - Neshody auditu
-- Incidenty
+- Incidenty a události
 - Servisní požadavky
-Protože některé tyto záznamy, zejména incidenty a servisní požadavky, jsou často evidovány a řízeny ve specializovaných externích systémech, je Zoty připraveno tato data na pravidelné bázi synchronizovat. Aby pak mohla být propojena na relevantní entity spravované v  Zoty registrech (rizika, aktiva, atp.). Nastavení této synchronizace je vždy specifické pro každý konkrétní integrační scénář a je realizováno zakázkově v kooperaci s kvalifikovaným implementačním Zoty partnerem.
+Protože některé tyto záznamy, zejména incidenty a události nebo servisní požadavky, jsou často evidovány a řízeny ve specializovaných externích systémech, je Zoty připraveno tato data na pravidelné bázi synchronizovat. Aby pak mohla být propojena na relevantní entity spravované v  Zoty registrech (rizika, aktiva, atp.). Nastavení této synchronizace je vždy specifické pro každý konkrétní integrační scénář a je realizováno zakázkově v kooperaci s kvalifikovaným Zoty partnerem.
 
 &nbsp;
 
