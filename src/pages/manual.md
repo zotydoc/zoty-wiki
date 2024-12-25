@@ -958,9 +958,11 @@ Pro plánovaná cílová hodnocení reprezentující cílové milníky, je naví
 ### 10.1	Opatření
 Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
         
-Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnosti informací ve všech oblastech požadovaných mezinárodními standardy (např. ISO 27 002) nebo legislativou (vyhláška k ZoKB). Tato opatření jsou obecná – udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní aktivity pro plnění stanovených cílů . V Zoty jsou to pomyslné obálky (tzv. „šablony opatření“), jejichž obsah mohou uživatelé plnit konkrétními realizačními opatřeními, a to připojením entit typu *Úkol, Projekt, Proces*. Takto se určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
+Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnosti informací ve všech oblastech požadovaných mezinárodními standardy (např. ISO 27 002) nebo legislativou (vyhláška k ZoKB).
 
 <img src="/docs/img/10-sablony-opatreni.png"  title="Šablony opatření dle ISO 27002" width="" />         
+       
+Tato opatření jsou obecná – udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní aktivity pro plnění stanovených cílů . V Zoty jsou to pomyslné obálky (tzv. „šablony opatření“), jejichž obsah mohou uživatelé plnit konkrétními realizačními opatřeními, a to připojením entit typu *Úkol, Projekt, Proces*. Takto se určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
 
 Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“.      
 Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena i přímo k příslušnému aktivu.
@@ -970,6 +972,7 @@ Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, 
 :::      
       
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
+
 
 ### 10.2	Plán zvládání rizik
 Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik.      
