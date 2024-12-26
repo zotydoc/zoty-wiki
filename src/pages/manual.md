@@ -956,7 +956,7 @@ Pro plánovaná cílová hodnocení reprezentující cílové milníky, je naví
 
 ## 10	ZVLÁDÁNÍ RIZIK
 ### 10.1	Opatření
-Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření. Opatřeními mohou být také entity typu úkol, projekt či proces. Proto v Zoty používáme pro samotná opatření termín „*Šablona opatření*“, abychom je odlišili od opatření typu úkol / projekt /proces.    
+Opatření lze připojovat k libovolným typům entit, které lze hodnotit (aktiva, rizika, hrozby, zranitelnosti), a které mají vytvořeno alespoň jedno ohodnocení pro cílový stav. Opatření tedy nemají vazbu na tyto entity napřímo (vyjma entit typu *Aktivum*, viz „control driven approach“níže), ale skrze jejich plánovaná cílová ohodnocení. Cílová ohodnocení reprezentují totiž cílové milníky, kterých má být dosaženo právě s pomocí plánovaných opatření.    
         
 Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnosti informací ve všech oblastech požadovaných mezinárodními standardy (např. ISO 27 002) nebo legislativou (vyhláška k ZoKB).
 
