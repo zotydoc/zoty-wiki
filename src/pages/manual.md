@@ -117,7 +117,7 @@ Výchozí záložkou je ***Přehled***, která v pravém panelu zobrazuje přehl
 
 &nbsp;
 
-V tomto výchozím přehledovém zobrazení je na pracovním panelu jeden vnější vertikální posuvník pro posun celého panelu. Pro entitu, která má mnohem více atributů než složka, je zde navíc ještě jeden vnitřní pro posun obsahu okna uvnitř panelu se všemi atributy entity. Pro jejich zobrazení je též možné, namísto rolování obsahu okna vnitřním posuvníkem, „rozbalit“ celý jeho obsah pomocí ovládacího prvku se symbolem šipky dolů. Stejným způsobem lze pak obsah okna zase „sbalit“ zpět.      
+V tomto výchozím přehledovém zobrazení je na pracovním panelu jeden vnější vertikální posuvník pro posun celého panelu. Pro entitu, která má mnohem více atributů než složka, je zde navíc ještě jeden vnitřní posuvník pro posun obsahu okna uvnitř panelu se všemi atributy entity. Pro jejich zobrazení je též možné, namísto rolování obsahu okna vnitřním posuvníkem, „rozbalit“ celý jeho obsah pomocí ovládacího prvku se symbolem šipky dolů. Stejným způsobem lze pak obsah okna zase „sbalit“ zpět.      
 
 K entitám lze pomocí ikony se symbolem „**+**“ připojovat [organizace](#1621organizace), [metody](#metody), [štítky](#14štítky) a soubory. Příklad na obrázku demonstruje připojení dalších štítků, přičemž lze vybírat z dříve vytvořených nebo vytvořit a připojit štítek nový. Nově vytvořený štítek se automaticky ukládá pro případné další použití.      
 
@@ -246,7 +246,7 @@ Vyhledávat lze globálně napříč celým systémem dle názvu nebo klíče en
 &nbsp;
 
 :::tip
-Ikona připínáčku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterýkoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu.
+Ikona připínáčku, která se zobrazuje vedle každého vyhledaného záznamu, umožní kterýkoliv z nich "připnout" do samostatné záložky. Ty jsou pak ve spodní části pracovní plochy kdykoliv připraveny na jedno kliknutí zobrazit detail tohoto záznamu. Takto uložené záložky se pamatují, dokud se uživatel neodhlásí nebo neobnoví okno prohlížeče (F5). 
 :::
 
 Někdy může být výhodné omezit vyhledávání jen na sekci s příslušným registrem, např. **Aktiva**, **Rizika** atp. Vyhledávání v těchto sekcích funguje obdobně, jako globální vyhledávání. Stačí pouze zadat část vyhledávaného řetězce do pole pro vyhledávání vedle symbolu lupy.
@@ -668,6 +668,9 @@ Po najetí ukazovátka myši nad příslušnou barvu v indikátoru průběhu se 
 
 Podmínky, za jakých může úkol změnit jeden stav na jiný, jsou dány logikou přednastaveného workflow pro entitu typu Úkol, jak ukazuje workflow diagram níže.
 
+##### Workflow diagram - změna stavů úkolu      
+
+
 <img src="/docs/img/5-workflow-task.png" title="Úkoly – Wokflow" width="700"/>
 
 &nbsp;
@@ -716,7 +719,7 @@ Registr požadavků je tvořen veškerými požadavky, které mohou být relevan
 
 &nbsp;
 
-Obsah každého požadavku je tvořen fragmenty textu, reprezentující ve struktuře dokumentu kapitoly, odstavce, písmena či paragrafy. Ke každému fragmentu textu lze připojit soubory, libovolné další entity uložené v Zoty, vyjadřovat se k němu spolu s ostatními uživateli formou komentářů nebo k němu přiřadit odpovědnou osobu – garanta, který odpovídá za zajištění shody s tímto dílčím požadavkem.
+Obsah každého požadavku je tvořen fragmenty textu, reprezentující ve struktuře dokumentu kapitoly, odstavce, písmena či paragrafy. Ke každému fragmentu lze připojit soubory, libovolné další entity uložené v Zoty, vyjadřovat se k němu spolu s ostatními uživateli formou komentářů nebo k němu přiřadit odpovědnou osobu – garanta, který odpovídá za zajištění shody s tímto dílčím požadavkem.
 
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni-garant.png" title="Garant požadavku" width="470"/>
 
@@ -731,6 +734,20 @@ Aby bylo na první pohled vidět, za kterými fragmenty textu se skrývají dal�
 <img src="/docs/img/7-pozadavek-kybersecurity-propojeni-filtrace.png" title="Požadavek – filtrace textových fragmentů" width="460"/>
 
 &nbsp;
+
+Takovýto strukturovaný obsah lze tvořit pomocí ikony se symbolem „**+**“, která se u stávajícího či nově vytvořeného požadavku nabídne po přepnutí jeho záložky ***Obsah*** do editačního režimu.
+
+<img src="/docs/img/7-pozadavky-strukturace-nadpisu-a-odstavcu-cil-zoty.png" title="Tvorba strukturovaného obsahu požadavku"/>
+
+&nbsp;
+
+Obsah zde potom lze vložit manuálním zadáním textu nebo nejlépe využít již připravený existující text, např. ve formátu dokumentu typu Word – ten označit a zkopírovat do schránky (ve Windows Ctrl+C) a vložit jej do Zoty (Ctrl+V).
+
+<img src="/docs/img/7-pozadavky-strukturace-nadpisu-a-odstavcu-zdroj-word.png " title="Tvorba strukturovaného obsahu požadavku – příprava zdrojového textu ve Wordu"/>
+
+&nbsp;
+
+Text bude přenesen včetně zachování základního formátování (tučný font, kurzíva) i rozlišení jednotlivých úrovní nadpisů. Pokud je ponechán zapnutý přepínač ***Oddělit odstavce*** (viz předchozí obrázek), tak Zoty z odstavců a nadpisů, které identifikuje, automaticky vytvoří samostatné fragmenty.
 
 Z požadavků lze pak ještě vytvářet tzv. odvozené požadavky, jejichž smyslem je zpravidla konsolidovat více stejných či podobných požadavků, pocházejících z různých zdrojů, do požadavku jednoho, který pak agregovaně alokuje zdroje pro případná plánovaná opatření. Dalším důvodem, kdy se, zpravidla z legislativního požadavku, tvoří požadavky odvozené, může být snaha interpretovat právní výklad za účelem jeho snadnější implementace v praxi, tzn. tvoří se tímto způsobem soubor prováděcích předpisů či metodických pokynů k zákonům.     
 Odvozený, uživatelsky srozumitelný požadavek, lze vytvořit a připojit ke každému paragrafu či konkrétnímu odstavci zákona, či libovolného jiného typu dokumentu. A k němu přiřadit odpovědnou osobu. A celý jej pak propojit vazbou např. s rizikem, libovolným typem aktiva, cílem nebo s jiným souvisejícím požadavkem. Jsou zde tedy stejné možnosti, jako při práci s fragmenty textů u nadřízeného požadavku.
@@ -849,8 +866,8 @@ Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikov
 
 &nbsp;
 
-Pokud jsou identifikována jak primární, tak podpůrná aktiva, a jsou vzájemně propojena, tak zahrnutím primárních aktiv do analýzy rizik se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
-Účelem je vymezit rozsah analýzy rizik, odsouhlasit jej odpovědnými osobami v roli schvalovatelů v rámci schvalovacího workflow a celý proces takto dokumentovat přímo v aplikaci.      
+Pokud jsou identifikována jak primární, tak podpůrná aktiva, a jsou vzájemně propojena, tak zahrnutím primárních aktiv do analýzy se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
+Účelem analýzy aktiv je vymezit rozsah celé analýzy rizik, odsouhlasit jej odpovědnými osobami v roli schvalovatelů v rámci schvalovacího workflow a celý proces takto dokumentovat přímo v aplikaci.      
 
 :::tip
 Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.
@@ -976,7 +993,7 @@ Pro každé opatření lze zadat celkovou výši nákladů, které realizace dan
 
 ### 10.2	Plán zvládání rizik
 Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik.      
-Pokud už mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných samostatných záložkách.     
+Pokud už mají rizika připojená nějaká hodnocení či opatření, zobrazí se na stejnojmenných samostatných záložkách. Každý plán zobrazuje pouze ta hodnocení, jejichž datum platnosti Od-Do koresponduje s datumem platnosti Od-Do příslušného plánu.     
 V záložce se samotnými riziky lze pro každé zvolit strategii jeho zvládání výběrem jedné z následujících možností:
 - *Redukce*
 - *Přijetí*
