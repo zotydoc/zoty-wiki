@@ -630,6 +630,8 @@ Obsah v horním pruhu karet lze nastavit přes ikonu ***Nastavení karet*** v pr
 
 &nbsp;
 
+Pro zachování kompaktního zobrazení je třeba, aby byly v rámci případných úprav nastavení vybrané alespoň čtyři libovolné karty (Zoty nepovolí výběr méně karet). Pokud je tedy třeba nahradit zobrazení některé karty za jinou, je vhodné nejprve vybrat novou kartu a až poté zrušit zobrazení nechtěné karty.
+
 #### Konfigurace panelů
 Vzhled celé úvodní stránky lze upravit přepnutím do editačního módu, kdy lze jednotlivé celky zvětšovat, zmenšovat či přesouvat.
 
@@ -752,6 +754,8 @@ Text bude přenesen včetně zachování základního formátování (tučný fo
 Po najetí myší nad libovolný fragment se u něj zobrazí paleta základních nástrojů vizualizovaných ikonami, jež umožnují daný fragment editovat, posouvat jeho odsazení vlevo/vpravo pro zvýšení přehlednosti různých úrovní nadpisů či odstavců, přidávat za vybraný fragment další nové fragmenty nebo jej celý odstranit.
 
 <img src="/docs/img/7-pozadavky-editace-fragmentu.png" title="Tvorba strukturovaného obsahu požadavku – editace fragmentů"/>
+
+&nbsp;
 
 Z požadavků lze pak ještě vytvářet tzv. odvozené požadavky, jejichž smyslem je zpravidla konsolidovat více stejných či podobných požadavků, pocházejících z různých zdrojů, do požadavku jednoho, který pak agregovaně alokuje zdroje pro případná plánovaná opatření. Dalším důvodem, kdy se, zpravidla z legislativního požadavku, tvoří požadavky odvozené, může být snaha interpretovat právní výklad za účelem jeho snadnější implementace v praxi, tzn. tvoří se tímto způsobem soubor prováděcích předpisů či metodických pokynů k zákonům.     
 
