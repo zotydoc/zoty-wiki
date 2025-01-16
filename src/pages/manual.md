@@ -743,13 +743,18 @@ Takovýto strukturovaný obsah lze tvořit pomocí ikony se symbolem „**+**“
 
 Obsah zde potom lze vložit manuálním zadáním textu nebo nejlépe využít již připravený existující text, např. ve formátu dokumentu typu Word – ten označit a zkopírovat do schránky (ve Windows Ctrl+C) a vložit jej do Zoty (Ctrl+V).
 
-<img src="/docs/img/7-pozadavky-strukturace-nadpisu-a-odstavcu-zdroj-word.png " title="Tvorba strukturovaného obsahu požadavku – příprava zdrojového textu ve Wordu"/>
+<img src="/docs/img/7-pozadavky-strukturace-nadpisu-a-odstavcu-zdroj-word.png" title="Tvorba strukturovaného obsahu požadavku – příprava zdrojového textu ve Wordu"/>
 
 &nbsp;
 
 Text bude přenesen včetně zachování základního formátování (tučný font, kurzíva) i rozlišení jednotlivých úrovní nadpisů. Pokud je ponechán zapnutý přepínač ***Oddělit odstavce*** (viz předchozí obrázek), tak Zoty z odstavců a nadpisů, které identifikuje, automaticky vytvoří samostatné fragmenty.
+         
+Po najetí myší nad libovolný fragment se u něj zobrazí paleta základních nástrojů vizualizovaných ikonami, jež umožnují daný fragment editovat, posouvat jeho odsazení vlevo/vpravo pro zvýšení přehlednosti různých úrovní nadpisů či odstavců, přidávat za vybraný fragment další nové fragmenty nebo jej celý odstranit.
+
+<img src="/docs/img/7-pozadavky-editace-fragmentu.png" title="Tvorba strukturovaného obsahu požadavku – editace fragmentů"/>
 
 Z požadavků lze pak ještě vytvářet tzv. odvozené požadavky, jejichž smyslem je zpravidla konsolidovat více stejných či podobných požadavků, pocházejících z různých zdrojů, do požadavku jednoho, který pak agregovaně alokuje zdroje pro případná plánovaná opatření. Dalším důvodem, kdy se, zpravidla z legislativního požadavku, tvoří požadavky odvozené, může být snaha interpretovat právní výklad za účelem jeho snadnější implementace v praxi, tzn. tvoří se tímto způsobem soubor prováděcích předpisů či metodických pokynů k zákonům.     
+
 Odvozený, uživatelsky srozumitelný požadavek, lze vytvořit a připojit ke každému paragrafu či konkrétnímu odstavci zákona, či libovolného jiného typu dokumentu. A k němu přiřadit odpovědnou osobu. A celý jej pak propojit vazbou např. s rizikem, libovolným typem aktiva, cílem nebo s jiným souvisejícím požadavkem. Jsou zde tedy stejné možnosti, jako při práci s fragmenty textů u nadřízeného požadavku.
 Lze tak mj. snadno dohledat, kdo za plnění jakých požadavků odpovídá a jak se s nimi konkrétně organizace vypořádala v rámci celého systému řízení rizik a shody.
 
