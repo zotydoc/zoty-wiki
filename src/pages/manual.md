@@ -822,7 +822,14 @@ ________________________________
 -	Role (ROLE)
 -	Software (SW)
 
-Speciální kategorii pak tvoří aktiva typu projekt a proces, které mohou (spolu s [úkoly](#5úkoly)) vystupovat v roli konkrétních [opatření](#101opatření) připojených k [cílovým hodnocením](#9hodnocení) rizik v rámci jejich mitigace.
+Speciální kategorii pak tvoří aktiva typu projekt a proces, která mohou (spolu s [úkoly](#5úkoly)) vystupovat v roli konkrétních [opatření](#101opatření) připojených k [cílovým hodnocením](#9hodnocení) rizik v rámci jejich mitigace.
+
+Jakékoliv aktivum lze na jedno kliknutí ohodnotit z hlediska jeho důležitosti.
+<img src="/docs/img/8-aktivum-dulezitost-detail.png" title="Stanovení důležitosti aktiva"/>
+Stanovení důležitosti aktiva může být např. vodítkem pro to, zda má být pro dané aktivum prováděno zaznamenávání bezpečnostních a provozních událostí (viz § 22, odst. 1 b) VoKB).
+<img src="/docs/img/8-aktivum-dulezitost-seznam.png" title="Seznam vybraných aktiv dle důležitosti" width="590"/>
+
+&nbsp;
 
 #### 8.2.1 Správa aktiv
 Uživatel si může v registru aktiv vytvořit libovolnou strukturu složek a kategorizovat tak aktiva dle vlastních preferencí. Podobně, jako u jiných registrů, i zde se lze nechat inspirovat již vytvořenými strukturami složek v rámci předdefinovaných kategorií v katalozích aktiv.
@@ -1050,11 +1057,11 @@ V modulu **Audity** lze zakládat interní či externí audity a propojovat je s
 <img src="/docs/img/13-audit-seznam.png" title="Audity" />
 
 Je-li audit propojen s požadavkem v sekci Řízení shody - [Požadavky](#71požadavky), a tímto požadavkem je dokument (zákon, ISO norma, směrnice, smlouva, atp.), jež má strukturovaný obsah (kapitoly, podkapitoly nebo paragrafy, odstavce, písmena, atp.), tak pak lze ze všech těchto ucelených fragmentů textu vybrat v rámci auditu ty, u kterých má být posuzováno, zda je s nimi organizace ve shodě či nikoliv.
-Po najetí ukazovátka myši nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment se stává tzv. auditní.
+Po najetí ukazovátka myši nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment /dílčí požadavek se pak stává tzv. auditní a je tedy zahrnut do kritérií a cílů auditu. Tzn., že bude možné u něj posuzovat shodu se zavedeným systémem, např. na zajištění bezpečnosti informací.
 
 <img src="/docs/img/13-audit-aktivace-pro-fragment-textu-pozadavku.png" title="Aktivace auditu pro fragment textu požadavku" width="770"/>
 
-Aktivací auditu pro vybrané fragmenty / dílčí požadavky se určí zaměření a rozsah celého auditu. Zároveň lze ke každému dílčímu požadavku přiřadit odpovědnou osobu – garanta, který zodpovídá za jeho zavedení, připojit k němu komentáře nebo jej propojit s libovolnými dalšími entitami v Zoty. V rámci auditu lze pak každý dílčí požadavek označit za *Zaveden, Nezaveden, V procesu zavádění* či *Neaplikovatelný*.
+Ke každému dílčímu požadavku lze také přiřadit odpovědnou osobu – garanta, který zodpovídá za jeho zavedení, připojit k němu komentáře nebo jej propojit s libovolnými dalšími entitami v Zoty. V rámci auditu lze pak každý dílčí požadavek označit za *Zaveden, Nezaveden, V procesu zavádění* či *Neaplikovatelný*.
 
 <img src="/docs/img/13-audit-detail.png" title="Audit - detail" />
 
