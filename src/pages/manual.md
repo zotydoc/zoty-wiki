@@ -53,6 +53,7 @@ Pokud klíč obsahuje zkratku typu entity, ke které je na konci přidáno písm
   -	***A*** – Aktivum (obecného typu) 
   -	***AA*** – Analýza aktiv
   -	***AGR*** – Smlouva
+  -	***AUD*** – Audit
   -	***AUDN*** – Neshoda auditu
   -	***AUDR*** – Doporučení auditu
   -	***C*** – Šablona opatření (Control)
@@ -76,13 +77,13 @@ Pokud klíč obsahuje zkratku typu entity, ke které je na konci přidáno písm
    -	***REQ*** – Požadavek (Requirement)
    -	***REQD*** – Odvozený požadavek (Derived Requirement)
    -	***ROLE*** – Aktivum typu Role
+   -	***RTP*** – Plán zvládání rizik
    -	***SW*** – Aktivum typu Software
    -	***SR*** – Servisní požadavek
    -	***C*** – Šablona opatření
    -	***T*** – Hrozba (Threat)
    -	***TA*** – Aktivum typu Hmotný majetek (Tangible asset)
    -	***TASK*** – Úkol
-   -	***TPR*** – Plán zvládání rizik
    -	***V*** – Zranitelnost (Vulnerability)
    -	***VEN*** – Aktivum typu Dodavatel
    -	***WF*** – Workflow
@@ -640,7 +641,7 @@ Vzhled celé úvodní stránky lze upravit přepnutím do editačního módu, kd
 &nbsp;
 
 ## 5	ÚKOLY
-Úkoly uživateli přidělené nebo jím vytvořené jsou jedna z prvních věcí, které tento uživatel vidí v sekci [Přehled](#4přehled) na své úvodní stránce po přihlášení do systému. Uživatelé, kteří mají přístup do sekce [Administrace](#1622uživatelé), vidí i úkoly přidělené všem ostatním uživatelům, na záložce *Entity* v detailu každého uživatele.    
+Úkoly uživateli přidělené nebo jím vytvořené jsou jedna z prvních věcí, které tento uživatel vidí v sekci [Přehled](#4přehled) na své úvodní stránce po přihlášení do systému. Uživatelé s rolí ***Administrátor*** nebo ***Manažer entit*** vidí všechny úkoly, ostatní uživatelé vidí pouze své úkoly. Uživatelé, kteří mají přístup do sekce [Administrace](#1622uživatelé), vidí i úkoly přidělené všem ostatním uživatelům, na záložce *Entity* v detailu každého uživatele.    
 Zobrazení všech úkolů je dostupné v sekci **Úkoly**. Zde je lze třídit, filtrovat, sledovat jejich stav, časový průběh, datumy kdy byly vytvořeny, upraveny, jaký mají deadline, jakého mají správce nebo důležitost.    
 Úkoly, které nebyly uzavřeny (tzn. dokončeny, odmítnuty nebo archivovány) do plánovaného datumu dokončení, se po uplynutí tohoto datumu zobrazují v seznamu červeně s vykřičníkem. V případě, že plánovaný datum dokončení je již velmi blízko (tzn. je dnes nebo nastane již následující den), zobrazuje se toto datum oranžově.
 
@@ -895,7 +896,10 @@ Vybranou množinu aktiv, zpravidla těch, která byla pro organizaci identifikov
 &nbsp;
 
 Pokud jsou identifikována jak primární, tak podpůrná aktiva, a jsou vzájemně propojena, tak zahrnutím primárních aktiv do analýzy se do ní automaticky zahrnou i všechna jejich podpůrná aktiva.      
-Účelem analýzy aktiv je vymezit rozsah celé analýzy rizik, odsouhlasit jej odpovědnými osobami v roli schvalovatelů v rámci schvalovacího workflow a celý proces takto dokumentovat přímo v aplikaci.      
+
+:::info
+Aktiva, která jsou takto zařazena do analýzy aktiv, jsou podkladem ke schválení odpovědnými osobami v roli schvalovatelů. Tím je stanoven a odsouhlasen rozsah systému řízení bezpečnosti informací (ISMS). Každá další případná změna rozsahu ISMS znamená vytvoření nové analýzy aktiv, čímž jsou tyto změny dokumentovány včetně kompletní historie.      
+:::
 
 :::tip
 Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.

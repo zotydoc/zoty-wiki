@@ -102,7 +102,7 @@ const config: Config = {
           label: 'Tutorial',
         },*/
 
-        {to: '/manual', label: 'Uživatelský manuál Zoty [v1.13]', position: 'left'},
+        {to: '/manual', label: 'Uživatelský manuál Zoty [v1.18]', position: 'left'},
         
         /*{to: '/blog', label: 'Blog', position: 'left'},*/
         {
