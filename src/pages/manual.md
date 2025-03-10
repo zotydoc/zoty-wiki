@@ -826,8 +826,20 @@ Speciální kategorii pak tvoří aktiva typu projekt a proces, která mohou (sp
 
 Jakékoliv aktivum lze na jedno kliknutí ohodnotit z hlediska jeho důležitosti.
 <img src="/docs/img/8-aktivum-dulezitost-detail.png" title="Stanovení důležitosti aktiva"/>
-Stanovení důležitosti aktiva může být např. vodítkem pro to, zda má být pro dané aktivum prováděno zaznamenávání bezpečnostních a provozních událostí (viz § 22, odst. 1 b) VoKB).
+
+&nbsp;
+
 <img src="/docs/img/8-aktivum-dulezitost-seznam.png" title="Seznam vybraných aktiv dle důležitosti" width="590"/>
+
+&nbsp;
+
+:::info
+Stanovení důležitosti aktiv je užitečné pro všechny organizace, zejména pak ale pro ty, které se musí řídit vyhláškou o kybernetické bezpečnosti (VoKB). V celém procesu řízení aktiv je požadováno, aby se zohledněním hodnoty a **důležitosti aktiv** byla stanovena pravidla pro likvidaci dat (příloha č. 4, odst. 3), nakládání s aktivy (označování informací, manipulace s aktivy a správa výměnných médií), či pravidla pro ochranu jejich integrity a dostupnosti.
+:::
+
+:::note
+Důležitost aktiva může být např. vodítkem také pro to, zda pro něj dle VoKB má být prováděno zaznamenávání bezpečnostních a provozních událostí (§ 22, odst. 1 b), penetrační testování (pro aktiva v kategorii systémů ICT – viz § 25, odst. 1), nebo jak budou kategorizovány s ním související kybernetické bezpečnostní incidenty (§ 31, odst. 1 d), atp.
+:::
 
 &nbsp;
 
@@ -921,7 +933,7 @@ Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logi
 Při vytváření nového rizika lze zvolit i jeho tzv. „rodiče“. Tj. *hrozbu*, *zranitelnost* či *aktivum*, výsledkem jejichž kombinace je právě riziko (*hrozba*, zneužívající *zranitelnosti aktiva*, představuje *riziko*).       
 Při výběru těchto rodičovských entit může Zoty uživateli napovědět, kterou konkrétní hrozbu, zranitelnost či aktivum z celého seznamu vybrat. K tomu slouží přepínače ***Filtrovat dle propojení*** a ***Filtrovat dle Znalostní báze***.       
 Volba ***Filtrovat dle propojení***, je-li aktivována, tak po výběru jednoho z rodičů, např. hrozby, odfiltruje ze seznamu entit pro výběr ostatních rodičů (v tomto příkladu aktiv a zranitelností) ty, které zatím nemají s touto vybranou hrozbou žádné propojení.       
-Podobně funguje i přepínač ***Filtrovat dle Znalostní báze***, který analyzuje možná propojení na základě kombinací hrozeb, zranitelností a aktiv v matici znalostní báze a podle toho pak nabídne uživateli omezený výběr vhodných rodičů pro dané riziko.      
+Podobně funguje i přepínač ***Filtrovat dle Znalostní báze***, který analyzuje možná propojení na základě kombinací hrozeb, zranitelností a aktiv v [matici znalostní báze](#konfigurace-matice) a podle toho pak nabídne uživateli omezený výběr vhodných rodičů pro dané riziko.      
 Volba rodičů není pro vytvoření rizika v Zoty povinná. Je to ale výhodné např. v okamžiku, kdy se později provádí [hodnocení rizik](#9hodnocení). Ta lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1614hodnocení). A pokud už bylo provedeno hodnocení některého z rodičů, tj. hrozby, zranitelnosti či aktiva, tak výstupy těchto hodnocení pak mohou automaticky vstupovat do hodnocení rizika. Jinými slovy, výsledné skóre rizika pak může být spočteno automaticky. Pokud je takto zároveň nastaveno příslušné schéma hodnocení v metodě pro hodnocení rizik.
 
 :::tip
@@ -1003,7 +1015,11 @@ Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, 
 :::info
 **3A opatření**  jsou opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů).
 :::      
-      
+
+&nbsp;
+V Zoty lze opatření rozlišovat dle typu na **preventivní** (proaktivní opatření, jež se aplikují před problémem, kterému se snaží zabránit), **nápravná** (reaktivní opatření, jež se aplikují až po problému, na který reagují a napravují jej) a **detekční** (opatření, jejichž účelem je včasné odhalení nežádoucích aktivit).
+&nbsp;
+
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
 
 
