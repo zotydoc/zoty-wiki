@@ -63,6 +63,7 @@ Pokud klíč obsahuje zkratku typu entity, ke které je na konci přidáno písm
    -	***FP*** – Aktivum typu Funkční místo / Pracovní pozice
    -	***HW*** – Aktivum typu Hardware
    -	***I*** – Incident
+   -	***ICH*** – Významná změna
    -	***INF*** – Aktivum typu Informace
    -	***KNW*** – Aktivum typu Znalost
    -	***LOC*** – Aktivum typu Lokalita
@@ -902,7 +903,8 @@ Aktiva, která jsou takto zařazena do analýzy aktiv, jsou podkladem ke schvál
 :::
 
 :::tip
-Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …) nebo na aktiva patřící konkrétnímu útvaru či společnosti v rámci holdingu atp.
+Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …). Nebo na aktiva patřící konkrétnímu útvaru či jedné společnosti ve skupině v rámci velkého holdingu atp.      
+Také v rámci řízení [významných změn](#112významné-změny) je vhodné vytvořit samostatnou analýzu a zahrnout do ní pouze aktiva dotčená touto změnou.
 :::
 
 &nbsp;
@@ -921,7 +923,7 @@ Při návrhu nejvhodnější struktury složek v příslušných registrech v r�
 &nbsp;
 
 ### 8.4	Rizika
-Podobně jako v jiných registrech, i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
+Podobně, jako v jiných registrech, i zde platí, že uživatel si může vytvořit svoji vlastní strukturu složek, která bude nejlépe vyhovovat jeho potřebám a inspirovat se přitom některým z předdefinovaných katalogů rizik.    
 
  <img src="/docs/img/8-katalogy-rizik.png " title="Katalogy rizik" width="560"/>
 
@@ -1062,12 +1064,36 @@ V této sekci mohou být definovány reporty, jejichž obsah či vzhled je třeb
 
 ## 11	PŘÍPADY
 V této sekci lze evidovat specifické typy případů, jakými jsou:
-- Auditní nálezy
-  - Doporučení auditu
-  - Neshody auditu
-- Incidenty a události
+- Bezpečnostní události a incidenty
+- Významné změny
 - Servisní požadavky
-Protože některé tyto záznamy, zejména incidenty a události nebo servisní požadavky, jsou často evidovány a řízeny ve specializovaných externích systémech, je Zoty připraveno tato data na pravidelné bázi synchronizovat. Aby pak mohla být propojena na relevantní entity spravované v  Zoty registrech (rizika, aktiva, atp.). Nastavení této synchronizace je vždy specifické pro každý konkrétní integrační scénář a je realizováno zakázkově v kooperaci s kvalifikovaným Zoty partnerem.
+
+Protože některé tyto záznamy, zejména bezpečnostní události a incidenty, jsou často evidovány a řízeny ve specializovaných externích systémech, je Zoty připraveno tato data na pravidelné bázi synchronizovat. Aby pak mohla být propojena na relevantní entity spravované v  Zoty registrech (rizika, aktiva, atp.). Nastavení této synchronizace je vždy specifické pro každý konkrétní integrační scénář a je realizováno zakázkově v kooperaci s kvalifikovaným Zoty partnerem.
+
+### 11.1	Bezpečnostní události a incidenty
+
+<img src="/docs/img/11-incident-detail.png"  title="Incident - detail"/>
+
+&nbsp;
+
+### 11.2	Významné změny
+Významné změny důležitých aktiv mohou pro organizaci představovat vysoké riziko, nejsou-li identifikovány a správně řízeny. Zejména v oblasti bezpečnosti informací je často potřeba analyzovat, zda při změnách v ICT infrastruktuře mohou mít tyto změny vliv na kybernetickou bezpečnost. Vysoké riziko může představovat i řada jiných změn, např. v organizační struktuře, změna významného dodavatele, aj.       
+Pokud jsou takovéto "významné změny" identifikovány, měly by iniciovat znovuprovedení analýzy rizik.
+
+:::info
+Řízení změn je nedílnou součástí řízení bezpečnosti informací dle vyhlášky o kybernetické bezpečnosti (§ 11), ale i dle řady mezinárodních standardů, např. ITIL nebo ISO 27005 (odst. 9.1).
+:::
+
+V Zoty je pro tento účel zaveden specifický typ entity **Významná změna**, která může být propojena s [analýzou vybraných aktiv](#823-analýza-aktiv) (dotčených změnou). Ta následně vstupuje do analýzy rizik a vymezuje tak její rozsah.     
+Výsledek analýzy rizik pak dává podklady k rozhodnutí o způsobech posouzení úrovně bezpečnosti za účelem identifikace slabých míst (např. provedení penetračního testování, skenu zranitelností či prověrky konfigurace) a případně též zavedení vhodných opatření vedoucích ke snížení rizika minimalizací dopadu těchto změn. 
+
+<img src="/docs/img/11-vyznamna-zmena-detail.png"  title="Významná změna - detail" />
+
+&nbsp;
+
+:::tip
+Pro mitigaci rizik lze v Zoty volit z připravených šablon bezpečnostních opatření, kterými je přednaplněn registr opatření. Tzn. vybrat z registru např. opatření v oblasti technologické bezpečnosti č. 8.29 - "***Testování bezpečnosti při vývoji a akceptaci***" (doporučená „best practice“ dle ISO 27002) a propojit je na plánované cílové ohodnocení rizika identifikovaného a kvantifikovaného analýzou rizik.
+:::
 
 &nbsp;
 
