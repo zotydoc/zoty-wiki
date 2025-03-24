@@ -949,6 +949,12 @@ Rizika nemusí vytvářet sám uživatel, ale může si je nechat vygenerovat do
 
 &nbsp;
 
+Název nového rizika (jedno, zda vytvářeného manuálně nebo generováním ze znalostní báze) může být automaticky generován kombinací z názvů jeho rodičů nebo z jejich identifikátorů, tzv. [klíčů](#typy-entit-a-jejich-kódové-značení), či z kombinace obojího – podle toho, co si uživatel zvolí v atributu „***Generovaný název dle rodiče***“.
+
+<img src="/docs/img/8-riziko-generovany-nazev-dle-rodice.png" title="Generovaný název rizika dle jeho rodičů (aktiva, hrozby, zranitelnosti)" />
+
+&nbsp;
+
 ## 9	HODNOCENÍ
 Hodnocení je speciální [typ entity](#typy-entit-a-jejich-kódové-značení), jejíž jednotlivé záznamy představují konkrétní instance ohodnocení rizika nebo aktiva nebo hrozby nebo zranitelnosti.
 V rámci hodnocení lze ohodnotit skutečnost nebo cílový stav pro vybrané časové období.
@@ -966,9 +972,13 @@ Při zadávání hodnocení cílového nebo skutečného stavu si lze zobrazit v
 &nbsp;
 
 Při samotném hodnocení lze ke každé hodnocené metrice vložit číselné hodnoty, které mohou např. rozložit hodnocený parametr na více řádků, aby bylo zřejmé, z jakých dílčích hodnot se skládá.       
-K jednotlivým metrikám, stejně tak k výslednému skóre, lze vkládat i textové poznámky. Aby pak bylo na první pohled patrné, kde jsou již nějaké poznámky vloženy, tak je zde ikona pro editaci poznámky podsvícena ve žlutém kruhu.        
-            
-Časovým obdobím pro hodnocení aktuálního/skutečného stavu může být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu. Toto datum je milníkem, ke kterému má být dosaženo plánovaného cílového stavu. Platnost takto nastaveného milníku je v čase platná až do data, kdy bude zaplánován nový cílový milník.
+K jednotlivým metrikám, stejně tak k výslednému skóre, lze vkládat libovolné množství textových poznámek. Ikona pro editaci poznámky indikuje jejich počet a tím zároveň informuje, které hodnocené metriky či výsledné skóre jsou opatřeny poznámkou.
+
+<img src="/docs/img/9-hodnoceni-poznamky.png"  title="Hodnocení - poznámky" width="600" />
+
+&nbsp;
+
+Časovým obdobím pro hodnocení aktuálního/skutečného stavu může být týden, měsíc, čtvrtletí nebo rok. Nebo libovolné datum, pokud neexistuje pravidelná periodicita hodnocení skutečného stavu. Plánovaná hodnocení cílového stavu se pak vždy vztahují ke konkrétnímu datu. Toto datum je milníkem, ke kterému má být dosaženo plánovaného cílového stavu. Takto nastavený milník je platný až do data, kdy bude zaplánován nový cílový milník.
           
 Všechny tyto parametry lze plně uživatelsky konfigurovat v [nastavení Hodnocení](#1614hodnocení) zcela samostatně pro každé schéma hodnocení. Stejně, jako zde lze např. nastavit, zda se v rámci daného schématu může hodnotit pouze skutečnost nebo pouze cílový stav nebo obojí. Nebo zda budeme chtít v rámci daného schématu hodnotit dopad na aktiva pouze z pohledu možných hrozeb nebo příležitostí nebo obojího. Všechny možnosti uživatelské konfigurace a specifických nastavení pro schémata hodnocení jsou dále popsána v kap. [Nastavení - Hodnocení](#1614hodnocení).    
            
@@ -1395,24 +1405,45 @@ Pokud někde toto omezení nebude administrátorem nastaveno, budou se pak pro z
 &nbsp;
 
 #### 16.1.5	Reporty
-Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních technologií JavaScript, GraphQL, Handlebars, CSS. Pro každý report lze také zapnout/vypnout přepínač *Aktivní*, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatelům či role, pro které má být report dostupný.
+Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních technologií JavaScript, GraphQL, Handlebars, CSS. Pro každý report lze také zapnout/vypnout přepínač *Aktivní*, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatele či role, pro které má být report dostupný.
 
-#### 16.1.6	Data
+#### 16.1.6	Data a zálohování
 Záložky ***Export*** a ***Import*** slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
 Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci [Zoty Helpdesk](#32zoty--o-aplikaci) nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
-Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty pak umožňuje uživateli v roli administrátora exportovat obsah databáze do souboru ve formátu JSON.
+Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty také umožňuje uživateli v roli administrátora exportovat většinu uživatelských dat z databáze v Zoty do souboru ve formátu JSON.
 
 <img src="/docs/img/16-zalohovani.png" title="Záloha a obnova dat" width="640"/>
 
+&nbsp;
+
 Po exportu databáze do souboru lze soubor zpět naimportovat do Zoty účtu a data tak v databázi obnovit. Pokud se mezitím, tedy od posledního importu, v databázi některá data změnila, tak po aktivaci volby *Vynutit změny* se přepíší data v Zoty účtu, tzn. prioritu mají data v importovaném souboru. Volba *Odstranit data, která import neobsahuje*, odstraní v Zoty účtu všechna data, která nejsou nalezena v importovaném souboru.    
+
+:::caution
+Pro pravidelné zálohování v produkčním prostředí důrazně doporučujeme používat nativní nástroje pro zálohování databází namísto zálohování pomocí exportu a importu JSON souborů v Zoty. Nativní nástroje pro zálohování databází nabízejí mnohem konzistentnější a spolehlivější způsob ukládání a obnovy dat.
+:::
+
+:::info
+Když je Zoty používáno, není zaručeno, že zálohy v JSON souborech budou konzistentní, protože databáze může být během procesu zálohování aktualizována. Zoty nehlásí žádná varování ani chybová hlášení, pokud by byla vytvořena JSON záloha s nekonzistencí. Takové zálohy pak během procesu obnovy selžou. JSON export navíc nezahrnuje některá specifická data Zoty účtu, např. [notifikace](#38notifikace), [log aktivit](#312aktivity-uživatelů), informace o samotném [účtu](#162účet) a jeho [uživatelích](#1622uživatelé).
+:::
+
+&nbsp;
+
 Záložka ***Spreadsheet*** importuje data různých typů entit (*Aktiva, Hrozby, Zranitelnosti, Rizika*) ze souborů formátu Excel.
-Pro nové zákazníky, kteří si testují Zoty s demo daty, založili si v rámci testování v tomto účtu i svá data, která chtějí zachovat, ale demo demo data potřebují odstranit, slouží volba *Vyčistit* na záložce ***Demo***.    
-Záložka ***ARIS*** importuje data z  databáze SW nástroje ARIS pro modelování a analýzu procesů.
+
+Pro nové zákazníky, kteří testují Zoty s demo daty, založili si v rámci testování v tomto účtu i svá data, která chtějí zachovat, přičemž demo data potřebují odstranit, slouží volba *Vyčistit* na záložce ***Demo***.      
+
+[Reporty](#1615reporty), které lze v Zoty vytvářet, lze pak spouštět buď manuálně nebo automatizovaně v pravidelných, předem definovaných časech. Aplikacím třetích stran lze takto poskytovat aktuální data z databáze Zoty. Tyto reporty jsou pak v administraci dostupné v plánovači úloh na záložce ***Naplánované úlohy***.
+
+<img src="/docs/img/16-task-scheduler.png"  title="Plánovač úloh pro spouštění reportů" width="700" />
+
+&nbsp;
+
+Záložka ***ARIS*** poskytuje funkcionality importu dat z  databáze SW nástroje ARIS pro modelování a analýzu procesů.      
 
 &nbsp;
 
 ### 16.2	Účet
-V administraci účtu jsou v rámci příslušných záložek definovány organizace (a organizační jednotky), uživatelé, lidé a role.
+V administraci účtu jsou v rámci příslušných záložek definovány **organizace** (a organizační jednotky), **uživatelé**, **lidé** a **role**.
 #### 16.2.1	Organizace
 Uživatel si může definovat, jaké organizace (společnosti, organizační složky či jiné subjekty) jsou součástí jeho organizační struktury. Zároveň pak k jednotlivým organizacím nebo organizačním jednotkám (např. oddělením) přiřadit uživatele, kteří do nich patří.
 Jsou-li některá tato data spravována v externím systému, tak vyplněním atributu ***ID externího zdroje dat*** lze zajistit automatickou synchronizaci např. organizací a uživatelských účtů v Zoty a jejich přiřazení do té které organizace.
