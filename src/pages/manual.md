@@ -16,7 +16,7 @@ toc_max_heading_level: 5
 Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis funkcionalit aplikace Zoty. Nedává univerzální návod pro implementaci Zoty v konkrétní organizaci. Nastavení celého systému doporučujeme vždy konzultovat s kvalifikovaným implementačním partnerem. Navrhne řešení a doporučí, jak využít dané funkcionality tak, aby co nejlépe podpořily proces řízení aktiv a rizik s ohledem na zvyklosti či specifické potřeby konkrétní organizace.
 
 :::info
- Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz nebo využijte jakýkoliv jiný komunikační kanál vaší [Zoty podpory](#321zoty-podpora).     
+ Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz nebo využijte jakýkoliv jiný komunikační kanál vaší [Zoty podpory](#zoty-podpora).     
 Budeme vám vděční za veškeré podněty a připomínky.
 :::                
 
@@ -163,6 +163,8 @@ Podobně, jako pracovní plochy a panely jednotlivých sekcí mají své nástro
 &nbsp;
 
 ### 3.2	Zoty – O aplikaci
+
+#### Zoty podpora
 Zde jsou uvedeny důležité kontakty na **hotline** (607 007 700) a na webový **helpdesk portál** pro podporu aplikace Zoty https://zoty.support, který je preferovaným komunikačním kanálem. Jako alternativní komunikační kanál lze též využít e-mail kontakt.       
 Naleznete zde i odkaz na **uživatelský manuál**, který obsahuje průběžně aktualizovanou dokumentaci k poslední uvolněné verzi aplikace Zoty. Nové verze dokumentace nejsou vydávány pro opravné patche, tj. pro ty verze Zoty, kde ve značení čísla verze dochází ke změně na posledních dvou místech.
 
@@ -350,7 +352,7 @@ V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.
 Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.     
 
 <img src="/docs/img/3-notifikace-sluzba-failed.png" title="Notifikace – pozastavení služby" width="350"/>
-V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty podporu](#321zoty-podpora).
+V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty podporu](#zoty-podpora).
 
 &nbsp;
 
@@ -693,7 +695,7 @@ Proto jsou pro entitu typu ***Úkol***, zavedeny další podtypy, které jsou sp
 
 ## 6	VIZUALIZACE
 Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit vyškolení experti.
-Případné požadavky v této oblasti směrujte na vašeho dodavatele Zoty nebo přímo [na Zoty podporu](#321zoty-podpora).
+Případné požadavky v této oblasti směrujte na vašeho dodavatele Zoty nebo přímo [na Zoty podporu](#zoty-podpora).
 
 ### 6.1	Obecné
 Příklad vizualizace vazeb závislostí mezi primárními a podpůrnými aktivy a jejich hodnocení.
@@ -1416,7 +1418,7 @@ Výstupem reportů mohou být soubory ve formátech, které mohou konzumovat bě
 
 #### 16.1.6	Data a zálohování
 Záložky ***Export*** a ***Import*** slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
-Je-li aplikace Zoty provozována v cloudu formou předplatného jako služba (**Zoty cloud**), jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na [Zoty podporu](#321zoty-podpora).     
+Je-li aplikace Zoty provozována v cloudu formou předplatného jako služba (**Zoty cloud**), jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na [Zoty podporu](#zoty-podpora).     
 Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (**Zoty on-premise**), je zálohování dat uložených v databázi (PostgreSQL) plně v režii a odpovědnosti zákazníka. Zoty také umožňuje uživateli v roli administrátora exportovat většinu uživatelských dat z databáze v Zoty do souboru ve formátu JSON.
 
 <img src="/docs/img/16-zalohovani.png" title="Záloha a obnova dat" width="640"/>
