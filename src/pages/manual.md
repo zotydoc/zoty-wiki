@@ -16,7 +16,7 @@ toc_max_heading_level: 5
 Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis funkcionalit aplikace Zoty. Nedává univerzální návod pro implementaci Zoty v konkrétní organizaci. Nastavení celého systému doporučujeme vždy konzultovat s kvalifikovaným implementačním partnerem. Navrhne řešení a doporučí, jak využít dané funkcionality tak, aby co nejlépe podpořily proces řízení aktiv a rizik s ohledem na zvyklosti či specifické potřeby konkrétní organizace.
 
 :::info
- Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
+ Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz nebo využijte jakýkoliv jiný komunikační kanál vaší [Zoty podpory](#321zoty-podpora).     
 Budeme vám vděční za veškeré podněty a připomínky.
 :::                
 
@@ -163,11 +163,17 @@ Podobně, jako pracovní plochy a panely jednotlivých sekcí mají své nástro
 &nbsp;
 
 ### 3.2	Zoty – O aplikaci
-:::info
-Zde je důležité zejména číslo verze, které je třeba uvádět při každém ohlášení požadavku, dotazu či chyby prostřednictvím aplikace  Zoty Helpdesk (https://zoty.support) nebo pomocí telefonní hotline linky 607 007 700.
-:::
+Zde jsou uvedeny důležité kontakty na **hotline** (607 007 700) a na webový **helpdesk portál** pro podporu aplikace Zoty https://zoty.support, který je preferovaným komunikačním kanálem. Jako alternativní komunikační kanál lze též využít e-mail kontakt.       
+Naleznete zde i odkaz na **uživatelský manuál**, který obsahuje průběžně aktualizovanou dokumentaci k poslední uvolněné verzi aplikace Zoty. Nové verze dokumentace nejsou vydávány pro opravné patche, tj. pro ty verze Zoty, kde ve značení čísla verze dochází ke změně na posledních dvou místech.
 
-Odkaz na uživatelský manuál směřuje na webovou stránku s průběžně aktualizovanou dokumentací k poslední uvolněné verzi aplikace Zoty. Nové verze dokumentace nejsou vydávány pro opravné patche, tj. pokud v číslování verzí *X.YY.ZZ* dochází ke změně na posledních dvou místech, tedy na pozici *ZZ*.
+#### Verzování Zoty
+Číslo aktuální verze je doporučeno uvádět při každém kontaktu s týmem podpory Zoty.
+ 
+Číslování Zoty verzí má syntaxi ***X.YY.ZZ***. Kde ***X.YY*** značí číslo verze (složené z verze hlavní "***X***" a vedlejší "***YY***"), která přináší nové či vylepšené schopnosti a funkcionality. Zatímco "***ZZ***" je označení pro tzv. „opravný patch“, který pro aktuální verzi přináší opravy chyb, odstraňuje případné zranitelnosti, či optimalizuje kód, s cílem zvýšit výkon, spolehlivost a zabezpečení aplikace Zoty.
+
+:::info
+Vždy, když se *Všeobecné obchodní podmínky pro poskytování licencí a údržby* odkazují na číslo verze Zoty, je tím myšleno označení verze *X.YY*.
+:::
 
 &nbsp;
 
@@ -344,7 +350,7 @@ V případě neúspěchu zopakuje za 30 sec. ještě jednou pokus o připojení.
 Pokud ani druhý pokus nebyl úspěšný, informuje uživatele.     
 
 <img src="/docs/img/3-notifikace-sluzba-failed.png" title="Notifikace – pozastavení služby" width="350"/>
-V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty Helpdesk](#32zoty--o-aplikaci) nebo využijte hotline linku Zoty podpory.
+V takovém případě není služba notifikací funkční a je třeba kontaktovat vašeho správce IT. Až v případě, kdy se prověří, že chyba není způsobena výpadkem síťového nebo internetového připojení či jinou chybou ICT indrastruktury, obracejte se na [Zoty podporu](#321zoty-podpora).
 
 &nbsp;
 
@@ -686,8 +692,8 @@ Proto jsou pro entitu typu ***Úkol***, zavedeny další podtypy, které jsou sp
 &nbsp;
 
 ## 6	VIZUALIZACE
-Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit implementační partneři.
-Případné požadavky či náměty směřujte na vašeho implementačního partnera nebo na email: helpdesk@zoty.cz.
+Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit vyškolení experti.
+Případné požadavky v této oblasti směrujte na vašeho dodavatele Zoty nebo přímo [na Zoty podporu](#321zoty-podpora).
 
 ### 6.1	Obecné
 Příklad vizualizace vazeb závislostí mezi primárními a podpůrnými aktivy a jejich hodnocení.
@@ -1405,18 +1411,20 @@ Pokud někde toto omezení nebude administrátorem nastaveno, budou se pak pro z
 &nbsp;
 
 #### 16.1.5	Reporty
-Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních technologií JavaScript, GraphQL, Handlebars, CSS. Pro každý report lze také zapnout/vypnout přepínač *Aktivní*, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatele či role, pro které má být report dostupný.
+Správce aplikace zde má k dispozici prostředí pro tvorbu vlastních reportů s využitím standardních vývojářských technologií (JavaScript, GraphQL, Handlebars, CSS). Pro každý report lze také zapnout/vypnout přepínač *Aktivní*, aby mohl tvůrce reportu rozlišit reporty, které jsou např. ještě rozpracované, od těch, které jsou již hotové a mohou se uživatelům nabízet. Pro každý report lze navíc nastavit omezení jen na vybrané uživatele či role, pro které má být report dostupný.       
+Výstupem reportů mohou být soubory ve formátech, které mohou konzumovat běžní uživatelé (např. *PDF, DOC, XLS*). Anebo ve formátech (*JSON*, *XML*, …), které mohou být poskytnuty k dalšímu zpracování aplikacím třetích stran. A to jak jednorázově, tak i automatizovaně, na pravidelné bázi, s využitím [plánovače úloh](#plánovač-úloh). 
 
 #### 16.1.6	Data a zálohování
 Záložky ***Export*** a ***Import*** slouží pro zálohu a obnovu dat v aktuálním účtu Zoty.
-Tato volba není dostupná, je-li aplikace Zoty provozována v cloudu, jako služba (Zoty cloud), kdy jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci [Zoty Helpdesk](#32zoty--o-aplikaci) nebo zaslaného na e-mail adresu hotline podpory: helpdesk@zoty.cz.     
-Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (Zoty on-premise), je zálohování dat uložených v PostgreSQL databázi plně v režii a odpovědnosti zákazníka. Zoty také umožňuje uživateli v roli administrátora exportovat většinu uživatelských dat z databáze v Zoty do souboru ve formátu JSON.
+Je-li aplikace Zoty provozována v cloudu formou předplatného jako služba (**Zoty cloud**), jsou data zálohována automaticky na denní bázi. Obnovení dat z databáze je pak provedeno na základě zákazníkova požadavku založeného v aplikaci Zoty Helpdesk nebo zaslaného na [Zoty podporu](#321zoty-podpora).     
+Pokud je aplikace Zoty provozována na vlastním serveru zákazníka (**Zoty on-premise**), je zálohování dat uložených v databázi (PostgreSQL) plně v režii a odpovědnosti zákazníka. Zoty také umožňuje uživateli v roli administrátora exportovat většinu uživatelských dat z databáze v Zoty do souboru ve formátu JSON.
 
 <img src="/docs/img/16-zalohovani.png" title="Záloha a obnova dat" width="640"/>
 
 &nbsp;
 
-Po exportu databáze do souboru lze soubor zpět naimportovat do Zoty účtu a data tak v databázi obnovit. Pokud se mezitím, tedy od posledního importu, v databázi některá data změnila, tak po aktivaci volby *Vynutit změny* se přepíší data v Zoty účtu, tzn. prioritu mají data v importovaném souboru. Volba *Odstranit data, která import neobsahuje*, odstraní v Zoty účtu všechna data, která nejsou nalezena v importovaném souboru.    
+Po exportu databáze do souboru lze pak tento soubor naimportovat zpět do Zoty účtu a data tak v databázi obnovit. Pokud se mezitím, tedy od posledního importu, v databázi některá data změnila, tak po aktivaci volby *Vynutit změny* se přepíší data v Zoty účtu, tzn. prioritu mají data v importovaném souboru. Volba *Odstranit data, která import neobsahuje*, odstraní v Zoty účtu všechna data, která nejsou nalezena v importovaném souboru.      
+Aktivace obou výše zmíněných voleb importu je tedy ekvivalentem běžného obnovení dat ze zálohy pomocí libovolného standardního nástroje pro zálohování a obnovu dat.  
 
 :::caution
 Pro pravidelné zálohování v produkčním prostředí důrazně doporučujeme používat nativní nástroje pro zálohování databází namísto zálohování pomocí exportu a importu JSON souborů v Zoty. Nativní nástroje pro zálohování databází nabízejí mnohem konzistentnější a spolehlivější způsob ukládání a obnovy dat.
@@ -1432,13 +1440,24 @@ Záložka ***Spreadsheet*** importuje data různých typů entit (*Aktiva, Hrozb
 
 Pro nové zákazníky, kteří testují Zoty s demo daty, založili si v rámci testování v tomto účtu i svá data, která chtějí zachovat, přičemž demo data potřebují odstranit, slouží volba *Vyčistit* na záložce ***Demo***.      
 
-[Reporty](#1615reporty), které lze v Zoty vytvářet, lze pak spouštět buď manuálně nebo automatizovaně v pravidelných, předem definovaných časech. Aplikacím třetích stran lze takto poskytovat aktuální data z databáze Zoty. Tyto reporty jsou pak v administraci dostupné v plánovači úloh na záložce ***Naplánované úlohy***.
+Záložka ***ARIS*** poskytuje funkcionality importu dat z  databáze SW nástroje ARIS pro modelování a analýzu procesů.      
+
+#### Plánovač úloh
+Schopnost vytvářet a plánovat specifické úlohy, spolu se schopnostmi [reportů](#1615reporty), zajišťují interoperabilitu Zoty s aplikacemi třetích stran. V administraci jsou všechny dostupné úlohy zobrazeny na záložce ***Naplánované úlohy***. Zde mohou být spouštěny buď manuálně nebo automatizovaně v pravidelných, předem definovaných časech. 
 
 <img src="/docs/img/16-task-scheduler.png"  title="Plánovač úloh pro spouštění reportů" width="700" />
 
 &nbsp;
 
-Záložka ***ARIS*** poskytuje funkcionality importu dat z  databáze SW nástroje ARIS pro modelování a analýzu procesů.      
+:::note
+Úloha může v Zoty např. iniciovat libovolný zakázkový report a získaný výstup v definovaném formátu a struktuře poskytnout aplikacím třetích stran. Může také volat externí URL adresy, kde běží služby aplikací třetích stran a data od nich naopak získávat. Takto lze efektivně přistupovat k datům a vzájemně si je vyměňovat s aplikacemi třetích stran.
+A nejen to. Jiné specifické úlohy mohou, dle definovaných pravidel, data na straně Zoty také např. automaticky generovat či upravovat.
+:::
+
+:::info
+Výsledné řešení, jak popisují výše uvedené příklady, je třeba vždy zakázkově implementovat s podporou vyškolených expertů.  Zoty poskytuje pouze technické schopnosti a nástroje v podobě funkcionalit pro administrátory aplikace. 
+Případné požadavky v této oblasti proto směrujte na vašeho dodavatele Zoty nebo přímo na Zoty podporu.
+:::
 
 &nbsp;
 
