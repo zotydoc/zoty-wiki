@@ -16,7 +16,7 @@ toc_max_heading_level: 5
 Tento dokument obsahuje uživatelskou dokumentaci poskytující obecný popis funkcionalit aplikace Zoty. Nedává univerzální návod pro implementaci Zoty v konkrétní organizaci. Nastavení celého systému doporučujeme vždy konzultovat s kvalifikovaným implementačním partnerem. Navrhne řešení a doporučí, jak využít dané funkcionality tak, aby co nejlépe podpořily proces řízení aktiv a rizik s ohledem na zvyklosti či specifické potřeby konkrétní organizace.
 
 :::info
- Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz nebo využijte jakýkoliv jiný komunikační kanál vaší [Zoty podpory](#zoty-podpora).     
+Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, předejte jej prosím prostřednictvím libovolného komunikačního kanálu na [Zoty podporu](#zoty-podpora).     
 Budeme vám vděční za veškeré podněty a připomínky.
 :::                
 
@@ -54,6 +54,7 @@ Pokud klíč obsahuje zkratku typu entity, ke které je na konci přidáno písm
   -	***AA*** – Analýza aktiv
   -	***AGR*** – Smlouva
   -	***AUD*** – Audit
+  -	***AUDC*** – Kontrola
   -	***AUDN*** – Neshoda auditu
   -	***AUDR*** – Doporučení auditu
   -	***C*** – Šablona opatření (Control)
@@ -386,7 +387,7 @@ Pro širokoúhlé displeje je doporučeno vyzkoušet volbu Maximální šířka 
 &nbsp;
 
 #### 3.9.4 Odhlásit se
-Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele.   
+Zde se může aktuálně přihlášený uživatel odhlásit a tím uvolnit licenci k použití pro další uživatele. Systém automaticky odhlásí neaktivní uživatele při nečinnosti delší než 72 hodin. Změna tohoto parametru je možná zadáním požadavku na vašeho dodavatele Zoty nebo přímo na [Zoty podporu](#zoty-podpora).  
 
 &nbsp;
 
@@ -695,7 +696,7 @@ Proto jsou pro entitu typu ***Úkol***, zavedeny další podtypy, které jsou sp
 
 ## 6	VIZUALIZACE
 Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit vyškolení experti.
-Případné požadavky v této oblasti směrujte na vašeho dodavatele Zoty nebo přímo [na Zoty podporu](#zoty-podpora).
+Případné požadavky v této oblasti směrujte na vašeho dodavatele nebo přímo [na Zoty podporu](#zoty-podpora).
 
 ### 6.1	Obecné
 Příklad vizualizace vazeb závislostí mezi primárními a podpůrnými aktivy a jejich hodnocení.
@@ -914,6 +915,8 @@ Aktiva, která jsou takto zařazena do analýzy aktiv, jsou podkladem ke schvál
 Zejména v případě většího množství aktiv může být výhodné rozdělit jejich analýzu na více dílčích analýz. A každou pak zaměřit jen na aktiva určitého typu (např. *Analýza systémů S1*, *Analýza systémů S2*, …). Nebo na aktiva patřící konkrétnímu útvaru či jedné společnosti ve skupině v rámci velkého holdingu atp.      
 Také v rámci řízení [významných změn](#112významné-změny) je vhodné vytvořit samostatnou analýzu a zahrnout do ní pouze aktiva dotčená touto změnou.
 :::
+&nbsp;
+Pro uživatele nebo role, které mají mít přístup ke schvalování analýz aktiv, je třeba v administraci [nastavit oprávnění](#oprávnění-přístupu-do-aplikace).
 
 &nbsp;
 
@@ -1030,22 +1033,36 @@ Opatření lze připojovat k libovolným typům entit, které lze hodnotit (akti
 Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnosti informací ve všech oblastech požadovaných mezinárodními standardy (např. ISO 27 002) nebo legislativou (vyhláška k ZoKB).
 
 <img src="/docs/img/10-sablony-opatreni.png"  title="Šablony opatření dle ISO 27002" width="" />         
-       
-Tato opatření jsou obecná – udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní aktivity pro plnění stanovených cílů . V Zoty jsou to pomyslné obálky (tzv. „šablony opatření“), jejichž obsah mohou uživatelé plnit konkrétními realizačními opatřeními, a to připojením entit typu *Úkol, Projekt, Proces*. Takto se určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
+
+&nbsp;
+
+Tato opatření jsou obecná – udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní aktivity pro plnění stanovených cílů . V Zoty jsou to pomyslné obálky (tzv. „šablony opatření“), jejichž obsah mohou uživatelé plnit konkrétními realizačními iniciativami, a to připojením entit typu *Úkol, Projekt, Proces*. Takto se určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
+
+:::info
+Tento koncept vychází z dobré praxe, kdy např. ISO 27001 (odst. 6.2) specifikuje, že:         
+*Organizace musí stanovit cíle informační bezpečnosti a při plánování, jak těchto cílů dosáhnout, musí určit:*       
+*co bude vykonáno;*        
+*jaké zdroje budou vyžadovány;*     
+*kdo bude odpovědný;*     
+*termín dokončení;*     
+*jak budou výsledky hodnoceny.*
+:::
+
+&nbsp;
 
 Opatření lze připojit nejen k cílovým hodnocením entit, ale i přímo k aktivům. To je užitečné zejména v případech, kdy se neprovádí analýza rizik (jejíž součástí je hodnocení), ale rovnou se na vybraná aktiva/skupiny aktiv aplikují příslušná opatření, tedy použije se tzv. „control driven approach“.      
-Typické je to pro základní sadu opatření, např. tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Proto mohou být tato opatření připojena i přímo k příslušnému aktivu.
+Tento zjednodušený přístup lze využít např. pro rychlou implementaci základní sady opatření - tzv. „3A opatření“, která je doporučeno implementovat vždy, bez ohledu na výsledek analýzy rizik. Možnost propojit takto opatření i přímo k příslušnému aktivu je dostupná pouze v rámci základní metody „Zoty“.
 
 :::info
 **3A opatření**  jsou opatření v oblasti **A**utentizace (přihlášení uživatele heslem, otiskem, atp., či vícefaktorově, zahrnující jedinečnou identifikaci uživatele), **A**utorizace (po přihlášení do systému se přidělí odpovídající oprávnění) a odpovědnosti (**A**ccounting – logování činnosti uživatelů).
 :::      
 
 &nbsp;
+
 V Zoty lze opatření rozlišovat dle typu na **preventivní** (proaktivní opatření, jež se aplikují před problémem, kterému se snaží zabránit), **nápravná** (reaktivní opatření, jež se aplikují až po problému, na který reagují a napravují jej) a **detekční** (opatření, jejichž účelem je včasné odhalení nežádoucích aktivit).
 &nbsp;
 
 Pro každé opatření lze zadat celkovou výši nákladů, které realizace daného opatření spotřebuje. Náklad lze zadat ve více různých měnách (CZK, EUR, USD) a zda jde o náklad jednorázový či periodicky se opakující a následně i s jakou periodou se opakuje (denně/týdně/měsíčně/ročně). Systém pak automaticky zohlední tyto vstupy při výpočtu vynaložených nákladů na všechna zaplánovaná opatření za zvolené časové období.
-
 
 ### 10.2	Plán zvládání rizik
 Jednotlivá opatření mohou být součástí plánů zvládání rizik. Vytvořit lze libovolné množství plánů s platností Od-Do. Vytvořený plán se zařadí do seznamu plánů zvládání rizik, odkud je pak možné libovolný plán otevřít kliknutím na jeho název a pomocí tlačítka ***Připojit riziko*** do něj zahrnout rizika z registru rizik.      
@@ -1073,7 +1090,8 @@ V rámci zvolené strategie lze na operativní úrovni velmi jednoduše vytvář
 :::
 
 Ve spodním panelu je ještě volba **Report**, kde lze do plánu zvládání rizik doplnit potřebné zdroje pro jeho realizaci v členění *Technické, Finanční – investiční, Finanční – provozní, Lidské (MD), Informační*, přidat libovolnou textovou poznámku, a připravit jej pro případný tisk nebo prezentaci a schválení.    
-Plán zvládání rizik je schvalován stejnými kroky, jak ukazuje [diagram  schvalovacího workflow](#diagram-schvalovacího-workflow-pro-analýzu-aktiv) pro analýzu aktiv.
+Plán zvládání rizik je schvalován stejnými kroky, jak ukazuje [diagram  schvalovacího workflow](#diagram-schvalovacího-workflow-pro-analýzu-aktiv) pro analýzu aktiv.       
+Pro uživatele nebo role, které mají mít přístup ke schvalování plánů zvládání rizik, je třeba v administraci [nastavit oprávnění](#oprávnění-přístupu-do-aplikace).
 
 ### 10.3	Reporty
 V této sekci mohou být definovány reporty, jejichž obsah či vzhled je třeba zakázkově přizpůsobit dle požadavků uživatelů konkrétní organizace. V Zoty jsou pro tento účel připravena data v takovém kontextu, aby z nich bylo možné sestavit příslušné standardní reporty, např. Prohlášení o aplikovatelnosti (PoA) dle požadavku Zákona o kybernetické bezpečnosti, které v Zoty, v metodě ZoKB, využívá přednaplněný registr bezpečnostních opatření dle vyhlášky o kybernetické bezpečnosti (VoKB) s možností auditovat, zda a jak jsou jednotlivá bezpečností opatření v organizaci aplikována ve vazbě na požadavky této vyhlášky. Výstupy z tohoto auditu, spolu s registrem bezpečnostních opatření a znalostní bází Zoty, kde je definována matice opatření a kategorií zranitelností, na které tato opatření působí, jsou pak podkladem pro sestavení PoA reportu.
@@ -1116,12 +1134,12 @@ Pro mitigaci rizik lze v Zoty volit z připravených šablon bezpečnostních op
 &nbsp;
 
 ## 12	AUDITY
-V modulu **Audity** lze zakládat interní či externí audity a propojovat je s požadavky, vůči kterým je v rámci daného auditu posuzována shoda.
+V modulu **Audity** lze zakládat interní či externí audity a kontroly a propojovat je s požadavky, vůči kterým je v rámci příslušných auditů nebo kontrol posuzována shoda.
 
 <img src="/docs/img/13-audit-seznam.png" title="Audity" />
 
 Je-li audit propojen s požadavkem v sekci Řízení shody - [Požadavky](#71požadavky), a tímto požadavkem je dokument (zákon, ISO norma, směrnice, smlouva, atp.), jež má strukturovaný obsah (kapitoly, podkapitoly nebo paragrafy, odstavce, písmena, atp.), tak pak lze ze všech těchto ucelených fragmentů textu vybrat v rámci auditu ty, u kterých má být posuzováno, zda je s nimi organizace ve shodě či nikoliv.
-Po najetí ukazovátka myši nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment /dílčí požadavek se pak stává tzv. auditní a je tedy zahrnut do kritérií a cílů auditu. Tzn., že bude možné u něj posuzovat shodu se zavedeným systémem, např. na zajištění bezpečnosti informací.
+Po najetí ukazovátka myši nad příslušný fragment textu, např. jeden konkrétní odstavec, se zobrazí volba, která umožní aktivovat pro něj funkcionality auditu. Tento fragment /dílčí požadavek se pak stává tzv. auditní a je tedy zahrnut do kritérií a cílů auditů či kontrol. Tzn., že bude možné u něj posuzovat shodu se zavedeným systémem, např. na zajištění bezpečnosti informací.
 
 <img src="/docs/img/13-audit-aktivace-pro-fragment-textu-pozadavku.png" title="Aktivace auditu pro fragment textu požadavku" width="770"/>
 
@@ -1135,7 +1153,18 @@ Zoty ve standardu nabízí různé typy grafů, které poskytnou rychlý přehle
 Grafy lze snadno použít i v externích dokumentech, např. v prezentacích a to tak, že po najetí ukazovátka myši do oblasti grafu se zobrazí ikona pro stažení grafu ve formátu PNG.
        
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="/docs/img/13-ikona-graph-download.png" title="Ikona stažení grafu" width="40"/>    
-          
+
+### 12.1 Zjištění auditu
+Zjištění auditu, jako jsou např. shoda, neshoda, příležitost ke zlepšení, lze zaznamenat v textové formě do popisných atributů v entitě typu **Audit**. Pokud je ale v rámci auditního zjištění identifikována neshoda, je výhodné založit v Zoty specifický typ entity **Neshoda** a připojit ji k příslušnému auditu. Jedině tak je možné s ní systematicky a efektivně dále pracovat, tj. např. přiřadit odpovědnou osobu, sledovat stav a způsob řešení, termíny atp. Podobně lze pracovat i s doporučeními auditu.      
+
+#### 12.1.1 Neshody auditu      
+Neshody auditu mohou být v rámci zjištění auditu označeny i podle jejich závažnosti nižší nebo vyšší úrovní důležitosti podle toho, zda byly klasifikovány jako významná/velká neshoda („major neshoda“) nebo méně významná/malá neshoda („minor neshoda“).      
+
+### 12.2 Doporučení auditu       
+Návrh auditora/auditorského týmu pro certifikační nebo dozorčí orgán (např. doporučení k udělení, zachování nebo odebrání certifikace). Nebo také pro samotnou organizaci, jak by mohla zlepšit svůj systém nebo procesy na základě příležitostí pro zlepšení, identifikovaných v průběhu auditu.
+
+&nbsp;
+
 ## 13	VYHLEDAT
 Vyhledávat lze v celé aplikaci dle názvu nebo klíče entity zadáním části vyhledávaného řetězce. Avšak zatímco vyhledávání přes pole pro vyhledávání vedle symbolu lupy v jednotlivých sekcích, které dostupné pouze pro záznamy jen některých typů entit patřících do dané sekce nebo globální vyhledávání s využitím symbolu lupy v horní nástrojové liště, slouží pro rychlé vyhledání, které je omezeno na max. 10 výsledků, tak v této sekci lze vyhledávat bez omezení. Navíc se zde vyhledané výsledky, je-li jich více, zobrazují ve standardním seznamu záznamů, který lze dále filtrovat, třídit anebo označovat jednotlivé záznamy a pak s nimi provádět některé hromadné operace.     
 Kterýkoliv z výsledků vyhledávání lze pak také připnout do samostatných záložek, které jsou ve spodní části obrazovky připraveny zobrazit na jedno kliknutí detail příslušného záznamu.      
@@ -1452,13 +1481,13 @@ Schopnost vytvářet a plánovat specifické úlohy, spolu se schopnostmi [repor
 &nbsp;
 
 :::note
-Úloha může v Zoty např. iniciovat libovolný zakázkový report a získaný výstup v definovaném formátu a struktuře poskytnout aplikacím třetích stran. Může také volat externí URL adresy, kde běží služby aplikací třetích stran a data od nich naopak získávat. Takto lze efektivně přistupovat k datům a vzájemně si je vyměňovat s aplikacemi třetích stran.
+Úloha může v Zoty např. iniciovat libovolný [report](#1615reporty) a získaný výstup v definovaném formátu a struktuře poskytnout aplikacím třetích stran. Může také volat externí URL adresy, kde běží služby aplikací třetích stran a data od nich naopak získávat. Takto lze efektivně přistupovat k datům a vzájemně si je vyměňovat s aplikacemi třetích stran.
 A nejen to. Jiné specifické úlohy mohou, dle definovaných pravidel, data na straně Zoty také např. automaticky generovat či upravovat.
 :::
 
 :::info
 Výsledné řešení, jak popisují výše uvedené příklady, je třeba vždy zakázkově implementovat s podporou vyškolených expertů.  Zoty poskytuje pouze technické schopnosti a nástroje v podobě funkcionalit pro administrátory aplikace. 
-Případné požadavky v této oblasti proto směrujte na vašeho dodavatele Zoty nebo přímo na Zoty podporu.
+Případné požadavky v této oblasti proto směrujte na vašeho dodavatele nebo přímo na [Zoty podporu](#zoty-podpora).
 :::
 
 &nbsp;
@@ -1500,9 +1529,10 @@ Na entity v koši se aplikují oprávnění dle rolí podobně, jako na entity m
 &nbsp;
 
 :::info
- Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, napište nám prosím na helpdesk@zoty.cz.     
- Budeme vám vděční za veškeré podněty a připomínky.
-:::
+Aplikace Zoty je neustále rozvíjena a vylepšována. Pokud naleznete jakýkoliv nesoulad této dokumentace s vaší aktuální verzí Zoty, předejte jej prosím prostřednictvím libovolného komunikačního kanálu na [Zoty podporu](#zoty-podpora).     
+Budeme vám vděční za veškeré podněty a připomínky.
+:::  
+
 
 <!---
 vlastní lokalizace
