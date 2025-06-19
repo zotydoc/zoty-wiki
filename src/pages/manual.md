@@ -1036,10 +1036,10 @@ Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnos
 
 &nbsp;
 
-Tato opatření jsou obecná – udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní aktivity pro plnění stanovených cílů . V Zoty jsou to pomyslné obálky (tzv. „šablony opatření“), jejichž obsah mohou uživatelé plnit konkrétními realizačními iniciativami, a to připojením entit typu *Úkol, Projekt, Proces*. Takto se určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
+Tato opatření jsou obecné povahy – v Zoty jsou to tzv. „šablony opatření“, které udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní iniciativy pro plnění stanovených cílů. Takovými iniciativami mohou být v Zoty entity různého typu. Konkrétně *Úkol, Projekt, Proces*, které, pokud se připojí k šabloně opatření, tak naplní obsah této pomyslné obálky (obecné šablony). Takto se mj. určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
 
 :::info
-Tento koncept vychází z dobré praxe, kdy např. ISO 27001 (odst. 6.2) specifikuje, že:         
+Tento koncept vychází z dobré praxe, kdy např. ISO 27001 (odst. 6.2) požaduje:         
 *Organizace musí stanovit cíle informační bezpečnosti a při plánování, jak těchto cílů dosáhnout, musí určit:*       
 *co bude vykonáno;*        
 *jaké zdroje budou vyžadovány;*     
@@ -1307,7 +1307,7 @@ Pokud je v daném řádku matice definovaná alespoň jedna kombinace hrozby s d
 
 &nbsp;
 
-Rizika lze takto vygenerovat hromadně z celého seznamu, který Zoty sestaví na základě znalosti možných kombinací mezi vybranou hrozbu a všemi relevantními aktivy a zranitelnostmi. Nebo může uživatel procházet seznam s jednotlivými kombinacemi, které Zoty pro vytvoření rizik nabízí a pomocí tlačítka ***Vytvořit*** na každém jednotlivém řádku generovat rizika jedno po druhém.
+Rizika lze takto vygenerovat hromadně z celého seznamu, který Zoty sestaví na základě znalosti možných kombinací mezi vybranou hrozbu a všemi relevantními aktivy a zranitelnostmi. Hromadné generování je dostupné pouze po zvolení některé z nabízených metod (lze zvolit i volbu „*Bez metody*“). Nebo může uživatel procházet seznam s jednotlivými kombinacemi, které Zoty pro vytvoření rizik nabízí a pomocí tlačítka ***Vytvořit*** na každém jednotlivém řádku generovat rizika jedno po druhém.
 <img src="/docs/img/16-znalostni-baze-kombinace-avt-detail.png" title="Nabídka kombinací aktiv, zranitelností a hrozeb pro generování rizik" />
 
 &nbsp;
