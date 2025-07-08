@@ -695,7 +695,7 @@ Proto jsou pro entitu typu ***Úkol***, zavedeny další podtypy, které jsou sp
 &nbsp;
 
 ## 6	VIZUALIZACE
-Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou zákazníkům na míru připravit vyškolení experti.
+Tato sekce je připravena na umístění libovolných dashboardů či grafů, které mohou uživatelům na míru připravit vyškolení experti.
 Případné požadavky v této oblasti směrujte na vašeho dodavatele nebo přímo [na Zoty podporu](#zoty-podpora).
 
 ### 6.1	Obecné
@@ -886,10 +886,25 @@ Aktiva lze hodnotit podle uživatelsky definovatelných [schémat hodnocení](#1
 :::info
 Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv není totéž, co hodnota dopadu v rámci hodnocení rizik. Hodnota dopadu sice vychází z hodnoty aktiva, ale v důsledku přijatých bezpečnostních opatření by se měla v čase snižovat. Tzn., že na začátku (před zavedením bezpečnostních opatření) může hodnota dopadu být rovna (nebo se blížit) hodnotě aktiva, ale s implementací bezpečnostních opatření se bude postupně snižovat (jsou-li opatření účinná).
 :::
+
 Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
 
 :::tip
  Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
+:::
+
+&nbsp;
+
+#### Hodnocení dodavatelů
+V rámci hodnocení aktiv lze hodnotit i dodavatele, neboť dodavatel je v Zoty [specifická entita](#typy-aktiv) typu aktivum, pro kterou lze uživatelsky definovat libovolné [schéma hodnocení](#1614hodnocení), jak je demonstrováno v příkladu na obrázku níže.
+
+<img src="/docs/img/8-hodnoceni-dodavatelu.png "  title="Hodnocení dodavatelů" width="" />
+
+&nbsp;
+
+:::info
+I když z pohledu **účetního** je dodavatel jiný subjekt, kterému firma dluží, tedy závazek neboli **pasivum**, tak z pohledu **řízení rizik** je dodavatel **aktivem**, protože má hodnotu a vliv na bezpečnost informací. Silní dodavatelé mohou být dokonce strategickým aktivem, např. v „just-in-time“ výrobě. Pokud navíc zajišťují zpracování nebo přenos citlivých informací, pak výpadek nebo narušení bezpečnosti u takových dodavatelů může mít značný dopad na dostupnost, důvěrnost nebo integritu informací.      
+Z pohledu **ekonomického či strategického** může dlouhodobý, spolehlivý dodavatel být i součástí know-how či goodwillu, tj. nehmotných aktiv. A např. při akvizicích firem se hodnota obchodních vztahů s takovými klíčovými dodavateli může ocenit jako součást jejich nehmotného majetku, tedy opět – aktiv.
 :::
 
 &nbsp;
