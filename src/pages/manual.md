@@ -147,7 +147,7 @@ Takto lze zvětšit velikost pravého panelu pracovní plochy na úkor levého, 
 Pro malé displeje, které mají nastavené vertikální rozlišení 1440 px a nižší, není toto nastavení dostupné.
 
 :::tip
-Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče pomocí funkční klávesy F11. Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
+Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče pomocí funkční klávesy F11 (nebo alternativně na MacOS - Control + Command + F). Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
 :::
 
 Podobně, jako pracovní plochy a panely jednotlivých sekcí mají své nástrojové lišty, tak i samotné Zoty má **nástrojovou lištu aplikace**. Je umístěna v horním, fialově podbarveném horizontálním pruhu nad pracovní plochou a poskytuje informace, obecné funkcionality a ovládací prvky pro celou aplikaci Zoty:
@@ -890,13 +890,13 @@ Je třeba mít také na paměti, že hodnota aktiva v rámci hodnocení aktiv ne
 Proto je vhodné, vždy v rámci konkrétního hodnocení, individuálně posoudit (např. s ohledem na existenci připojených opatření a vyhodnocení jejich účinnosti), zda nebude třeba manuálně korigovat automaticky doporučené hodnoty pro stanovení výsledného skóre hodnocení.
 
 :::tip
- Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je většinou daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
+ Pro účely hodnocení rizik se nepoužívá pouze účetní nebo pořizovací hodnota aktiva, ale hodnota, která odráží náklady na obnovu a nápravu následků vyplývajících ze selhání při narušení důvěrnosti, integrity nebo dostupnosti aktiva. A která je často daleko vyšší než hodnota účetní, kdy např. selhání součástky v pořizovací ceně v řádu stokorun může způsobit škodu v řádu milionů.
 :::
 
 &nbsp;
 
 #### Hodnocení dodavatelů
-V rámci hodnocení aktiv lze hodnotit i dodavatele, neboť dodavatel je v Zoty [specifická entita](#typy-aktiv) typu aktivum, pro kterou lze uživatelsky definovat libovolné [schéma hodnocení](#1614hodnocení), jak je demonstrováno v příkladu na obrázku níže.
+V rámci hodnocení aktiv lze hodnotit i dodavatele, neboť dodavatel je v Zoty [specifická entita](#typy-aktiv) typu aktivum - ***Dodavatel***, pro kterou lze uživatelsky definovat libovolné [schéma hodnocení](#1614hodnocení), jak je demonstrováno v příkladu na obrázku níže.
 
 <img src="/docs/img/8-hodnoceni-dodavatelu.png "  title="Hodnocení dodavatelů" width="" />
 
@@ -958,6 +958,10 @@ Podobně, jako v jiných registrech, i zde platí, že uživatel si může vytvo
 Založit nové riziko do registru rizik lze pomocí tlačítka ***Vytvořit*** v sekci **Rizika**.
     
 Na kartě rizika je, vedle řady popisných atributů (***Název, Popis, Příčina, Dopad, Původ rizika, Vlastník rizika, Autor rizika, Účastníci***), které jsou editovatelné, zobrazen i atribut ***Strategie zvládání***, který lze editovat v Plánu zvládání rizik (tj. poté, co byla rizika analyzována a vyhodnocena ve fázi zvládání rizik ve stejnojmenné sekci).
+
+:::info
+*Autor rizika* je osoba, která riziko identifikovala, např. v rámci dotazníkových šetření, workshopů atp. *Vlastník rizika* je osoba zodpovědná za riziko, např. za jeho zvládání (role "Acountable" dle RACI matice). *Účastníci* jsou pak všechny další osoby zapojené do analýzy rizik.
+:::
 
 Riziko může nabývat stavů: *Vytvořeno, Schvaluje se, Schváleno, Dokončeno, V přípravě, Posuzuje se, Zamítnuto, Akceptováno, Archivováno*.    
 Podmínky, za jakých může riziko změnit jeden stav na jiný, jsou dány logikou přednastaveného výchozího workflow pro schvalování entit, jak ukazuje workflow diagram v kapitole [Schvalovací workflow](#34schvalovací-workflow).
