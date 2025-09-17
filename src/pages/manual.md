@@ -147,7 +147,7 @@ Takto lze zvětšit velikost pravého panelu pracovní plochy na úkor levého, 
 Pro malé displeje, které mají nastavené vertikální rozlišení 1440 px a nižší, není toto nastavení dostupné.
 
 :::tip
-Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče pomocí funkční klávesy F11 (nebo alternativně na MacOS - Control + Command + F). Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
+Další možností, jak zvětšit pracovní plochu v Zoty, je maximalizovat zobrazovanou plochu okna internetového prohlížeče ve Windows pomocí funkční klávesy F11 (nebo alternativně na MacOS - Control + Command + F). Opakovaným stisknutím F11 je pak možné vrátit se zpět do původního nastavení zobrazení.
 :::
 
 Podobně, jako pracovní plochy a panely jednotlivých sekcí mají své nástrojové lišty, tak i samotné Zoty má **nástrojovou lištu aplikace**. Je umístěna v horním, fialově podbarveném horizontálním pruhu nad pracovní plochou a poskytuje informace, obecné funkcionality a ovládací prvky pro celou aplikaci Zoty:
@@ -1055,16 +1055,21 @@ Zoty poskytuje přednaplněný registr opatření pro plnění cílů bezpečnos
 
 &nbsp;
 
-Tato opatření jsou obecné povahy – v Zoty jsou to tzv. „šablony opatření“, které udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní iniciativy pro plnění stanovených cílů. Takovými iniciativami mohou být v Zoty entity různého typu. Konkrétně *Úkol, Projekt, Proces*, které, pokud se připojí k šabloně opatření, tak naplní obsah této pomyslné obálky (obecné šablony). Takto se mj. určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
+Tato opatření jsou obecné povahy – v Zoty jsou to tzv. „šablony opatření“, které udávají pouze směr, v jakých oblastech je třeba plánovat a realizovat konkrétní iniciativy pro plnění stanovených cílů bezpečnosti informací. Takovými iniciativami mohou být v Zoty entity různého typu. Konkrétně *Úkol, Projekt, Proces*, které, pokud se připojí k šabloně opatření, tak naplní obsah této pomyslné obálky (obecné šablony). Takto se mj. určí, co konkrétně bude vykonáno, v jakém termínu, kdo za to bude odpovědný a případně i jaké zdroje bude třeba alokovat.
 
 :::info
-Tento koncept vychází z dobré praxe, kdy např. ISO 27001 (odst. 6.2) požaduje:         
-*Organizace musí stanovit cíle informační bezpečnosti a při plánování, jak těchto cílů dosáhnout, musí určit:*       
-*co bude vykonáno;*        
-*jaké zdroje budou vyžadovány;*     
-*kdo bude odpovědný;*     
-*termín dokončení;*     
-*jak budou výsledky hodnoceny.*
+Tento koncept vychází z dobré praxe, kdy např. ISO 27001 (odst. 6.2) požaduje:
+&nbsp;
+
+*Organizace musí stanovit cíle informační bezpečnosti a při plánování, jak těchto cílů dosáhnout, musí určit:*
+- *co bude vykonáno;*        
+- *jaké zdroje budou vyžadovány;*     
+- *kdo bude odpovědný;*     
+- *termín dokončení;*     
+- *jak budou výsledky hodnoceny.*
+&nbsp;
+
+Podobně i NÚKIB doporučuje, aby v rámci plnění legislativních požadavků v oblasti zajištění kybernetické bezpečnosti, Plán zvládání rizik obsahoval jak konkrétní bezpečností opatření pro zvládání rizik, tak i specifikaci finančních, technických, lidských a informačních zdrojů potřebných pro jejich realizaci.
 :::
 
 &nbsp;
